@@ -1,0 +1,89 @@
+@import "./partials/breakpoints";
+
+html, 
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 900;
+    //font-family: "AvenirNextBold";
+
+    @include tablet {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}
+
+h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    //font-family: "AvenirNextDemi";
+
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        //font-family: "AvenirNextBold";
+    }
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    margin: 0;
+    //font-family: "AvenirNextDemi";
+}
+
+p {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: normal;
+
+    @include tablet {
+        font-size: 1.25rem;
+        line-height: 1.375rem;
+    }
+}
+
+h4 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: normal;
+    color: #AFAFAF;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+h5 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #AFAFAF;
+    //font-family: "AvenirNextDemi";
+}
+
+a {
+    color: inherit;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    //font-family: "AvenirNextRegular";
+    margin: 0;
+    color: #000000;
+}
