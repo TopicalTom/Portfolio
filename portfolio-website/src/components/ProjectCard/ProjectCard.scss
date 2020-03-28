@@ -1,0 +1,41 @@
+.project-card {
+    width: 480px;
+    height: 215px;
+    border-radius: 15px;
+    background: linear-gradient(45deg,#2E63E9, #7FC0FF); //TouchBase
+    //background: linear-gradient(45deg,#2CB977, #3BC786); //SharedSpace
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px, rgba(0, 0, 0, 0.05) 0px 2px 6px, rgba(0, 0, 0, 0.05) 0px 10px 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__details {
+        padding: 60px;
+    }
+
+    &__project {
+        color: white;
+    }
+
+    &__type {
+        color: rgba($color: white, $alpha: 0.6)
+    }
+
+    &__link {
+        color: white;
+    }
+
+    &__preview {
+        position: relative;
+        bottom: 40;
+        width: 200px;
+        height: 600px;
+        //background-color: red;
+    }
+}
+

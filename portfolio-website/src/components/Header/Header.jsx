@@ -3,10 +3,10 @@ import "./Header.scss";
 
 const Header = () => {
     return (
-        <header className="header section section--nav">
-            <div className="header__section header__section--logo">
+        <header className="header">
+            <div className="header__section">
             </div>
-            <div className="header__section header__section--actions">
+            <div className="header__section">
             </div>
         </header>
     );

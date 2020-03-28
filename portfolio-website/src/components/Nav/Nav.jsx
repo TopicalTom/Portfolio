@@ -6,7 +6,7 @@ const Nav = () => {
         <nav className="nav">
             <div className="nav__container">
                 <div className="nav__back">
-TopicalTom
+                Home
                 </div>
                 <div className="nav__search">
 
