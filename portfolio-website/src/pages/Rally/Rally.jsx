@@ -1,14 +1,17 @@
 import React from 'react';
-import "./Rally.scss";
+import "../Project/Project.scss";
+
+import Figure from "../../components/Figure/Figure";
+
 
 const Rally = () => {
     return (
         <main className="project">
             <div className="project__container">
-                <div className="project__links">
+                <div className="project__nav">
                     <aside>
                         <p>Process</p>
-                        <ul>
+                        <ul className="project__links">
                             <li>
                                 <a href="">
                                     Discovery
@@ -40,41 +43,22 @@ const Rally = () => {
                 <main className="project__content">
                     <article>
                         <h1>Rally</h1>
-                        <br></br>
                         <p>Rally is an iOS app that allows users to seamlessly transition from discovering, making, and sharing plans for in-person interactions. Rally empowers this process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
-                        <br></br>
-                        <div className="project__figure">
-
-                        </div>
-                        <br></br>
+                        <Figure />
                         <p>Rally is a solo venture so I oversaw all aspects of this project from research, ideation, design, testing and development.</p>
-                        <br></br>
-                        <div className="project__figure">
-
-                        </div>
+                        <Figure />
                     </article>
                     <article>
                         <h2>The Problem</h2>
-                        <br></br>
                         <p>After moving out of my residence hall from first year, I found it was harder to figure out what all my friends were up to at a moments notice as I wasn’t able to just head across the hall and ask them in person. I now had to message them through a variety of channels in order to figure out if there was anything going on that night. Throughout the years, and especially after graduating, this problem has only worsened as we have even less free time and become increasingly unaware of when we can meetup with our friends to do something fun. </p>
-                        <br></br>
                         <p>Making plans with friends is analogous to playing Go-Fish where the “cards” are one’s current interests or availability and the “game” is the process of finding common ground. The inherent challenge of Go-Fish is that we cannot see the cards of the other player and the only way to determine what they have is to explicitly ask.</p>
-                        <br></br>
-                        <div className="project__figure">
-                            
-                        </div>
+                        <Figure />
                     </article>
                     <article>
-                        <h2>Rally</h2>
-                        <br></br>
+                        <h2>Research Plan</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                        <br></br>
-                        <div className="project__figure">
-                            
-                        </div>
-                        <br></br>
+                        <Figure />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                        <br></br>
                     </article>
                 </main>
             </div>

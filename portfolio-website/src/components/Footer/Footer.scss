@@ -26,4 +26,41 @@
         background-color: #2E2E2E;
         border-radius: 15px;
     }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 300px;
+        padding-top: 50px;
+        padding-inline-start: 0px;
+    }
+
+    &__icon {
+        opacity: 0.3;
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+            opacity: 1.0;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        margin: auto;
+        padding-top: 20px;
+        color: #AFAFAF;
+        text-align: center;
+    }
 }

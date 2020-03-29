@@ -11,24 +11,24 @@
         width: 1000px;
     }
 
-    &__links {
+    &__nav {
         margin: 0;
         display: flex;
         flex-direction: column;
         width: 230px;
         margin-right: 70px;
+        position: sticky;
+        top: 120px;
+        height: calc(100vh - 120px);
+        overflow: scroll;
+    }
+
+    &__links {
+        padding-inline-start: 0px;
     }
 
     &__content {
         margin: 0;
         width: 730px;
-    }
-
-    &__figure {
-        margin: 0;
-        width: 730px;
-        height: 445px;
-        background-color: #2E2E2E;
-        border-radius: 20px;
     }
 }

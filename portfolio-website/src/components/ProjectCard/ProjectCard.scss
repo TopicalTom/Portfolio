@@ -2,28 +2,34 @@
     width: 480px;
     height: 215px;
     border-radius: 15px;
-    background: linear-gradient(45deg,#2E63E9, #7FC0FF); //TouchBase
+    //background: linear-gradient(45deg,#2E63E9, #7FC0FF); //TouchBase
     //background: linear-gradient(45deg,#2CB977, #3BC786); //SharedSpace
     overflow: hidden;
     display: flex;
     flex-direction: row;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px, rgba(0, 0, 0, 0.05) 0px 2px 6px, rgba(0, 0, 0, 0.05) 0px 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
 
     &:hover {
         cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 30px;
     }
 
     &__details {
-        padding: 60px;
+        padding: 50px;
+        align-items: center;
+        margin: auto 0;
     }
 
     &__project {
         color: white;
+        font-size: 2rem;
+        line-height: 2rem;
     }
 
     &__type {
-        color: rgba($color: white, $alpha: 0.6)
+        color: rgba($color: white, $alpha: 0.6);
+        margin-bottom: 20px;
     }
 
     &__link {
@@ -35,7 +41,11 @@
         bottom: 40;
         width: 200px;
         height: 600px;
-        //background-color: red;
+    }
+
+    &__image {
+        width: 180px;
+        padding-top: 25px;
     }
 }
 

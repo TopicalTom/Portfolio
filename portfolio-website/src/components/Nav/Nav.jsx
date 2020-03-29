@@ -6,9 +6,9 @@ const Nav = () => {
         <nav className="nav">
             <div className="nav__container">
                 <div className="nav__back">
-                Home
+                    Home
                 </div>
-                <div className="nav__search">
+                <div className="nav__switch">
 
                 </div>
             </div>
