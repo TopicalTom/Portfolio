@@ -19,7 +19,6 @@ const Project = () => {
                 <Route path="/project/shared-space" component={SharedSpace}/>
                 <Route path="/project" exact component={Rally} />
             </Switch>
-            <Footer/>
         </>
     );
 };

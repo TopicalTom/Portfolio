@@ -1,0 +1,11 @@
+.hero {
+    width: 100vw;
+    height: 60vh;
+    background-color: black;
+
+    &__container {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+}
