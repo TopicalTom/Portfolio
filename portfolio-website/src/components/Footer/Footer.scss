@@ -1,12 +1,9 @@
 .footer {
-    margin: 0;
     width: 100vw;
-    margin: 0 350px;
-    padding-top: 110px;
-    padding-bottom: 110px;
+    margin: 50px 0;
 
     &__container {
-        margin: 0;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         width: 1000px;
@@ -48,9 +45,11 @@
         opacity: 0.3;
         width: 25px;
         height: 25px;
+        transition: all 0.2s ease 0s;
 
         &:hover {
             opacity: 1.0;
+            transition: all 0.2s ease 0s;
         }
     }
 
@@ -62,5 +61,6 @@
         padding-top: 20px;
         color: #AFAFAF;
         text-align: center;
+        padding-bottom: 200px;
     }
 }

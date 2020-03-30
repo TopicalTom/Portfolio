@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ProjectCard from "../ProjectCard/ProjectCard";
+import ContactCard from "../ContactCard/ContactCard";
 
 import TouchBasePreview from "../../assets/images/TouchBasePreview.png";
 import SharedSpacePreview from "../../assets/images/SharedSpacePreview.png";
@@ -15,14 +16,12 @@ export default class DynamicCards extends Component {
                 <ProjectCard
                     project={"TouchBase"}
                     type={"Wallet Pass"}
-                    color={"#4D7FFF"}
                     preview={TouchBasePreview}
                     link={"touch-base"}
                 />
                 <ProjectCard
                     project={"Homediate"}
                     type={"iMessage App"}
-                    color={"#2CB977"}
                     preview={SharedSpacePreview}
                     link={"shared-space"}
                 />
@@ -30,12 +29,19 @@ export default class DynamicCards extends Component {
                 <ProjectCard
                     project={"Rally"}
                     type={"Standalone App"}
-                    color={"#FD2D55"}
                     preview={RallyPreview}
-                    link={" "}
+                    link={"rally"}
                 />
                 */}
             </>
         );
+
+        /*
+        return (
+            <>
+                <ContactCard/>
+            </>
+        );
+        */
     }
 };

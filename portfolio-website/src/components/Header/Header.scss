@@ -2,12 +2,54 @@
     position: fixed;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    background-color: white;
-    border-bottom: solid 1px #afafaf;
-    padding: 1.5rem 350px;
+    width: 100vw;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    background-color: rgba($color: #ffffff, $alpha: 0.0);
+    box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
+    z-index: 100;
+
+    &.shadow {
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    }
+
+    &__container {
+        margin: 0 auto;
+        padding: 1.5rem 0rem;
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     &__section {
-        margin: 0;
+        display: flex;
+        flex-direction: row-reverse;
+
+        &--logo {
+            margin: 0;
+        }
+
+        &--nav {
+            width: 30vw;
+            justify-content: space-between;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__link {
+        color: black;
+        opacity: 0.5;
+        transition: all 0.2s ease 0s;
+
+        &:hover {
+            opacity: 1.0;
+            transition: all 0.2s ease 0s;
+        }
     }
 }

@@ -1,11 +1,42 @@
 .hero {
     width: 100vw;
-    height: 60vh;
+    height: 80vh;
     background-color: black;
-    padding-top: 20px;
 
     &__container {
         width: 1000px;
         margin: 0 auto;
+        vertical-align: center;
+        padding: 200px 0px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__cta {
+        margin-top: 60px;
+        width: 100px;
+        height: 44px;
+    }
+
+
+    &__button {
+        width: 140px;
+        height: 44px;
+        border-radius: 12px;
+        background-color: white;
+        opacity: 0.5;
+        transition: all 0.2s ease 0s;
+        text-align: center;
+        align-items: center;
+        padding: 12px 0;
+
+        &:hover {
+            opacity: 1.0;
+            transition: all 0.2s ease 0s;
+        }
+    }
+    &__mission {
+        padding-top: 20px;
     }
 }

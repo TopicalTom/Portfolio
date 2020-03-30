@@ -39,6 +39,13 @@ const Rally = () => {
                             </li>
                         </ul>
                     </aside>
+                    <div className="project__code">
+                        <a 
+                            className="project__github" 
+                            href="https://github.com/TopicalTom/rally-capstone">
+                            View Code
+                        </a>
+                    </div>
                 </div>
                 <main className="project__content">
                     <article>

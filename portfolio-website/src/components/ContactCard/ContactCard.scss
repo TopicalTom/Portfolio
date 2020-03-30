@@ -1,7 +1,9 @@
-.project-card {
-    width: 480px;
-    height: 215px;
+.contact-card {
+    width: 1000px;
+    height: 300px;
     border-radius: 15px;
+    //background: linear-gradient(45deg,#2E63E9, #7FC0FF); //TouchBase
+    //background: linear-gradient(45deg,#2CB977, #3BC786); //SharedSpace
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -10,18 +12,7 @@
     margin-bottom: 5px;
     margin-top: 5px;
     transition: all 0.2s ease 0s;
-
-    &--rally {
-        background: linear-gradient(45deg,#FD2D55, #ED506F);
-    }
-
-    &--touch-base {
-        background: linear-gradient(45deg,#2E63E9, #7FC0FF);
-    }
-
-    &--shared-space {
-        background: linear-gradient(45deg,#2CB977, #3BC786)
-    }
+    background-color: black;
 
     &:hover {
         cursor: pointer;
@@ -35,18 +26,12 @@
         padding: 50px;
         align-items: center;
         margin: auto 0;
-        position: absolute;
     }
 
-    &__project {
+    &__cta {
         color: white;
         font-size: 2rem;
         line-height: 2rem;
-    }
-
-    &__type {
-        color: rgba($color: white, $alpha: 0.6);
-        padding-bottom: 20px;
     }
 
     &__link {
@@ -55,9 +40,9 @@
 
     &__preview {
         position: relative;
+        bottom: 40;
         width: 200px;
         height: 600px;
-        padding-left: 260px;
     }
 
     &__image {
@@ -65,4 +50,3 @@
         padding-top: 25px;
     }
 }
-
