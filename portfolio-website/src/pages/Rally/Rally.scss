@@ -1,33 +1,15 @@
-.project {
+.rally {
+    background: linear-gradient(45deg,#FD2D55, #ED506F);
     width: 100vw;
-    margin: 500px 350px;
-    //padding-top: 300px;
+    height: 60vh;
+    //transform: rotate(15deg);
+    overflow: hidden;
 
-    &__container {
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        width: 1000px;
-    }
-
-    &__nav {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        width: 230px;
-        margin-right: 70px;
-        position: sticky;
-        top: 120px;
-        height: calc(100vh - 120px);
-        overflow: scroll;
-    }
-
-    &__links {
-        padding-inline-start: 0px;
-    }
-
-    &__content {
-        margin: 0;
-        width: 730px;
+    &__layer {
+        position: absolute;
+        //top: 400;
+        //left: 500;
+        //width: 800px;
+        padding: 90px 350px;
     }
 }

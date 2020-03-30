@@ -6,26 +6,27 @@ import "./Header.scss";
 
 function Header() {
 
-    const [shouldHideHeader, setShouldHideHeader] = useState(false);
+    //const [shouldHideHeader, setShouldHideHeader] = useState(false);
     const [shouldShowShadow, setShouldShowShadow] = useState(false);
   
-    const MINIMUM_SCROLL = 80;
-    const TIMEOUT_DELAY = 400;
+    const MINIMUM_SCROLL = 759;
+    //const TIMEOUT_DELAY = 400;
   
     useDocumentScrollThrottled(callbackData => {
         const { previousScrollTop, currentScrollTop } = callbackData;
-        const isScrolledDown = previousScrollTop < currentScrollTop;
+        //const isScrolledDown = previousScrollTop < currentScrollTop;
         const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
   
-        setShouldShowShadow(currentScrollTop > 2);
-  
+        setShouldShowShadow(isMinimumScrolled);
+        /*
         setTimeout(() => {
             setShouldHideHeader(isScrolledDown && isMinimumScrolled);
         }, TIMEOUT_DELAY);
+        */
     });
   
     const shadowStyle = shouldShowShadow ? 'shadow' : '';
-    const hiddenStyle = shouldHideHeader ? 'hidden' : '';
+    //const hiddenStyle = shouldHideHeader ? 'hidden' : '';
   
 
     return (

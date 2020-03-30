@@ -1,11 +1,16 @@
 import React from 'react';
 import "../Project/Project.scss";
+import "./TouchBase.scss"
 
 import Figure from "../../components/Figure/Figure";
 
 
 const TouchBase = () => {
     return (
+        <>
+        <section className="touch-base">
+
+        </section>
         <main className="project">
             <div className="project__container">
                 <div className="project__nav">
@@ -63,6 +68,7 @@ const TouchBase = () => {
                 </main>
             </div>
         </main>
+        </>
     );
 };
 

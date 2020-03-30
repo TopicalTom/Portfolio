@@ -12,7 +12,6 @@ import SharedSpace from "../SharedSpace/SharedSpace";
 const Project = () => {
     return (
         <>
-            <Nav />
             <Switch>
                 <Route path="/project/rally" component={Rally} />
                 <Route path="/project/touch-base" component={TouchBase} />
