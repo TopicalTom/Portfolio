@@ -30,4 +30,44 @@
         margin: 0;
         width: 730px;
     }
+
+    &__block {
+        margin-bottom: 50px;
+    }
+
+    &__process {
+        font-weight: bold;
+    }
+
+    &__link {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1.0;
+        }
+    }
+
+    &__code {
+        width: 150px;
+        height: 44px;
+        background-color: black;
+        border-radius: 12px;
+        margin-top: 20px;
+        padding: 0 auto;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &__github {
+        color: white;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        border: 1px solid black;
+    }
 }

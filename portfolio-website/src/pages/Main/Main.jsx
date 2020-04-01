@@ -36,27 +36,29 @@ const Main = () => {
                     </Link>
                 </div>
             </section>
-            <ProjectPromo
-                project="Rally"
-                description="Helping friends spontaneously connect with their social circle over current interests."
-                preview={Rally}
-                link="rally"
-                orientation="left"
-            />
-            <ProjectPromo
-                project="TouchBase"
-                description="Helping working professionals transition into a new career by making networking more manageable."
-                preview={TouchBase}
-                link="touch-base"
-                orientation="right"
-            />
-            <ProjectPromo
-                project="Homediate"
-                description="Helping housemates mediate household tasks and utility costs within a shared space."
-                preview={SharedSpace}
-                link="shared-space"
-                orientation="left"
-            />
+            <section className="break">
+                <ProjectPromo
+                    project="Rally"
+                    description="Helping friends spontaneously connect with their social circle over current interests."
+                    preview={Rally}
+                    link="rally"
+                    orientation="left"
+                />
+                <ProjectPromo
+                    project="TouchBase"
+                    description="Helping working professionals transition into a new career by making networking more manageable."
+                    preview={TouchBase}
+                    link="touch-base"
+                    orientation="right"
+                />
+                <ProjectPromo
+                    project="Homediate"
+                    description="Helping housemates mediate household tasks and utility costs within a shared space."
+                    preview={SharedSpace}
+                    link="shared-space"
+                    orientation="left"
+                />
+            </section>
         </>
     );
 };

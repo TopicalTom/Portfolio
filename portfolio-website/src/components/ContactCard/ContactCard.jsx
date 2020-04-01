@@ -14,7 +14,8 @@ const ContactCard = () => {
                         Like what you see?
                     </h2>
                     <a 
-                        className="contact-card__link">
+                        className="contact-card__link"
+                        href="/contact">
                         Let's Chat
                     </a>
                 </div>
