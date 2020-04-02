@@ -1,16 +1,43 @@
 .rally {
     width: 100vw;
-    height: 60vh;
+    height: 55vh;
     overflow: hidden;
 
     &__background {
         position: absolute;
         z-index: 5;
-        background: linear-gradient(45deg,#FD2D55, #ED506F);
         width: 100vw;
         height: 70vh;
         //-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+
+        &-hangout {
+            background: linear-gradient(45deg,#FD2D55, #ED506F);
+        }
+
+        &-grabdrinks {
+            background: linear-gradient(45deg,#F4844A, #F58F47);
+        }
+
+        &-getfood {
+            background: linear-gradient(45deg,#FACC30, #F4B92D);
+        }
+
+        &-beactive {
+            background: linear-gradient(45deg,#31C488, #5ECB84);
+        }
+
+        &-explore {
+            background: linear-gradient(45deg,#4D7FFF, #589AF6);
+        }
+
+        &-goout {
+            background: linear-gradient(45deg,#8637A6, #D156E8);
+        }
+
+        &-beproductive {
+            background: linear-gradient(45deg,#EE5BA1, #FB778F);
+        }
     }
 
     &__container {
@@ -19,7 +46,7 @@
         width: 100%;
         margin: 0 auto;
         display: flex;
-        margin-top: 2vh;
+        margin-top: 3vh;
     }
 
     &__layer {
