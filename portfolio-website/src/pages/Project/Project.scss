@@ -37,6 +37,7 @@
 
     &__process {
         font-weight: bold;
+        padding-bottom: 10px;
     }
 
     &__link {
@@ -47,13 +48,19 @@
         }
     }
 
+    &__tester {
+        color: white;
+        position: absolute;
+        z-index: 300;
+    }
+
     &__code {
         width: 150px;
         height: 44px;
         background-color: black;
         border-radius: 12px;
         margin-top: 20px;
-        padding: 0 auto;
+        padding: 0 20px;
         align-items: center;
         display: flex;
         flex-direction: row;

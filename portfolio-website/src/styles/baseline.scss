@@ -24,8 +24,8 @@ h2 {
     //font-family: "AvenirNextDemi";
 
     @include tablet {
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: 2rem;
+        line-height: 3rem;
         //font-family: "AvenirNextBold";
     }
 }
@@ -34,6 +34,12 @@ h3 {
     font-size: 1rem;
     line-height: 1.375rem;
     margin: 0;
+
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        //font-family: "AvenirNextBold";
+    }
     //font-family: "AvenirNextDemi";
 }
 
@@ -44,7 +50,7 @@ p {
 
     @include tablet {
         font-size: 1.25rem;
-        line-height: 2rem;
+        line-height: 2.2rem;
     }
 }
 
@@ -79,7 +85,7 @@ a {
     font-weight: normal;
 
     @include tablet {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 2rem;
     }
 }

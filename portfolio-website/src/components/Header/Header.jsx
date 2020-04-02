@@ -33,7 +33,7 @@ function Header() {
         <header className={`header ${shadowStyle}`}>
             <div className="header__container">
                 <div className="header__section header__section--logo">
-                    <h2>TopicalTom</h2>
+                    <h3>TopicalTom</h3>
                 </div>
                 <nav className="header__section header__section--nav">
                     <ul className="header__links">

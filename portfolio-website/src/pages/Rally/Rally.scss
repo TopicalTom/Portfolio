@@ -1,40 +1,28 @@
 .rally {
-    //background: linear-gradient(45deg,#FD2D55, #ED506F);
-    //background-color: #F2F2F2;
     width: 100vw;
     height: 60vh;
-    //transform: rotate(15deg);
     overflow: hidden;
 
     &__background {
         position: absolute;
         z-index: 5;
-        //transform: rotate(12deg);
-        //background-color: #F2F2F2;
         background: linear-gradient(45deg,#FD2D55, #ED506F);
         width: 100vw;
         height: 70vh;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+        //-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
     }
 
     &__container {
         position: absolute;
-        //top: 400;
-        //left: 500;
         z-index: 98;
         width: 100%;
-        //padding: 0 auto;
         margin: 0 auto;
         display: flex;
         margin-top: 2vh;
     }
 
     &__layer {
-        //position: absolute;
-        //top: 400;
-        //left: 500;
-        //z-index: 98;
         width: 1000px;
         margin: 0 auto;
         padding: 0 auto;

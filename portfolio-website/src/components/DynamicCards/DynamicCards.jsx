@@ -9,6 +9,7 @@ import RallyPreview from "../../assets/images/RallyPreview.png";
 
 export default class DynamicCards extends Component {
 
+
     render(){
 
         return (
