@@ -12,25 +12,25 @@ import SharedSpace from "../../assets/gifs/HomediatePromo.gif";
 const Main = () => {
     return (
         <>
-            <section className="hero">
-                <div className="hero__container">
+            <section className="lander">
+                <div className="lander__container">
                     <div 
-                        className="hero__logo">
+                        className="lander__logo">
                         <h2></h2>
                     </div>
-                    <div className="hero__details">
-                        <h1 className="hero__about">
+                    <div className="lander__details">
+                        <h1 className="lander__about">
                             I'm Thomas Griffiths an aspiring Product Designer.
                         </h1>
-                        <p className="hero__mission">
+                        <p className="lander__mission">
                             Interested in created human-centered mobile experiences. Capable of taking on marketing, design and developer roles.
                         </p>
                     </div>
                     <Link 
                         to={"/contact"}
-                        className="hero__cta">
+                        className="lander__cta">
                         <div 
-                            className="hero__button">
+                            className="lander__button">
                             Get in Touch
                         </div>
                     </Link>
