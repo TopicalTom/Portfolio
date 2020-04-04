@@ -6,8 +6,17 @@
     padding: 1.5rem 350px;
     position: fixed;
     z-index: 100;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    transform: translateY(0);
+    transition: transform 0 ease;
+    background-color: rgba($color: #ffffff, $alpha: 0.0);
+    box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
     margin-top: 5rem;
+
+    &.shadow {
+        border-top: 1px solid #f7f7f7;
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    }
 
     &__action {
         display: flex;

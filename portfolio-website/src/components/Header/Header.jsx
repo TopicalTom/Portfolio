@@ -9,7 +9,7 @@ function Header() {
     //const [shouldHideHeader, setShouldHideHeader] = useState(false);
     const [shouldShowShadow, setShouldShowShadow] = useState(false);
   
-    const MINIMUM_SCROLL = 759;
+    const MINIMUM_SCROLL = 200;
     //const TIMEOUT_DELAY = 400;
   
     useDocumentScrollThrottled(callbackData => {
@@ -26,6 +26,8 @@ function Header() {
     });
   
     const shadowStyle = shouldShowShadow ? 'shadow' : '';
+    const titleStyle = shouldShowShadow ? 'visible' : '';
+    const fontStyle = shouldShowShadow ? 'black' : '';
     //const hiddenStyle = shouldHideHeader ? 'hidden' : '';
   
 
@@ -33,27 +35,30 @@ function Header() {
         <header className={`header ${shadowStyle}`}>
             <div className="header__container">
                 <div className="header__section header__section--logo">
-                    <h3>TopicalTom</h3>
+                    <h3
+                        className={`header__logo ${titleStyle}`}>
+                        TopicalTom
+                    </h3>
                 </div>
                 <nav className="header__section header__section--nav">
                     <ul className="header__links">
                         <li><a
-                            className="header__link"
+                            className={`header__link ${fontStyle}`}
                             href="/project">
                             Projects
                         </a></li>
                         <li><a
-                            className="header__link"
+                            className={`header__link ${fontStyle}`}
                             href="/about">
                             About
                         </a></li>
                         <li><a
-                            className="header__link"
+                            className={`header__link ${fontStyle}`}
                             href="/resume">
                             Resume
                         </a></li>
                         <li><a
-                            className="header__link"
+                            className={`header__link ${fontStyle}`}
                             href="/contact">
                             Contact
                         </a></li>

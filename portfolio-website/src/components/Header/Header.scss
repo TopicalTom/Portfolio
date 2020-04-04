@@ -4,7 +4,7 @@
     flex-direction: row;
     width: 100vw;
     transform: translateY(0);
-    transition: transform 0 ease;
+    transition: transform 0 ease-in-out;
     background-color: rgba($color: #ffffff, $alpha: 0.0);
     box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
     z-index: 100;
@@ -12,6 +12,7 @@
     &.shadow {
         background-color: rgba($color: #ffffff, $alpha: 1.0);
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+        transition: transform 0 ease-in-out;
     }
 
     &__container {
@@ -45,10 +46,23 @@
         justify-content: space-between;
     }
 
+    &__logo {
+        color: white;
+
+        &.visible {
+            color: #2E2E2E;
+        }
+    }
+
     &__link {
-        color: black;
+        color: white;
         opacity: 0.5;
         transition: all 0.2s ease 0s;
+
+        &.black {
+            color: #2E2E2E;
+            opacity: 0.5;
+        }
 
         &:hover {
             opacity: 1.0;

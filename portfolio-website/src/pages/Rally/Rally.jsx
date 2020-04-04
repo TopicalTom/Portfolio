@@ -16,12 +16,9 @@ class Rally extends Component {
     }
 
     componentDidMount() {
-
         scrollSpy.update();
-    
     }
     
-
     render() {
         return (
             <>
