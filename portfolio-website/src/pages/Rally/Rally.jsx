@@ -22,7 +22,7 @@ class Rally extends Component {
     render() {
         return (
             <>
-            <Hero />
+            <Hero/>
             <main className="project">
                 <div className="project__container">
                     <div className="project__nav">
@@ -41,6 +41,7 @@ class Rally extends Component {
                                         onSetActive={this.handleSetActive}
                                         onSetInactive={this.handleSetInactive}
                                         spy={true} 
+                                        offset={-240}
                                         duration={500}>
                                         Overview
                                     </Link>
@@ -49,7 +50,8 @@ class Rally extends Component {
                                     <Link 
                                         to="Problem Space"
                                         className="project__link" 
-                                        smooth={true} 
+                                        smooth={true}
+                                        offset={-240} 
                                         duration={500}>
                                         Problem Space
                                     </Link>
@@ -58,7 +60,8 @@ class Rally extends Component {
                                     <Link 
                                         to="Research" 
                                         className="project__link"
-                                        smooth={true} 
+                                        smooth={true}
+                                        offset={-240} 
                                         duration={500}>
                                         Research
                                     </Link>
@@ -67,7 +70,8 @@ class Rally extends Component {
                                     <Link 
                                         to="Insights" 
                                         className="project__link"
-                                        smooth={true} 
+                                        smooth={true}
+                                        offset={-240} 
                                         duration={500}>
                                         Insights
                                     </Link>
@@ -76,7 +80,8 @@ class Rally extends Component {
                                     <Link 
                                         to="Ideation" 
                                         className="project__link"
-                                        smooth={true} 
+                                        smooth={true}
+                                        offset={-240} 
                                         duration={500}>
                                         Ideation
                                     </Link>
@@ -85,7 +90,8 @@ class Rally extends Component {
                                     <Link 
                                         to="Design" 
                                         className="project__link"
-                                        smooth={true} 
+                                        smooth={true}
+                                        offset={-240} 
                                         duration={500}>
                                         Design
                                     </Link>
@@ -95,6 +101,7 @@ class Rally extends Component {
                                         to="Next Steps" 
                                         className="project__link"
                                         smooth={true} 
+                                        offset={-240}
                                         duration={500}>
                                         Next Steps
                                     </Link>

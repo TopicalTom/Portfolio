@@ -1,6 +1,7 @@
 import React from 'react';
 import "./ProjectPromo.scss";
 
+import Homediate from "../../assets/videos/HomediatePromo.mp4";
 import TouchBase from "../../assets/videos/TouchBasePromo.mp4";
 
 const ProjectPromo = (props) => {
@@ -11,9 +12,9 @@ const ProjectPromo = (props) => {
         return (
             <section className="promo">
                 <article className="promo__container promo__container--left">
-                    <img 
+                    <video 
                         className="promo__preview"
-                        src={preview}
+                        src={Homediate} 
                     />
                     <div className="promo__details">
                         <h2 

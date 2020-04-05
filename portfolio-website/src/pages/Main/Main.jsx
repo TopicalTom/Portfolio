@@ -37,6 +37,9 @@ const Main = () => {
                     </Link>
                 </div>
             </section>
+            <section className="value">
+            test
+            </section>
             <section className="break">
                 <ProjectPromo
                     project="Rally"
