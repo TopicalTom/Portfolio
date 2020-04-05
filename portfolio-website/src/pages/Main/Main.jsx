@@ -6,7 +6,8 @@ import {Link} from "react-router-dom";
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";
 
 import Rally from "../../assets/gifs/RallyPromo.gif";
-import TouchBase from "../../assets/gifs/TouchBasePromo.gif";
+import TouchBase from "../../assets/videos/TouchBasePromo.mp4";
+//import TouchBase from "../../assets/gifs/TouchBasePromo.gif";
 import SharedSpace from "../../assets/gifs/HomediatePromo.gif";
 
 const Main = () => {

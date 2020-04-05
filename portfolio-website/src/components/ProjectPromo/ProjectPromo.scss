@@ -22,6 +22,11 @@
         height: 730px;
     }
 
+    &__project {
+        margin-bottom: 20px;
+        font-size: 2.4rem;
+    }
+
     &__details {
         display: flex;
         flex-direction: column;
@@ -32,6 +37,27 @@
     &__link {
         width: 150px;
         height: 50px;
+        padding: auto;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    &__demo {
+        width: 150px;
+        height: 50px;
+        border-radius: 12px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 8px 0;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__button {
@@ -40,6 +66,10 @@
         background-color: #2E2E2E;
         border-radius: 12px;
         color: white;
+        text-align: center;
+        vertical-align: middle;
+        padding: 8px 0;
+
 
         &:hover {
             cursor: pointer;

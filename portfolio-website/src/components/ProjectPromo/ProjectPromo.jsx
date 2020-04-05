@@ -1,13 +1,13 @@
 import React from 'react';
 import "./ProjectPromo.scss";
 
-import {Link} from "react-router-dom";
+import TouchBase from "../../assets/videos/TouchBasePromo.mp4";
 
 const ProjectPromo = (props) => {
 
     const { project, description, preview, link, orientation } = props
 
-    if (orientation == "left") {
+    if (orientation === "left") {
         return (
             <section className="promo">
                 <article className="promo__container promo__container--left">
@@ -24,14 +24,20 @@ const ProjectPromo = (props) => {
                             className="promo__description">
                             {description}
                         </p>
-                        <Link 
-                            className="promo__link"
-                            to={`/project/${link}`}>
-                            <div 
-                                className="promo__button">
-                                Learn More
+                        <div className="promo__actions">
+                            <a 
+                                className="promo__link"
+                                href={`/project/${link}`}>
+                                <div 
+                                    className="promo__button">
+                                    Learn More
+                                </div>
+                            </a>
+                            <div
+                                className="promo__demo">
+                                Start Preview
                             </div>
-                        </Link>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -40,9 +46,9 @@ const ProjectPromo = (props) => {
         return (
             <section className="promo">
                 <article className="promo__container promo__container--right">
-                    <img 
+                    <video 
                         className="promo__preview"
-                        src={preview}
+                        src={TouchBase} 
                     />
                     <div className="promo__details">
                         <h2 
@@ -53,12 +59,20 @@ const ProjectPromo = (props) => {
                             className="promo__description">
                             {description}
                         </p>
-                        <Link to={`/project/${link}`}>
-                            <div 
-                                className="promo__button">
-                                Learn More
+                        <div className="promo__actions">
+                            <a 
+                                className="promo__link"
+                                href={`/project/${link}`}>
+                                <div 
+                                    className="promo__button">
+                                    Learn More
+                                </div>
+                            </a>
+                            <div
+                                className="promo__demo">
+                                Start Preview
                             </div>
-                        </Link>
+                        </div>
                     </div>
                 </article>
             </section>
