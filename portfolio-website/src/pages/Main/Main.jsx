@@ -29,7 +29,7 @@ const Main = () => {
                             className="lander__cta">
                             <div 
                                 className="lander__button">
-                                Get in Touch
+                                View Projects
                             </div>
                         </Link>
                     </div>

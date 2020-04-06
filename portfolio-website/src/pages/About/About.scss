@@ -16,6 +16,7 @@
 
         &--profile {
             width: 420px;
+            height: 420px;
         }
 
         &--bio {
@@ -35,5 +36,21 @@
         width: 420px;
         border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+        position: absolute;
+        z-index: 20;
+    }
+
+    &__backing {
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+        position: absolute;
+        z-index: 19;
+        border: 8px solid #2e2e2e; 
+        //background-color: #2e2e2e;
+        margin-top: 250px;
+        margin-left: 250px;
+        transform: 15deg;
     }
 }

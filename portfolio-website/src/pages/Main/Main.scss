@@ -23,21 +23,20 @@
 
     &__cta {
         margin-top: 60px;
-        width: 100px;
-        height: 44px;
+        width: 200px;
+        height: 50px;
     }
 
 
     &__button {
-        width: 150px;
-        height: 50px;
+        width: 200px;
+        height: 55px;
         background-color: #2E2E2E;
         border-radius: 12px;
         color: white;
         text-align: center;
         vertical-align: middle;
-        padding: 8px 0;
-
+        padding: 0.6rem 0;
 
         &:hover {
             cursor: pointer;

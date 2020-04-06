@@ -8,8 +8,10 @@ import Footer from "./components/Footer/Footer";
 // Unqiue Pages
 import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
+import Skills from "./pages/Skills/Skills";
 import About from "./pages/About/About";
 import Main from "./pages/Main/Main";
+import DynamicCards from "./components/DynamicCards/DynamicCards";
 
 import "./styles/baseline.scss";
 import './App.css';
@@ -28,6 +30,10 @@ function App() {
                     component={Contact} 
                 />
                 <Route 
+                    path="/skills" 
+                    component={Skills} 
+                />
+                <Route 
                     path="/about" 
                     component={About} 
                 />
@@ -36,6 +42,7 @@ function App() {
                     exact component={Main}
                 />
             </Switch>
+            <DynamicCards/>
             <Footer/>
         </BrowserRouter>
     );

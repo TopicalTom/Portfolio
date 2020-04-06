@@ -8,7 +8,7 @@ const ProjectCard = (props) => {
     const { project, type, preview, link } = props
 
     return (
-        <Link to={`/project/${link}`}>
+        <a href={`/project/${link}`}>
             <article className={`project-card project-card--${link}`}>
                 <div className="project-card__details">
                     <h2
@@ -31,7 +31,7 @@ const ProjectCard = (props) => {
                     />
                 </div>
             </article>
-        </Link>
+        </a>
     );
 };
 

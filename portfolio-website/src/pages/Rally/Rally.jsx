@@ -193,6 +193,7 @@ class Rally extends Component {
                         <article className="project__block">
                             <Redirect 
                                 text="Have any Questions?"
+                                link="/contact"
                                 cta="Let's Chat"
                             />
                         </article>

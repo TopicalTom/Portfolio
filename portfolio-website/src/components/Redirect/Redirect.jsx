@@ -3,7 +3,7 @@ import "./Redirect.scss";
 
 const Redirect = (props) => {
 
-    const { text, cta } = props
+    const { text, link, cta } = props
 
     return (
         <div className="redirect">
@@ -13,7 +13,7 @@ const Redirect = (props) => {
             </p>
             <a 
                 className="redirect__button"
-                href="/contact">
+                href={link}>
                 <p
                     className="redirect__cta">
                     {cta}

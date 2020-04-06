@@ -16,11 +16,14 @@ const About = () => {
                         className="about__profile"
                         src={Profile}
                     />
+                    <div className="about__backing">
+                        depth
+                    </div>
                 </div>
                 <section className="about__section about__section--bio">
                     <h2 
                         className="about__header">
-                        Biology Major gone digital
+                        A bit about me...
                     </h2>
                     <p
                         className="about__content">
@@ -32,32 +35,31 @@ const About = () => {
                     </p>
                     <p
                         className="about__content">
-                        Through shaping experiences with my Orientation Week, QMP, and CUCOH extracurriculars as well as assisting my friends with designs for their endeavours of starting a band, a photography business, or a children's book, I began to notice a trend. The projects I got excited about were the ones that allowed me to invest in an idea and build a strong foundation for helping people become more confident in their own "starts."
+                        Having reached this breakthrough in what drives me, I explored further education at BrainStation in UX Design, iOS Development, and Product Management to kickstart my journey into the field
                     </p>
+                    <ul>
+                        <li>
+                            UX Design
+                        </li>
+                        <li>
+                            UX Design
+                        </li>
+                        <li>
+                            UX Design
+                        </li>
+                        <li>
+                            UX Design
+                        </li>
+                    </ul>
                     <p
                         className="about__content">
-                        Having reached this breakthrough in what drives me, I explored further education at BrainStation in 
-                            <a 
-                                href="https://brainstation.io/course/toronto/user-experience-immersive">
-                                UX Design
-                            </a>, 
-                            <a 
-                                href="https://brainstation.io/course/toronto/user-experience-immersive">
-                                iOS Development
-                            </a>,
-                            <a 
-                                href="https://brainstation.io/course/toronto/user-experience-immersive">
-                                Product Management
-                            </a> and,
-                            <a 
-                                href="https://brainstation.io/course/toronto/user-experience-immersive">
-                                Web Development
-                            </a>
-                        to kickstart my journey into the field.
+                        Now equipped with a course-refined process to complement my self-taught skills and drive, the only missing piece is a new mission I can invest in! I am currently looking to secure a challenging entry-level position in an organization that needs a multifaceted individual to invest in their mission of driving impact for people.
                     </p>
                     <Redirect 
                         text="See what I can do"
-                        cta="View Projects"/>
+                        link="/skills"
+                        cta="View Skills"
+                    />
                 </section>
             </div>
         </main>

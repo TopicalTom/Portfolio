@@ -54,8 +54,8 @@ function Header() {
                         </a></li>
                         <li><a
                             className={`header__link ${fontStyle}`}
-                            href="/resume">
-                            Resume
+                            href="/skills">
+                            Skills
                         </a></li>
                         <li><a
                             className={`header__link ${fontStyle}`}
