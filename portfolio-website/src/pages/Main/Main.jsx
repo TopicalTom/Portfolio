@@ -22,7 +22,7 @@ const Main = () => {
                             I'm Thomas Griffiths an aspiring Product Designer.
                         </h1>
                         <p className="lander__mission">
-                            Interested in created human-centered mobile experiences. Capable of taking on marketing, design and developer roles.
+                            On a mission to bridge the gap between designer and developer. Interested in creating human-centered mobile experiences.
                         </p>
                         <Link 
                             to={"/contact"}

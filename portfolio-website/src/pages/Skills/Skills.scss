@@ -2,7 +2,6 @@
     margin: 0;
     width: 100vw;
     padding-top: 240px;
-    background-color: #F2F2F7;
 
     &__container {
         margin: 0 auto;
@@ -10,6 +9,8 @@
         flex-direction: column;
         width: 1000px;
         justify-content: space-between;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #F2F2F7;
     }
 
     &__form {
@@ -24,6 +25,7 @@
         width: 300px;
         height: 44px;
         border-radius: 4px;
+        border: 2px solid #F2F2F7;
     }
 }
 
