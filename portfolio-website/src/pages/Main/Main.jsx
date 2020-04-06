@@ -5,10 +5,8 @@ import {Link} from "react-router-dom";
 
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";
 
-import Rally from "../../assets/gifs/RallyPromo.gif";
 import TouchBase from "../../assets/videos/TouchBasePromo.mp4";
-//import TouchBase from "../../assets/gifs/TouchBasePromo.gif";
-import SharedSpace from "../../assets/gifs/HomediatePromo.gif";
+import Homediate from "../../assets/videos/HomediatePromo.mp4";
 
 const Main = () => {
     return (
@@ -26,15 +24,15 @@ const Main = () => {
                         <p className="lander__mission">
                             Interested in created human-centered mobile experiences. Capable of taking on marketing, design and developer roles.
                         </p>
+                        <Link 
+                            to={"/contact"}
+                            className="lander__cta">
+                            <div 
+                                className="lander__button">
+                                Get in Touch
+                            </div>
+                        </Link>
                     </div>
-                    <Link 
-                        to={"/contact"}
-                        className="lander__cta">
-                        <div 
-                            className="lander__button">
-                            Get in Touch
-                        </div>
-                    </Link>
                 </div>
             </section>
             <section className="value">
@@ -44,9 +42,10 @@ const Main = () => {
                 <ProjectPromo
                     project="Rally"
                     description="Helping friends spontaneously connect with their social circle over current interests."
-                    preview={Rally}
+                    preview={TouchBase}
                     link="rally"
                     orientation="left"
+                    code=""
                 />
                 <ProjectPromo
                     project="TouchBase"
@@ -54,13 +53,15 @@ const Main = () => {
                     preview={TouchBase}
                     link="touch-base"
                     orientation="right"
+                    code="none"
                 />
                 <ProjectPromo
                     project="Homediate"
                     description="Helping housemates mediate household tasks and utility costs within a shared space."
-                    preview={SharedSpace}
+                    preview={Homediate}
                     link="shared-space"
                     orientation="left"
+                    code="none"
                 />
             </section>
         </>

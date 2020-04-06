@@ -6,6 +6,7 @@ import ContactCard from "../ContactCard/ContactCard";
 import TouchBasePreview from "../../assets/images/TouchBasePreview.png";
 import SharedSpacePreview from "../../assets/images/SharedSpacePreview.png";
 import RallyPreview from "../../assets/images/RallyPreview.png";
+import DegreeCard from '../DegreeCard/DegreeCard';
 
 export default class DynamicCards extends Component {
 

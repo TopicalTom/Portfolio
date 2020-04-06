@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {Link} from "react-router-dom";
 import "./Nav.scss";
 
 import chevron from "../../assets/icons/chevron.svg";
@@ -33,7 +32,7 @@ function Nav() {
     return (
         <nav className={`nav ${shadowStyle}`}>
             <div className="nav__container">
-                <Link to="/">
+                <a href="/">
                     <div className="nav__action">
                         <img 
                             className="nav__chevron"
@@ -44,7 +43,7 @@ function Nav() {
                             Back
                         </p>
                     </div>
-                </Link>
+                </a>
                 <div className="nav__switch">
 
                 </div>

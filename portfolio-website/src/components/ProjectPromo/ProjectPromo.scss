@@ -34,6 +34,10 @@
         margin: auto 0;
     }
 
+    &__description {
+        color: #afafaf;
+    }
+
     &__link {
         width: 150px;
         height: 50px;
@@ -45,9 +49,10 @@
         flex-direction: row;
         margin-top: 40px;
         width: 100%;
+        align-items: baseline;
     }
 
-    &__demo {
+    &__code {
         width: 150px;
         height: 50px;
         border-radius: 12px;
