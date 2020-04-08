@@ -102,7 +102,7 @@ class Header extends Component {
                             Rally
                         </a>
                         <a 
-                            className="dropdown__project"
+                            className="dropdown__project dropdown__project--locked"
                             href="/project/touch-base">
                             <img 
                                 className="dropdown__icon"
@@ -111,7 +111,7 @@ class Header extends Component {
                             TouchBase
                         </a>
                         <a 
-                            className="dropdown__project"
+                            className="dropdown__project dropdown__project--locked"
                             href="/project/shared-space">
                             <img 
                                 className="dropdown__icon"

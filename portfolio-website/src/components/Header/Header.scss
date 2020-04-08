@@ -89,8 +89,8 @@
     position: fixed;
     z-index: 105;
     width: 100vw;
-    height: 12vh;
-    background-color: #F2F2F7;
+    height: 108px;
+    background-color: #F4F4F4;
     margin-top: 82px;
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
@@ -115,6 +115,10 @@
         text-align: center;
         vertical-align: middle;
         padding: 18px 0;
+
+        &--locked {
+            opacity: 0.5;
+        }
     }
 
     &__icon {
