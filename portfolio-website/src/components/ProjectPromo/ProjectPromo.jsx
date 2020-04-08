@@ -14,6 +14,8 @@ const ProjectPromo = (props) => {
                 <video 
                     className="promo__preview"
                     src={preview} 
+                    autoPlay
+                    loop
                 />
                 <div className="promo__details">
                     <h2 

@@ -22,7 +22,6 @@ export default class DynamicCards extends Component {
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
                         <PersonalCard />
-                        <PersonalCard />
                     </div>
                 </div>
             )

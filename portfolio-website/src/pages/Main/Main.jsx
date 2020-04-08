@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";
 
+import Rally from "../../assets/videos/RallyPromo.mp4";
 import TouchBase from "../../assets/videos/TouchBasePromo.mp4";
 import Homediate from "../../assets/videos/HomediatePromo.mp4";
 
@@ -13,10 +14,6 @@ const Main = () => {
         <>
             <section className="lander">
                 <div className="lander__container">
-                    <div 
-                        className="lander__logo">
-                        <h2></h2>
-                    </div>
                     <div className="lander__details">
                         <h1 className="lander__about">
                             I'm Thomas Griffiths an aspiring Product Designer.
@@ -42,10 +39,12 @@ const Main = () => {
                 <ProjectPromo
                     project="Rally"
                     description="Helping friends spontaneously connect with their social circle over current interests."
-                    preview={TouchBase}
+                    preview={Rally}
                     link="rally"
                     orientation="left"
                     code=""
+                    autoPlay
+                    loop
                 />
                 <ProjectPromo
                     project="TouchBase"
@@ -54,6 +53,8 @@ const Main = () => {
                     link="touch-base"
                     orientation="right"
                     code="none"
+                    autoPlay
+                    loop
                 />
                 <ProjectPromo
                     project="Homediate"
@@ -62,6 +63,8 @@ const Main = () => {
                     link="shared-space"
                     orientation="left"
                     code="none"
+                    autoPlay
+                    loop
                 />
             </section>
         </>

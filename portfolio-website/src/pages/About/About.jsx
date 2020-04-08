@@ -16,9 +16,6 @@ const About = () => {
                         className="about__profile"
                         src={Profile}
                     />
-                    <div className="about__backing">
-                        depth
-                    </div>
                 </div>
                 <section className="about__section about__section--bio">
                     <h2 
