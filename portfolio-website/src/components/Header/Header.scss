@@ -5,9 +5,9 @@
     width: 100vw;
     transform: translateY(0);
     transition: transform 0 ease-in-out;
-    background-color: rgba($color: #ffffff, $alpha: 0.0);
+    background-color: rgba($color: #ffffff, $alpha: 1.0);
     box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
-    z-index: 100;
+    z-index: 105;
 
     &.shadow {
         background-color: rgba($color: #ffffff, $alpha: 1.0);
@@ -54,6 +54,19 @@
         }
     }
 
+    &__dropdown {
+        color: #2E2E2E;
+        //color: white;
+        opacity: 0.5;
+        transition: all 0.2s ease 0s;
+
+        &:hover {
+            opacity: 1.0;
+            transition: all 0.2s ease 0s;
+            cursor: default;
+        }
+    }
+
     &__link {
         color: #2E2E2E;
         //color: white;
@@ -69,5 +82,43 @@
             opacity: 1.0;
             transition: all 0.2s ease 0s;
         }
+    }
+}
+
+.dropdown {
+    position: fixed;
+    z-index: 105;
+    width: 100vw;
+    height: 12vh;
+    background-color: #F2F2F7;
+    margin-top: 82px;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    transition: all 0.2s ease 0s;
+
+    &__container {
+        width: 600px;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        transition: all 0.2s ease 0s;
+    }
+
+    &__project {
+        width: 30%;
+        transition: all 0.2s ease 0s;
+        margin: auto 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        vertical-align: middle;
+        padding: 18px 0;
+    }
+
+    &__icon {
+        width: 35px;
+        margin: 0 auto;
     }
 }

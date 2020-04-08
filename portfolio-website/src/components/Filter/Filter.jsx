@@ -49,8 +49,8 @@ export default class Filter extends Component {
                     <label className="filter__checkbox">
                             <input 
                                 className="filter__label"
-                                type="checkbox" 
-                                name="Design"
+                                type="radio" 
+                                name="filter"
                                 value="Design"
                             />
                             All
@@ -58,8 +58,8 @@ export default class Filter extends Component {
                         <label className="filter__checkbox">
                             <input 
                                 className="filter__label"
-                                type="checkbox" 
-                                name="Design"
+                                type="radio" 
+                                name="filter"
                                 value="Design"
                             />
                             Current
@@ -67,8 +67,8 @@ export default class Filter extends Component {
                         <label className="filter__checkbox">
                             <input 
                                 className="filter__label"
-                                type="checkbox" 
-                                name="Design"
+                                type="radio" 
+                                name="filter"
                                 value="Design"
                             />
                             Upcoming
