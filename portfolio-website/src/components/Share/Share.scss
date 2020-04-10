@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .share {
     fill: #007AFF;
     height: 25px;
@@ -8,7 +10,7 @@
 }
 
 .Modal {
-    position: absolute;
+    position: fixed;
     overflow-y:auto;
     background-color: white;
     top:50%;
@@ -18,19 +20,85 @@
     z-index: 1000;
     border-radius:10px;
     transform:translate(-50%,-50%);
-    width: 600px;
-    height: 600px;
+    width: 550px;
+    height: 700px;
     padding: 80px 60px;
+    text-align: center;
+    outline: none;
+}
+
+.modal {
+    margin: 0;
+
+    &__cancel {
+        width: 20px;
+        position: fixed;
+        top: 0;
+        margin: 20px 20px 0px 0px;
+        right: 0;
+        opacity: 0.5;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1.0;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__field {
+        border-radius: 2px;
+        border: 1px solid #e1e1e1;
+        height: 40px;
+        width: 100%;
+    }
+
+    &__label {
+        @extend h4;
+        text-align: left;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    &__action {
+        display: flex;
+        flex-direction: row;
+        border-radius: 2px;
+        //border: 1px solid #007AFF;
+        height: 40px;
+        //background-color: rgba(0, 123, 255, 0.1);
+        padding: 0px 8px;
+        width: 120px;
+        justify-content: flex-end;
+    }
+
+    &__copy {
+        color: #007AFF;
+        padding-right: 5px;
+    }
+
+    &__icon { 
+        width: 20px;
+    }
 }
 
 .Overlay {
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     right:0;
     bottom:0;
     z-index: 600;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .7);
     display: flex;
     width: 100vw;
     height: 100vh;

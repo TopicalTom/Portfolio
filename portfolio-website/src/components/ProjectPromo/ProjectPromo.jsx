@@ -1,22 +1,54 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./ProjectPromo.scss";
 
-import Homediate from "../../assets/videos/HomediatePromo.mp4";
-import TouchBase from "../../assets/videos/TouchBasePromo.mp4";
+import pause from "../../assets/icons/pause.svg";
+import play from "../../assets/icons/play.svg";
 
 const ProjectPromo = (props) => {
 
     const { project, description, preview, link, orientation, code } = props
 
+    const [ isPlaying, setisPlaying ] = useState(true);
+
+    function playVideo() {
+
+        let player = document.getElementById(`${project}`);
+
+        player.play();
+
+        setisPlaying(true);
+    }
+   
+    function pauseVideo(){
+        let player = document.getElementById(`${project}`);
+
+        player.pause();
+
+        setisPlaying(false);
+    }
+
+    const icon = isPlaying ? pause : play;
+    const toggle = isPlaying ? pauseVideo : playVideo;
+
     return (
         <section className="promo">
             <article className={`promo__container promo__container--${orientation}`}>
-                <video 
+                <video
+                    id={`${project}`}
                     className="promo__preview"
                     src={preview} 
                     autoPlay
                     loop
                 />
+                <button
+                    className="promo__toggle"
+                    onClick={toggle}
+                >
+                    <img
+                        className="promo__player"
+                        src={icon}
+                    />
+                </button>
                 <div className="promo__details">
                     <h2 
                         className="promo__project">
