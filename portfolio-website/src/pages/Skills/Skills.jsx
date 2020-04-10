@@ -1,7 +1,14 @@
 import React, {Component} from 'react';
 import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import "./Skills.scss";
+
+import DegreeCard from "../../components/DegreeCard/DegreeCard";
+import UX from "../../assets/images/UXCertificate.png";
+import PM from "../../assets/images/ProductManagementCertificate.png";
+import iOS from "../../assets/images/iOSDevCertificate.png";
+import chevron from "../../assets/icons/chevron.svg";
 
 import Figure from "../../components/Figure/Figure";
 import Nav from "../../components/Nav/Nav";
@@ -86,13 +93,30 @@ class Skills extends Component {
                                 <br></br>
                                 <p>My goal is to keep on learning new skills to gain a better understading of how each discipline comes together to create digital products. Due to this I'll be updating this space with my current process. However, if you would like to view a more traditional resume, follow the link below:</p>
                                 <br></br>
-                                <div className="skills__action">
-                                    <a 
-                                        className="skills__button"
-                                        href="">
-                                        Resume
-                                    </a>
-                                </div>
+                                <CarouselProvider
+                                    naturalSlideWidth={730}
+                                    //naturalSlideHeight={280}
+                                    totalSlides={2}
+                                >
+                                    <div className="skills__buttons">
+                                        <ButtonNext className="skills__btn"><img className="skills__icon--flip"src={chevron}/></ButtonNext>
+                                        <ButtonBack className="skills__btn"><img src={chevron}/></ButtonBack>
+                                    </div>
+                                    <Slider className="skills__slider">
+                                        <Slide className="skills__slide" index={0}>
+                                            <img
+                                                className="skills__certificate"
+                                                src={iOS}
+                                            />
+                                            <img
+                                                className="skills__certificate"
+                                                src={PM}
+                                            />
+                                        </Slide>
+                                    </Slider>
+                                </CarouselProvider>
+                                <br></br>
+                                <br></br>
                                 <br></br>
                                 <br></br>
                         </Element>

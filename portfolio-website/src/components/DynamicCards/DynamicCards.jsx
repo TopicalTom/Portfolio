@@ -14,8 +14,6 @@ import UX from "../../assets/images/UXCertificate.png";
 import PM from "../../assets/images/ProductManagementCertificate.png";
 import iOS from "../../assets/images/iOSDevCertificate.png";
 
-
-
 export default class DynamicCards extends Component {
 
 
@@ -91,23 +89,8 @@ export default class DynamicCards extends Component {
         } else if (window.location.href === "http://localhost:3000/skills") {
             return (
                 <div className="dynamic">
-                    <div className="dynamic__container dynamic__container--row">
-                        <DegreeCard 
-                            degree={UX}
-                            course={"https://brainstation.io/course-package/user-experience-immersive/toronto"}
-                        />
-                        <DegreeCard 
-                            degree={UX}
-                            course={"https://brainstation.io/course-package/web-development-immersive/toronto"}
-                        />
-                        <DegreeCard 
-                            degree={iOS}
-                            course={"https://brainstation.io/course-package/intro-to-ios-development/toronto"}
-                        />
-                        <DegreeCard 
-                            degree={PM}
-                            course={"https://brainstation.io/course-package/product-management/toronto"}
-                        />
+                    <div className="dynamic__container dynamic__container--column">
+                        <PersonalCard />
                     </div>
                 </div>
             )

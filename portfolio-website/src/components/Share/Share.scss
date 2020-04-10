@@ -66,7 +66,6 @@
         @extend h4;
         text-align: left;
         margin-bottom: 5px;
-        text-transform: uppercase;
     }
 
     &__action {
@@ -79,6 +78,7 @@
         padding: 0px 8px;
         width: 120px;
         justify-content: flex-end;
+        position: absolute;
     }
 
     &__copy {

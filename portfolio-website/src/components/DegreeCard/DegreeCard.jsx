@@ -1,8 +1,6 @@
 import React from 'react';
 import "./DegreeCard.scss";
 
-import {Link} from "react-router-dom";
-
 const DegreeCard = (props) => {
 
     const { degree, course } = props

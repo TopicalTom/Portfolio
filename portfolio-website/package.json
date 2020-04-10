@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "netlify-cli": "^2.40.0",
     "node-sass": "^4.13.1",
+    "pure-react-carousel": "^1.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-modal": "^3.11.2",

@@ -61,4 +61,60 @@
         padding-inline-start: 0px;
         padding-bottom: 20px;
     }
+
+    &__slider {
+        display: flex;
+        flex-direction: row;
+        width: 730px;
+        //justify-content: space-between;
+        //background-color: red;
+        overflow: hidden;
+        //height: 280px;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    &__slide {
+        width: 730px;
+        height: 262px;
+        display: flex;
+        flex-direction: row;
+        //background-color: green;
+        //margin: auto;
+        justify-content: space-between;
+    }
+
+    &__certificate {
+        background-position: center;
+        width: 350px;
+        height: 262px;
+        border-radius: 4px;
+        border: 1px solid #E1E1E1;
+        overflow: hidden;
+        color: white;
+
+        &:nth-of-type(1) {
+            margin-right: 15px;
+        }
+    }
+
+    &__btn {
+        background-color: white;
+        outline: none;
+        border: none;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 730px;
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+
+        &--flip {
+            transform: scaleX(-1);
+        }
+    }
 }

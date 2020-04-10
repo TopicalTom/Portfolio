@@ -60,10 +60,6 @@ function Share() {
                                 value={window.location.href}
                             />
                             <div className="modal__action">
-                                <p 
-                                    className="modal__copy">
-                                    Copy
-                                </p>
                                 <img 
                                     className="modal__icon"
                                     src={copy}
@@ -84,10 +80,6 @@ function Share() {
                                 value={"topicaltom.com/"}
                             />
                             <div className="modal__action">
-                                <p 
-                                    className="modal__copy">
-                                    Copy
-                                </p>
                                 <img 
                                     className="modal__icon"
                                     src={copy}
