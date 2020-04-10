@@ -1,7 +1,6 @@
 .skills {
     margin: 0;
     width: 100vw;
-    padding-top: 40px;
 
     &__container {
         margin: 0 auto;
@@ -9,7 +8,11 @@
         flex-direction: row;
         width: 1000px;
         justify-content: space-between;
-        padding-top: 240px;
+        padding-top: 280px;
+    }
+
+    &__header {
+        font-weight: bold;
     }
 
     &__content {
@@ -17,6 +20,11 @@
 
         &--filter {
             width: 230px;
+            margin: 0;
+            position: sticky;
+            top: 240px;
+            height: calc(100vh - 280px);
+            overflow: scroll;
         }
 
         &--skills {
@@ -35,17 +43,22 @@
     }
 
     &__button {
-        width: 200px;
-        height: 55px;
+        width: 150px;
+        height: 50px;
         background-color: #2E2E2E;
         border-radius: 12px;
         color: white;
         text-align: center;
         vertical-align: middle;
-        padding: 0.6rem 0;
+        padding: 8px 0;
 
         &:hover {
             cursor: pointer;
         }
+    }
+
+    &__links {
+        padding-inline-start: 0px;
+        padding-bottom: 20px;
     }
 }

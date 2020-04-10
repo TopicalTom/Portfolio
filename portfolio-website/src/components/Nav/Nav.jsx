@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+
 import "./Nav.scss";
 
 import chevron from "../../assets/icons/chevron.svg";
 
+import Share from "../../components/Share/Share";
+
 import useDocumentScrollThrottled from '../../functions/HeaderTransition/HeaderTransition';
+
 
 function Nav() {
 
@@ -44,9 +48,7 @@ function Nav() {
                         </p>
                     </div>
                 </a>
-                <div className="nav__switch">
-
-                </div>
+                <Share/>
             </div>
         </nav>
     );

@@ -34,20 +34,6 @@ const About = () => {
                         className="about__content">
                         Having reached this breakthrough in what drives me, I explored further education at BrainStation in UX Design, iOS Development, and Product Management to kickstart my journey into the field
                     </p>
-                    <ul>
-                        <li>
-                            UX Design
-                        </li>
-                        <li>
-                            UX Design
-                        </li>
-                        <li>
-                            UX Design
-                        </li>
-                        <li>
-                            UX Design
-                        </li>
-                    </ul>
                     <p
                         className="about__content">
                         Now equipped with a course-refined process to complement my self-taught skills and drive, the only missing piece is a new mission I can invest in! I am currently looking to secure a challenging entry-level position in an organization that needs a multifaceted individual to invest in their mission of driving impact for people.

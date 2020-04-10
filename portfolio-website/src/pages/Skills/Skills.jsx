@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import "./Skills.scss";
 
 import Figure from "../../components/Figure/Figure";
@@ -18,11 +20,66 @@ class Skills extends Component {
             <Nav/>
             <main className="skills">
                 <div className="skills__container">
-                    <section className="skills__content skills__content--filter">
+                    <aside className="skills__content skills__content--filter">
+                        <p 
+                            className="skills__header">
+                            Navigate
+                        </p>
+                        <ul className="skills__links">
+                            <li>
+                                <Link
+                                    to="Overview"
+                                    className="project__link"
+                                    activeClass="active" 
+                                    smooth={true}
+                                    onSetActive={this.handleSetActive}
+                                    onSetInactive={this.handleSetInactive}
+                                    spy={true} 
+                                    offset={-240}
+                                    duration={500}>
+                                    Overview
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="Design"
+                                    className="project__link"
+                                    activeClass="active" 
+                                    smooth={true}
+                                    onSetActive={this.handleSetActive}
+                                    onSetInactive={this.handleSetInactive}
+                                    spy={true} 
+                                    offset={-240}
+                                    duration={500}>
+                                    Design
+                                </Link>
+                            </li>
+                            <li>
+                                <Link 
+                                    to="Development"
+                                    className="project__link" 
+                                    smooth={true}
+                                    offset={-240} 
+                                    duration={500}>
+                                    Development
+                                </Link>
+                            </li>
+                            <li>
+                                <Link 
+                                    to="Product" 
+                                    className="project__link"
+                                    smooth={true}
+                                    offset={-240} 
+                                    duration={500}>
+                                    Product
+                                </Link>
+                            </li>
+                        </ul>
                         <Filter />
-                    </section>
+                    </aside>
                     <section className="skills__content skills__content--skills">
-                        <article 
+                        <Element
+                            name="Overview"
                             className="skills__block">
                                 <h1>My Skillset</h1>
                                 <br></br>
@@ -33,13 +90,14 @@ class Skills extends Component {
                                     <a 
                                         className="skills__button"
                                         href="">
-                                        Open Resume
+                                        Resume
                                     </a>
                                 </div>
                                 <br></br>
                                 <br></br>
-                        </article>
-                        <article
+                        </Element>
+                        <Element
+                            name="Design"
                             className="skills__block">
                                 <h2>Design</h2>
                                 <br></br>
@@ -54,8 +112,9 @@ class Skills extends Component {
                                 <h3>Prototyping</h3>
                                 <br></br>
                                 <Figure />
-                        </article>
-                        <article
+                        </Element>
+                        <Element
+                            name="Development"
                             className="skills__block">
                                 <h2>Development</h2>
                                 <br></br>
@@ -71,8 +130,9 @@ class Skills extends Component {
                                 <br></br>
                                 <Figure />
                                 <br></br>
-                        </article>
-                        <article 
+                        </Element>
+                        <Element 
+                            name="Product"
                             className="skills__block">
                                 <h2>Product</h2>
                                 <br></br>
@@ -84,10 +144,10 @@ class Skills extends Component {
                                 <br></br>
                                 <Figure />
                                 <br></br>
-                        </article>
+                        </Element>
                         <article className="skills__block">
                             <Redirect 
-                                text="Have any Questions?"
+                                text="Notice any skill gaps?"
                                 link="/contact"
                                 cta="Let's Chat"
                             />

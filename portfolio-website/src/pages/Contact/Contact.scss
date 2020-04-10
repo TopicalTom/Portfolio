@@ -1,7 +1,6 @@
 .contact {
     margin: 0;
     width: 100vw;
-    padding-top: 240px;
 
     &__container {
         margin: 0 auto;
@@ -9,17 +8,18 @@
         flex-direction: row;
         width: 1000px;
         justify-content: space-between;
+        padding-top: 280px;
     }
 
     &__section {
         margin: 0;
 
-        &--details {
-            width: 300px;
+        &--links {
+            width: 230px;
         }
 
         &--form {
-            width: 600px;
+            width: 730px;
             //background-color: red;
         }
     }
@@ -28,7 +28,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: green;
     }
 
     &__input {

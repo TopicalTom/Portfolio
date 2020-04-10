@@ -1,7 +1,6 @@
 .about {
     margin: 0;
     width: 100vw;
-    padding-top: 240px;
 
     &__container {
         margin: 0 auto;
@@ -9,6 +8,7 @@
         flex-direction: row;
         width: 1000px;
         justify-content: space-between;
+        padding-top: 280px;
     }
 
     &__section {

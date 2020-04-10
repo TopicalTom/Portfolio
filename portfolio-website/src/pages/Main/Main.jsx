@@ -1,7 +1,7 @@
 import React from 'react';
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import "./Main.scss";
-
-import {Link} from "react-router-dom";
 
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";
 
@@ -22,8 +22,11 @@ const Main = () => {
                             On a mission to bridge the gap between designer and developer. Interested in creating human-centered mobile experiences.
                         </p>
                         <Link 
-                            to={"/contact"}
-                            className="lander__cta">
+                            to="Projects"
+                            className="lander__cta"
+                            smooth={true}
+                            duration={500}
+                            offset={-220}>
                             <div 
                                 className="lander__button">
                                 View Projects
@@ -32,10 +35,9 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-            <section className="value">
-            test
-            </section>
-            <section className="break">
+            <Element 
+                className="break"
+                name="Projects">
                 <ProjectPromo
                     project="Rally"
                     description="Helping friends spontaneously connect with their social circle over current interests."
@@ -66,7 +68,7 @@ const Main = () => {
                     autoPlay
                     loop
                 />
-            </section>
+            </Element>
         </>
     );
 };

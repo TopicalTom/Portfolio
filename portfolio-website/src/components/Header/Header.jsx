@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import ReactModal from 'react-modal';
 
 import "./Header.scss";
 
 import Rally from "../../assets/icons/Rally.svg";
 import TouchBase from "../../assets/icons/TouchBase.svg";
 import Homediate from "../../assets/icons/Homediate.svg";
+
+ReactModal.setAppElement('*');
 
 class Header extends Component {
     constructor(props){
@@ -54,10 +57,12 @@ class Header extends Component {
         <header className={`header`}>
             <div className="header__container">
                 <div className="header__section header__section--logo">
-                    <h3
-                        className={`header__logo`}>
-                        TopicalTom
-                    </h3>
+                    <a href="/">
+                        <h3
+                            className={`header__logo`}>
+                            TopicalTom
+                        </h3>
+                    </a>
                 </div>
                 <nav className="header__section header__section--nav">
                     <ul className="header__links">

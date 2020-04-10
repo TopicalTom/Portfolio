@@ -1,0 +1,37 @@
+.share {
+    fill: #007AFF;
+    height: 25px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.Modal {
+    position: absolute;
+    overflow-y:auto;
+    background-color: white;
+    top:50%;
+    left:50%;
+    right:auto;
+    bottom:auto;
+    z-index: 1000;
+    border-radius:10px;
+    transform:translate(-50%,-50%);
+    width: 600px;
+    height: 600px;
+    padding: 80px 60px;
+}
+
+.Overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 600;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
