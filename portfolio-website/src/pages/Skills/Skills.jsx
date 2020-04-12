@@ -35,6 +35,8 @@ import sass from "../../assets/tools/Sass.svg";
 import node from "../../assets/tools/Node.svg";
 import oAuth from "../../assets/tools/oAuth.svg";
 import mySQL from "../../assets/tools/mySQL.svg";
+import hotjar from "../../assets/tools/Hotjar.svg";
+import mailchimp from "../../assets/tools/Mailchimp.svg";
 
 
 import Nav from "../../components/Nav/Nav";
@@ -74,6 +76,16 @@ class Skills extends Component {
                                 </Link>
                             </li>
                             <li>
+                                <Link 
+                                    to="Product" 
+                                    className="project__link"
+                                    smooth={true}
+                                    offset={-240} 
+                                    duration={500}>
+                                    Product
+                                </Link>
+                            </li>
+                            <li>
                                 <Link
                                     to="Design"
                                     className="project__link"
@@ -95,16 +107,6 @@ class Skills extends Component {
                                     offset={-240} 
                                     duration={500}>
                                     Development
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    to="Product" 
-                                    className="project__link"
-                                    smooth={true}
-                                    offset={-240} 
-                                    duration={500}>
-                                    Product
                                 </Link>
                             </li>
                         </ul>
@@ -157,6 +159,68 @@ class Skills extends Component {
                                 <br></br>
                                 <br></br>
                         </Element>
+                        <Element 
+                            name="Product"
+                            className="skills__block">
+                                <h2>Product</h2>
+                                <br></br>
+                                <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
+                                <br></br>
+                                <br></br>
+                                <h4>Research</h4>
+                                <SkillCard 
+                                    icon={otterAi}
+                                    tool="Otter.ai"
+                                    type="Ai-powered speech to text transcription"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    icon={optimalsort}
+                                    tool="Optimal Sort"
+                                    type="Card-based information architecture categorization"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    icon={analytics}
+                                    tool="Google Analytics"
+                                    type="Web analytics service for measuring website traffic and ROI"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    icon={hotjar}
+                                    tool="HotJar"
+                                    type="Card-based information architecture categorization"
+                                    status="Upcoming"
+                                />
+                                <h4>Workflow</h4>
+                                <SkillCard 
+                                    icon={slack}
+                                    tool="Slack"
+                                    type="Instant messaging platform for team collaboration"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    icon={jira}
+                                    tool="Jira"
+                                    type="Ticket-based issue tracking for agile project management"
+                                    status="Learned"
+                                />
+                                <h4>Marketing</h4>
+                                <SkillCard 
+                                    icon={mailchimp}
+                                    tool="Mailchimp"
+                                    type="Ticket-based issue tracking for agile project management"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    icon={searchconsole}
+                                    tool="Google Search Console"
+                                    type="Web service for website search engine optimization (SEO)"
+                                    status="Learned"
+                                />
+                                <br></br>
+                                <br></br>
+                        </Element>
                         <Element
                             name="Design"
                             className="skills__block">
@@ -165,58 +229,49 @@ class Skills extends Component {
                                 <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
                                 <br></br>
                                 <br></br>
-                                <SkillCard 
-                                    icon={otterAi}
-                                    tool="Otter.ai"
-                                    type="Records Interviews and complies to text"
-                                    status="Learned"
-                                />
-                                <SkillCard 
-                                    icon={optimalsort}
-                                    tool="Optimal Sort"
-                                    type="Allows sorting of data for Information Architecture"
-                                    status="Learned"
-                                />
+                                <h4>Wireframing</h4>
                                 <SkillCard 
                                     icon={sketch}
                                     tool="Sketch"
-                                    type="Design Software for Hi-fi wireframing"
+                                    type="Vector graphics editor for web and mobile wireframes"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={photoshop}
                                     tool="Photoshop"
-                                    type="Design Software for image manipulation"
+                                    type="Raster graphics editor for photo editing and enhancement"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={illustrator}
                                     tool="Illustrator"
-                                    type="Design Software for image manipulation"
+                                    type="Vector graphics editor for print and digital media"
                                     status="Upcoming"
                                 />
+                                <h4>Prototyping</h4>
                                 <SkillCard 
                                     icon={inVision}
                                     tool="inVision"
-                                    type="Design Software for image manipulation"
+                                    type="Prototyping Software for simple user flows"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={principle}
                                     tool="Principle"
-                                    type="Design Software for image manipulation"
+                                    type="Prototyping Software for motion based interactions"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={framer}
                                     tool="Framer X"
-                                    type="Design Software for image manipulation"
-                                    status="Upcoming"
+                                    type="Prototyping software for complex data-driven interactions"
+                                    status="In-Progress"
                                 />
+                                <h4>Handoff</h4>
                                 <SkillCard 
                                     icon={zeplin}
                                     tool="Zeplin"
-                                    type="Design Software for image manipulation"
+                                    type="Collaboration tool for design handoff"
                                     status="Learned"
                                 />
                                 <br></br>
@@ -230,6 +285,7 @@ class Skills extends Component {
                                 <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
                                 <br></br>
                                 <br></br>
+                                <h4>Front-End (Web)</h4>
                                 <SkillCard 
                                     icon={html}
                                     tool="HTML5"
@@ -255,17 +311,12 @@ class Skills extends Component {
                                     status="Learned"
                                 />
                                 <SkillCard 
-                                    icon={react}
-                                    tool="React Native"
-                                    type="Design Software for image manipulation"
-                                    status="In-Progress"
-                                />
-                                <SkillCard 
                                     icon={sass}
                                     tool="SASS"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
+                                <h4>Back-End (Web)</h4>
                                 <SkillCard 
                                     icon={node}
                                     tool="Node.js"
@@ -290,6 +341,13 @@ class Skills extends Component {
                                     type="Design Software for image manipulation"
                                     status="Upcoming"
                                 />
+                                <h4>Mobile</h4>
+                                <SkillCard 
+                                    icon={react}
+                                    tool="React Native"
+                                    type="Design Software for image manipulation"
+                                    status="In-Progress"
+                                />
                                 <SkillCard 
                                     icon={swift}
                                     tool="Swift"
@@ -302,45 +360,11 @@ class Skills extends Component {
                                     type="Design Software for image manipulation"
                                     status="Upcoming"
                                 />
+                                <h4>Collaboration</h4>
                                 <SkillCard 
                                     icon={git}
                                     tool="Git"
-                                    type="Design Software for image manipulation"
-                                    status="Learned"
-                                />
-                                <br></br>
-                                <br></br>
-                        </Element>
-                        <Element 
-                            name="Product"
-                            className="skills__block">
-                                <h2>Product</h2>
-                                <br></br>
-                                <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
-                                <br></br>
-                                <br></br>
-                                <SkillCard 
-                                    icon={jira}
-                                    tool="Jira"
-                                    type="Design Software for image manipulation"
-                                    status="Learned"
-                                />
-                                <SkillCard 
-                                    icon={slack}
-                                    tool="Slack"
-                                    type="Design Software for image manipulation"
-                                    status="Learned"
-                                />
-                                <SkillCard 
-                                    icon={analytics}
-                                    tool="Google Analytics"
-                                    type="Design Software for image manipulation"
-                                    status="Learned"
-                                />
-                                <SkillCard 
-                                    icon={searchconsole}
-                                    tool="Google Search Console"
-                                    type="Design Software for image manipulation"
+                                    type="Version control system for tracking changes in code"
                                     status="Learned"
                                 />
                                 <br></br>

@@ -1,0 +1,49 @@
+.resume {
+    width: 1000px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    transition: all 0.2s ease 0s;
+    background: linear-gradient(180deg,#2e2e2e, black);
+    justify-content: space-between;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 20px 30px;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        transition: all 0.2s ease 0s;
+    }
+
+    &__details {
+        padding: 0px 50px;
+        align-items: center;
+        margin: auto 0;
+    }
+
+    &__cta {
+        color: white;
+        padding-top: 20px;
+    }
+
+    &__link {
+        color: white;
+        padding-bottom: 20px;
+    }
+
+    &__preview {
+        margin: 40px 60px 0px 30px;
+    }
+
+    &__image {
+        width: 400px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    }
+    
+}

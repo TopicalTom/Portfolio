@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import ProjectCard from "../ProjectCard/ProjectCard";
-import DegreeCard from "../DegreeCard/DegreeCard";
+import ResumeCard from "../ResumeCard/ResumeCard";
 import PersonalCard from "../PersonalCard/PersonalCard";
 
 import "./DynamicCards.scss"
@@ -90,7 +90,7 @@ export default class DynamicCards extends Component {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
-                        <PersonalCard />
+                        <ResumeCard />
                     </div>
                 </div>
             )
