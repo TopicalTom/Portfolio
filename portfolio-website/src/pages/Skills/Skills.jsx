@@ -8,9 +8,10 @@ import DegreeCard from "../../components/DegreeCard/DegreeCard";
 import UX from "../../assets/images/UXCertificate.png";
 import PM from "../../assets/images/ProductManagementCertificate.png";
 import iOS from "../../assets/images/iOSDevCertificate.png";
+
+import SkillCard from "../../components/SkillCard/SkillCard";
 import chevron from "../../assets/icons/chevron.svg";
 
-import Figure from "../../components/Figure/Figure";
 import Nav from "../../components/Nav/Nav";
 import Redirect from "../../components/Redirect/Redirect";
 import Filter from "../../components/Filter/Filter";
@@ -99,8 +100,19 @@ class Skills extends Component {
                                     totalSlides={2}
                                 >
                                     <div className="skills__buttons">
-                                        <ButtonNext className="skills__btn"><img className="skills__icon--flip"src={chevron}/></ButtonNext>
-                                        <ButtonBack className="skills__btn"><img src={chevron}/></ButtonBack>
+                                        <ButtonNext 
+                                            className="skills__btn">
+                                                <img 
+                                                    className="skills__icon--flip" 
+                                                    src={chevron}
+                                                />
+                                        </ButtonNext>
+                                        <ButtonBack 
+                                            className="skills__btn">
+                                                <img 
+                                                    src={chevron}
+                                                />
+                                        </ButtonBack>
                                     </div>
                                     <Slider className="skills__slider">
                                         <Slide className="skills__slide" index={0}>
@@ -125,34 +137,126 @@ class Skills extends Component {
                             className="skills__block">
                                 <h2>Design</h2>
                                 <br></br>
-                                <h3>Research</h3>
+                                <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
                                 <br></br>
-                                <Figure />
                                 <br></br>
-                                <h3>UI/UX</h3>
+                                <SkillCard 
+                                    tool="Otter.ai"
+                                    type="Records Interviews and complies to text"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Optimal Sort"
+                                    type="Allows sorting of data for Information Architecture"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Sketch"
+                                    type="Design Software for Hi-fi wireframing"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Photoshop"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="inVision"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Principle"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Framer X"
+                                    type="Design Software for image manipulation"
+                                    status="Upcoming"
+                                />
+                                <SkillCard 
+                                    tool="Zeplin"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
                                 <br></br>
-                                <Figure />
                                 <br></br>
-                                <h3>Prototyping</h3>
-                                <br></br>
-                                <Figure />
                         </Element>
                         <Element
                             name="Development"
                             className="skills__block">
                                 <h2>Development</h2>
                                 <br></br>
-                                <h3>Front-End (Web)</h3>
+                                <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
                                 <br></br>
-                                <Figure />
                                 <br></br>
-                                <h3>Back-End (Web)</h3>
+                                <SkillCard 
+                                    tool="HTML5"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="CSS3"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Javascript"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="React.js"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="React Native"
+                                    type="Design Software for image manipulation"
+                                    status="In-Progress"
+                                />
+                                <SkillCard 
+                                    tool="SASS"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Node.js"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Express.js"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="OAuth"
+                                    type="Design Software for image manipulation"
+                                    status="Upcoming"
+                                />
+                                <SkillCard 
+                                    tool="mySQL"
+                                    type="Design Software for image manipulation"
+                                    status="Upcoming"
+                                />
+                                <SkillCard 
+                                    tool="Swift"
+                                    type="Design Software for image manipulation"
+                                    status="In-Progress"
+                                />
+                                <SkillCard 
+                                    tool="ARKit"
+                                    type="Design Software for image manipulation"
+                                    status="Upcoming"
+                                />
+                                <SkillCard 
+                                    tool="Git"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
                                 <br></br>
-                                <Figure />
-                                <br></br>
-                                <h3>Mobile</h3>
-                                <br></br>
-                                <Figure />
                                 <br></br>
                         </Element>
                         <Element 
@@ -160,13 +264,30 @@ class Skills extends Component {
                             className="skills__block">
                                 <h2>Product</h2>
                                 <br></br>
-                                <h3>Management</h3>
+                                <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
                                 <br></br>
-                                <Figure />
                                 <br></br>
-                                <h3>Marketing</h3>
+                                <SkillCard 
+                                    tool="Jira"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Slack"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Google Analytics"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    tool="Google Search Console"
+                                    type="Design Software for image manipulation"
+                                    status="Learned"
+                                />
                                 <br></br>
-                                <Figure />
                                 <br></br>
                         </Element>
                         <article className="skills__block">

@@ -27,7 +27,16 @@ export default class Filter extends Component {
                                 name="filter"
                                 value="Design"
                             />
-                            Current
+                            Learned
+                        </label>
+                        <label className="filter__checkbox">
+                            <input 
+                                className="filter__label"
+                                type="radio" 
+                                name="filter"
+                                value="Design"
+                            />
+                            In-Progress
                         </label>
                         <label className="filter__checkbox">
                             <input 

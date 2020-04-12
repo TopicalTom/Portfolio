@@ -1,3 +1,56 @@
+import React, { useState, useEffect } from 'react';
+
+import "./Nav.scss";
+
+import chevron from "../../assets/icons/chevron.svg";
+import Share from "../../components/Share/Share";
+
+
+function Nav() {
+
+    const [hasShadow, setShouldShowShadow] = useState("");
+
+    const listenScrollEvent = (event) => {
+        if (window.scrollY > 100) {
+            setShouldShowShadow("shadow")
+        } else {
+            setShouldShowShadow("")
+        } 
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenScrollEvent);
+      
+        return () =>
+            window.removeEventListener('scroll', listenScrollEvent);
+    }, []);
+
+    return (
+        <nav className={`nav ${hasShadow}`}>
+            <div className="nav__container">
+                <a href="/">
+                    <div className="nav__action">
+                        <img 
+                            className="nav__chevron"
+                            src={chevron} 
+                        />
+                        <p
+                            className="nav__back">
+                            Back
+                        </p>
+                    </div>
+                </a>
+                <Share/>
+            </div>
+        </nav>
+    );
+};
+
+export default Nav;
+
+
+/*
+
 import React, { useState } from 'react';
 
 import "./Nav.scss";
@@ -23,11 +76,9 @@ function Nav() {
             const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
       
             setShouldShowShadow(isMinimumScrolled);
-            /*
             setTimeout(() => {
                 setShouldHideHeader(isScrolledDown && isMinimumScrolled);
             }, TIMEOUT_DELAY);
-            */
         });
       
         const shadowStyle = shouldShowShadow ? 'shadow' : '';
@@ -55,3 +106,5 @@ function Nav() {
 };
 
 export default Nav;
+
+*/

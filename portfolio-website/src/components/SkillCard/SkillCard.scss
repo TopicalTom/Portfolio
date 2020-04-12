@@ -1,0 +1,54 @@
+.skill-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 2px solid #F2F3F7;
+    border-radius: 4px;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        margin: auto 0;
+    }
+
+    &__details {
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        height: 50px;
+        padding-right: 20px;
+    }
+
+    &__chevron {
+        transform: scaleX(-1);
+        margin: auto 0px;
+    }
+
+    &__status {
+        margin: auto 20px;
+
+        &--Learned {
+            display: none;
+        }
+
+        &--In-Progress {
+            color: rgb(27, 233, 99);
+            background-color: rgba(0, 255, 89, 0.15);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        &--Upcoming {
+            color: #8d8d8d;
+            background-color: rgba(242, 243, 247, 0.6);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+    }
+}
