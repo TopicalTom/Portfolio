@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Zeplin Copy 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="98.031%" y1="0.161%" x2="58.888%" y2="40.766%" id="linearGradient-1">
+            <stop stop-color="#0052CC" offset="18%"></stop>
+            <stop stop-color="#2684FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100.665%" y1="0.455%" x2="55.402%" y2="44.727%" id="linearGradient-2">
+            <stop stop-color="#0052CC" offset="18%"></stop>
+            <stop stop-color="#2684FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Zeplin-Copy-6" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" opacity="0" x="0" y="0" width="50" height="50" rx="6"></rect>
+        <g id="jira-1" transform="translate(7.000000, 7.000000)" fill-rule="nonzero">
+            <path d="M34.4961226,0 L17.160361,0 C17.160361,4.32197794 20.6640163,7.82563331 24.9859943,7.82563331 L28.1794426,7.82563331 L28.1794426,10.9089627 C28.1822625,15.2270057 31.681957,18.7268412 36,18.7296611 L36,1.50387743 C36,0.673544203 35.3268788,0 34.4961226,0 Z" id="Path" fill="#2684FF"></path>
+            <path d="M25.9184096,8.63777788 L8.58278893,8.63777788 C8.58546788,12.9558208 12.0851624,16.4556563 16.4033463,16.4584763 L19.5967947,16.4584763 L19.5967947,19.5516755 C19.6022936,23.8697185 23.104385,27.367157 27.422428,27.367157 L27.422428,10.1419373 C27.422428,9.31132208 26.7490248,8.63777788 25.9184096,8.63777788 L25.9184096,8.63777788 Z" id="Path" fill="url(#linearGradient-1)"></path>
+            <path d="M17.3357616,17.2706209 L0,17.2706209 C0,21.5926117 3.50378343,25.0962542 7.82563331,25.0962542 L11.0290924,25.0962542 L11.0290924,28.1794426 C11.0319124,32.4935376 14.525544,35.9918222 18.83978,36 L18.83978,18.7746393 C18.83978,17.9440241 18.1663768,17.2706209 17.3357616,17.2706209 Z" id="Path" fill="url(#linearGradient-2)"></path>
+        </g>
+    </g>
+</svg>

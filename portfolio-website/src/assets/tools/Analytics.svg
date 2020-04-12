@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Zeplin Copy 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Zeplin-Copy-7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" opacity="0" x="0" y="0" width="50" height="50" rx="6"></rect>
+        <g id="ic_analytics">
+            <rect id="Rectangle" x="0" y="0" width="50" height="50"></rect>
+            <g id="Group" transform="translate(9.000000, 7.000000)" fill-rule="nonzero">
+                <path d="M22.5,4.29545455 L22.5,31.2954545 C22.5,34.3165909 24.5843182,36 26.7954545,36 C28.8409091,36 31.0909091,34.5681818 31.0909091,31.2954545 L31.0909091,4.5 C31.0909091,1.73045455 29.0454545,0 26.7954545,0 C24.5454545,0 22.5,1.90840909 22.5,4.29545455 Z" id="Path" fill="#F9AB00"></path>
+                <path d="M11.25,18 L11.25,31.2954545 C11.25,34.3165909 13.3343182,36 15.5454545,36 C17.5909091,36 19.8409091,34.5681818 19.8409091,31.2954545 L19.8409091,18.2045455 C19.8409091,15.435 17.7954545,13.7045455 15.5454545,13.7045455 C13.2954545,13.7045455 11.25,15.6129545 11.25,18 Z" id="Path" fill="#E37400"></path>
+                <circle id="Oval" fill="#E37400" cx="4.29545455" cy="31.7045455" r="4.29545455"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

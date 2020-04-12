@@ -11,6 +11,31 @@ import iOS from "../../assets/images/iOSDevCertificate.png";
 
 import SkillCard from "../../components/SkillCard/SkillCard";
 import chevron from "../../assets/icons/chevron.svg";
+import sketch from "../../assets/tools/Sketch.svg";
+import framer from "../../assets/tools/Framer.svg";
+import otterAi from "../../assets/tools/OtterAi.svg";
+import zeplin from "../../assets/tools/Zeplin.svg";
+import principle from "../../assets/tools/Principle.svg";
+import photoshop from "../../assets/tools/Photoshop.svg";
+import illustrator from "../../assets/tools/Illustrator.svg";
+import inVision from "../../assets/tools/inVision.svg";
+import optimalsort from "../../assets/tools/OptimalSort.svg";
+import jira from "../../assets/tools/Jira.svg";
+import slack from "../../assets/tools/Slack.svg";
+import analytics from "../../assets/tools/Analytics.svg";
+import searchconsole from "../../assets/tools/SearchConsole.svg";
+import html from "../../assets/tools/HTML.svg";
+import css from "../../assets/tools/CSS.svg";
+import javascript from "../../assets/tools/Javascript.svg";
+import react from "../../assets/tools/React.svg";
+import swift from "../../assets/tools/Swift.svg";
+import arkit from "../../assets/tools/ARKit.svg";
+import git from "../../assets/tools/Git.svg";
+import sass from "../../assets/tools/Sass.svg";
+import node from "../../assets/tools/Node.svg";
+import oAuth from "../../assets/tools/oAuth.svg";
+import mySQL from "../../assets/tools/mySQL.svg";
+
 
 import Nav from "../../components/Nav/Nav";
 import Redirect from "../../components/Redirect/Redirect";
@@ -141,41 +166,55 @@ class Skills extends Component {
                                 <br></br>
                                 <br></br>
                                 <SkillCard 
+                                    icon={otterAi}
                                     tool="Otter.ai"
                                     type="Records Interviews and complies to text"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={optimalsort}
                                     tool="Optimal Sort"
                                     type="Allows sorting of data for Information Architecture"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={sketch}
                                     tool="Sketch"
                                     type="Design Software for Hi-fi wireframing"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={photoshop}
                                     tool="Photoshop"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={illustrator}
+                                    tool="Illustrator"
+                                    type="Design Software for image manipulation"
+                                    status="Upcoming"
+                                />
+                                <SkillCard 
+                                    icon={inVision}
                                     tool="inVision"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={principle}
                                     tool="Principle"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={framer}
                                     tool="Framer X"
                                     type="Design Software for image manipulation"
                                     status="Upcoming"
                                 />
                                 <SkillCard 
+                                    icon={zeplin}
                                     tool="Zeplin"
                                     type="Design Software for image manipulation"
                                     status="Learned"
@@ -192,66 +231,79 @@ class Skills extends Component {
                                 <br></br>
                                 <br></br>
                                 <SkillCard 
+                                    icon={html}
                                     tool="HTML5"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={css}
                                     tool="CSS3"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={javascript}
                                     tool="Javascript"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
-                                <SkillCard 
+                                <SkillCard
+                                    icon={react}
                                     tool="React.js"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={react}
                                     tool="React Native"
                                     type="Design Software for image manipulation"
                                     status="In-Progress"
                                 />
                                 <SkillCard 
+                                    icon={sass}
                                     tool="SASS"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={node}
                                     tool="Node.js"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={node}
                                     tool="Express.js"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
-                                    tool="OAuth"
-                                    type="Design Software for image manipulation"
-                                    status="Upcoming"
-                                />
-                                <SkillCard 
+                                    icon={mySQL}
                                     tool="mySQL"
                                     type="Design Software for image manipulation"
                                     status="Upcoming"
                                 />
                                 <SkillCard 
+                                    icon={oAuth}
+                                    tool="OAuth"
+                                    type="Design Software for image manipulation"
+                                    status="Upcoming"
+                                />
+                                <SkillCard 
+                                    icon={swift}
                                     tool="Swift"
                                     type="Design Software for image manipulation"
                                     status="In-Progress"
                                 />
                                 <SkillCard 
-                                    tool="ARKit"
+                                    icon={arkit}
+                                    tool="ARKit 3.5"
                                     type="Design Software for image manipulation"
                                     status="Upcoming"
                                 />
                                 <SkillCard 
+                                    icon={git}
                                     tool="Git"
                                     type="Design Software for image manipulation"
                                     status="Learned"
@@ -268,21 +320,25 @@ class Skills extends Component {
                                 <br></br>
                                 <br></br>
                                 <SkillCard 
+                                    icon={jira}
                                     tool="Jira"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={slack}
                                     tool="Slack"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={analytics}
                                     tool="Google Analytics"
                                     type="Design Software for image manipulation"
                                     status="Learned"
                                 />
                                 <SkillCard 
+                                    icon={searchconsole}
                                     tool="Google Search Console"
                                     type="Design Software for image manipulation"
                                     status="Learned"

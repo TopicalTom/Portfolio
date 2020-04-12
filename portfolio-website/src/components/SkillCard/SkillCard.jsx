@@ -6,12 +6,12 @@ import chevron from "../../assets/icons/chevron.svg";
 
 const SkillCard = (props) => {
 
-    const { tool, type, status} = props
+    const { icon, tool, type, status} = props
 
     return (
             <article className="skill-card">
                 <div className="skill-card__container">
-                    <img className="skill-card__image" src={sketch}/>
+                    <img className="skill-card__image" src={icon}/>
                     <div className="skill-card__details">
                         <h3
                             className="skill-card__project">
