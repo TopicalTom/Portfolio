@@ -16,11 +16,11 @@ const PersonalCard = () => {
                     />
                     <h2
                         className="spotify__cta">
-                        The Slow Rush - Tame Impala
+                        The Slow Rush • Tame Impala
                     </h2>
                     <h4 
                         className="spotify__link">
-                        Album I'm playing on repeat
+                        What I'm currently listening to
                     </h4>
                 </div>
                 <div className="spotify__preview">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import ReactModal from 'react-modal';
 import share from "../../assets/icons/share.svg";
 import cancel from "../../assets/icons/cancel.svg";
@@ -9,19 +9,38 @@ ReactModal.setAppElement('*')
 
 function Share() {
 
-    const [modalIsOpen,setIsOpen] = React.useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [copySuccess, setCopySuccess] = useState('');
 
     function openModal() {
         setIsOpen(true);
         document.documentElement.style.overflow = 'hidden';
         document.body.scroll = "no";
-    }
+    };
    
     function closeModal(){
         setIsOpen(false);
         document.documentElement.style.overflow = 'scroll';
         document.body.scroll = "yes";
-    }
+    };
+
+    const pageRef = useRef(null);
+  
+    function copyPage(e) {
+        pageRef.current.select();
+        document.execCommand('copy');
+        e.target.focus();
+        setCopySuccess('Copied!');
+    };
+
+    const homeRef = useRef(null);
+
+    function copyHome(e) {
+        homeRef.current.select();
+        document.execCommand('copy');
+        e.target.focus();
+        setCopySuccess('Copied!');
+    };
 
     return (
         <>
@@ -45,17 +64,20 @@ function Share() {
                     />
                     <h2>Looking to Hire?</h2>
                     <br></br>
-                    <p>I'm currently looking for employment so if you know someone in need of a Product Designer, you can send them these links:</p>
+                    <p>If you, or someone you know is in need of a Product Designer, send them these links:</p>
                     <br></br>
                     <br></br>
                     <form className="modal__form">
                         <label 
                             className="modal__label">
                             Current Page
+                            {copySuccess}
                         </label>
                         <div className="modal__container">
                             <textarea 
                                 className="modal__field"
+                                onClick={copyPage}
+                                ref={pageRef}
                                 placeholder={window.location.href} 
                                 value={window.location.href}
                             />
@@ -74,8 +96,10 @@ function Share() {
                             Home Page
                         </label>
                         <div className="modal__container">
-                            <textarea 
+                            <textarea
                                 className="modal__field"
+                                onClick={copyHome}
+                                ref={homeRef}
                                 placeholder="topicaltom.com/" 
                                 value={"topicaltom.com/"}
                             />
@@ -86,6 +110,10 @@ function Share() {
                                 />
                             </div>
                         </div>
+                        <br></br>
+                        <a>
+                            <div>Download Resume</div>
+                        </a>
                     </form>
                 </div>
             </ReactModal>

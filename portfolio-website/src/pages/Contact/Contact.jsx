@@ -11,22 +11,25 @@ const Contact = () => {
         <main className="contact">
             <div className="contact__container">
                 <aside className="contact__section contact__section--links">
-                    <p>Direct Links</p>
+                    <p>Details</p>
                     <ul>
-                        <li>
+                        <li><a 
+                            className="contact__link"
+                            href="mailto:thomasvgriffiths@gmail.com">
                             thomasvgriffiths@gmail.com
-                        </li>
-                        <li>
-                            613-893-3437
-                        </li>
-                        <li>
+                        </a></li>
+                        <li><a 
+                            className="contact__link">
+                            (613) 893-3437
+                        </a></li>
+                        <li><a 
+                            className="contact__link">
                             Toronto, ON
-                        </li>
+                        </a></li>
                     </ul>
                 </aside>
                 <section className="contact__section contact__section--form">
                     <h1>Let's Chat</h1>
-                    <p>This is for the details and resume and anything else that might come to ming</p>
                     <Form />
                 </section>
             </div>

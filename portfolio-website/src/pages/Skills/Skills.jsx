@@ -4,7 +4,6 @@ import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } 
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import "./Skills.scss";
 
-import DegreeCard from "../../components/DegreeCard/DegreeCard";
 import UX from "../../assets/images/UXCertificate.png";
 import PM from "../../assets/images/ProductManagementCertificate.png";
 import iOS from "../../assets/images/iOSDevCertificate.png";
@@ -37,6 +36,9 @@ import oAuth from "../../assets/tools/oAuth.svg";
 import mySQL from "../../assets/tools/mySQL.svg";
 import hotjar from "../../assets/tools/Hotjar.svg";
 import mailchimp from "../../assets/tools/Mailchimp.svg";
+import mapbox from "../../assets/tools/Mapbox.svg";
+import foursquare from "../../assets/tools/FourSquare.svg";
+import postman from "../../assets/tools/Postman.svg";
 
 
 import Nav from "../../components/Nav/Nav";
@@ -189,7 +191,7 @@ class Skills extends Component {
                                 <SkillCard 
                                     icon={hotjar}
                                     tool="HotJar"
-                                    type="Card-based information architecture categorization"
+                                    type="Behavior analytics and user feedback service for websites"
                                     status="Upcoming"
                                 />
                                 <h4>Workflow</h4>
@@ -209,12 +211,12 @@ class Skills extends Component {
                                 <SkillCard 
                                     icon={mailchimp}
                                     tool="Mailchimp"
-                                    type="Ticket-based issue tracking for agile project management"
+                                    type="Email-campaign focused marketing platform for CMS needs"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={searchconsole}
-                                    tool="Google Search Console"
+                                    tool="Search Console"
                                     type="Web service for website search engine optimization (SEO)"
                                     status="Learned"
                                 />
@@ -229,7 +231,7 @@ class Skills extends Component {
                                 <p>These tools are used for whenever I am doing design work. I am going to talk about the tools I use and how it adheres to a framework.</p>
                                 <br></br>
                                 <br></br>
-                                <h4>Wireframing</h4>
+                                <h4>Deliverables</h4>
                                 <SkillCard 
                                     icon={sketch}
                                     tool="Sketch"
@@ -289,75 +291,94 @@ class Skills extends Component {
                                 <SkillCard 
                                     icon={html}
                                     tool="HTML5"
-                                    type="Design Software for image manipulation"
+                                    type="Markup language for displaying web browser documents"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={css}
                                     tool="CSS3"
-                                    type="Design Software for image manipulation"
-                                    status="Learned"
-                                />
-                                <SkillCard 
-                                    icon={javascript}
-                                    tool="Javascript"
-                                    type="Design Software for image manipulation"
-                                    status="Learned"
-                                />
-                                <SkillCard
-                                    icon={react}
-                                    tool="React.js"
-                                    type="Design Software for image manipulation"
+                                    type="Style sheet language for presenting web browser documents"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={sass}
                                     tool="SASS"
-                                    type="Design Software for image manipulation"
+                                    type="CSS extension for implementing nested naming conventions (BEM)"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    icon={javascript}
+                                    tool="JavaScript"
+                                    type="Scripting language for creating dynamic web browser documents"
+                                    status="Learned"
+                                />
+                                <SkillCard
+                                    icon={react}
+                                    tool="React.js"
+                                    type="JavaScript library for building reusable UI components"
                                     status="Learned"
                                 />
                                 <h4>Back-End (Web)</h4>
                                 <SkillCard 
                                     icon={node}
                                     tool="Node.js"
-                                    type="Design Software for image manipulation"
+                                    type="Platform for executing JavaScript code server-side"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={node}
                                     tool="Express.js"
-                                    type="Design Software for image manipulation"
+                                    type="Node framework for handling http requests, responses and routes"
+                                    status="Learned"
+                                />
+                                <SkillCard 
+                                    icon={postman}
+                                    tool="Postman"
+                                    type="HTTP client for testing RESTful API functionality"
                                     status="Learned"
                                 />
                                 <SkillCard 
                                     icon={mySQL}
                                     tool="mySQL"
-                                    type="Design Software for image manipulation"
+                                    type="Relational database management system"
                                     status="Upcoming"
                                 />
                                 <SkillCard 
                                     icon={oAuth}
                                     tool="OAuth"
-                                    type="Design Software for image manipulation"
+                                    type="Authorization framework for authenticated access to assets"
                                     status="Upcoming"
                                 />
                                 <h4>Mobile</h4>
                                 <SkillCard 
                                     icon={react}
                                     tool="React Native"
-                                    type="Design Software for image manipulation"
+                                    type="JavaScript library for building native mobile applications"
                                     status="In-Progress"
                                 />
                                 <SkillCard 
                                     icon={swift}
                                     tool="Swift"
-                                    type="Design Software for image manipulation"
+                                    type="Programming language used to develop iOS specific applications"
                                     status="In-Progress"
+                                />
+                                <h4>API/SDK</h4>
+                                <SkillCard 
+                                    icon={mapbox}
+                                    tool="Mapbox"
+                                    type="Map-based location data platform for mobile and web applications"
+                                    status="In-Progress"
+                                />
+                                <SkillCard 
+                                    icon={foursquare}
+                                    tool="FourSquare"
+                                    type="Venue and user content database for mobile and web applications"
+                                    status="Upcoming"
                                 />
                                 <SkillCard 
                                     icon={arkit}
                                     tool="ARKit 3.5"
-                                    type="Design Software for image manipulation"
+                                    type="Augmented reality (AR) development platform for iOS devices"
                                     status="Upcoming"
                                 />
                                 <h4>Collaboration</h4>
@@ -387,50 +408,3 @@ class Skills extends Component {
 };
 
 export default Skills;
-
-
-/*
-
-import React from 'react';
-import "./Skills.scss";
-
-import Nav from "../../components/Nav/Nav";
-
-const Skills = () => {
-    return (
-        <>
-        <Nav/>
-        <section className="filter">
-            <div className="filter__container">
-                <div className="filter__section">
-                    <h1>What are you looking for?</h1>
-                    <p>My skillset will keep on growing so inquire below to see if I have what you need!</p>
-                </div>
-                <form className="filter__form">
-                    <input 
-                        className="filter__input"
-                        placeholder="Discipline"
-                    />
-                    <input 
-                        className="filter__input"
-                        placeholder="Type"
-                    />
-                    <input 
-                        className="filter__input"
-                        placeholder="Keywords"
-                    />
-                </form>
-            </div>
-        </section>
-        <section className="skills">
-            <div className="skills__container">
-                <p>These are the skills</p>
-            </div>
-        </section>
-        </>
-    );
-};
-
-export default Skills;
-
-*/

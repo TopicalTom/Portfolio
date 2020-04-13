@@ -12,11 +12,11 @@ const ResumeCard = () => {
                 <div className="resume__details">
                     <h2
                         className="resume__cta">
-                        Looking for a Resume?
+                        Download my Resume
                     </h2>
                     <div 
                         className="resume__download">
-                        Click to Download
+                        Click to Begin
                     </div>
                 </div>
                 <div className="resume__preview">

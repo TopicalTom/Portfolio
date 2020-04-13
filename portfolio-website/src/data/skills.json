@@ -1,0 +1,261 @@
+[
+    { 
+        "discipline":"Product",
+        "caption":"",
+        "skillset": [
+            {
+                "type":"Research",
+                "tools": [
+                    {
+                        "tool":"Otter.ai",
+                        "description":"Ai-powered speech to text transcription",
+                        "status":"Learned",
+                        "logo":"../assets/tools/OtterAi.svg"
+                    },
+                    {
+                        "tool":"Optimal Sort",
+                        "description":"Card-based information architecture categorization",
+                        "status":"Learned",
+                        "logo":"../assets/tools/OptimalSort.svg"
+                    },
+                    {
+                        "tool":"Google Analytics",
+                        "description":"Web analytics service for measuring website traffic and ROI",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Analytics.svg"
+                    },
+                    {
+                        "tool":"HotJar",
+                        "description":"Behavior analytics and user feedback service for websites",
+                        "status":"Upcoming",
+                        "logo":"../assets/tools/Hotjar.svg"
+                    }
+                ]
+            },
+            {
+                "type":"Workflow",
+                "tools": [
+                    {
+                        "tool":"Slack",
+                        "description":"Instant messaging platform for team collaboration",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Slack.svg"
+                    },
+                    {
+                        "tool":"Jira",
+                        "description":"Ticket-based issue tracking for agile project management",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Jira.svg"
+                    }
+                ]
+            },
+            {
+                "type":"Marketing",
+                "tools": [
+                    {
+                        "tool":"Mailchimp",
+                        "description":"Email-campaign focused marketing platform for CMS needs",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Mailchimp.svg"
+                    },
+                    {
+                        "tool":"Google Search Console",
+                        "description":"Web service for website search engine optimization (SEO)",
+                        "status":"Learned",
+                        "logo":"../assets/tools/SearchConsole.svg"
+                    }
+                ]
+            }
+        ]
+    },
+    { 
+        "discipline":"Design",
+        "caption":"",
+        "skillset": [
+            {
+                "type":"Deliverables",
+                "tools": [
+                    {
+                        "tool":"Sketch",
+                        "description":"Vector graphics editor for web and mobile wireframes",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Sketch.svg"
+                    },
+                    {
+                        "tool":"Photoshop",
+                        "description":"Raster graphics editor for photo editing and enhancement",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Photoshop.svg"
+                    },
+                    {
+                        "tool":"Illustrator",
+                        "description":"Vector graphics editor for print and digital media",
+                        "status":"Upcoming",
+                        "logo":"../assets/tools/Illustrator.svg"
+                    }
+                ]
+            },
+            {
+                "type":"Prototyping",
+                "tools": [
+                    {
+                        "tool":"inVision",
+                        "description":"Prototyping Software for simple user flows",
+                        "status":"Learned",
+                        "logo":"../assets/tools/inVision.svg"
+                    },
+                    {
+                        "tool":"Principle",
+                        "description":"Prototyping Software for motion based interactions",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Principle.svg"
+                    },
+                    {
+                        "tool":"Framer X",
+                        "description":"Prototyping software for complex data-driven interactions",
+                        "status":"In-Progress",
+                        "logo":"../assets/tools/Framer.svg"
+                    }
+                ]
+            },
+            {
+                "type":"Handoff",
+                "tools": [
+                    {
+                        "tool":"Zeplin",
+                        "description":"Collaboration tool for design handoff",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Zeplin.svg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "discipline":"Development",
+        "caption":"",
+        "skillset": [
+            {
+                "type":"Front-End (Web)",
+                "tools": [
+                    {
+                        "tool":"HTML5",
+                        "description":"Markup language for displaying web browser documents",
+                        "status":"Learned",
+                        "logo":"../assets/tools/HTML.svg"
+                    },
+                    {
+                        "tool":"CSS3",
+                        "description":"Style sheet language for presenting web browser documents",
+                        "status":"Learned",
+                        "logo":"../assets/tools/CSS.svg"
+                    },
+                    {
+                        "tool":"SASS",
+                        "description":"CSS extension for implementing nested naming conventions (BEM)",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Sass.svg"
+                    },
+                    {
+                        "tool":"Javascript",
+                        "description":"Scripting language for creating dynamic web browser documents",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Javascript.svg"
+                    },
+                    {
+                        "tool":"React.js",
+                        "description":"JavaScript library for building reusable UI components",
+                        "status":"Learned",
+                        "logo":"../assets/tools/React.svg"
+                    }
+                ]
+            },
+            {
+                "type":"Back-End (Web)",
+                "tools": [
+                    {
+                        "tool":"Node.js",
+                        "description":"Platform for executing JavaScript code server-side",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Node.svg"
+                    },
+                    {
+                        "tool":"Express.js",
+                        "description":"Node framework for handling http requests, responses and routes",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Node.svg"
+                    },
+                    {
+                        "tool":"Postman",
+                        "description":"HTTP client for testing RESTful API functionality",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Postman.svg"
+                    },
+                    {
+                        "tool":"mySQL",
+                        "description":"Relational database management system",
+                        "status":"Upcoming",
+                        "logo":"../assets/tools/mySQL.svg"
+                    },
+                    {
+                        "tool":"OAuth",
+                        "description":"Authorization framework for authenticated access to assets",
+                        "status":"Upcoming",
+                        "logo":"../assets/tools/oAuth.svg"
+                    }
+                ] 
+            },
+            {
+                "type":"Mobile",
+                "tools": [
+                    {
+                        "tool":"React Native",
+                        "description":"JavaScript library for building native mobile applications",
+                        "status":"In-Progress",
+                        "logo":"../assets/tools/React.svg"
+                    },
+                    {
+                        "tool":"Swift",
+                        "description":"Programming language used to develop iOS specific applications",
+                        "status":"In-Progress",
+                        "logo":"../assets/tools/Swift.svg"
+                    }
+                ] 
+            },
+            {
+                "type":"API/SDK",
+                "tools": [
+                    {
+                        "tool":"Mapbox",
+                        "description":"Map-based location data platform for mobile and web applications",
+                        "status":"In-Progress",
+                        "logo":"../assets/tools/Mapbox.svg"
+                    },
+                    {
+                        "tool":"Four Square",
+                        "description":"Venue and user content database for mobile and web applications",
+                        "status":"Upcoming",
+                        "logo":"../assets/tools/FourSquare.svg"
+                    },
+                    {
+                        "tool":"ARKit 3.5",
+                        "description":"Augmented reality (AR) development platform for iOS devices",
+                        "status":"Upcoming",
+                        "logo":"../assets/tools/ARKit.svg"
+                    }
+                ] 
+            },
+            {
+                "type":"Collaboration",
+                "tools": [
+                    {
+                        "tool":"Git",
+                        "description":"Version control system for tracking changes in code",
+                        "status":"Learned",
+                        "logo":"../assets/tools/Git.svg"
+                    }
+                ] 
+            }
+        ]
+    }
+]
