@@ -1,8 +1,6 @@
 [
     { 
-        "discipline":"Product",
-        "caption":"",
-        "skillset": [
+        "Product": [
             {
                 "type":"Research",
                 "tools": [
@@ -69,9 +67,7 @@
         ]
     },
     { 
-        "discipline":"Design",
-        "caption":"",
-        "skillset": [
+        "Design": [
             {
                 "type":"Deliverables",
                 "tools": [
@@ -132,9 +128,7 @@
         ]
     },
     {
-        "discipline":"Development",
-        "caption":"",
-        "skillset": [
+        "Development": [
             {
                 "type":"Front-End (Web)",
                 "tools": [

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="426px" height="426px" viewBox="0 0 426 426" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Artboard Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FD2D55" offset="0%"></stop>
+            <stop stop-color="#ED506F" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="127.190805" cy="127.190805" r="127.190805"></circle>
+        <filter x="-24.5%" y="-16.7%" width="149.0%" height="149.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="8.86666667" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="20" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0816761364 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="-1876.78763%" y1="45.0454479%" x2="1977.66502%" y2="45.0454479%" id="linearGradient-4">
+            <stop stop-color="#FD2D55" offset="0%"></stop>
+            <stop stop-color="#ED506F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1878.45688%" y1="44.9881413%" x2="1977.35057%" y2="44.9881413%" id="linearGradient-5">
+            <stop stop-color="#FD2D55" offset="0%"></stop>
+            <stop stop-color="#ED506F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-335.620846%" y1="118.149369%" x2="435.728396%" y2="118.149369%" id="linearGradient-6">
+            <stop stop-color="#FD2D55" offset="0%"></stop>
+            <stop stop-color="#ED506F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard-Copy-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <path d="M87.7968596,-3.54709821e-15 L337.80314,3.54709821e-15 C368.332021,-2.06096621e-15 379.402531,3.17869035 390.563434,9.14760633 C401.724336,15.1165223 410.483478,23.8756639 416.452394,35.0365664 C422.42131,46.1974689 425.6,57.2679788 425.6,87.7968596 L425.6,337.80314 C425.6,368.332021 422.42131,379.402531 416.452394,390.563434 C410.483478,401.724336 401.724336,410.483478 390.563434,416.452394 C379.402531,422.42131 368.332021,425.6 337.80314,425.6 L87.7968596,425.6 C57.2679788,425.6 46.1974689,422.42131 35.0365664,416.452394 C23.8756639,410.483478 15.1165223,401.724336 9.14760633,390.563434 C3.17869035,379.402531 1.37397747e-15,368.332021 -2.36473214e-15,337.80314 L2.36473214e-15,87.7968596 C-1.37397747e-15,57.2679788 3.17869035,46.1974689 9.14760633,35.0365664 C15.1165223,23.8756639 23.8756639,15.1165223 35.0365664,9.14760633 C46.1974689,3.17869035 57.2679788,2.06096621e-15 87.7968596,-3.54709821e-15 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+            <g id="Group-3" transform="translate(85.609195, 85.609195)">
+                <g id="Oval-Copy-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use stroke="#FFFFFF" stroke-width="17.7333333" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <g id="Group-2" transform="translate(123.624270, 131.286102) rotate(45.000000) translate(-123.624270, -131.286102) translate(76.624270, 59.286102)">
+                    <rect id="Rectangle" stroke="url(#linearGradient-5)" stroke-width="13.5190588" fill="url(#linearGradient-4)" x="37.3093027" y="3.82275255" width="18.6546513" height="139.442209" rx="9.32732567"></rect>
+                    <polyline id="Path-16" stroke="url(#linearGradient-6)" stroke-width="27.0381176" stroke-linecap="round" stroke-linejoin="round" points="-3.97051832e-12 56.3459844 46.6366284 0.10429366 93.2732567 56.3459844"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

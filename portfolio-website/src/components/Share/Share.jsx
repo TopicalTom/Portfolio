@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import ReactModal from 'react-modal';
 import share from "../../assets/icons/share.svg";
 import cancel from "../../assets/icons/cancel.svg";
+import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 import copy from "../../assets/icons/copy.svg";
 import "./Share.scss";
 
@@ -10,7 +11,6 @@ ReactModal.setAppElement('*')
 function Share() {
 
     const [modalIsOpen, setIsOpen] = useState(false);
-    const [copySuccess, setCopySuccess] = useState('');
 
     function openModal() {
         setIsOpen(true);
@@ -24,7 +24,9 @@ function Share() {
         document.body.scroll = "yes";
     };
 
+    const [copySuccess, setCopySuccess] = useState('');
     const pageRef = useRef(null);
+    const homeRef = useRef(null);
   
     function copyPage(e) {
         pageRef.current.select();
@@ -32,8 +34,6 @@ function Share() {
         e.target.focus();
         setCopySuccess('Copied!');
     };
-
-    const homeRef = useRef(null);
 
     function copyHome(e) {
         homeRef.current.select();
@@ -65,8 +65,10 @@ function Share() {
                     <h2>Looking to Hire?</h2>
                     <br></br>
                     <p>If you, or someone you know is in need of a Product Designer, send them these links:</p>
-                    <br></br>
-                    <br></br>
+                    <a href={resume} download="ThomasGriffithsResume">
+                            <div className="modal__button">Download Resume</div>
+                        </a>
+
                     <form className="modal__form">
                         <label 
                             className="modal__label">
@@ -111,9 +113,6 @@ function Share() {
                             </div>
                         </div>
                         <br></br>
-                        <a>
-                            <div>Download Resume</div>
-                        </a>
                     </form>
                 </div>
             </ReactModal>

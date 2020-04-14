@@ -105,6 +105,23 @@
         width: 15px;
         //position: absolute;
     }
+
+    &__button {
+        width: 240px;
+        margin-top: 30px;
+        height: 55px;
+        background-color: #2E2E2E;
+        border-radius: 12px;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0.6rem 0;
+        margin: auto;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .Overlay {
