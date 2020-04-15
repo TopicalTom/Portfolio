@@ -64,11 +64,18 @@ function Share() {
                     />
                     <h2>Looking to Hire?</h2>
                     <br></br>
-                    <p>If you, or someone you know is in need of a Product Designer, send them these links:</p>
+                    <p>If you, or someone you know is in need of a Product Designer, check out my resume:</p>
+                    <br></br>
+                    <br></br>
                     <a href={resume} download="ThomasGriffithsResume">
                             <div className="modal__button">Download Resume</div>
                         </a>
-
+                        <br></br>
+                        <br></br>
+                        <h4>-- or --</h4>
+                        <br></br>
+                        <br></br>
+                        <p>Share a Link</p>
                     <form className="modal__form">
                         <label 
                             className="modal__label">
@@ -90,9 +97,6 @@ function Share() {
                                 />
                             </div>
                         </div>
-                        <br></br>
-                        <h4>-- or --</h4>
-                        <br></br>
                         <label 
                             className="modal__label">
                             Home Page

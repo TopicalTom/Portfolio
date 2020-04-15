@@ -1,6 +1,7 @@
 [
     { 
-        "Product": [
+        "discipline":"Product",
+        "skills": [
             {
                 "type":"Research",
                 "tools": [
@@ -67,7 +68,8 @@
         ]
     },
     { 
-        "Design": [
+        "discipline":"Design",
+        "skills": [
             {
                 "type":"Deliverables",
                 "tools": [
@@ -128,7 +130,8 @@
         ]
     },
     {
-        "Development": [
+        "discipline":"Development",
+        "skills": [
             {
                 "type":"Front-End (Web)",
                 "tools": [

@@ -10,7 +10,6 @@ h1 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 900;
-    //font-family: "AvenirNextBold";
 
     @include tablet {
         font-size: 4rem;
@@ -21,12 +20,10 @@ h1 {
 h2 {
     font-size: 1rem;
     line-height: 1.5rem;
-    //font-family: "AvenirNextDemi";
 
     @include tablet {
         font-size: 2.25rem;
         line-height: 3rem;
-        //font-family: "AvenirNextBold";
     }
 }
 
@@ -38,9 +35,7 @@ h3 {
     @include tablet {
         font-size: 1.5rem;
         line-height: 2rem;
-        //font-family: "AvenirNextBold";
     }
-    //font-family: "AvenirNextDemi";
 }
 
 p {
@@ -58,7 +53,7 @@ h4 {
     font-size: 0.8125rem;
     line-height: 1.125rem;
     font-weight: normal;
-    color: #AFAFAF;
+    color: rgb(142,142,147);
 
     @include tablet {
         font-size: 0.875rem;
@@ -71,8 +66,7 @@ h5 {
     line-height: 1.125rem;
     font-weight: normal;
     text-transform: uppercase;
-    color: #AFAFAF;
-    //font-family: "AvenirNextDemi";
+    color: rgb(142,142,147);
 }
 
 ul {
@@ -101,7 +95,6 @@ a {
     list-style: none;
     list-style-type: none;
     text-decoration: none;
-    //font-family: "AvenirNextRegular";
     margin: 0;
-    color: #2E2E2E;
+    color: rgb(28, 28, 30);
 }

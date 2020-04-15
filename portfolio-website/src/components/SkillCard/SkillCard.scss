@@ -33,11 +33,11 @@
     &__status {
         margin: auto 10px;
 
-        &--Learned {
+        &--Current {
             display: none;
         }
 
-        &--In-Progress {
+        &--Learning {
             color: #00C642;
             background-color: rgba(0, 255, 85, 0.253);
             padding: 5px 10px;

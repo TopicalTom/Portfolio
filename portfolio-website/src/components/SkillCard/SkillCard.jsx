@@ -3,7 +3,7 @@ import "./SkillCard.scss";
 
 const SkillCard = (props) => {
 
-    const { icon, tool, type, status} = props
+    const { icon, tool, description, status} = props
 
     return (
             <article className="skill-card">
@@ -15,8 +15,8 @@ const SkillCard = (props) => {
                             {tool}
                         </h3>
                         <h4
-                            className="skill-card__type">
-                            {type}
+                            className="skill-card__description">
+                            {description}
                         </h4>
                     </div>
                 </div>

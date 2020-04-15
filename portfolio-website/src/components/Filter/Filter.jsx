@@ -27,7 +27,7 @@ export default class Filter extends Component {
                                 name="filter"
                                 value="Design"
                             />
-                            Learned
+                            Current
                         </label>
                         <label className="filter__checkbox">
                             <input 
@@ -36,7 +36,7 @@ export default class Filter extends Component {
                                 name="filter"
                                 value="Design"
                             />
-                            In-Progress
+                            Learning
                         </label>
                         <label className="filter__checkbox">
                             <input 
