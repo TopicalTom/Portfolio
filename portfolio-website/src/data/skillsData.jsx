@@ -5,6 +5,7 @@ import zeplin from "../assets/tools/Zeplin.svg";
 import principle from "../assets/tools/Principle.svg";
 import photoshop from "../assets/tools/Photoshop.svg";
 import illustrator from "../assets/tools/Illustrator.svg";
+import afterEffects from "../assets/tools/AfterEffects.svg";
 import inVision from "../assets/tools/inVision.svg";
 import optimalsort from "../assets/tools/OptimalSort.svg";
 import jira from "../assets/tools/Jira.svg";
@@ -29,81 +30,13 @@ import foursquare from "../assets/tools/FourSquare.svg";
 import postman from "../assets/tools/Postman.svg";
 
 const skillsData = [
-{
-    discipline:"Product",
-    caption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
-    skills: [
-        {
-            category:"Research",
-            tools: [
-                {
-                    tool:"Otter.ai",
-                    description:"Ai-powered speech to text transcription",
-                    status:"Current",
-                    logo:otterAi
-                },
-                {
-                    tool:"Optimal Sort",
-                    description:"Card-based information architecture categorization",
-                    status:"Current",
-                    logo:optimalsort
-                },
-                {
-                    tool:"Google Analytics",
-                    description:"Web analytics service for measuring website traffic and ROI",
-                    status:"Current",
-                    logo:analytics
-                },
-                {
-                    tool:"HotJar",
-                    description:"Behavior analytics and user feedback service for websites",
-                    status:"Upcoming",
-                    logo:hotjar
-                }
-            ]
-        },
-        {
-            category:"Workflow",
-            tools: [
-                {
-                    tool:"Slack",
-                    description:"Instant messaging platform for team collaboration",
-                    status:"Current",
-                    logo:slack
-                },
-                {
-                    tool:"Jira",
-                    description:"Ticket-based issue tracking for agile project management",
-                    status:"Current",
-                    logo:jira
-                }
-            ]
-        },
-        {
-            category:"Marketing",
-            tools: [
-                {
-                    tool:"Mailchimp",
-                    description:"Email-campaign focused marketing platform for CMS needs",
-                    status:"Current",
-                    logo:mailchimp
-                },
-                {
-                    tool:"Google Search Console",
-                    description:"Web service for website search engine optimization (SEO)",
-                    status:"Current",
-                    logo:searchconsole
-                }
-            ]
-        }
-    ]
-},
 { 
     discipline:"Design",
-    caption:"My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    caption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
     skills: [
         {
-            category:"Deliverables",
+            category:"Graphics",
             tools: [
                 {
                     tool:"Sketch",
@@ -120,8 +53,14 @@ const skillsData = [
                 {
                     tool:"Illustrator",
                     description:"Vector graphics editor for print and digital media",
-                    status:"Current",
+                    status:"Expected",
                     logo:illustrator
+                },
+                {
+                    tool:"After Effects",
+                    description:"Motion graphics editor for animation and composition",
+                    status:"Expected",
+                    logo:afterEffects
                 }
             ]
         },
@@ -136,7 +75,7 @@ const skillsData = [
                 },
                 {
                     tool:"Principle",
-                    description:"Prototyping Software for motion based interactions",
+                    description:"Prototyping Software for fluid screen animations",
                     status:"Current",
                     logo:principle
                 },
@@ -163,7 +102,8 @@ const skillsData = [
 },
 {
     discipline:"Development",
-    caption:"My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    caption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
     skills: [
         {
             category:"Front-End (Web)",
@@ -224,13 +164,13 @@ const skillsData = [
                 {
                     tool:"mySQL",
                     description:"Relational database management system",
-                    status:"Upcoming",
+                    status:"Expected",
                     logo:mySQL
                 },
                 {
                     tool:"OAuth",
                     description:"Authorization framework for authenticated access to assets",
-                    status:"Upcoming",
+                    status:"Expected",
                     logo:oAuth
                 }
             ] 
@@ -264,13 +204,13 @@ const skillsData = [
                 {
                     tool:"Four Square",
                     description:"Venue and user content database for mobile and web applications",
-                    status:"Upcoming",
+                    status:"Expected",
                     logo:foursquare
                 },
                 {
                     tool:"ARKit 3.5",
                     description:"Augmented reality (AR) development platform for iOS devices",
-                    status:"Upcoming",
+                    status:"Expected",
                     logo:arkit
                 }
             ] 
@@ -285,6 +225,76 @@ const skillsData = [
                     logo:git
                 }
             ] 
+        }
+    ]
+},
+{
+    discipline:"Product",
+    caption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    skills: [
+        {
+            category:"Research",
+            tools: [
+                {
+                    tool:"Otter.ai",
+                    description:"Ai-powered speech to text transcription",
+                    status:"Current",
+                    logo:otterAi
+                },
+                {
+                    tool:"Optimal Sort",
+                    description:"Card-based information architecture categorization",
+                    status:"Current",
+                    logo:optimalsort
+                },
+                {
+                    tool:"Google Analytics",
+                    description:"Web analytics service for measuring website traffic and ROI",
+                    status:"Current",
+                    logo:analytics
+                },
+                {
+                    tool:"HotJar",
+                    description:"Behavior analytics and user feedback service for websites",
+                    status:"Expected",
+                    logo:hotjar
+                }
+            ]
+        },
+        {
+            category:"Workflow",
+            tools: [
+                {
+                    tool:"Slack",
+                    description:"Instant messaging platform for team collaboration",
+                    status:"Current",
+                    logo:slack
+                },
+                {
+                    tool:"Jira",
+                    description:"Ticket-based issue tracking for agile project management",
+                    status:"Current",
+                    logo:jira
+                }
+            ]
+        },
+        {
+            category:"Marketing",
+            tools: [
+                {
+                    tool:"Mailchimp",
+                    description:"Email-campaign focused marketing platform for CMS needs",
+                    status:"Current",
+                    logo:mailchimp
+                },
+                {
+                    tool:"Google Search Console",
+                    description:"Web service for website search engine optimization (SEO)",
+                    status:"Current",
+                    logo:searchconsole
+                }
+            ]
         }
     ]
 }

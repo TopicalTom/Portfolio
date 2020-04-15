@@ -6,11 +6,13 @@ import SkillCategory from "../SkillCategory/SkillCategory";
 
 const SkillBlock = props => {
 
+    const {allSkills, filter, filterBy} = props
+
     return (
         <>
-            {props.allSkills.map(data => {
+            {allSkills.map(data => {
 
-                const {discipline, caption, skills} = data
+                const { discipline, caption, altCaption, skills } = data
     
                 return (
     
@@ -18,10 +20,14 @@ const SkillBlock = props => {
                         name={discipline}
                         className="skills__block">
                         <h2>{discipline}</h2>
-                        <p>{caption}</p>
-                        <SkillCategory skills={skills}/>
+                        <p>{filter ? altCaption : caption}</p>
+                        <SkillCategory 
+                            skills={skills}
+                            filterBy={filterBy}
+                            filter={filter}
+                        />
                     </Element>
-                )
+                )                
             })}
         </>
     )

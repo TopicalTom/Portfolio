@@ -1,125 +1,172 @@
 import React, {Component} from 'react';
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import "./Skills.scss";
 
 import UX from "../../assets/images/UXCertificate.png";
+import Web from "../../assets/images/WebDevDiploma.png";
 import PM from "../../assets/images/ProductManagementCertificate.png";
 import iOS from "../../assets/images/iOSDevCertificate.png";
-
 import chevron from "../../assets/icons/chevron.svg";
+
 import skillsData from "../../data/skillsData.jsx";
 
 import Nav from "../../components/Nav/Nav";
 import Redirect from "../../components/Redirect/Redirect";
 import Filter from "../../components/Filter/Filter";
 import SkillBlock from "../../components/SkillBlock/SkillBlock";
+import SideNav from "../../components/SideNav/SideNav";
 
-class Skills extends Component {
+export default class Skills extends Component {
 
     state = {
         allSkills: skillsData,
-        filterBy: "",
-        filter: false            
+        filterBy: "All",
+        filter: false,
+        links: [
+            "Overview", 
+            "Design", 
+            "Development",
+            "Product" 
+        ]      
     }
+
+    resetFilter = (e) => {
+
+        this.setState({
+            filterBy: e.target.value,
+            filter: false
+        });
+
+        window.scrollTo({ top: 700, behavior: 'smooth' });
+    };
+
+    handleFilterChange = (e) => {
+
+        this.setState({
+            filterBy: e.target.value,
+            filter: true
+        });
+
+        window.scrollTo({ top: 700, behavior: 'smooth' });
+    };
 
     render() {
 
-        console.log(this.state.allSkills)
         return (
             <>
             <Nav/>
             <main className="skills">
                 <div className="skills__container">
                     <aside className="skills__content skills__content--filter">
-                        <p 
-                            className="skills__header">
-                            Navigate
-                        </p>
-                        <ul className="skills__links">
-                            <li>
-                                <Link
-                                    to="Overview"
-                                    className="project__link"
-                                    smooth={true}
-                                    offset={-240}
-                                    duration={500}>
-                                    Overview
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    to="Product" 
-                                    className="project__link"
-                                    smooth={true}
-                                    offset={-240} 
-                                    duration={500}>
-                                    Product
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="Design"
-                                    className="project__link"
-                                    smooth={true}
-                                    offset={-240}
-                                    duration={500}>
-                                    Design
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    to="Development"
-                                    className="project__link" 
-                                    smooth={true}
-                                    offset={-240} 
-                                    duration={500}>
-                                    Development
-                                </Link>
-                            </li>
-                        </ul>
-                        <Filter />
+                        <SideNav links={this.state.links}/>
+                        <form className="filter">
+                    <p 
+                        className="filter__header">
+                        Skills
+                    </p>
+                    <div className="filter__selections">
+                        <label className="filter__checkbox">
+                            <input 
+                                className="filter__label"
+                                type="radio" 
+                                name="filter"
+                                value="All"
+                                checked={this.state.filterBy === "All"}
+                                onChange={this.resetFilter}
+                            />
+                            All
+                        </label>
+                        <label className="filter__checkbox">
+                            <input 
+                                className="filter__label"
+                                type="radio" 
+                                name="filter"
+                                value="Current"
+                                checked={this.state.filterBy === "Current"}
+                                onChange={this.handleFilterChange}
+                            />
+                            Current
+                        </label>
+                        <label className="filter__checkbox">
+                            <input 
+                                className="filter__label"
+                                type="radio" 
+                                name="filter"
+                                value="Learning"
+                                checked={this.state.filterBy === "Learning"}
+                                onChange={this.handleFilterChange}
+                            />
+                            Learning
+                        </label>
+                        <label className="filter__checkbox">
+                            <input 
+                                className="filter__label"
+                                type="radio" 
+                                name="filter"
+                                value="Expected"
+                                checked={this.state.filterBy === "Expected"}
+                                onChange={this.handleFilterChange}
+                            />
+                            Expected
+                        </label>
+                    </div>
+                </form>
                     </aside>
                     <section className="skills__content skills__content--skills">
                         <Element
                             name="Overview"
                             className="skills__overview">
-                                <h1>My Skillset</h1>
-                                <p>My goal is to keep on learning new skills to gain a better understading of how each discipline comes together to create digital products. Due to this I'll be updating this space with my current progress. In the pursuit of that goal I have acquired the following certificates and skills:</p>
-                                <CarouselProvider
-                                    naturalSlideWidth={730}
-                                    //naturalSlideHeight={280}
-                                    totalSlides={2}
-                                >
-                                    <div className="skills__buttons">
-                                        <ButtonNext className="skills__btn">
-                                            <img 
-                                                className="skills__icon--flip" 
-                                                src={chevron}
-                                            />
-                                        </ButtonNext>
-                                        <ButtonBack className="skills__btn">
-                                            <img 
-                                                src={chevron}
-                                            />
-                                        </ButtonBack>
-                                    </div>
-                                    <Slider className="skills__slider">
-                                        <Slide className="skills__slide" index={0}>
-                                            <img
-                                                className="skills__certificate"
-                                                src={iOS}
-                                            />
-                                            <img
-                                                className="skills__certificate"
-                                                src={PM}
-                                            />
-                                        </Slide>
-                                    </Slider>
+                            <h1>My Skillset</h1>
+                            <p>My goal is to keep on learning new skills to gain a better understading of how each discipline comes together to create digital products. Due to this I'll be updating this space with my current progress. In the pursuit of that goal I have acquired the following certificates and skills:</p>
+                            <CarouselProvider
+                                naturalSlideWidth={352}
+                                //naturalSlideHeight={262}
+                                totalSlides={2}
+                                isIntrinsicHeight={true}
+                            >
+                                <div className="skills__buttons">
+                                    <ButtonNext className="skills__btn">
+                                        <img 
+                                            className="skills__icon--flip" 
+                                            src={chevron}
+                                        />
+                                    </ButtonNext>
+                                    <ButtonBack className="skills__btn">
+                                        <img 
+                                            src={chevron}
+                                        />
+                                    </ButtonBack>
+                                </div>
+                                <Slider className="skills__slider" orientation="horizontal">
+                                    <Slide  className="skills__slide" index={0}>
+                                        <img
+                                            className="skills__certificate"
+                                            src={UX}
+                                        />
+                                        <img
+                                            className="skills__certificate"
+                                            src={Web}
+                                        />
+                                    </Slide>
+                                    <Slide index={1}>
+                                        <img
+                                            className="skills__certificate"
+                                            src={iOS}
+                                        />
+                                        <img
+                                            className="skills__certificate"
+                                            src={PM}
+                                        />
+                                    </Slide>
+                                </Slider>
                                 </CarouselProvider>
                         </Element>
-                        <SkillBlock allSkills={this.state.allSkills}/>
+                        <SkillBlock 
+                            allSkills={this.state.allSkills}
+                            filterBy={this.state.filterBy}
+                            filter={this.state.filter}
+                        />
                         <article className="skills__block">
                             <Redirect 
                                 text="Notice any skill gaps?"
@@ -134,8 +181,6 @@ class Skills extends Component {
         );
     }
 };
-
-export default Skills;
 
 /*
 

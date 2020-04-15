@@ -16,7 +16,8 @@ export default class Filter extends Component {
                                 className="filter__label"
                                 type="radio" 
                                 name="filter"
-                                value="Design"
+                                value="all"
+                                //checked={this.state.filterBy === "all"}
                             />
                             All
                         </label>
@@ -25,7 +26,8 @@ export default class Filter extends Component {
                                 className="filter__label"
                                 type="radio" 
                                 name="filter"
-                                value="Design"
+                                value="current"
+                                //checked={this.state.filterBy === "current"}
                             />
                             Current
                         </label>
@@ -34,7 +36,8 @@ export default class Filter extends Component {
                                 className="filter__label"
                                 type="radio" 
                                 name="filter"
-                                value="Design"
+                                value="learning"
+                                //checked={this.state.filterBy === "learning"}
                             />
                             Learning
                         </label>
@@ -43,7 +46,8 @@ export default class Filter extends Component {
                                 className="filter__label"
                                 type="radio" 
                                 name="filter"
-                                value="Design"
+                                value="upcoming"
+                                //checked={this.state.filterBy === "upcoming"}
                             />
                             Upcoming
                         </label>

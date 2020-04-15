@@ -1,0 +1,21 @@
+.side-nav {
+    margin-bottom: 25px;
+
+    &__header {
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    
+    &__links {
+        padding-inline-start: 0px;
+    }
+
+    &__link {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1.0;
+            cursor: pointer;
+        }
+    }
+}

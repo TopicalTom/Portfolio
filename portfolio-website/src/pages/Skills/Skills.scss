@@ -77,10 +77,8 @@
         display: flex;
         flex-direction: row;
         width: 730px;
-        //justify-content: space-between;
-        //background-color: red;
         overflow: hidden;
-        //height: 280px;
+        height: 262px;
         margin: auto;
         justify-content: space-between;
     }
@@ -100,9 +98,10 @@
         width: 350px;
         height: 262px;
         border-radius: 4px;
-        border: 1px solid #E1E1E1;
+        border: 2px solid #F2F3F7;
         overflow: hidden;
         color: white;
+        margin: 0;
 
         &:nth-of-type(1) {
             margin-right: 15px;
@@ -119,6 +118,10 @@
         }
     }
 
+    &__category {
+        margin-left: 5px;
+    }
+
     &__buttons {
         display: flex;
         flex-direction: row-reverse;
@@ -130,6 +133,64 @@
 
         &--flip {
             transform: scaleX(-1);
+        }
+    }
+
+    &__box {
+        border: 1px solid #F2F3F7;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        margin-top: 0.15rem;
+    }
+}
+
+.filter {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 2px solid #F2F2F7;
+    width: 60%;
+
+    &__form {
+        margin: 0;
+        justify-content: space-between; 
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__input {
+        width: 300px;
+        height: 44px;
+        border-radius: 4px;
+        border: 2px solid #F2F2F7;
+    }
+
+    &__header {
+        font-weight: bold;
+    }
+
+    &__selections {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__checkbox {
+        padding: 3px 0px;
+    }
+
+    &__label {
+        margin-right: 10px;
+        margin-left: 1px;
+    }
+
+    &__reset {
+        color: blue;
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }

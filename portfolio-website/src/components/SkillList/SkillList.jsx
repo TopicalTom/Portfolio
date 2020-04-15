@@ -1,12 +1,15 @@
 import React from 'react';
 
 import SkillCard from "../SkillCard/SkillCard";
+import "../../pages/Skills/Skills.scss";
 
 const SkillList = (props) => {
 
+    const {tools, filter, filterBy} = props
+
     return (
         <>
-            {props.tools.map(content => {
+            {tools.map(content => {
     
                 const { logo, tool, description, status } = content
     
@@ -16,6 +19,8 @@ const SkillList = (props) => {
                         tool={tool}
                         description={description}
                         status={status}
+                        filter={filter}
+                        filterBy={filterBy}
                     /> 
                 )
             })}
