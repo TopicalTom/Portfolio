@@ -1,0 +1,57 @@
+.degrees {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+
+    &__slider {
+        overflow: hidden;
+        margin: auto;
+
+        &--animation {
+            transition-duration: 0.5s;
+        }
+    }
+
+    &__slide {
+        width: 730px;
+        height: 262px;
+        display: flex;
+        flex-direction: row;
+        //background-color: green;
+        //margin: auto;
+        justify-content: space-between;
+    }
+
+    &__certificate {
+        background-position: center;
+        width: 350px;
+        height: 262px;
+        border-radius: 4px;
+        border: 2px solid #F2F3F7;
+        overflow: hidden;
+        color: white;
+        margin: 0;
+
+        &:nth-of-type(1) {
+            margin-right: 15px;
+        }
+    }
+
+    &__button {
+        background-color: white;
+        outline: none;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+
+        &--flip {
+            transform: scaleX(-1);
+        }
+    }
+}

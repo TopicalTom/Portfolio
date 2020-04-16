@@ -11,7 +11,7 @@ const Contact = () => {
         <main className="contact">
             <div className="contact__container">
                 <aside className="contact__section contact__section--links">
-                    <p>Details</p>
+                    <p>Direct</p>
                     <ul>
                         <li><a 
                             className="contact__link"

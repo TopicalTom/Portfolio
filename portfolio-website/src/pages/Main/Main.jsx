@@ -1,75 +1,60 @@
 import React from 'react';
 import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import "./Main.scss";
 
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";
-
-import Rally from "../../assets/videos/RallyPromo.mp4";
-import TouchBase from "../../assets/videos/TouchBasePromo.mp4";
-import Homediate from "../../assets/videos/HomediatePromo.mp4";
+import projectsData from "../../data/projectsData";
 
 const Main = () => {
+
+    const projects = projectsData
+
     return (
-        <>
-            <section className="lander">
-                <div className="lander__container">
-                    <div className="lander__details">
-                        <h1 className="lander__about">
-                            I'm Thomas Griffiths an aspiring Product Designer.
-                        </h1>
-                        <p className="lander__mission">
-                            On a mission to bridge the gap between designer and developer. Interested in creating human-centered mobile experiences.
-                        </p>
-                        <Link 
-                            to="Projects"
-                            className="lander__cta"
-                            smooth={true}
-                            duration={500}
-                            offset={-220}>
-                            <div 
-                                className="lander__button">
-                                View Projects
-                            </div>
-                        </Link>
-                    </div>
+        <main className="main">
+            <section className="main__container">
+                <div className="main__details">
+                    <h1 
+                        className="main__heading">
+                        I'm Thomas Griffiths an aspiring Product Designer.
+                    </h1>
+                    <p 
+                        className="main__mission">
+                        On a mission to bridge the gap between designer and developer. Interested in creating human-centered mobile experiences.
+                    </p>
+                    <Link 
+                        className="main__button"
+                        to="Projects"
+                        smooth={true}
+                        duration={500}
+                        offset={-240}>
+                        <div 
+                            className="main__cta">
+                            View Projects
+                        </div>
+                    </Link>
                 </div>
             </section>
             <Element 
-                className="break"
+                className="main__projects"
                 name="Projects">
-                <ProjectPromo
-                    project="Rally"
-                    description="Helping friends spontaneously connect with their social circle over current interests."
-                    preview={Rally}
-                    link="rally"
-                    orientation="left"
-                    code=""
-                    autoPlay
-                    loop
-                />
-                <ProjectPromo
-                    project="TouchBase"
-                    description="Helping working professionals transition into a new career by making networking more manageable."
-                    preview={TouchBase}
-                    link="touch-base"
-                    orientation="right"
-                    code="none"
-                    autoPlay
-                    loop
-                />
-                <ProjectPromo
-                    project="Homediate"
-                    description="Helping housemates mediate household tasks and utility costs within a shared space."
-                    preview={Homediate}
-                    link="shared-space"
-                    orientation="left"
-                    code="none"
-                    autoPlay
-                    loop
-                />
+                {projects.map(promo => {
+                    const { project, description, preview, link, orientation, code } = promo
+                    return (
+                        <ProjectPromo
+                            project={project}
+                            description={description}
+                            preview={preview}
+                            link={link}
+                            orientation={orientation}
+                            code={code}
+                            autoPlay
+                            loop
+                        />
+                    )
+                })}
             </Element>
-        </>
+        </main>
     );
 };
 

@@ -7,28 +7,19 @@ import play from "../../assets/icons/play.svg";
 const ProjectPromo = (props) => {
 
     const { project, description, preview, link, orientation, code } = props
-
     const [ isPlaying, setisPlaying ] = useState(true);
 
     function playVideo() {
-
         let player = document.getElementById(`${project}`);
-
         player.play();
-
         setisPlaying(true);
     }
    
     function pauseVideo(){
         let player = document.getElementById(`${project}`);
-
         player.pause();
-
         setisPlaying(false);
     }
-
-    const icon = isPlaying ? pause : play;
-    const toggle = isPlaying ? pauseVideo : playVideo;
 
     return (
         <section className="promo">
@@ -42,11 +33,11 @@ const ProjectPromo = (props) => {
                 />
                 <button
                     className="promo__toggle"
-                    onClick={toggle}
+                    onClick={isPlaying ? pauseVideo : playVideo}
                 >
                     <img
                         className="promo__player"
-                        src={icon}
+                        src={isPlaying ? pause : play}
                     />
                 </button>
                 <div className="promo__details">

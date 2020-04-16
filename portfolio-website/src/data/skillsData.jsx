@@ -28,6 +28,8 @@ import mailchimp from "../assets/tools/Mailchimp.svg";
 import mapbox from "../assets/tools/Mapbox.svg";
 import foursquare from "../assets/tools/FourSquare.svg";
 import postman from "../assets/tools/Postman.svg";
+import netlify from "../assets/tools/Netlify.svg";
+import zapier from "../assets/tools/Zapier.svg";
 
 const skillsData = [
 { 
@@ -36,7 +38,24 @@ const skillsData = [
     altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
     skills: [
         {
-            category:"Graphics",
+            category:"Research",
+            tools: [
+                {
+                    tool:"Otter.ai",
+                    description:"Ai-powered speech to text transcription",
+                    status:"Current",
+                    logo:otterAi
+                },
+                {
+                    tool:"Optimal Sort",
+                    description:"Card-based information architecture categorization",
+                    status:"Current",
+                    logo:optimalsort
+                }
+            ],
+        },
+        {
+            category:"Visuals",
             tools: [
                 {
                     tool:"Sketch",
@@ -121,16 +140,16 @@ const skillsData = [
                     logo:css
                 },
                 {
-                    tool:"SASS",
-                    description:"CSS extension for implementing nested naming conventions (BEM)",
-                    status:"Current",
-                    logo:sass
-                },
-                {
                     tool:"JavaScript",
                     description:"Scripting language for creating dynamic web browser documents",
                     status:"Current",
                     logo:javascript
+                },
+                {
+                    tool:"SASS",
+                    description:"CSS extension for implementing nested naming conventions (BEM)",
+                    status:"Current",
+                    logo:sass
                 },
                 {
                     tool:"React.js",
@@ -160,6 +179,12 @@ const skillsData = [
                     description:"HTTP client for testing RESTful API functionality",
                     status:"Current",
                     logo:postman
+                },
+                {
+                    tool:"Netlify",
+                    description:"Platform for deploying serverless static sites",
+                    status:"Learning",
+                    logo:netlify
                 },
                 {
                     tool:"mySQL",
@@ -237,18 +262,6 @@ const skillsData = [
             category:"Research",
             tools: [
                 {
-                    tool:"Otter.ai",
-                    description:"Ai-powered speech to text transcription",
-                    status:"Current",
-                    logo:otterAi
-                },
-                {
-                    tool:"Optimal Sort",
-                    description:"Card-based information architecture categorization",
-                    status:"Current",
-                    logo:optimalsort
-                },
-                {
                     tool:"Google Analytics",
                     description:"Web analytics service for measuring website traffic and ROI",
                     status:"Current",
@@ -272,6 +285,12 @@ const skillsData = [
                     logo:slack
                 },
                 {
+                    tool:"Zapier",
+                    description:"Online automation tool for connecting apps and services",
+                    status:"Current",
+                    logo:zapier
+                },
+                {
                     tool:"Jira",
                     description:"Ticket-based issue tracking for agile project management",
                     status:"Current",
@@ -289,7 +308,7 @@ const skillsData = [
                     logo:mailchimp
                 },
                 {
-                    tool:"Google Search Console",
+                    tool:"Search Console",
                     description:"Web service for website search engine optimization (SEO)",
                     status:"Current",
                     logo:searchconsole

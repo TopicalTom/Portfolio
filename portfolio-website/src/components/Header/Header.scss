@@ -17,11 +17,13 @@
 
     &__container {
         margin: 0 auto;
-        padding: 1.5rem 0rem;
+        //padding: 1.5rem 0rem;
         width: 1000px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        z-index: 105;
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
     }
 
     &__section {
@@ -33,7 +35,7 @@
         }
 
         &--nav {
-            width: 350px;
+            width: 400px;
             justify-content: space-between;
         }
     }
@@ -42,12 +44,22 @@
         display: flex;
         flex-direction: row;
         padding-inline-start: 0px;
-        width: 350px;
+        width: 100%;
         justify-content: space-between;
+    }
+
+    &__spacing {
+        display: flex;
+        flex-direction: row;
+        padding-inline-start: 0px;
+        width: 280px;
+        justify-content: space-between;
+        padding: 1.5rem 0rem;
     }
 
     &__logo {
         color: #2E2E2E;
+        padding: 1.5rem 0rem;
 
         &.visible {
             color: #2E2E2E;
@@ -59,6 +71,8 @@
         //color: white;
         opacity: 0.5;
         transition: all 0.2s ease 0s;
+        padding: 1.5rem 0rem;
+        width: 100px;
 
         &:hover {
             opacity: 1.0;
@@ -69,9 +83,10 @@
 
     &__link {
         color: #2E2E2E;
-        //color: white;
         opacity: 0.5;
         transition: all 0.2s ease 0s;
+        padding: 1.5rem 0rem;
+        height: 83px;
 
         &.black {
             color: #2E2E2E;
@@ -87,14 +102,46 @@
 
 .dropdown {
     position: fixed;
-    z-index: 105;
+    z-index: 104;
     width: 100vw;
-    height: 108px;
     background-color: #F2F3F7;
-    margin-top: 82px;
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
     transition: all 0.2s ease 0s;
+    //animation: mynewanimation 0.3s;
+    transition: transform 3s ease;
+
+    &--active {
+        animation: out 0.3s;
+        animation-fill-mode: forwards;
+
+        @keyframes out {
+            from { 
+                margin-top: 0px; 
+                height: 83px;
+            };
+            to { 
+                margin-top: 83px;
+                height: 100px;
+            };
+        }
+    }
+
+    &--inactive {
+        animation: in 0.3s;
+        animation-fill-mode: forwards;
+
+        @keyframes in {
+            from { 
+                margin-top: 83px; 
+                height: 100px;
+            };
+            to { 
+                margin-top: 0px;
+                height: 83px;
+            };
+        }
+    }
 
     &__container {
         width: 600px;

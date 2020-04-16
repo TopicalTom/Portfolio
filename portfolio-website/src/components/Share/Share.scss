@@ -69,10 +69,21 @@
         background-color: white;
         transition: transform 1s ease-in-out;
 
-        &:hover {
+        &--inactive {
+
+            &:hover {
+                cursor: pointer;
+                border: 1px solid #007AFF;
+                background-color: rgba(0, 123, 255, 0.205);
+                transition: transform 1s ease-in-out;
+            }
+        }
+
+        &--active {
+
             cursor: pointer;
             border: 1px solid #00C642;
-            background-color: transparent;
+            background-color: rgba(0, 255, 85, 0.253);
             transition: transform 1s ease-in-out;
         }
     }
@@ -87,18 +98,17 @@
         display: flex;
         flex-direction: row;
         border-radius: 2px;
-        //border: 1px solid #007AFF;
         height: 44px;
         padding: 0.8rem 0.8rem;
         justify-content: flex-end;
         width: 410px;
         padding-right: 15px;
-        background-color: rgba(0, 255, 85, 0.253);
     }
 
-    &__copy {
-        color: #007AFF;
-        padding-right: 5px;
+    &__alert {
+        font-weight: bolder;
+        padding-right: 8px;
+        color: #AFAFAF;
     }
 
     &__icon { 

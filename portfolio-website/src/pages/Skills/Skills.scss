@@ -47,12 +47,6 @@
         }
     }
 
-    &__action {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 100%;
-    }
-
     &__button {
         width: 150px;
         height: 50px;
@@ -73,51 +67,6 @@
         padding-bottom: 20px;
     }
 
-    &__slider {
-        display: flex;
-        flex-direction: row;
-        width: 730px;
-        overflow: hidden;
-        height: 262px;
-        margin: auto;
-        justify-content: space-between;
-    }
-
-    &__slide {
-        width: 730px;
-        height: 262px;
-        display: flex;
-        flex-direction: row;
-        //background-color: green;
-        //margin: auto;
-        justify-content: space-between;
-    }
-
-    &__certificate {
-        background-position: center;
-        width: 350px;
-        height: 262px;
-        border-radius: 4px;
-        border: 2px solid #F2F3F7;
-        overflow: hidden;
-        color: white;
-        margin: 0;
-
-        &:nth-of-type(1) {
-            margin-right: 15px;
-        }
-    }
-
-    &__btn {
-        background-color: white;
-        outline: none;
-        border: none;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
     &__category {
         margin-left: 5px;
     }
@@ -127,13 +76,6 @@
         flex-direction: row-reverse;
         width: 730px;
         margin-bottom: 20px;
-    }
-
-    &__icon {
-
-        &--flip {
-            transform: scaleX(-1);
-        }
     }
 
     &__box {

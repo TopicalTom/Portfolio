@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import ReactModal from 'react-modal';
-
 import "./Header.scss";
 
-import Rally from "../../assets/icons/Rally.svg";
-import TouchBase from "../../assets/icons/TouchBase.svg";
-import Homediate from "../../assets/icons/Homediate.svg";
+import projectsData from "../../data/projectsData";
 
 ReactModal.setAppElement('*');
 
@@ -13,53 +10,45 @@ class Header extends Component {
     constructor(props){
         super(props)        
         this.state = {
-            isOpen: false
+            isOpen: false,
+            projects: projectsData
         }
     }
-
-    // Clicking on the Kebab Opens and Closes Dropdown
+    /*
     toggleDropdown = () => {
-        if (!this.state.isOpen) {
-            
-            // Attaches Event Handler While Dropdown is Visible 
-            document.addEventListener('click', this.handleOutsideClick, false);
-        } else {
-
-            // Removes Event Handler While Dropdown is Hidden
-            document.removeEventListener('click', this.handleOutsideClick, false);
-        }
-
-        // Toggles isOpen State
         this.setState(prevState => ({
             isOpen: !prevState.isOpen
         }));
     }
+    */
 
-    // Toggles Dropdown once the user hovers outside
-    handleOutsideClick = (e) => {
-        
-        // Prevents Toggle Event for clicks within Dropdown Component
-        if (this.node===e.target) {
-            return;
-        }
-        
-        // Function Callback to toggle isOpen state
-        this.toggleDropdown();
+    openDropdown = () => {
+        this.setState({isOpen: true})
+    }
+
+    closeDropdown = () => {
+        this.setState({isOpen: false})
+        /*
+        setTimeout(() => {
+            this.setState({isOpen: false});
+        }, 1000);
+        */
     }
 
     render() {
 
-        const nodeRef = node => { this.node = node };
         const { isOpen } = this.state;
-
+        const projects = this.state.projects
 
     return (
+        <>
         <header className={`header`}>
             <div className="header__container">
                 <div className="header__section header__section--logo">
                     <a href="/">
                         <h3
-                            className={`header__logo`}>
+                            className={`header__logo`}
+                            onMouseEnter={ () => this.closeDropdown() }>
                             TopicalTom
                         </h3>
                     </a>
@@ -68,68 +57,58 @@ class Header extends Component {
                     <ul className="header__links">
                         <li><p
                             className={`header__dropdown`}
-                            //onMouseEnter={ () => this.toggleDropdown() }
-                            //onMouseLeave={ () => this.toggleDropdown() }
-                            onClick={ () => this.toggleDropdown() }>
+                            onMouseEnter={ () => this.openDropdown() }>
                             Projects
                         </p></li>
-                        <li><a
-                            className={`header__link`}
-                            href="/about">
-                            About
-                        </a></li>
-                        <li><a
-                            className={`header__link`}
-                            href="/skills">
-                            Skills
-                        </a></li>
-                        <li><a
-                            className={`header__link`}
-                            href="/contact">
-                            Contact
-                        </a></li>
+                        <span 
+                            className="header__spacing" 
+                            onMouseEnter={ () => this.closeDropdown() }>
+                            <li><a
+                                className={`header__link`}
+                                href="/skills">
+                                Skills
+                            </a></li>
+                            <li><a
+                                className={`header__link`}
+                                href="/about">
+                                About
+                            </a></li>
+                            <li><a
+                                className={`header__link`}
+                                href="/contact">
+                                Contact
+                            </a></li>
+                        </span>
                     </ul>
                 </nav>
             </div>
-            {isOpen && // Only displays dropdown when isOpen = true
-                <div 
-                    ref={node => { this.node = node }}
-                    className="dropdown">
-                    <div 
-                        className="dropdown__container">
-                        <a 
-                            className="dropdown__project"
-                            href="/project/rally">
-                            <img 
-                                className="dropdown__icon"
-                                src={Rally}
-                            />
-                            Rally
-                        </a>
-                        <a 
-                            className="dropdown__project dropdown__project--locked"
-                            href="/project/touch-base">
-                            <img 
-                                className="dropdown__icon"
-                                src={TouchBase}
-                            />
-                            TouchBase
-                        </a>
-                        <a 
-                            className="dropdown__project dropdown__project--locked"
-                            href="/project/shared-space">
-                            <img 
-                                className="dropdown__icon"
-                                src={Homediate}
-                            />
-                            Homediate
-                        </a>
-                    </div>
-                </div>
-            }
         </header>
-    );
+        {isOpen && // Only displays dropdown when isOpen = true
+            <div 
+                className={`dropdown dropdown${isOpen ? "--active" : "--inactive"}`}
+                onMouseLeave={ () => this.closeDropdown() }>
+                <div 
+                    className="dropdown__container">
+                    {projects.map(promo => {
+                        const {project, icon, link} = promo
+                        return (
+                            <a 
+                                className="dropdown__project"
+                                href={`/project/${link}`}>
+                                <img 
+                                    className="dropdown__icon"
+                                    src={icon}
+                                />
+                                {project}
+                            </a>
+                        )
+                    })}
+                </div>
+            </div>
         }
+        </>
+    );
+    }
 };
 
 export default Header;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element , animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import "../Project/Project.scss";
 
 import Figure from "../../components/Figure/Figure";
@@ -14,11 +14,20 @@ import map from "../../assets/images/ExperienceMap.png";
 import app from "../../assets/icons/RallyAppIcon.svg";
 
 import github from "../../assets/icons/github.svg";
+import SideNav from '../../components/SideNav/SideNav';
 
 class Rally extends Component {
 
-    constructor(props) {
-        super(props);
+    state = {
+        links: [
+            "Overview", 
+            "Problem Space", 
+            "Research",
+            "Insights",
+            "Ideation",
+            "Design",
+            "Next Steps" 
+        ]      
     }
 
     componentDidMount() {
@@ -30,89 +39,8 @@ class Rally extends Component {
             <>
             <main className="project">
                 <div className="project__container">
-                    <div className="project__nav">
-                        <aside>
-                            <p 
-                                className="project__process">
-                                Navigate
-                            </p>
-                            <ul className="project__links">
-                                <li>
-                                    <Link
-                                        to="Overview"
-                                        className="project__link"
-                                        activeClass="active" 
-                                        smooth={true}
-                                        onSetActive={this.handleSetActive}
-                                        onSetInactive={this.handleSetInactive}
-                                        spy={true} 
-                                        offset={-240}
-                                        duration={500}>
-                                        Overview
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link 
-                                        to="Problem Space"
-                                        className="project__link" 
-                                        smooth={true}
-                                        offset={-240} 
-                                        duration={500}>
-                                        Problem Space
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link 
-                                        to="Research" 
-                                        className="project__link"
-                                        smooth={true}
-                                        offset={-240} 
-                                        duration={500}>
-                                        Research
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link 
-                                        to="Insights" 
-                                        className="project__link"
-                                        smooth={true}
-                                        offset={-240} 
-                                        duration={500}>
-                                        Insights
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link 
-                                        to="Ideation" 
-                                        className="project__link"
-                                        smooth={true}
-                                        offset={-240} 
-                                        duration={500}>
-                                        Ideation
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link 
-                                        to="Design" 
-                                        className="project__link"
-                                        smooth={true}
-                                        offset={-240} 
-                                        duration={500}>
-                                        Design
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link 
-                                        to="Next Steps" 
-                                        className="project__link"
-                                        smooth={true} 
-                                        offset={-240}
-                                        duration={500}>
-                                        Next Steps
-                                    </Link>
-                                </li>
-                            </ul>
-                        </aside>
+                    <aside className="project__nav">
+                        <SideNav links={this.state.links}/>
                         <a 
                             className="project__code"
                             href="https://github.com/TopicalTom/rally-capstone">
@@ -125,7 +53,7 @@ class Rally extends Component {
                                 src={github}
                             />
                         </a>
-                    </div>
+                    </aside>
                     <section className="project__content">
                         <Element 
                             name="Overview"
@@ -216,15 +144,7 @@ class Rally extends Component {
                         </Element>
                         <Element 
                             className="project__block">
-                                <h3 className="project__block">Brand Imagery</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <div className="project__image">
-                                    <img src={app} />
-                                </div>
-                        </Element>
-                        <Element 
-                            className="project__block">
-                                <h3>Color Psychology</h3>
+                                <h3>Branding</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                                 <Palette />
                         </Element>
@@ -243,13 +163,11 @@ class Rally extends Component {
                                 <h2>What's Next</h2>
                                 <p>I am currently in the process of developing this app for iOS devices using React Native. While I am only in the early stages, I am planning to look into.</p>
                         </Element>
-                        <article className="project__block">
-                            <Redirect 
-                                text="Have any Questions?"
-                                link="/contact"
-                                cta="Let's Chat"
-                            />
-                        </article>
+                        <Redirect 
+                            text="Want to learn more?"
+                            link="/contact"
+                            cta="Let's Chat"
+                        />
                     </section>
                 </div>
             </main>

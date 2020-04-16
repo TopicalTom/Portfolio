@@ -10,12 +10,7 @@ import TouchBasePreview from "../../assets/images/TouchBasePreview.png";
 import SharedSpacePreview from "../../assets/images/SharedSpacePreview.png";
 import RallyPreview from "../../assets/images/RallyPreview.png";
 
-import UX from "../../assets/images/UXCertificate.png";
-import PM from "../../assets/images/ProductManagementCertificate.png";
-import iOS from "../../assets/images/iOSDevCertificate.png";
-
 export default class DynamicCards extends Component {
-
 
     render(){
 
@@ -101,13 +96,5 @@ export default class DynamicCards extends Component {
                 </div>
             )
         }
-
-        /*
-        return (
-            <>
-                <ContactCard/>
-            </>
-        );
-        */
     }
 };

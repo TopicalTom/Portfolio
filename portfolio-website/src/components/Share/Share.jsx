@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react';
 import ReactModal from 'react-modal';
+import "./Share.scss";
+
 import share from "../../assets/icons/share.svg";
 import cancel from "../../assets/icons/cancel.svg";
+import success from "../../assets/icons/success.svg";
 import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 import copy from "../../assets/icons/copy.svg";
-import "./Share.scss";
 
 ReactModal.setAppElement('*')
 
@@ -24,7 +26,8 @@ function Share() {
         document.body.scroll = "yes";
     };
 
-    const [copySuccess, setCopySuccess] = useState('');
+    const [copyPageSuccess, setCopyPageSuccess] = useState(false);
+    const [copyHomeSuccess, setCopyHomeSuccess] = useState(false);
     const pageRef = useRef(null);
     const homeRef = useRef(null);
   
@@ -32,14 +35,20 @@ function Share() {
         pageRef.current.select();
         document.execCommand('copy');
         e.target.focus();
-        setCopySuccess('Copied!');
+        setCopyPageSuccess(true);
+        setTimeout(() => {
+            setCopyPageSuccess(false);
+        }, 1200);
     };
 
     function copyHome(e) {
         homeRef.current.select();
         document.execCommand('copy');
         e.target.focus();
-        setCopySuccess('Copied!');
+        setCopyHomeSuccess(true);
+        setTimeout(() => {
+            setCopyHomeSuccess(false);
+        }, 1200);
     };
 
     return (
@@ -64,27 +73,17 @@ function Share() {
                     />
                     <h2>Looking to Hire?</h2>
                     <br></br>
-                    <p>If you, or someone you know is in need of a Product Designer, check out my resume:</p>
-                    <br></br>
-                    <br></br>
-                    <a href={resume} download="ThomasGriffithsResume">
-                            <div className="modal__button">Download Resume</div>
-                        </a>
+                    <p>If you, or someone you know is in need of a Product Designer, click the boxes below to share some links:</p>
                         <br></br>
                         <br></br>
-                        <h4>-- or --</h4>
-                        <br></br>
-                        <br></br>
-                        <p>Share a Link</p>
                     <form className="modal__form">
                         <label 
                             className="modal__label">
-                            Current Page
-                            {copySuccess}
+                            {copyPageSuccess ? "Link copied to clipboard" : "Current Page"}
                         </label>
                         <div className="modal__container">
                             <textarea 
-                                className="modal__field"
+                                className={`modal__field modal__field${copyPageSuccess ? "--active" : "--inactive"}`}
                                 onClick={copyPage}
                                 ref={pageRef}
                                 placeholder={window.location.href} 
@@ -93,31 +92,40 @@ function Share() {
                             <div className="modal__action">
                                 <img 
                                     className="modal__icon"
-                                    src={copy}
+                                    src={copyPageSuccess ? success : copy}
                                 />
                             </div>
                         </div>
+                        <br></br>
+                    <br></br>
                         <label 
                             className="modal__label">
-                            Home Page
+                            {copyHomeSuccess ? "Link copied to clipboard" : "Home Page"}
                         </label>
                         <div className="modal__container">
                             <textarea
-                                className="modal__field"
+                                className={`modal__field modal__field${copyHomeSuccess ? "--active" : "--inactive"}`}
                                 onClick={copyHome}
                                 ref={homeRef}
-                                placeholder="topicaltom.com/" 
+                                placeholder="topicaltom.com/"
                                 value={"topicaltom.com/"}
                             />
                             <div className="modal__action">
                                 <img 
                                     className="modal__icon"
-                                    src={copy}
+                                    src={copyHomeSuccess ? success : copy}
                                 />
                             </div>
                         </div>
                         <br></br>
                     </form>
+                    <br></br>
+                        <br></br>
+                    <br></br>
+                    <br></br>
+                    <a href={resume} download="ThomasGriffithsResume">
+                        <div className="modal__button">Download Resume</div>
+                    </a>
                 </div>
             </ReactModal>
             </>
