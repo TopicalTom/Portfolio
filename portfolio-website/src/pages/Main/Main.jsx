@@ -4,6 +4,7 @@ import { Link, Element, animateScroll as scroll, scrollSpy, scroller } from 'rea
 import "./Main.scss";
 
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";
+import Switch from "../../components/Switch/Switch";
 import projectsData from "../../data/projectsData";
 
 const Main = () => {
@@ -22,17 +23,20 @@ const Main = () => {
                         className="main__mission">
                         On a mission to bridge the gap between designer and developer. Interested in creating human-centered mobile experiences.
                     </p>
-                    <Link 
-                        className="main__button"
-                        to="Projects"
-                        smooth={true}
-                        duration={500}
-                        offset={-240}>
-                        <div 
-                            className="main__cta">
-                            View Projects
-                        </div>
-                    </Link>
+                    <div className="main__actions">
+                        <Link 
+                            className="main__button"
+                            to="Projects"
+                            smooth={true}
+                            duration={500}
+                            offset={-240}>
+                            <div 
+                                className="main__cta">
+                                View Projects
+                            </div>
+                        </Link>
+                        <Switch />
+                    </div>
                 </div>
             </section>
             <Element 

@@ -19,7 +19,30 @@
     }
 
     &__preview {
+        height: 703px;
+        border-radius: 16px;
+        overflow: hidden;
+        padding-top: 29px;
+        padding-left: 116px;
+    }
+
+    &__overlay {
         height: 730px;
+        position: absolute;
+        margin: 4px 88px 0px 88px;
+        overflow: hidden;
+    }
+
+    &__app {
+        height: 730px;
+
+        &--right {
+            margin: 0px 100px 0px auto;
+        }
+
+        &--left {
+            margin: 0px 100px 0px auto;
+        }
     }
 
     &__project {
@@ -32,10 +55,12 @@
         flex-direction: column;
         vertical-align: center;
         margin: auto 0;
+        width: 500px;
     }
 
     &__description {
         color: #afafaf;
+        opacity: 0.65;
     }
 
     &__link {
@@ -83,7 +108,7 @@
     &__toggle {
         width: 80px;
         height: 80px;
-        //background-color: red;
+        background-color: transparent;
         border: none;
         outline: none;
         position: absolute;

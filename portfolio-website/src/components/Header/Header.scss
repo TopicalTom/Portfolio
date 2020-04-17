@@ -7,12 +7,12 @@
     width: 100vw;
     transform: translateY(0);
     transition: transform 0 ease-in-out;
-    @include theme-aware('background', 'color-background');
+    @include theme-aware('background', 'system-background-primary');
     box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
     z-index: 105;
 
     &.shadow {
-        @include theme-aware('background', 'color-background');
+        @include theme-aware('background', 'system-background-primary');
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         transition: transform 0 ease-in-out;
     }
@@ -25,7 +25,7 @@
         flex-direction: row;
         justify-content: space-between;
         z-index: 105;
-        @include theme-aware('background', 'color-background');
+        @include theme-aware('background', 'system-background-primary');
     }
 
     &__section {
@@ -60,7 +60,7 @@
     }
 
     &__logo {
-        color: #2E2E2E;
+        //color: #2E2E2E;
         padding: 1.5rem 0rem;
 
         &.visible {
@@ -106,9 +106,11 @@
     position: fixed;
     z-index: 104;
     width: 100vw;
-    background-color: #F2F3F7;
-    border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
+    @include theme-aware('background', 'system-background-tertiary');
+    @include theme-aware('border-top', 'content-outline-mid');
+    @include theme-aware('border-bottom', 'content-outline-mid');
+    //border-top: 1px solid #e1e1e1;
+    //border-bottom: 1px solid #e1e1e1;
     transition: all 0.2s ease 0s;
     //animation: mynewanimation 0.3s;
     transition: transform 3s ease;

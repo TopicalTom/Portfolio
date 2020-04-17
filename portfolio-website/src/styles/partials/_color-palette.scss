@@ -1,10 +1,26 @@
 $themes: (
     light: (
-        color-background: white,
-        color-text: rgb(28, 28, 30)
+        system-background-primary: white,
+        system-background-secondary: white,
+        system-background-tertiary: #F2F3F7,
+        seperator-line-opaque: 1px solid #F2F3F7,
+        content-outline: 1px solid #F2F3F7,
+        content-outline-light: 1px solid #F4F4F4,
+        content-outline-mid: 1px solid #E1E1E1,
+        color-text: rgb(28, 28, 30),
+        color-paragraph: #2E2E2E,
+        switch: #53d769,
     ),
     dark: (
-        color-background: rgb(28, 28, 30),
-        color-text: white
+        system-background-primary: #000000,
+        system-background-secondary: #1C1C1E,
+        system-background-tertiary: #1C1C1E,
+        seperator-line-opaque: 1px solid #3A3A3C,
+        content-outline: 1px solid #1C1C1E,
+        content-outline-light: 1px solid #1C1C1E,
+        content-outline-mid: 1px solid #1C1C1E,
+        color-text: white,
+        color-paragraph: rgba(255, 255, 255, 0.65),
+        switch: #3A3A3C
     )
 );

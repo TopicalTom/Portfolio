@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .skills {
     margin: 0;
     width: 100vw;
@@ -79,7 +81,8 @@
     }
 
     &__box {
-        border: 1px solid #F2F3F7;
+        @include theme-aware('border', 'content-outline');
+        @include theme-aware('background', 'system-background-secondary');
         border-radius: 4px;
         margin-bottom: 2rem;
         margin-top: 0.15rem;

@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .form {
     display: flex;
     flex-direction: column;
@@ -24,9 +26,9 @@
     }
 
     &__input {
-        background-color: white;
+        @include theme-aware('background', 'system-background-secondary');
         border-radius: 2px;
-        border: 1px solid #e1e1e1;
+        @include theme-aware('border', 'content-outline-mid');
         padding: 1rem;
         outline: none;
         height: 3.2rem;

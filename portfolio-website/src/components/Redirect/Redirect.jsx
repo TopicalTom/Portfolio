@@ -15,10 +15,10 @@ const Redirect = (props) => {
                 <a 
                     className="redirect__button"
                     href={link}>
-                    <p
+                    <div
                         className="redirect__cta">
                         {cta}
-                    </p>
+                    </div>
                 </a>
             </div>
         </article>

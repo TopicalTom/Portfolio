@@ -9,9 +9,11 @@ import Redirect from "../../components/Redirect/Redirect";
 import prism from "../../assets/images/RallyPrism.png";
 import sketch from "../../assets/images/Sketches.png";
 import rally from "../../assets/videos/RallyPromo.mp4";
+import bumble from "../../assets/videos/BumbleModes.mp4";
 import Palette from "../../components/Palette/Palette";
 import map from "../../assets/images/ExperienceMap.png";
 import app from "../../assets/icons/RallyAppIcon.svg";
+import iPhone from "../../assets/layers/iPhoneOverlay.svg";
 
 import github from "../../assets/icons/github.svg";
 import SideNav from '../../components/SideNav/SideNav';
@@ -125,10 +127,15 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Product Inspiration</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <video 
-                                    className="project__video"
-                                    src={rally}
-                                />
+                                <div>
+                                    <img className="project__video--overlay" src={iPhone}/>
+                                    <video 
+                                        className="project__video"
+                                        src={bumble}
+                                        autoPlay
+                                        loop
+                                    />
+                                </div>
                         </Element>
                         <Element 
                             className="project__block">
@@ -155,10 +162,15 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Prototype</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <video 
-                                    className="project__video"
-                                    src={rally}
-                                />
+                                <div>
+                                    <img className="project__video--overlay" src={iPhone}/>
+                                    <video 
+                                        className="project__video"
+                                        src={rally}
+                                        autoPlay
+                                        loop
+                                    />
+                                </div>
                         </Element>
                         <Element 
                             name="Next Steps"

@@ -1,31 +1,28 @@
 @import "../../styles/baseline.scss";
 
 .share {
-    fill: #007AFF;
-    height: 25px;
+    width: 100%;
 
-    &:hover {
-        cursor: pointer;
+    &__container {
+        width: 100%;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 8px;
+        justify-content: space-between;
+        margin: 60px 0;
+        @include theme-aware('background', 'system-background-tertiary');
+        box-shadow: rgba(0, 0, 0, 0.01) 0px 10px 10px;
     }
-}
 
-.Modal {
-    position: fixed;
-    overflow-y:auto;
-    background-color: white;
-    top:50%;
-    left:50%;
-    right:auto;
-    bottom:auto;
-    z-index: 1000;
-    border-radius:10px;
-    transform:translate(-50%,-50%);
-    width: 550px;
-    height: 700px;
-    padding: 80px 70px;
-    text-align: center;
-    outline: none;
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 20px 30px;
+
+    &__text {
+        font-weight: bold;
+    }
+
+    &__cta {
+        color: #007AFF
+    }
 }
 
 .modal {
@@ -132,17 +129,4 @@
             cursor: pointer;
         }
     }
-}
-
-.Overlay {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index: 600;
-    background: rgba(0, 0, 0, .7);
-    display: flex;
-    width: 100vw;
-    height: 100vh;
 }

@@ -4,6 +4,7 @@ import "./Nav.scss";
 
 import chevron from "../../assets/icons/chevron.svg";
 import Share from "../../components/Share/Share";
+import Switch from "../Switch/Switch";
 
 
 function Nav() {
@@ -34,13 +35,13 @@ function Nav() {
                             className="nav__chevron"
                             src={chevron} 
                         />
-                        <p
+                        <div
                             className="nav__back">
                             Back
-                        </p>
+                        </div>
                     </div>
                 </a>
-                <Share/>
+                <Switch />
             </div>
         </nav>
     );

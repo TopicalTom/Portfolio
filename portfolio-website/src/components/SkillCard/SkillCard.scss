@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .skill-card {
     display: flex;
     flex-direction: row;
@@ -13,6 +15,7 @@
         flex-direction: row;
         margin: auto 0;
         width: 100%;
+        border-radius: 4px;
         //background-color: #F2F3F7;
     }
 
@@ -20,7 +23,7 @@
         margin-right: auto;
         display: flex;
         flex-direction: row;
-        border-bottom: 1px solid #F2F3F7;
+        @include theme-aware('border-bottom', 'seperator-line-opaque');
         width: 100%;
         justify-content: space-between;
         padding: 20px 20px 20px 0px;

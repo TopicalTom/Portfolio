@@ -5,7 +5,7 @@ html,
 body {
     margin: 0;
     box-sizing: border-box;
-    @include theme-aware('background', 'color-background');
+    @include theme-aware('background', 'system-background-primary');
     @include theme-aware('color', 'color-text');
 }
 
@@ -45,6 +45,7 @@ p {
     font-size: 0.8125rem;
     line-height: 1.125rem;
     font-weight: normal;
+    @include theme-aware('color', 'color-paragraph');
 
     @include tablet {
         font-size: 1.25rem;
@@ -77,7 +78,7 @@ ul {
 }
 
 a {
-    color: inherit;
+    @include theme-aware('color', 'color-paragraph');
     list-style: none;
     list-style-type: none;
     text-decoration: none;

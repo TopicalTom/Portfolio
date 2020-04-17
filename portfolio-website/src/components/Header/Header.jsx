@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactModal from 'react-modal';
 import "./Header.scss";
 
-import Switch from "../../components/Fab/Fab";
+import Switch from "../Switch/Switch";
 import projectsData from "../../data/projectsData";
 
 ReactModal.setAppElement('*');
@@ -82,9 +82,6 @@ class Header extends Component {
                         </span>
                     </ul>
                 </nav>
-                <div className="header__section header__section--switch">
-                    <Switch />
-                </div>
             </div>
         </header>
         {isOpen && // Only displays dropdown when isOpen = true

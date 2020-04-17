@@ -3,6 +3,7 @@ import "./ProjectPromo.scss";
 
 import pause from "../../assets/icons/pause.svg";
 import play from "../../assets/icons/play.svg";
+import overlay from "../../assets/layers/iPhoneOverlay.svg";
 
 const ProjectPromo = (props) => {
 
@@ -24,13 +25,18 @@ const ProjectPromo = (props) => {
     return (
         <section className="promo">
             <article className={`promo__container promo__container--${orientation}`}>
-                <video
-                    id={`${project}`}
-                    className="promo__preview"
-                    src={preview} 
-                    autoPlay
-                    loop
-                />
+                <div className={`promo__app promo__app--${orientation}`}>
+                    <img 
+                        className="promo__overlay" 
+                        src={overlay}/>
+                    <video
+                        id={`${project}`}
+                        className="promo__preview"
+                        src={preview} 
+                        autoPlay
+                        loop
+                    />
+                </div>
                 <button
                     className="promo__toggle"
                     onClick={isPlaying ? pauseVideo : playVideo}
