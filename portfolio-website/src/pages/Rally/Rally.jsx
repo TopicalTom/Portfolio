@@ -40,7 +40,10 @@ class Rally extends Component {
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">
-                        <SideNav links={this.state.links}/>
+                        <SideNav 
+                            header="Rally"
+                            links={this.state.links}
+                        />
                         <a 
                             className="project__code"
                             href="https://github.com/TopicalTom/rally-capstone">

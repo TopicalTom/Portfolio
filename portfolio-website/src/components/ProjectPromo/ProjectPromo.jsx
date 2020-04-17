@@ -41,12 +41,10 @@ const ProjectPromo = (props) => {
                     />
                 </button>
                 <div className="promo__details">
-                    <h2 
-                        className="promo__project">
+                    <h2 className="promo__project">
                         {project}
                     </h2>
-                    <p 
-                        className="promo__description">
+                    <p className="promo__description">
                         {description}
                     </p>
                     <div className="promo__actions">

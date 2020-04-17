@@ -4,7 +4,6 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 // Reusable Components
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Nav from "./components/Nav/Nav";
 
 // Unqiue Pages
 import Project from "./pages/Project/Project";
@@ -15,7 +14,6 @@ import Main from "./pages/Main/Main";
 import DynamicCards from "./components/DynamicCards/DynamicCards";
 
 import "./styles/baseline.scss";
-import './App.css';
 
 function App() {
     return (

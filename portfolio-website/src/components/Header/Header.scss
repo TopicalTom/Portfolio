@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .header {
     position: fixed;
     display: flex;
@@ -5,12 +7,12 @@
     width: 100vw;
     transform: translateY(0);
     transition: transform 0 ease-in-out;
-    background-color: rgba($color: #ffffff, $alpha: 1.0);
+    @include theme-aware('background', 'color-background');
     box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
     z-index: 105;
 
     &.shadow {
-        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        @include theme-aware('background', 'color-background');
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         transition: transform 0 ease-in-out;
     }
@@ -23,7 +25,7 @@
         flex-direction: row;
         justify-content: space-between;
         z-index: 105;
-        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        @include theme-aware('background', 'color-background');
     }
 
     &__section {

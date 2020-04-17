@@ -47,7 +47,10 @@ export default class Skills extends Component {
             <main className="skills">
                 <div className="skills__container">
                     <aside className="skills__content skills__content--filter">
-                        <SideNav links={links}/>
+                        <SideNav 
+                            header="Skills"
+                            links={links}
+                        />
                         <form className="filter">
                             <p className="filter__header">
                                 Filter

@@ -204,7 +204,7 @@ const skillsData = [
             category:"Mobile",
             tools: [
                 {
-                    tool:"React Native",
+                    tool:"React Native CLI",
                     description:"JavaScript library for building native mobile applications",
                     status:"Learning",
                     logo:react

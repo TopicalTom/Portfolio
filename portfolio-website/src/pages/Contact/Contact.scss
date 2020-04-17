@@ -21,6 +21,10 @@
         &--form {
             width: 730px;
             //background-color: red;
+            & > h1,
+            & > p {
+                margin-bottom: 2rem;
+            }
         }
     }
 
@@ -37,5 +41,9 @@
     &__link {
         color: #007AFF;
         font-size: 0.825rem;
+    }
+
+    &__info {
+        font-weight: bolder;
     }
 }

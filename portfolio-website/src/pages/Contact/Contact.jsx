@@ -11,17 +11,25 @@ const Contact = () => {
         <main className="contact">
             <div className="contact__container">
                 <aside className="contact__section contact__section--links">
-                    <p>Direct</p>
-                    <ul>
+                    <ul className="contact__links">
+                        <p className="contact__info">
+                            Email
+                        </p>
                         <li><a 
                             className="contact__link"
                             href="mailto:thomasvgriffiths@gmail.com">
                             thomasvgriffiths@gmail.com
                         </a></li>
+                        <p className="contact__info">
+                            Phone
+                        </p>
                         <li><a 
                             className="contact__link">
                             (613) 893-3437
                         </a></li>
+                        <p className="contact__info">
+                            Location
+                        </p>
                         <li><a 
                             className="contact__link">
                             Toronto, ON

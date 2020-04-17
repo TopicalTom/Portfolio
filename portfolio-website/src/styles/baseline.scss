@@ -1,9 +1,12 @@
 @import "./partials/breakpoints";
+@import "./partials/mixins";
 
 html, 
 body {
     margin: 0;
     box-sizing: border-box;
+    @include theme-aware('background', 'color-background');
+    @include theme-aware('color', 'color-text');
 }
 
 h1 {
@@ -96,5 +99,4 @@ a {
     list-style-type: none;
     text-decoration: none;
     margin: 0;
-    color: rgb(28, 28, 30);
 }

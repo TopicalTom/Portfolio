@@ -10,9 +10,7 @@ const SkillList = (props) => {
     return (
         <>
             {tools.map(content => {
-    
                 const { logo, tool, description, status } = content
-    
                 return (
                     <SkillCard 
                         icon={logo}

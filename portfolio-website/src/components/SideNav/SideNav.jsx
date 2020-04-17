@@ -9,7 +9,7 @@ const SideNav = props => {
         <div className="side-nav">
             <p 
                 className="side-nav__header">
-                Navigate
+                {props.header}
             </p>
             <ul className="side-nav__links">
                 {props.links.map(link => {
