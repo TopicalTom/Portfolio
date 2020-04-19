@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .footer {
     width: 100vw;
     margin: 50px 0;
@@ -25,6 +27,7 @@
         width: 25px;
         height: 25px;
         transition: all 0.2s ease 0s;
+        @include theme-aware('fill', 'footer');
 
         &:hover {
             opacity: 1.0;
@@ -38,7 +41,7 @@
         justify-self: center;
         margin: auto;
         padding-top: 20px;
-        color: #AFAFAF;
+        @include theme-aware('color', 'color-text-alt');
         text-align: center;
         padding-bottom: 200px;
     }

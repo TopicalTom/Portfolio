@@ -1,26 +1,26 @@
 import React from 'react';
 import "./Redirect.scss";
 
+import chevron from "../../assets/icons/chevron.svg";
+
 const Redirect = (props) => {
 
     const { text, link, cta } = props
 
     return (
         <article className="redirect">
-            <div className="redirect__container">
-                <p 
-                    className="redirect__text">
-                    {text}
-                </p>
-                <a 
-                    className="redirect__button"
-                    href={link}>
-                    <div
-                        className="redirect__cta">
-                        {cta}
-                    </div>
-                </a>
-            </div>
+            <a 
+                className="redirect__button"
+                href={link}>
+                <span
+                    className="redirect__cta">
+                    {cta}
+                </span>
+                <img 
+                    className="redirect__next"
+                    src={chevron}
+                />
+            </a>
         </article>
     );
 };

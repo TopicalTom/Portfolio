@@ -31,26 +31,34 @@
         @include theme-aware('border', 'content-outline-mid');
         padding: 1rem;
         outline: none;
+        width: 100%;
         height: 3.2rem;
         font-size: 1rem;
         margin-bottom: 20px;
+        @include theme-aware('caret-color', 'caret-color');
+        @include theme-aware('color', 'color-text');
 
-        &:focus {
+        &--filled {
             border: 1px solid #2e2e2e;
+            padding: 1.4rem 1rem 0.6rem 1rem;
         }
 
-        &--textarea {
+        &--email {
+            width: 100%;
+        }
+
+        &--message {
             resize: none;
             width: 100%;
             height: 120px;
-            margin-bottom: 20px;
+            line-height: 1.5rem;
         }
     }
 
     &__button {
         width: 200px;
         height: 55px;
-        background-color: #2E2E2E;
+        @include theme-aware('background', 'button');
         border-radius: 12px;
         color: white;
         text-align: center;
@@ -60,7 +68,7 @@
     }
 
     &__submit {
-        color: white;
+        @include theme-aware('color', 'color-text-button');
     }
 
     &__container {
@@ -71,12 +79,22 @@
     &__placeholder {
         position: absolute;
         z-index: 10;
-        top: 0.5rem;
+        top: 1rem;
         left: 18px;
         pointer-events: none;
-        font-size: 0.6875em;
+        font-size: 1rem;
         font-weight: 400;
         margin-bottom: 3px;
         opacity: 0;
+        transform: 0.5 ease;
+        @include theme-aware('color', 'color-form-header');
+
+        &--show {
+            top: 0.5rem;
+            opacity: 1;
+            font-size: 0.6875em;
+            transform: 0.5 ease;
+            @include theme-aware('color', 'color-form-header');
+        }
     }
 }

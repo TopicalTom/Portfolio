@@ -2,19 +2,10 @@
 
 .redirect {
     width: 100%;
-
-    &__container {
-        width: 100%;
-        padding: 20px 20px;
-        display: flex;
-        flex-direction: row;
-        border-radius: 8px;
-        justify-content: space-between;
-        margin: 60px 0;
-        @include theme-aware('background', 'system-background-tertiary');
-        box-shadow: rgba(0, 0, 0, 0.01) 0px 10px 10px;
-    }
-
+    padding: 20px 0px 20px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 60px 0;
 
     &__text {
         font-weight: bold;
@@ -22,5 +13,19 @@
 
     &__cta {
         color: #007AFF
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: row;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__next {
+        transform: scaleX(-1);
+        padding-right: 8px;
     }
 }

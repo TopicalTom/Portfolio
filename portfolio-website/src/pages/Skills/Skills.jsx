@@ -14,7 +14,7 @@ export default class Skills extends Component {
 
     state = {
         allSkills: skillsData,
-        filterBy: "All",
+        filterBy: "None",
         filter: false,
         links: [ "Overview", "Design", "Development", "Product" ]      
     }
@@ -61,11 +61,11 @@ export default class Skills extends Component {
                                         className="filter__label"
                                         type="radio" 
                                         name="filter"
-                                        value="All"
-                                        checked={filterBy === "All"}
+                                        value="None"
+                                        checked={filterBy === "None"}
                                         onChange={this.resetFilter}
                                     />
-                                    All
+                                    None
                                 </label>
                                 <label className="filter__checkbox">
                                 <input 
@@ -94,11 +94,11 @@ export default class Skills extends Component {
                                     className="filter__label"
                                     type="radio" 
                                     name="filter"
-                                    value="Expected"
-                                    checked={filterBy === "Expected"}
+                                    value="Upcoming"
+                                    checked={filterBy === "Upcoming"}
                                     onChange={this.handleFilterChange}
                                 />
-                                Expected
+                                Upcoming
                                 </label>
                             </div>
                         </form>
@@ -117,9 +117,9 @@ export default class Skills extends Component {
                             filter={filter}
                         />
                         <Redirect 
-                            text="Do I have a skill you need?"
-                            link="/contact"
-                            cta="Let's Chat"
+                            text=""
+                            link="/about"
+                            cta="About Me"
                         />
                     </section>
                 </div>

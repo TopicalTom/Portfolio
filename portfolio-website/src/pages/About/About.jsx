@@ -34,7 +34,7 @@ const About = () => {
                         Now equipped with a course-refined process to complement my self-taught skills and drive, the only missing piece is a new mission I can invest in! I am currently looking to secure a challenging entry-level position in an organization that needs a multifaceted individual to invest in their mission of driving impact for people.
                     </p>
                     <Redirect 
-                        text="See what I can do"
+                        text=""
                         link="/skills"
                         cta="View Skills"
                     />

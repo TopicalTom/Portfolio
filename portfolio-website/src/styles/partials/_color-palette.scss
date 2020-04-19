@@ -8,8 +8,15 @@ $themes: (
         content-outline-light: 1px solid #F4F4F4,
         content-outline-mid: 1px solid #E1E1E1,
         color-text: rgb(28, 28, 30),
+        color-text-alt: #AFAFAF,
+        color-text-button: white,
         color-paragraph: #2E2E2E,
         switch: #53d769,
+        link: #007AFF,
+        button: rgb(28, 28, 30),
+        caret-color: #000000,
+        footer: #AFAFAF,
+        color-form-header: #AFAFAF
     ),
     dark: (
         system-background-primary: #000000,
@@ -20,7 +27,14 @@ $themes: (
         content-outline-light: 1px solid #1C1C1E,
         content-outline-mid: 1px solid #1C1C1E,
         color-text: white,
+        color-text-alt: #AFAFAF, 
+        color-text-button: rgb(28, 28, 30),
         color-paragraph: rgba(255, 255, 255, 0.65),
-        switch: #3A3A3C
+        switch: #3A3A3C,
+        link: #007AFF,
+        button: white,
+        caret-color: white,
+        footer: rgb(28, 28, 30),
+        color-form-header: rgba(255, 255, 255, 0.5)
     )
 );

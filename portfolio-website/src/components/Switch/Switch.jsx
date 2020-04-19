@@ -3,7 +3,7 @@ import './Switch.scss'
 
 const Switch = () => {
 
-    const [ makeDark, setMakeDark ] = useState("light");
+    const [ makeDark, setMakeDark ] = useState("dark");
 
 
     function toggleMode() {
@@ -17,24 +17,24 @@ const Switch = () => {
     }
 
     function changeTheme() {
-        document.documentElement.className = '';
+        document.documentElement.className = 'js-focus-visible';
         document.documentElement.classList.add(`theme-${makeDark}`);
     }
 
     return (
-              <div className="toggle" onChange={toggleMode}>
-                <input
-                  className="switch"
-                  id={`react-switch-new`}
-                  type="checkbox"
-                />
-                <label
-                  className="switch__label"
-                  htmlFor={`react-switch-new`}
-                >
-                  <span className={`switch__button`} />
-                </label>
-              </div>
+        <div className="toggle" onChange={toggleMode}>
+            <input
+                className="switch"
+                id={`react-switch-new`}
+                type="checkbox"
+            />
+            <label
+                className="switch__label"
+                htmlFor={`react-switch-new`}
+            >
+                <span className={`switch__button`} />
+            </label>
+        </div>
     )
 };
 

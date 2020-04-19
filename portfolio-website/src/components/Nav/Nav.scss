@@ -70,8 +70,8 @@
     }
 
     &__back {
-        color: #007AFF;
-        padding-left: 5px;
+        @include theme-aware('color', 'link');
+        padding-left: 8px;
         padding-top: 0.8rem;
         padding-bottom: 0.8rem;
 

@@ -35,10 +35,10 @@ function Nav() {
                             className="nav__chevron"
                             src={chevron} 
                         />
-                        <div
+                        <span
                             className="nav__back">
                             Back
-                        </div>
+                        </span>
                     </div>
                 </a>
                 <Switch />

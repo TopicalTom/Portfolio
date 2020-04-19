@@ -137,6 +137,12 @@ class Rally extends Component {
                                     />
                                 </div>
                         </Element>
+                        <Element
+                            name="Design"
+                            className="project__block">
+                                <h2 className="project__title">Design Output</h2>
+                                <p className="project__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </Element>
                         <Element 
                             className="project__block">
                                 <h3>Sketches</h3>
@@ -145,12 +151,6 @@ class Rally extends Component {
                                     className="project__image"
                                     src={sketch}
                                 />
-                        </Element>
-                        <Element
-                            name="Design"
-                            className="project__block">
-                                <h2 className="project__title">Design Output</h2>
-                                <p className="project__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                         </Element>
                         <Element 
                             className="project__block">
@@ -179,9 +179,8 @@ class Rally extends Component {
                                 <p>I am currently in the process of developing this app for iOS devices using React Native. While I am only in the early stages, I am planning to look into.</p>
                         </Element>
                         <Redirect 
-                            text="Want to learn more?"
-                            link="/contact"
-                            cta="Let's Chat"
+                            link="/skills"
+                            cta="View Skills"
                         />
                     </section>
                 </div>

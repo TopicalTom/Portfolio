@@ -11,9 +11,7 @@ const SkillCategory = (props) => {
         return (
             <>
                 {skills.map(data => {
-        
                     const {tools, category} = data
-    
                     return (
                         <>
                             <h4 
@@ -40,9 +38,7 @@ const SkillCategory = (props) => {
                 </h4>
                 <div className="skills__box">
                 {skills.map(data => {
-        
                     const {tools} = data
-    
                     return (
                         <SkillList 
                             tools={tools}
@@ -54,7 +50,6 @@ const SkillCategory = (props) => {
                 </div>
             </>
         )
-
     }
 };
 

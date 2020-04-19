@@ -35,7 +35,9 @@ const Main = () => {
                                 View Projects
                             </div>
                         </Link>
-                        <Switch />
+                        <div className="main__toggle">
+                            <Switch />
+                        </div>
                     </div>
                 </div>
             </section>

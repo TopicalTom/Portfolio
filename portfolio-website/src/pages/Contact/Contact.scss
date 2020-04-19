@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .contact {
     margin: 0;
     width: 100vw;
@@ -39,7 +41,7 @@
     }
 
     &__link {
-        color: #007AFF;
+        @include theme-aware('color', 'link');
         font-size: 0.825rem;
     }
 

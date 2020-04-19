@@ -11,38 +11,12 @@
         border-radius: 8px;
         justify-content: space-between;
         margin: 60px 0;
-        @include theme-aware('background', 'system-background-tertiary');
+        border: 1px solid #e1e1e1;
+        @include theme-aware('background', 'system-background-secondary');
         box-shadow: rgba(0, 0, 0, 0.01) 0px 10px 10px;
     }
 
-
-    &__text {
-        font-weight: bold;
-    }
-
-    &__cta {
-        color: #007AFF
-    }
-}
-
-.modal {
-    margin: 0;
-
-    &__cancel {
-        width: 20px;
-        position: fixed;
-        top: 0;
-        margin: 20px 20px 0px 0px;
-        right: 0;
-        opacity: 0.5;
-
-        &:hover {
-            cursor: pointer;
-            opacity: 1.0;
-        }
-    }
-
-    &__container {
+    &__url {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -53,9 +27,13 @@
         flex-direction: column;
     }
 
+    &__cta {
+        font-weight: bold;
+    }
+
     &__field {
         border-radius: 2px;
-        border: 1px solid #e1e1e1;
+        border: 1px solid #E1E1E1;
         height: 44px;
         position: absolute;
         width: 410px;
@@ -63,15 +41,15 @@
         resize: none;
         font-size: 1rem;
         padding: 0.7rem 0.7rem;
-        background-color: white;
+        background-color: #F2F3F7;
         transition: transform 1s ease-in-out;
 
         &--inactive {
 
             &:hover {
                 cursor: pointer;
-                border: 1px solid #007AFF;
-                background-color: rgba(0, 123, 255, 0.205);
+                border: 1px solid #00C642;
+                background-color: rgba(0, 255, 85, 0.253);
                 transition: transform 1s ease-in-out;
             }
         }
@@ -111,22 +89,5 @@
     &__icon { 
         width: 15px;
         //position: absolute;
-    }
-
-    &__button {
-        width: 240px;
-        margin-top: 30px;
-        height: 55px;
-        background-color: #2E2E2E;
-        border-radius: 12px;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-        padding: 0.6rem 0;
-        margin: auto;
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 }

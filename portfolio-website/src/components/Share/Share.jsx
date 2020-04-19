@@ -6,36 +6,35 @@ import copy from "../../assets/icons/copy.svg";
 
 function Share() {
 
-    const [copyPageSuccess, setCopyPageSuccess] = useState(false);
+    const [copyURLSuccess, setCopyURLSuccess] = useState(false);
     const pageRef = useRef(null);
   
-    function copyPage(e) {
+    function copyURL(e) {
         pageRef.current.select();
         document.execCommand('copy');
         e.target.focus();
-        setCopyPageSuccess(true);
+        setCopyURLSuccess(true);
         setTimeout(() => {
-            setCopyPageSuccess(false);
+            setCopyURLSuccess(false);
         }, 1200);
     };
 
     return (
         <article className="share">
-            <div>
-                <p>Want to share?</p>
-                <form className="modal__form">
-                    <div className="modal__container">
+            <div className="share__container">
+                <form className="share__form">
+                    <div className="share__url">
                         <textarea 
-                            className={`modal__field modal__field${copyPageSuccess ? "--active" : "--inactive"}`}
-                            onClick={copyPage}
+                            className={`share__field share__field${copyURLSuccess ? "--active" : "--inactive"}`}
+                            onClick={copyURL}
                             ref={pageRef}
                             placeholder={window.location.href} 
                             value={window.location.href}
                         />
-                        <div className="modal__action">
+                        <div className="share__action">
                             <img 
-                                className="modal__icon"
-                                src={copyPageSuccess ? success : copy}
+                                className="share__icon"
+                                src={copyURLSuccess ? success : copy}
                             />
                         </div>
                     </div>
@@ -45,4 +44,4 @@ function Share() {
     );
 }
 
-export default Share
+export default Share;

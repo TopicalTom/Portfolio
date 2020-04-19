@@ -3,6 +3,7 @@ import "./ProjectPromo.scss";
 
 import pause from "../../assets/icons/pause.svg";
 import play from "../../assets/icons/play.svg";
+import redirect from "../../assets/icons/redirect.svg";
 import overlay from "../../assets/layers/iPhoneOverlay.svg";
 
 const ProjectPromo = (props) => {
@@ -69,6 +70,10 @@ const ProjectPromo = (props) => {
                                 className="promo__code">
                                 View Code
                             </div>
+                            <img
+                                className="promo__redirect"
+                                src={redirect}
+                            />
                         </a>
                     </div>
                 </div>

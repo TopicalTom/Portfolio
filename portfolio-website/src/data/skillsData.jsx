@@ -72,13 +72,13 @@ const skillsData = [
                 {
                     tool:"Illustrator",
                     description:"Vector graphics editor for print and digital media",
-                    status:"Expected",
+                    status:"Upcoming",
                     logo:illustrator
                 },
                 {
                     tool:"After Effects",
                     description:"Motion graphics editor for animation and composition",
-                    status:"Expected",
+                    status:"Upcoming",
                     logo:afterEffects
                 }
             ]
@@ -189,13 +189,13 @@ const skillsData = [
                 {
                     tool:"mySQL",
                     description:"Relational database management system",
-                    status:"Expected",
+                    status:"Upcoming",
                     logo:mySQL
                 },
                 {
                     tool:"OAuth",
                     description:"Authorization framework for authenticated access to assets",
-                    status:"Expected",
+                    status:"Upcoming",
                     logo:oAuth
                 }
             ] 
@@ -229,13 +229,13 @@ const skillsData = [
                 {
                     tool:"Four Square",
                     description:"Venue and user content database for mobile and web applications",
-                    status:"Expected",
+                    status:"Upcoming",
                     logo:foursquare
                 },
                 {
                     tool:"ARKit 3.5",
                     description:"Augmented reality (AR) development platform for iOS devices",
-                    status:"Expected",
+                    status:"Upcoming",
                     logo:arkit
                 }
             ] 
@@ -270,7 +270,7 @@ const skillsData = [
                 {
                     tool:"HotJar",
                     description:"Behavior analytics and user feedback service for websites",
-                    status:"Expected",
+                    status:"Upcoming",
                     logo:hotjar
                 }
             ]

@@ -3,6 +3,7 @@ import "./Contact.scss";
 
 import Nav from "../../components/Nav/Nav";
 import Form from "../../components/Form/Form";
+import Map from "../../components/Map/Map";
 
 const Contact = () => {
     return (
@@ -21,18 +22,12 @@ const Contact = () => {
                             thomasvgriffiths@gmail.com
                         </a></li>
                         <p className="contact__info">
-                            Phone
+                            LinkedIn
                         </p>
                         <li><a 
-                            className="contact__link">
-                            (613) 893-3437
-                        </a></li>
-                        <p className="contact__info">
-                            Location
-                        </p>
-                        <li><a 
-                            className="contact__link">
-                            Toronto, ON
+                            className="contact__link"
+                            href="https://www.linkedin.com/in/thomasvgriffiths/">
+                            in/thomasvgriffiths
                         </a></li>
                     </ul>
                 </aside>
@@ -40,6 +35,9 @@ const Contact = () => {
                     <h1>Let's Chat</h1>
                     <Form />
                 </section>
+            </div>
+            <div className="contact__container">
+                <Map />
             </div>
         </main>
         </>
