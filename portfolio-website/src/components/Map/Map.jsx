@@ -10,14 +10,16 @@ export default class Map extends Component {
         this.state = {
             lng: -79.3832,
             lat: 43.6532,
-            zoom: 11
+            zoom: 11,
+            style: "mapbox://styles/mapbox/dark-v9"
         };
     }
     
     componentDidMount() {
         const map = new mapboxgl.Map({
             container: this.mapContainer,
-            style: 'mapbox://styles/mapbox/streets-v11',
+            style: this.state.style,
+            //style: 'mapbox://styles/mapbox/streets-v11',
             center: [this.state.lng, this.state.lat],
             zoom: this.state.zoom
         });

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ResumeCard from "../ResumeCard/ResumeCard";
 import PersonalCard from "../PersonalCard/PersonalCard";
+import Map from "../Map/Map";
 
 import "./DynamicCards.scss"
 
@@ -13,8 +14,6 @@ import RallyPreview from "../../assets/images/RallyPreview.png";
 export default class DynamicCards extends Component {
 
     render(){
-
-        console.log(window.location.href)
 
         if (window.location.href === "http://localhost:3000/about") {
             return (
@@ -86,6 +85,14 @@ export default class DynamicCards extends Component {
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
                         <ResumeCard />
+                    </div>
+                </div>
+            )
+        } else if (window.location.href === "http://localhost:3000/contact") {
+            return (
+                <div className="dynamic">
+                    <div className="dynamic__container dynamic__container--column">
+                        <Map />
                     </div>
                 </div>
             )

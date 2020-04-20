@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from "axios";
 import "./Contact.scss";
 
 import Nav from "../../components/Nav/Nav";
@@ -6,6 +7,23 @@ import Form from "../../components/Form/Form";
 import Map from "../../components/Map/Map";
 
 const Contact = () => {
+
+    const submitContactForm = (e) => {
+        e.preventDefault();
+
+        axios.post("netlify", {
+
+            firstName: e.target.firstName.value,
+            lastName: e.target.lastName.value,
+            email: e.target.email.value,
+            message: e.target.message.value
+
+        }).then((res) => {
+            //send alert
+        });
+    };
+
+
     return (
         <>
         <Nav/>
@@ -33,11 +51,8 @@ const Contact = () => {
                 </aside>
                 <section className="contact__section contact__section--form">
                     <h1>Let's Chat</h1>
-                    <Form />
+                    <Form submitHandler={submitContactForm}/>
                 </section>
-            </div>
-            <div className="contact__container">
-                <Map />
             </div>
         </main>
         </>

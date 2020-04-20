@@ -15,31 +15,33 @@ export default class Skills extends Component {
     state = {
         allSkills: skillsData,
         filterBy: "None",
-        filter: false,
-        links: [ "Overview", "Design", "Development", "Product" ]      
+        filter: false,     
     }
-
-    resetFilter = (e) => {
-        this.setState({
-            filterBy: e.target.value,
-            filter: false
-        });
-
-        window.scrollTo({ top: 700, behavior: 'smooth' });
-    };
 
     handleFilterChange = (e) => {
         this.setState({
-            filterBy: e.target.value,
-            filter: true
+            filterBy: e.target.value
         });
+        
+        if (e.target.value !== "None") {
+            this.setState({
+                filter: true
+            });
+        } else {
+            this.setState({
+                filter: false
+            });
+        }
 
         window.scrollTo({ top: 700, behavior: 'smooth' });
     };
 
     render() {
 
-        const {links, allSkills, filterBy, filter} = this.state
+        const {allSkills, filterBy, filter} = this.state
+
+        const links = [ "Overview", "Design", "Development", "Product" ]
+        const filters = [ "None", "Current", "Learning", "Upcoming"]
 
         return (
             <>
@@ -55,52 +57,23 @@ export default class Skills extends Component {
                             <p className="filter__header">
                                 Filter
                             </p>
-                            <div className="filter__selections">
-                                <label className="filter__checkbox">
-                                    <input 
-                                        className="filter__label"
-                                        type="radio" 
-                                        name="filter"
-                                        value="None"
-                                        checked={filterBy === "None"}
-                                        onChange={this.resetFilter}
-                                    />
-                                    None
-                                </label>
-                                <label className="filter__checkbox">
-                                <input 
-                                    className="filter__label"
-                                    type="radio" 
-                                    name="filter"
-                                    value="Current"
-                                    checked={filterBy === "Current"}
-                                    onChange={this.handleFilterChange}
-                                />
-                                Current
-                                </label>
-                                <label className="filter__checkbox">
-                                <input 
-                                    className="filter__label"
-                                    type="radio" 
-                                    name="filter"
-                                    value="Learning"
-                                    checked={filterBy === "Learning"}
-                                    onChange={this.handleFilterChange}
-                                />
-                                Learning
-                                </label>
-                                <label className="filter__checkbox">
-                                <input 
-                                    className="filter__label"
-                                    type="radio" 
-                                    name="filter"
-                                    value="Upcoming"
-                                    checked={filterBy === "Upcoming"}
-                                    onChange={this.handleFilterChange}
-                                />
-                                Upcoming
-                                </label>
-                            </div>
+                            <ul className="filter__selections">
+                                {filters.map(filter => {
+                                    return (
+                                        <li className="filter__checkbox"><label>
+                                            <input 
+                                                className="filter__label"
+                                                type="radio" 
+                                                name="filter"
+                                                value={filter}
+                                                checked={filterBy === filter}
+                                                onChange={this.handleFilterChange}
+                                            />
+                                            {filter}
+                                        </label></li>
+                                    )
+                                })}
+                            </ul>
                         </form>
                     </aside>
                     <section className="skills__content skills__content--skills">

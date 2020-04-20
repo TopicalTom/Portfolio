@@ -7,6 +7,7 @@
     width: 100vw;
     transform: translateY(0);
     transition: transform 0 ease-in-out;
+    transition: background-color 0.3s ease;
     @include theme-aware('background', 'system-background-primary');
     box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
     z-index: 105;
@@ -25,6 +26,7 @@
         flex-direction: row;
         justify-content: space-between;
         z-index: 105;
+        transition: background-color 0.3s ease;
         @include theme-aware('background', 'system-background-primary');
     }
 
@@ -106,12 +108,15 @@
     position: fixed;
     z-index: 104;
     width: 100vw;
-    @include theme-aware('background', 'system-background-tertiary');
+    transition: background-color 0.3s ease;
+    transition: border-top 0.3s ease;
+    transition: border-bottom 0.3s ease;
+    @include theme-aware('background-color', 'system-background-tertiary');
     @include theme-aware('border-top', 'content-outline-mid');
     @include theme-aware('border-bottom', 'content-outline-mid');
     //border-top: 1px solid #e1e1e1;
     //border-bottom: 1px solid #e1e1e1;
-    transition: all 0.2s ease 0s;
+    //transition: all 0.2s ease 0s;
     //animation: mynewanimation 0.3s;
     transition: transform 3s ease;
 

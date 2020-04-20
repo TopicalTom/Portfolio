@@ -11,6 +11,10 @@
     margin-top: 83px;
     @include theme-aware('border-bottom', 'content-outline-light');
     @include theme-aware('border-top', 'content-outline-light');
+    @include theme-aware('background', 'system-background-primary');
+    transition: border-bottom-color 0.3s ease;
+    transition: border-top-color 0.3s ease;
+    transition: background-color 0.3s ease;
     //border-top: 1px solid #F4F4F4;
     //border-bottom: 1px solid #F4F4F4;
 
@@ -23,14 +27,12 @@
         transform: translateY(0);
         transition: transform 0 ease;
         margin-top: 83px;
+        transition: border-bottom-color 0.3s ease;
+        transition: border-top-color 0.3s ease;
+        transition: background-color 0.3s ease;
     }
 
     &.shadow {
-        @include theme-aware('border-bottom', 'content-outline-light');
-        @include theme-aware('border-top', 'content-outline-light');
-        //border-top: 1px solid #F4F4F4;
-        //border-bottom: 1px solid #F4F4F4;
-        @include theme-aware('background', 'system-background-primary');
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         transform: translateY(0);
         transition: transform 1s ease;

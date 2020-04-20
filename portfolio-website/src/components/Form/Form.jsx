@@ -3,71 +3,111 @@ import "./Form.scss";
 
 function Form ({submitHandler}) {
 
-    const [ isFilled, setIsFilled ] = useState(false);
+    const [ firstIsFilled, setFirstIsFilled ] = useState(false);
+    const [ lastIsFilled, setLastIsFilled ] = useState(false);
+    const [ emailIsFilled, setEmailIsFilled ] = useState(false);
+    const [ messageIsFilled, setMessageIsFilled ] = useState(false);
+    const [ wordCount, setWordCount ] = useState(0);
 
-
-    function handleInput(e) {
-        if (e.target.value.length <= 0) {
-            setIsFilled(false)
+    function handleFirstInput(e) {
+        if (e.currentTarget.value.length <= 0) {
+            setFirstIsFilled(false)
         } else {
-            setIsFilled(true)
+            setFirstIsFilled(true)
         }
     }
 
-    const hasContent = isFilled ? "form__input--filled" : "";
-    const showHeader = isFilled ? "form__placeholder--show" : "";
+    function handleLastInput(e) {
+        if (e.currentTarget.value.length <= 0) {
+            setLastIsFilled(false)
+        } else {
+            setLastIsFilled(true)
+        }
+    }
+
+    function handleEmailInput(e) {
+        if (e.currentTarget.value.length <= 0) {
+            setEmailIsFilled(false)
+        } else {
+            setEmailIsFilled(true)
+        }
+    }
+
+    function handleMessageInput(e) {
+        if (e.currentTarget.value.length <= 0) {
+            setMessageIsFilled(false)
+        } else {
+            setMessageIsFilled(true)
+        }
+        const words = e.currentTarget.value === "" ? 0 : e.currentTarget.value.split(" ").length;
+        setTimeout(() => {
+            setWordCount(words);
+        }, 1000);
+    }
+
+    const firstHasContent = firstIsFilled ? "form__input--filled" : "";
+    const showFirstHeader = firstIsFilled ? "form__placeholder--show" : "";
+    const lastHasContent = lastIsFilled ? "form__input--filled" : "";
+    const showLastHeader = lastIsFilled ? "form__placeholder--show" : "";
+    const emailHasContent = emailIsFilled ? "form__input--filled" : "";
+    const showEmailHeader = emailIsFilled ? "form__placeholder--show" : "";
+    const messageHasContent = messageIsFilled ? "form__input--filled" : "";
+    const showMessageHeader = messageIsFilled ? "form__placeholder--show" : "";
 
     return (
-        <form className="form" netlify netlify-honeypot="bot-field" hidden onSubmit={submitHandler}>
+        <form className="form" netlify method="post" data-netlify="true" data-netlify-honeypot="bot-field" hidden onSubmit={submitHandler}>
             <div className="form__field form__field--row">
                 <label className="form__container">
-                    <span className={`form__placeholder ${showHeader}`}>First Name</span>
+                    <span className={`form__placeholder ${showFirstHeader}`}>First Name</span>
                     <input 
-                        className={`form__input ${hasContent}`}
+                        className={`form__input ${firstHasContent}`}
                         placeholder="First Name"
                         name="firstName"
                         id="firstName"
                         type="text"
-                        onChange={handleInput}
+                        onChange={handleFirstInput}
                         required
                     />
                 </label>
                 <label className="form__container">
-                    <span className={`form__placeholder ${showHeader}`}>Last Name</span>
+                    <span className={`form__placeholder ${showLastHeader}`}>Last Name</span>
                     <input 
-                        className={`form__input ${hasContent}`}
+                        className={`form__input ${lastHasContent}`}
                         placeholder="Last Name"
                         name="lastName"
                         id="lastName"
                         type="text"
-                        onChange={handleInput}
+                        onChange={handleLastInput}
                         required
                     />
                 </label>
             </div>
             <div className="form__field form__field--stack">
                 <label className="form__container">
-                    <span className={`form__placeholder ${showHeader}`}>Email</span>
+                    <span className={`form__placeholder ${showEmailHeader}`}>Email</span>
                     <input 
-                        className={`form__input form__input--email ${hasContent}`}
+                        className={`form__input form__input--email ${emailHasContent}`}
                         placeholder="Email"
                         name="email"
                         id="email"
                         type="email"
-                        onChange={handleInput}
+                        onChange={handleEmailInput}
                         required
                     />
                 </label>
                 <label className="form__container">
-                    <span className={`form__placeholder ${showHeader}`}>Your Message</span>
+                    <span className={`form__placeholder ${showMessageHeader}`}>Your Message</span>
                     <textarea 
-                        className={`form__input form__input--message ${hasContent}`}
+                        className={`form__input form__input--message ${messageHasContent}`}
                         placeholder="Your Message"
                         name="message"
                         id="message"
-                        onChange={handleInput}
+                        onChange={handleMessageInput}
+                        minLength="100"
                         required
                     />
+                    <span className="form__count">{wordCount} / 100
+                    </span>
                 </label>
             </div>
             <div className="form__field form__field--button">
