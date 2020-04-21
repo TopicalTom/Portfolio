@@ -3,7 +3,6 @@ import * as Scroll from 'react-scroll';
 import { Element , animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import "../Project/Project.scss";
 
-import Figure from "../../components/Figure/Figure";
 import Hero from "../../components/Hero/Hero";
 import Redirect from "../../components/Redirect/Redirect";
 import prism from "../../assets/images/RallyPrism.png";
@@ -39,6 +38,7 @@ class Rally extends Component {
     render() {
         return (
             <>
+            <Hero />
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">
@@ -71,14 +71,12 @@ class Rally extends Component {
                             className="project__block">
                                 <h2 className="project__title">The Need to Connect</h2>
                                 <p className="project__paragraph">After moving out of my residence hall from first year, I found it was harder to figure out what all my friends were up to at a moments notice as I wasn’t able to just head across the hall and ask them in person. I now had to message them through a variety of channels in order to figure out if there was anything going on that night. Throughout the years, and especially after graduating, this problem has only worsened as we have even less free time and become increasingly unaware of when we can meetup with our friends to do something fun. </p>
-                                <Figure />
                         </Element>
                         <Element
                             name="Research"
                             className="project__block">
                                 <h2 className="project__title">Gaining Context</h2>
                                 <p className="project__paragraph">Making plans with friends is analogous to playing Go-Fish where the “cards” are one’s current interests or availability and the “game” is the process of finding common ground. The inherent challenge of Go-Fish is that we cannot see the cards of the other player and the only way to determine what they have is to explicitly ask.</p>
-                                <Figure />
                         </Element>
                         <Element
                             name="Insights"
@@ -90,13 +88,11 @@ class Rally extends Component {
                             className="project__block">
                                 <h3 className="project__subtitle">Gathering Patterns</h3>
                                 <p className="project__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <Figure/>
                         </Element>
                         <Element
                             className="project__block">
                                 <h3>Refining our Audience</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <Figure/>
                         </Element>
                         <Element
                             className="project__block">
@@ -121,7 +117,6 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Hooked Model</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <Figure/>
                         </Element>
                         <Element
                             className="project__block">
