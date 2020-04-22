@@ -2,6 +2,7 @@ import React from 'react';
 import "./ProjectPreview.scss";
 
 import overlay from "../../assets/layers/iPhoneOverlay.svg";
+import bumble from "../../assets/videos/BumbleModes.mp4";
 
 const ProjectPreview = () => {
 
@@ -12,30 +13,30 @@ const ProjectPreview = () => {
                     className="preview__overlay" 
                     src={overlay}/>
                 <video
-                    id={`${project}`}
+                    id=""
                     className="preview__video"
-                    src={preview} 
+                    src={bumble}
                     autoPlay
                 />
             </div>
             <div className="preview__container preview__container--content">
-                <h3 className="preview__caption">Details on the screen</h3>
+                <h3 className="preview__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
                 <ul className="preview__list">
                     <li className="preview__selection">
                         <h5 className="preview__title">Trigger</h5>
-                        <span className="preview__scrubber"/>
+                        <div className="preview__scrubber" />
                     </li>
                     <li className="preview__selection">
                         <h5 className="preview__title">Action</h5>
-                        <span className="preview__scrubber"/>
+                        <div className="preview__scrubber"/>
                     </li>
                     <li className="preview__selection">
                         <h5 className="preview__title">Reward</h5>
-                        <span className="preview__scrubber"/>
+                        <div className="preview__scrubber"/>
                     </li>
                     <li className="preview__selection">
                         <h5 className="preview__title">Investment</h5>
-                        <span className="preview__scrubber"/>
+                        <div className="preview__scrubber"/>
                     </li>
                 </ul>
             </div>
