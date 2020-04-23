@@ -20,7 +20,7 @@ const ProjectPreview = () => {
                 />
             </div>
             <div className="preview__container preview__container--content">
-                <h3 className="preview__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+                <h3 className="preview__caption">Bumble, uses swipeable cards for switching modes to allow users to focus in on how they want to connect with others.</h3>
                 <ul className="preview__list">
                     <li className="preview__selection">
                         <h5 className="preview__title">Trigger</h5>

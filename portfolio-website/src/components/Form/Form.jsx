@@ -40,9 +40,9 @@ function Form ({submitHandler}) {
             setMessageIsFilled(true)
         }
         const words = e.currentTarget.value === "" ? 0 : e.currentTarget.value.split(" ").length;
-        setTimeout(() => {
+        //setTimeout(() => {
             setWordCount(words);
-        }, 1000);
+        //}, 1000);
     }
 
     const firstHasContent = firstIsFilled ? "form__input--filled" : "";
@@ -97,6 +97,7 @@ function Form ({submitHandler}) {
                 </label>
                 <label className="form__container">
                     <span className={`form__placeholder ${showMessageHeader}`}>Your Message</span>
+                    <span className="form__count">{wordCount} / 100</span>
                     <textarea 
                         className={`form__input form__input--message ${messageHasContent}`}
                         placeholder="Your Message"
@@ -106,8 +107,6 @@ function Form ({submitHandler}) {
                         minLength="100"
                         required
                     />
-                    <span className="form__count">{wordCount} / 100
-                    </span>
                 </label>
             </div>
             <div className="form__field form__field--button">

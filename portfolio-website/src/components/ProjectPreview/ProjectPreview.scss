@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .preview {
     display: flex;
     flex-direction: row;
@@ -35,9 +37,14 @@
     &__scrubber {
         height: 0.25rem;
         width: 60%;
-        background-color: #F2F3F7;
+        @include theme-aware('background-color', 'system-background-tertiary');
+        //background-color: #F2F3F7;
         border-radius: 8px;
         margin-bottom: 15px;
+    }
+
+    &__title {
+        padding-bottom: 5px;
     }
 
     &__selection {

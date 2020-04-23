@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    margin-bottom: 60px;
 
     &__field {
         display: flex;
@@ -50,9 +51,9 @@
         }
 
         &--message {
-            resize: none;
+            resize: vertical;
             width: 100%;
-            height: 120px;
+            min-height: 120px;
             line-height: 1.5rem;
         }
     }
@@ -60,9 +61,11 @@
     &__button {
         width: 200px;
         height: 55px;
+        transition: 0.3s ease;
         @include theme-aware('background', 'button');
         border-radius: 12px;
-        color: white;
+        //color: white;
+        border: none;
         text-align: center;
         vertical-align: middle;
         padding: 0.6rem 0;
@@ -70,6 +73,7 @@
     }
 
     &__submit {
+        transition: 0.3s ease;
         @include theme-aware('color', 'color-text-button');
     }
 
@@ -121,5 +125,17 @@
                 }
             }
         }
+    }
+
+    &__count {
+        position: absolute;
+        z-index: 10;
+        bottom: 2rem;
+        right: 18px;
+        pointer-events: none;
+        font-size: 0.6875em;
+        font-weight: 400;
+        transition: 0.3s ease;
+        @include theme-aware('color', 'color-text');
     }
 }
