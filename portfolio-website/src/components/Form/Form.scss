@@ -5,6 +5,10 @@
     flex-direction: column;
     box-sizing: border-box;
     margin-bottom: 60px;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    @include theme-aware('background', 'system-background-primary');
+    @include theme-aware('color', 'color-text');
 
     &__field {
         display: flex;
@@ -101,7 +105,7 @@
             0% {
                 opacity: 1;
             }
-            50% {
+            100% {
                 opacity: 0;
             }
         }

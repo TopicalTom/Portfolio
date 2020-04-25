@@ -26,15 +26,13 @@ const Switch = () => {
         const data = window.localStorage.getItem("global-theme");
         if (data) {
             setMakeDark(JSON.parse(data));
-            document.documentElement.className = 'js-focus-visible';
-            document.documentElement.classList.add(`theme-${makeDark}`);
+            changeTheme()
         }
     }, []);
 
     useLayoutEffect(() => {
         window.localStorage.setItem("global-theme", JSON.stringify(makeDark))
-        document.documentElement.className = 'js-focus-visible';
-        document.documentElement.classList.add(`theme-${makeDark}`);
+        changeTheme();
     });
 
     return (

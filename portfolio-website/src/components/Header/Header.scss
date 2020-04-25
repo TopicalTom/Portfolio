@@ -13,6 +13,7 @@
     z-index: 105;
 
     &.shadow {
+        transition: background-color 0.3s ease;
         @include theme-aware('background', 'system-background-primary');
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         transition: transform 0 ease-in-out;

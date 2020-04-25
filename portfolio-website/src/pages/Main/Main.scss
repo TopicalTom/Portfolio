@@ -3,6 +3,10 @@
 .main {
     width: 100vw;
     margin: 0;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    @include theme-aware('background', 'system-background-primary');
+    @include theme-aware('color', 'color-text');
 
     &__container {
         width: 1000px;

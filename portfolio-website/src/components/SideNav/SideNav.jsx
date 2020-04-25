@@ -7,10 +7,10 @@ const SideNav = props => {
 
     return (
         <div className="side-nav">
-            <p 
+            <h3 
                 className="side-nav__header">
                 {props.header}
-            </p>
+            </h3>
             <ul className="side-nav__links">
                 {props.links.map(link => {
 

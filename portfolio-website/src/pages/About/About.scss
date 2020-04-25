@@ -1,6 +1,13 @@
+@import "../../styles/baseline.scss";
+
 .about {
     margin: 0;
     width: 100vw;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    @include theme-aware('background', 'system-background-primary');
+    @include theme-aware('color', 'color-text');
+
 
     &__container {
         margin: 0 auto;

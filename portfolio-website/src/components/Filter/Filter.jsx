@@ -7,9 +7,9 @@ const Filter = (props) => {
 
         return (
             <form className="filter">
-                            <p className="filter__header">
+                            <h3 className="filter__header">
                                 Skills
-                            </p>
+                            </h3>
                             <div className="filter__selections">
                                 <label className="filter__checkbox">
                                 <input 

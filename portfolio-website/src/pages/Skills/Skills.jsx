@@ -54,9 +54,9 @@ export default class Skills extends Component {
                             links={links}
                         />
                         <form className="filter">
-                            <p className="filter__header">
+                            <h3 className="filter__header">
                                 Filter
-                            </p>
+                            </h3>
                             <ul className="filter__selections">
                                 {filters.map(filter => {
                                     return (

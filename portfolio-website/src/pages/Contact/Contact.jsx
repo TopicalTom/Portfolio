@@ -31,17 +31,14 @@ const Contact = () => {
             <div className="contact__container">
                 <aside className="contact__section contact__section--links">
                     <ul className="contact__links">
-                        <p className="contact__info">
-                            Email
-                        </p>
+                        <h3 className="contact__info">
+                            Direct Links
+                        </h3>
                         <li><a 
                             className="contact__link"
                             href="mailto:thomasvgriffiths@gmail.com">
                             thomasvgriffiths@gmail.com
                         </a></li>
-                        <p className="contact__info">
-                            LinkedIn
-                        </p>
                         <li><a 
                             className="contact__link"
                             href="https://www.linkedin.com/in/thomasvgriffiths/">
