@@ -32,7 +32,7 @@ const Contact = () => {
                 <aside className="contact__section contact__section--links">
                     <ul className="contact__links">
                         <h3 className="contact__info">
-                            Direct Links
+                            My Details
                         </h3>
                         <li><a 
                             className="contact__link"
@@ -48,6 +48,11 @@ const Contact = () => {
                             className="contact__link"
                             href="">
                             (613) 893-3437
+                        </a></li>
+                        <li><a 
+                            className="contact__link"
+                            href="">
+                            Toronto, ON
                         </a></li>
                     </ul>
                 </aside>

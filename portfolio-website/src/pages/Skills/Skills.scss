@@ -87,10 +87,9 @@
 
     &__box {
         border: 1px solid;
-        transition: border-color 0.3s ease;
-        transition: background-color 0.3s ease;
         @include theme-aware('border-color', 'content-outline');
         @include theme-aware('background', 'system-background-secondary');
+        transition: 0.3s ease;
         border-radius: 4px;
         margin-bottom: 2rem;
         margin-top: 0.15rem;

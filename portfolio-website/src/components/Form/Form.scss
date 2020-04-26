@@ -33,9 +33,9 @@
     &__input {
         border: 1px solid;
         border-radius: 2px;
-        transition: border-color 0.3s ease;
-        transition: background-color 0.3s ease;
-        @include theme-aware('background', 'system-background-secondary');
+        //transition: border-color 0.3s ease;
+        //transition: background-color 0.3s ease;
+        @include theme-aware('background', 'system-background-tertiary');
         @include theme-aware('border-color', 'content-outline-mid');
         padding: 1rem;
         outline: none;
