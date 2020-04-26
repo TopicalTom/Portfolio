@@ -1,8 +1,6 @@
 import React from 'react';
 import "./ProjectCard.scss";
 
-import {Link} from "react-router-dom";
-
 const ProjectCard = (props) => {
 
     const { project, type, preview, link } = props
@@ -21,7 +19,7 @@ const ProjectCard = (props) => {
                     </h4>
                     <a 
                         className="project-card__link">
-                        Learn More
+                        Coming Soon
                     </a>
                 </div>
                 <div className="project-card__preview">

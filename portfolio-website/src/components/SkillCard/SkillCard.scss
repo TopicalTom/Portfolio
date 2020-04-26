@@ -23,7 +23,8 @@
         margin-right: auto;
         display: flex;
         flex-direction: row;
-        @include theme-aware('border-bottom', 'content-outline');
+        border-bottom: 1px solid;
+        @include theme-aware('border-bottom-color', 'content-outline');
         width: 100%;
         justify-content: space-between;
         padding: 20px 20px 20px 0px;

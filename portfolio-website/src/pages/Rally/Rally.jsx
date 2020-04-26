@@ -7,10 +7,15 @@ import Hero from "../../components/Hero/Hero";
 import Redirect from "../../components/Redirect/Redirect";
 import prism from "../../assets/images/RallyPrism.png";
 import sketch from "../../assets/images/Sketches.png";
-import rally from "../../assets/videos/RallyPromo.mp4";
 import Palette from "../../components/Palette/Palette";
 import map from "../../assets/images/ExperienceMap.png";
 import Preview from "../../components/ProjectPreview/ProjectPreview";
+
+import tinder from "../../assets/images/TinderPush.png";
+import bumble from "../../assets/videos/BumbleModes.mp4";
+import local from "../../assets/videos/LocalEvents.mp4";
+import airbnb from "../../assets/videos/AirbnbLists.mp4";
+import rally from "../../assets/videos/RallyPromo.mp4";
 
 import github from "../../assets/icons/github.svg";
 import SideNav from '../../components/SideNav/SideNav';
@@ -36,7 +41,6 @@ class Rally extends Component {
     render() {
         return (
             <>
-            <Hero />
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">
@@ -120,7 +124,26 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Product Inspiration</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <Preview />
+                                <Preview 
+                                    image={tinder}
+                                    caption="Tinder uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+                                />
+                                <Preview 
+                                    video={bumble}
+                                    caption="Bumble uses swipeable cards to enable users to switch modes and focus in on how they want to connect with others."
+                                />
+                                <Preview 
+                                    video={local}
+                                    caption="Local (Facebook Events) enables users to see friends who expressed interest in events to help form groups."
+                                />
+                                <Preview 
+                                    video={bumble}
+                                    caption="Snapchat uses location based updates to keep friends close and enable passive get-togethers for plans."
+                                />
+                                <Preview 
+                                    video={airbnb}
+                                    caption="Airbnb uses lists to enable users to save experiences and places they are interested in for use in sharing with friends."
+                                />
                         </Element>
                         <Element
                             name="Design"
@@ -147,7 +170,26 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Prototype</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <Preview />
+                                <Preview 
+                                    image={tinder}
+                                    caption="Rally uses push notifications to enable users to know when their friends are currently rallying to encourage app use"
+                                />
+                                <Preview 
+                                    video={bumble}
+                                    caption="Rally uses swipeable cards to enable users to broadcast their interests in an actionable way for use in making plans."
+                                />
+                                <Preview 
+                                    video={rally}
+                                    caption="Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods."
+                                />
+                                <Preview 
+                                    video={rally}
+                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts ."
+                                />
+                                <Preview 
+                                    video={airbnb}
+                                    caption="Rally filters places based on the current rally which can be saved in lists for use in ideating hangout plans."
+                                />
                         </Element>
                         <Element 
                             name="Next Steps"

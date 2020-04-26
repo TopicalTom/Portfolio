@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .project-card {
     width: 480px;
     height: 215px;
@@ -5,7 +7,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    color: white;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -39,7 +40,7 @@
     }
 
     &__project {
-        color: white;
+        @include theme-aware('color', 'color-text-static');
         font-size: 2rem;
         line-height: 2rem;
     }
@@ -50,7 +51,7 @@
     }
 
     &__link {
-        color: white;
+        @include theme-aware('color', 'color-text-static');
     }
 
     &__preview {

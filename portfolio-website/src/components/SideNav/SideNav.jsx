@@ -13,7 +13,6 @@ const SideNav = props => {
             </h3>
             <ul className="side-nav__links">
                 {props.links.map(link => {
-
                     return (
                         <li>
                             <Link

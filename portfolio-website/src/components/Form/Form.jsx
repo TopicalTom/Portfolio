@@ -8,12 +8,14 @@ function Form ({submitHandler}) {
     const [ emailIsFilled, setEmailIsFilled ] = useState(false);
     const [ messageIsFilled, setMessageIsFilled ] = useState(false);
     const [ wordCount, setWordCount ] = useState(0);
+    const [ formReady, setFormIsReady ] = useState(false);
 
     function handleFirstInput(e) {
         if (e.currentTarget.value.length <= 0) {
             setFirstIsFilled(false)
         } else {
             setFirstIsFilled(true)
+            formIsReady()
         }
     }
 
@@ -22,6 +24,7 @@ function Form ({submitHandler}) {
             setLastIsFilled(false)
         } else {
             setLastIsFilled(true)
+            formIsReady()
         }
     }
 
@@ -30,6 +33,7 @@ function Form ({submitHandler}) {
             setEmailIsFilled(false)
         } else {
             setEmailIsFilled(true)
+            formIsReady()
         }
     }
 
@@ -38,11 +42,21 @@ function Form ({submitHandler}) {
             setMessageIsFilled(false)
         } else {
             setMessageIsFilled(true)
+            formIsReady()
         }
         const words = e.currentTarget.value === "" ? 0 : e.currentTarget.value.split(" ").length;
         //setTimeout(() => {
             setWordCount(words);
         //}, 1000);
+    }
+
+
+    function formIsReady() {
+        if (firstIsFilled === true && lastIsFilled === true && emailIsFilled === true && messageIsFilled === true) {
+            setFormIsReady(true)
+        } else {
+            setFormIsReady(false)
+        }
     }
 
     const firstHasContent = firstIsFilled ? "form__input--filled" : "";
@@ -53,6 +67,7 @@ function Form ({submitHandler}) {
     const showEmailHeader = emailIsFilled ? "form__placeholder--show" : "";
     const messageHasContent = messageIsFilled ? "form__input--filled" : "";
     const showMessageHeader = messageIsFilled ? "form__placeholder--show" : "";
+    const buttonActive = formReady ? "form__button--active" : "";
 
     return (
         <form className="form" netlify method="post" data-netlify="true" data-netlify-honeypot="bot-field" hidden onSubmit={submitHandler}>
@@ -111,7 +126,7 @@ function Form ({submitHandler}) {
             </div>
             <div className="form__field form__field--button">
                 <button 
-                    className="form__button"
+                    className={`form__button ${buttonActive}`}
                     type="submit">
                     <p className="form__submit">
                     Send Message

@@ -5,7 +5,7 @@ import chevron from "../../assets/icons/chevron.svg";
 
 const Redirect = (props) => {
 
-    const { text, link, cta } = props
+    const { link, cta } = props
 
     return (
         <article className="redirect">
@@ -17,7 +17,7 @@ const Redirect = (props) => {
                     {cta}
                 </span>
                 <img 
-                    className="redirect__next"
+                    className="redirect__chevron"
                     src={chevron}
                 />
             </a>

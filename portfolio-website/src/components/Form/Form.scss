@@ -31,9 +31,12 @@
     }
 
     &__input {
-        @include theme-aware('background', 'system-background-secondary');
+        border: 1px solid;
         border-radius: 2px;
-        @include theme-aware('border', 'content-outline-mid');
+        transition: border-color 0.3s ease;
+        transition: background-color 0.3s ease;
+        @include theme-aware('background', 'system-background-secondary');
+        @include theme-aware('border-color', 'content-outline-mid');
         padding: 1rem;
         outline: none;
         width: 100%;
@@ -66,7 +69,7 @@
         width: 200px;
         height: 55px;
         transition: 0.3s ease;
-        @include theme-aware('background', 'button');
+        @include theme-aware('background', 'button-inactive');
         border-radius: 12px;
         //color: white;
         border: none;
@@ -74,6 +77,10 @@
         vertical-align: middle;
         padding: 0.6rem 0;
         cursor: pointer;
+
+        &--active {
+            @include theme-aware('background', 'button');
+        }
     }
 
     &__submit {

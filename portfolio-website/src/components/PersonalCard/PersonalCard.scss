@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .spotify {
     width: 1000px;
     height: 300px;
@@ -28,17 +30,16 @@
     }
 
     &__cta {
-        color: white;
+        @include theme-aware('color', 'color-text-static');
         padding-top: 20px;
     }
 
     &__link {
-        color: white;
+        @include theme-aware('color', 'color-text-alt');
         padding-bottom: 20px;
     }
 
     &__preview {
-        background-color: red;
         margin: 30px 60px;
     }
 

@@ -60,9 +60,9 @@ export default class Skills extends Component {
                             <ul className="filter__selections">
                                 {filters.map(filter => {
                                     return (
-                                        <li className="filter__checkbox"><label>
+                                        <li className="filter__checkbox"><label className="filter__label">
                                             <input 
-                                                className="filter__label"
+                                                className="filter__input"
                                                 type="radio" 
                                                 name="filter"
                                                 value={filter}

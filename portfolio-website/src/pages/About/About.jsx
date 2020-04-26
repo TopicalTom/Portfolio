@@ -35,8 +35,8 @@ const About = () => {
                     </p>
                     <Redirect 
                         text=""
-                        link="/skills"
-                        cta="View Skills"
+                        link="/contact"
+                        cta="Let's Chat"
                     />
                 </section>
             </div>

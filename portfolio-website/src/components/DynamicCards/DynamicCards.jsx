@@ -23,7 +23,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href == "http://localhost:3000/project" || window.location.href == "http://localhost:3000/project/rally" ) {
+        } else if (window.location.href === "http://localhost:3000/project" || window.location.href == "http://localhost:3000/project/rally" ) {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
@@ -42,7 +42,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href == "http://localhost:3000/project/touch-base") {
+        } else if (window.location.href === "http://localhost:3000/project/touch-base") {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
@@ -61,7 +61,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href == "http://localhost:3000/project/shared-space" ) {
+        } else if (window.location.href === "http://localhost:3000/project/shared-space" ) {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">

@@ -44,6 +44,11 @@ const Contact = () => {
                             href="https://www.linkedin.com/in/thomasvgriffiths/">
                             in/thomasvgriffiths
                         </a></li>
+                        <li><a 
+                            className="contact__link"
+                            href="">
+                            (613) 893-3437
+                        </a></li>
                     </ul>
                 </aside>
                 <section className="contact__section contact__section--form">

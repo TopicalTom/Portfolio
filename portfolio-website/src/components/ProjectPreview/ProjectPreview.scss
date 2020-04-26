@@ -16,22 +16,38 @@
         }
     }
 
+    &__image {
+        position: absolute;
+        z-index: 3;
+        height: 460px;
+        margin: 0px 75px;
+        width: 215px;
+        margin-top: 17px;
+    }
+
     &__video {
         height: 460px;
         margin: 0 auto;
         width: 100%;
         margin-top: 17px;
-
     }
 
     &__overlay {
         position: absolute;
+        z-index: 5;
         height: 500px;
         padding: 0 56px;
     }
 
     &__caption {
         margin-bottom: 30px;
+    }
+
+    &__multiple {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
     }
 
     &__scrubber {
@@ -41,15 +57,17 @@
         //background-color: #F2F3F7;
         border-radius: 8px;
         margin-bottom: 15px;
+
+        &--alt {
+            width: 49%
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__title {
         padding-bottom: 5px;
-    }
-
-    &__selection {
-        &:hover {
-            cursor: pointer;
-        }
     }
 }
