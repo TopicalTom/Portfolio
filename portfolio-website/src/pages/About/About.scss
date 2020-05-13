@@ -10,24 +10,59 @@
 
 
     &__container {
-        margin: 0 auto;
+        margin: 0 20px;
         display: flex;
-        flex-direction: row;
-        width: 1000px;
+        flex-direction: column;
         justify-content: space-between;
-        padding-top: 280px;
+        padding-top: 120px;
+
+        @include tablet {
+            margin: 0 60px;
+            padding-top: 280px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include laptop-small {
+            margin: 0 100px;
+        }
+
+        @include laptop {
+            margin: 0 auto;
+            width: 1000px;
+        }
     }
 
     &__section {
         margin: 0;
 
         &--profile {
-            width: 400px;
-            height: 400px;
+            width: 100%;
+            margin-right: 100px;
+
+            @include tablet {
+                max-width: 360px;
+                margin-right: 60px;
+            }
+
+            @include laptop-small {
+                width: 400px;
+                height: 400px;
+                margin-right: 100px;
+            }
         }
 
         &--bio {
-            width: 500px;
+            width: 100%;
+            margin-top: 30px;
+
+            @include tablet {
+                margin-top: 0px;
+            }
+
+            @include laptop-small {
+                width: 500px;
+            }
         }
     }
 
@@ -40,14 +75,18 @@
     }
 
     &__profile {
-        width: 400px;
+        width: 100%;
         border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
-        position: absolute;
-        z-index: 20;
+        //position: absolute;
+        //z-index: 20;
 
         &:hover {
             cursor: pointer;
+        }
+
+        @include laptop {
+            width: 400px;
         }
     }
 
@@ -59,7 +98,6 @@
         position: absolute;
         z-index: 19;
         border: 8px solid #2e2e2e; 
-        //background-color: #2e2e2e;
         margin-top: 250px;
         margin-left: 250px;
         transform: 15deg;

@@ -19,7 +19,7 @@ export default class DynamicCards extends Component {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
-                        <PersonalCard />
+                        <Map />
                     </div>
                 </div>
             )
@@ -85,14 +85,6 @@ export default class DynamicCards extends Component {
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
                         <ResumeCard />
-                    </div>
-                </div>
-            )
-        } else if (window.location.href === "http://localhost:3000/contact") {
-            return (
-                <div className="dynamic">
-                    <div className="dynamic__container dynamic__container--column">
-                        <Map />
                     </div>
                 </div>
             )

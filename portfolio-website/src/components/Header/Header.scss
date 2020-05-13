@@ -11,6 +11,9 @@
     @include theme-aware('background', 'system-background-primary');
     box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px;
     z-index: 105;
+    border-bottom: 1px solid;
+    @include theme-aware('border-color', 'content-outline-light');
+    transition: 0.3s ease;
 
     &.shadow {
         transition: background-color 0.3s ease;
@@ -20,15 +23,27 @@
     }
 
     &__container {
-        margin: 0 auto;
-        //padding: 1.5rem 0rem;
-        width: 1000px;
+        margin: 0 20px;
         display: flex;
+        width: 100%;
         flex-direction: row;
         justify-content: space-between;
         z-index: 105;
         transition: background-color 0.3s ease;
         @include theme-aware('background', 'system-background-primary');
+
+        @include tablet {
+            margin: 0 60px;
+        }
+
+        @include laptop-small {
+            margin: 0 100px;
+        }
+
+        @include laptop {
+            width: 1000px;
+            margin: 0 auto;
+        }
     }
 
     &__section {
@@ -40,17 +55,26 @@
         }
 
         &--nav {
-            width: 400px;
+            display: flex;
+            width: 100%;
             justify-content: space-between;
+
+            @include tablet {
+                width: 400px;
+            }
         }
     }
 
     &__links {
-        display: flex;
-        flex-direction: row;
-        padding-inline-start: 0px;
-        width: 100%;
-        justify-content: space-between;
+        display: none;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            padding-inline-start: 0px;
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 
     &__spacing {
@@ -65,6 +89,8 @@
     &__logo {
         //color: #2E2E2E;
         padding: 1.5rem 0rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
 
         &.visible {
             color: #2E2E2E;

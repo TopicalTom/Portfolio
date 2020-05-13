@@ -1,0 +1,129 @@
+@import "../../styles/baseline.scss";
+
+.hamburger {
+    display: flex;
+    z-index: 1001;
+    height: 18px;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: auto 0;
+    align-self: center;
+
+    @include tablet {
+        display: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+
+    &__top {
+        @include theme-aware('background', 'menu');
+        height: 4px;
+        width: 28px;
+        border-radius: 8px;
+
+        &.active {
+            transform: rotate(45deg);
+            top: 0;
+        }
+    }
+
+    &__bottom {
+        @include theme-aware('background', 'menu');
+        height: 4px;
+        width: 28px;
+        border-radius: 8px;
+
+        &.active {
+            transform: rotate(-45deg);
+            top:0;
+        }
+    }
+}
+
+.menu {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    &__header {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: bold;
+    }
+
+    &__list {
+        margin-bottom: 2rem;
+
+        & > li {
+            padding: 1rem 0rem;
+            border-bottom: 1px solid;
+            @include theme-aware('border-color', 'content-outline-light');
+            transition: 0.3s ease;
+            flex-direction: row;
+            display: flex;
+        }
+    }
+
+    &__icon {
+        height: 20px;
+        margin-right: 1rem;
+        padding: auto 0;
+        align-self: center;
+    }
+
+    &__link {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        font-weight: bold;
+        font-family: "SF Pro Display";
+        transition: color 0.3s ease;
+        @include theme-aware('color', 'color-text');
+        width: 100%;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.Menu {
+    position: fixed;
+    overflow-y:auto;
+    @include theme-aware('background', 'system-background-primary');
+    @include theme-aware('color', 'color-text');
+    transition: 0.3s ease;
+    top:0;
+    left:0;
+    z-index: 1005;
+    margin-top: 76px;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+    outline: none;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.OverlayNew {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 1005;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    @include tablet {
+        display: none;
+    }
+}

@@ -8,7 +8,7 @@ import HomediateIcon from "../assets/icons/Homediate.svg";
 const projectsData = [
     {
         project: "Rally",
-        description: "Helping friends spontaneously connect with their social circle over current interests.",
+        description: "Helping friends spontaneously connect with their social circle over shared interests.",
         icon: RallyIcon,
         preview: Rally,
         link: "rally",

@@ -9,10 +9,18 @@
     @include theme-aware('color', 'color-text');
 
     &__container {
-        margin: 0 auto;
+        margin: 0 20px;
         display: flex;
         flex-direction: column;
-        width: 1000px;
+
+        @include tablet {
+            margin: 0 100px;
+        }
+
+        @include desktop {
+            margin: 0 auto;
+            width: 1000px;
+        }
     }
 
     &__social {
@@ -20,9 +28,13 @@
         flex-direction: row;
         justify-content: space-between;
         margin: auto;
-        width: 300px;
+        width: 260px;
         padding-top: 50px;
         padding-inline-start: 0px;
+
+        @include tablet {
+            width: 300px;
+        }
     }
 
     &__icon {

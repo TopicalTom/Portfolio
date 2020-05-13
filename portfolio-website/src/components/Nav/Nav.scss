@@ -1,19 +1,23 @@
 @import "../../styles/baseline.scss";
 
 .nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    transform: translateY(0);
-    transition: transform 0 ease;
-    margin-top: 83px;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    @include theme-aware('border-color', 'content-outline-light');
-    @include theme-aware('background', 'system-background-primary');
-    transition: 0.3s ease;
+    display: none;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        transform: translateY(0);
+        transition: transform 0 ease;
+        margin-top: 83px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        @include theme-aware('border-color', 'content-outline-light');
+        @include theme-aware('background', 'system-background-primary');
+        transition: 0.3s ease;
+    }
 
     &--project {
         display: flex;
@@ -52,13 +56,26 @@
     }
 
     &__container {
-        width: 1000px;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         align-items: middle;
+
+        @include tablet {
+            margin: 0 60px;
+        }
+
+        @include laptop-small {
+            margin: 0 100px;
+        }
+
+        @include laptop {
+            width: 1000px;
+            margin: 0 auto;
+        }
     }
 
     &__action {

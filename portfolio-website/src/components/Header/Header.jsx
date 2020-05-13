@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactModal from 'react-modal';
 import "./Header.scss";
 
-import Switch from "../Switch/Switch";
+import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
 
 ReactModal.setAppElement('*');
@@ -55,6 +55,7 @@ class Header extends Component {
                     </a>
                 </div>
                 <nav className="header__section header__section--nav">
+                    <Menu />
                     <ul className="header__links">
                         <li><p
                             className={`header__dropdown`}

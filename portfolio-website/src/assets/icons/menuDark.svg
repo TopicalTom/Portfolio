@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="18px" viewBox="0 0 28 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>menuDark</title>
+    <g id="menuDark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="firstBar" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M2,4 L26,4 C27.104,4 28,3.104 28,2 C28,0.896 27.104,0 26,0 L2,0 C0.896,0 0,0.896 0,2 C0,3.104 0.896,4 2,4 Z"></path>
+        </g>
+        <g id="secondBar" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M26,14 L2,14 C0.896,14 0,14.896 0,16 C0,17.104 0.896,18 2,18 L26,18 C27.104,18 28,17.104 28,16 C28,14.896 27.104,14 26,14 Z"></path>
+        </g>
+    </g>
+</svg>

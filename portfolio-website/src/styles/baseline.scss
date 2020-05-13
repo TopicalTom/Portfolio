@@ -1,6 +1,5 @@
 @import "./partials/breakpoints";
 @import "./partials/mixins";
-@import "./partials//fonts";
 
 html, 
 body {
@@ -27,8 +26,10 @@ h1 {
 }
 
 h2 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    //font-size: 1.5rem;
+    //line-height: 2rem;
     transition: color 0.3s ease;
     font-family: "SF Pro Display";
     @include theme-aware('color', 'color-text');
@@ -54,8 +55,10 @@ h3 {
 }
 
 p {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
+    //font-size: 1rem;
+    //line-height: 1.8rem;
+    font-size: 1.25rem;
+    line-height: 2.2rem;
     font-weight: normal;
     transition: color 0.3s ease;
     font-family: "SF Pro Text";
@@ -98,9 +101,12 @@ a {
     list-style: none;
     list-style-type: none;
     text-decoration: none;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
+    font-size: 1.25rem;
+    line-height: 2.2rem;
+    //font-size: 0.8125rem;
+    //line-height: 1.125rem;
     font-weight: normal;
+    font-family: "SF Pro Rounded";
 
     @include tablet {
         font-size: 1.25rem;

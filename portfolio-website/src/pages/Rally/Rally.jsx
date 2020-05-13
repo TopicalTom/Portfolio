@@ -16,6 +16,7 @@ import bumble from "../../assets/videos/BumbleModes.mp4";
 import local from "../../assets/videos/LocalEvents.mp4";
 import airbnb from "../../assets/videos/AirbnbLists.mp4";
 import rally from "../../assets/videos/RallyPromo.mp4";
+import shop from "../../assets/videos/ShopLocal.mp4";
 
 import github from "../../assets/icons/github.svg";
 import SideNav from '../../components/SideNav/SideNav';
@@ -137,8 +138,8 @@ class Rally extends Component {
                                     caption="Local (Facebook Events) enables users to see friends who expressed interest in events to help form groups."
                                 />
                                 <Preview 
-                                    video={bumble}
-                                    caption="Snapchat uses location based updates to keep friends close and enable passive get-togethers for plans."
+                                    video={shop}
+                                    caption="Shop (previously Arrive) uses location to show local stores near a user that they should checkout and support."
                                 />
                                 <Preview 
                                     video={airbnb}

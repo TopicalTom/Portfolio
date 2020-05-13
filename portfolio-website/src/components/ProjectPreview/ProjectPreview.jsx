@@ -44,7 +44,6 @@ const ProjectPreview = (props) => {
                         <div className="preview__multiple">
                             <div className="preview__scrubber preview__scrubber--alt"/>
                             <div className="preview__scrubber preview__scrubber--alt"/>
-                            <div className="preview__scrubber preview__scrubber--alt"/>
                         </div>
                     </li>
                     <li className="preview__selection">
