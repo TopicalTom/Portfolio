@@ -1,10 +1,12 @@
+@import "../../styles/baseline.scss";
+
 .resume {
-    width: 1000px;
+    width: 100%;
     height: 300px;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
     margin-bottom: 5px;
@@ -12,6 +14,25 @@
     transition: all 0.2s ease 0s;
     background: linear-gradient(180deg,#2e2e2e, black);
     justify-content: space-between;
+
+    @include laptop-small {
+        flex-direction: row;
+        /*
+        width: 1000px;
+        height: 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        transition: all 0.2s ease 0s;
+        background: linear-gradient(180deg,#2e2e2e, black);
+        justify-content: space-between;
+        */
+    }
 
     &:hover {
         cursor: pointer;
@@ -22,13 +43,19 @@
     }
 
     &__details {
-        padding: 0px 50px;
+        padding: 20px 20px;
         align-items: center;
         margin: auto 0;
+        text-align: center;
+
+        @include laptop-small {
+            padding: 0px 50px;
+            text-align: left;
+        }
     }
 
     &__cta {
-        color: white;
+        @include theme-aware('color', 'color-text-static');
         padding-top: 20px;
     }
 

@@ -1,3 +1,5 @@
+@import "../../styles/baseline.scss";
+
 .hero {
     width: 100vw;
     height: 70vh;
@@ -48,9 +50,13 @@
     }
 
     &__layer {
-        width: 1000px;
+        width: 80%;
         align-self: center;
         margin: 0 auto;
         padding: 0 auto;
+
+        @include laptop-small {
+            width: 50%;
+        }
     }
 }

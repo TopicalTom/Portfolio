@@ -14,10 +14,10 @@ const ResumeCard = () => {
                         className="resume__cta">
                         Download my Resume
                     </h2>
-                    <div 
+                    <h4 
                         className="resume__download">
                         Click to Begin
-                    </div>
+                    </h4>
                 </div>
                 <div className="resume__preview">
                     <img

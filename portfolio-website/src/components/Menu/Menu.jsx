@@ -45,7 +45,7 @@ function Menu() {
     return (
         <>
             <div 
-                className="hamburger"
+                className={`hamburger ${toggleIcon}`}
                 onClick={toggleMenu}>
                 <div className={`hamburger__top ${toggleIcon}`}/>
                 <div className={`hamburger__bottom ${toggleIcon}`}/>

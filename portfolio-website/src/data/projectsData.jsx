@@ -8,7 +8,7 @@ import HomediateIcon from "../assets/icons/Homediate.svg";
 const projectsData = [
     {
         project: "Rally",
-        description: "Helping friends spontaneously connect with their social circle over shared interests.",
+        description: "Helping people spontaneously connect with their close friends over social moods.",
         icon: RallyIcon,
         preview: Rally,
         link: "rally",
@@ -17,7 +17,7 @@ const projectsData = [
     },
     {
         project: "TouchBase",
-        description: "Helping working professionals transition into a new career by making networking more manageable.",
+        description: "Helping people transition into a new career by making networking more manageable.",
         icon: TouchBaseIcon,
         preview: TouchBase,
         link: "touch-base",
@@ -26,7 +26,7 @@ const projectsData = [
     },
     {
         project: "Homediate",
-        description: "Helping housemates mediate household tasks and utility costs within a shared space.",
+        description: "Helping people mediate household tasks and utility costs within a shared space.",
         icon: HomediateIcon,
         preview: Homediate,
         link: "shared-space",

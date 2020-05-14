@@ -4,7 +4,8 @@ import "./ProjectPromo.scss";
 import pause from "../../assets/icons/pause.svg";
 import play from "../../assets/icons/play.svg";
 import redirect from "../../assets/icons/redirect.svg";
-import overlay from "../../assets/layers/iPhoneOverlay.svg";
+
+import App from "../App/App";
 
 const ProjectPromo = (props) => {
 
@@ -27,15 +28,9 @@ const ProjectPromo = (props) => {
         <section className="promo">
             <article className={`promo__container promo__container--${orientation}`}>
                 <div className={`promo__app promo__app--${orientation}`}>
-                    <img 
-                        className="promo__overlay" 
-                        src={overlay}/>
-                    <video
-                        id={`${project}`}
-                        className="promo__preview"
-                        src={preview} 
-                        autoPlay
-                        loop
+                    <App 
+                        project={project}
+                        preview={preview}
                     />
                 </div>
                 <button
@@ -64,7 +59,7 @@ const ProjectPromo = (props) => {
                             </div>
                         </a>
                         <a
-                            className={`promo__link ${code}`}
+                            className={`promo__link promo__link--secondary ${code}`}
                             href={"https://github.com/TopicalTom/rally-capstone"}>
                             <div
                                 className="promo__code">
@@ -83,3 +78,19 @@ const ProjectPromo = (props) => {
 };
 
 export default ProjectPromo;
+
+
+/*
+
+                    <img 
+                        className="promo__overlay" 
+                        src={overlay}/>
+                    <video
+                        id={`${project}`}
+                        className="promo__preview"
+                        src={preview} 
+                        autoPlay
+                        loop
+                    />
+
+*/

@@ -9,6 +9,10 @@
     padding: auto 0;
     align-self: center;
 
+    &.active  {
+        justify-content: space-around;
+    }
+
     @include tablet {
         display: none;
     }
@@ -25,8 +29,25 @@
         border-radius: 8px;
 
         &.active {
-            transform: rotate(45deg);
-            top: 0;
+            position: absolute;
+            margin-right: 20px;
+            right: 0;
+            animation: cross-top 0.3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        &.inactive {
+            animation: cross-top 0.3s ease;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes cross-top {
+            from { 
+                transform: rotate(0deg);
+            };
+            to { 
+                transform: rotate(45deg);
+            };
         }
     }
 
@@ -37,8 +58,25 @@
         border-radius: 8px;
 
         &.active {
-            transform: rotate(-45deg);
-            top:0;
+            position: absolute;
+            margin-right: 20px;
+            right: 0;
+            animation: cross-bottom 0.3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        &.inactive {
+            animation: cross-bottom 0.3s ease;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes cross-bottom {
+            from { 
+                transform: rotate(0deg);
+            };
+            to { 
+                transform: rotate(-45deg);
+            };
         }
     }
 }

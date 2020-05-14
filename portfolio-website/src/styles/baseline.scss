@@ -12,8 +12,10 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    //font-size: 1.5rem;
+    //line-height: 2rem;
+    font-size: 3rem;
+    line-height: 4rem;
     font-family: "SF Pro Display";
     font-weight: 900;
     transition: color 0.3s ease;
@@ -57,17 +59,12 @@ h3 {
 p {
     //font-size: 1rem;
     //line-height: 1.8rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     line-height: 2.2rem;
     font-weight: normal;
     transition: color 0.3s ease;
     font-family: "SF Pro Text";
     @include theme-aware('color', 'color-paragraph');
-
-    @include tablet {
-        font-size: 1.25rem;
-        line-height: 2.2rem;
-    }
 }
 
 h4 {

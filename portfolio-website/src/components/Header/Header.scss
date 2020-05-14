@@ -91,9 +91,15 @@
         padding: 1.5rem 0rem;
         font-size: 1.5rem;
         line-height: 2rem;
+        overflow: hidden;
+        max-width: 0.9ch;
 
         &.visible {
             color: #2E2E2E;
+        }
+
+        @include tablet {
+            max-width: 75ch;
         }
     }
 

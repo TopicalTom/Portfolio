@@ -8,7 +8,6 @@
     @include theme-aware('background', 'system-background-primary');
     @include theme-aware('color', 'color-text');
 
-
     &__container {
         margin: 0 20px;
         display: flex;
@@ -41,7 +40,6 @@
             margin-right: 100px;
 
             @include tablet {
-                max-width: 360px;
                 margin-right: 60px;
             }
 
@@ -54,14 +52,16 @@
 
         &--bio {
             width: 100%;
-            margin-top: 30px;
+            margin-top: 50px;
 
             @include tablet {
                 margin-top: 0px;
+                min-width: 60%;
             }
 
             @include laptop-small {
                 width: 500px;
+                min-width: 500px;
             }
         }
     }
@@ -77,12 +77,17 @@
     &__profile {
         width: 100%;
         border-radius: 15px;
+        margin-top: 30px;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         //position: absolute;
         //z-index: 20;
 
         &:hover {
             cursor: pointer;
+        }
+
+        @include tablet {
+            margin-top: 0px;
         }
 
         @include laptop {

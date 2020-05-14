@@ -4,11 +4,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    //border-radius: 4px;
-    //padding: 15px 20px;
-    //margin-bottom: 20px;
     justify-content: space-between;
-    //background-color: red;
 
     &__container {
         display: flex;
@@ -16,19 +12,22 @@
         margin: auto 0;
         width: 100%;
         border-radius: 4px;
-        //background-color: #F2F3F7;
     }
 
     &__details {
         margin-right: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         border-bottom: 1px solid;
         @include theme-aware('border-bottom-color', 'seperator-line-opaque');
         transition: 0.3s ease;
         width: 100%;
         justify-content: space-between;
         padding: 20px 20px 20px 0px;
+
+        @include tablet {
+            flex-direction: row;
+        }
     }
 
     &__image {
@@ -48,7 +47,7 @@
     }
 
     &__status {
-        margin: auto 10px;
+        margin: 10px 0px;
 
         &--Current {
             display: none;
@@ -59,6 +58,7 @@
             background-color: rgba(0, 255, 85, 0.253);
             padding: 5px 10px;
             border-radius: 4px;
+            width: 84px;
         }
 
         &--Upcoming {
@@ -66,6 +66,11 @@
             background-color: rgba(242, 243, 247, 0.6);
             padding: 5px 10px;
             border-radius: 4px;
+            width: 94px;
+        }
+
+        @include tablet {
+            margin: auto 10px;
         }
     }
 }

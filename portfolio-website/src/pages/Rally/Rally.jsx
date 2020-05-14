@@ -181,11 +181,11 @@ class Rally extends Component {
                                 />
                                 <Preview 
                                     video={rally}
-                                    caption="Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods."
+                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts ."
                                 />
                                 <Preview 
                                     video={rally}
-                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts ."
+                                    caption="Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods."
                                 />
                                 <Preview 
                                     video={airbnb}

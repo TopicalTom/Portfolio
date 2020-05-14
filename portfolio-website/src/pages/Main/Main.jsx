@@ -17,27 +17,24 @@ const Main = () => {
                 <div className="main__details">
                     <h1 
                         className="main__heading">
-                        I'm Thomas Griffiths an aspiring Product Designer.
+                        I'm Thomas Griffiths a Digital Product Designer.
                     </h1>
-                    <p 
-                        className="main__mission">
-                        On a mission to bridge the gap between designer and developer. Interested in creating human-centered mobile experiences.
+                    <p className="main__mission">
+                        Specializing in crafting novel mobile experiences
                     </p>
                     <div className="main__actions">
+                        <div className="main__toggle">
+                            <Switch/>
+                            Light Mode
+                        </div>
                         <Link 
                             className="main__button"
                             to="Projects"
                             smooth={true}
                             duration={500}
                             offset={-240}>
-                            <div 
-                                className="main__cta">
-                                View Projects
-                            </div>
+                            <div className="main__cta"/>
                         </Link>
-                        <div className="main__toggle">
-                            <Switch />
-                        </div>
                     </div>
                 </div>
             </section>

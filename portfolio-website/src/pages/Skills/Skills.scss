@@ -8,14 +8,28 @@
     @include theme-aware('background', 'system-background-primary');
     @include theme-aware('color', 'color-text');
 
-
     &__container {
-        margin: 0 auto;
+        margin: 0 20px;
         display: flex;
         flex-direction: row;
-        width: 1000px;
         justify-content: space-between;
-        padding-top: 280px;
+        padding-top: 120px;
+
+        @include tablet {
+            margin: 0 60px;
+            padding-top: 280px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include laptop-small {
+            margin: 0 100px;
+        }
+
+        @include laptop {
+            margin: 0 auto;
+            width: 1000px;
+        }
     }
 
     &__header {
@@ -23,19 +37,29 @@
     }
 
     &__content {
-        justify-content: space-between;
+        //justify-content: space-between;
 
         &--filter {
-            width: 230px;
-            margin: 0;
-            position: sticky;
-            top: 240px;
-            height: calc(100vh - 280px);
-            overflow: scroll;
+            display: none;
+
+            @include laptop-small {
+                display: flex;
+                flex-direction: column;
+                width: 230px;
+                margin: 0;
+                position: sticky;
+                top: 240px;
+                height: calc(100vh - 280px);
+                overflow: scroll;
+            }
         }
 
         &--skills {
-            width: 730px;
+            width: 100%;
+
+            @include laptop-small {
+                width: 730px;
+            }
         }
     }
 
