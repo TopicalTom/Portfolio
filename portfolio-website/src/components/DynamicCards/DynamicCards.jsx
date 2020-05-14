@@ -90,9 +90,9 @@ export default class DynamicCards extends Component {
             )
         } else {
             return (
-                <div className="dynamic">
+                <>
 
-                </div>
+                </>
             )
         }
     }
