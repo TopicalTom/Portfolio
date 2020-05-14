@@ -126,24 +126,29 @@ class Rally extends Component {
                                 <h3>Product Inspiration</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                                 <Preview 
-                                    image={tinder}
+                                    video={bumble}
                                     caption="Tinder uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+                                    type="Trigger"
                                 />
                                 <Preview 
                                     video={bumble}
                                     caption="Bumble uses swipeable cards to enable users to switch modes and focus in on how they want to connect with others."
+                                    type="Action"
                                 />
                                 <Preview 
                                     video={local}
                                     caption="Local (Facebook Events) enables users to see friends who expressed interest in events to help form groups."
+                                    type="Reward"
                                 />
                                 <Preview 
                                     video={shop}
                                     caption="Shop (previously Arrive) uses location to show local stores near a user that they should checkout and support."
+                                    type="Reward"
                                 />
                                 <Preview 
                                     video={airbnb}
                                     caption="Airbnb uses lists to enable users to save experiences and places they are interested in for use in sharing with friends."
+                                    type="Investment"
                                 />
                         </Element>
                         <Element
@@ -165,31 +170,35 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Branding</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                                <Palette />
                         </Element>
                         <Element 
                             className="project__block">
                                 <h3>Prototype</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                                 <Preview 
-                                    image={tinder}
-                                    caption="Rally uses push notifications to enable users to know when their friends are currently rallying to encourage app use"
-                                />
-                                <Preview 
-                                    video={bumble}
-                                    caption="Rally uses swipeable cards to enable users to broadcast their interests in an actionable way for use in making plans."
+                                    video={rally}
+                                    caption="Rally uses push notifications to enable users to know when their friends are currently rallying to encourage app use."
+                                    type="Trigger"
                                 />
                                 <Preview 
                                     video={rally}
-                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts ."
+                                    caption="Rally uses swipeable cards to enable users to broadcast their interests in an actionable way for use in making plans."
+                                    type="Action"
+                                />
+                                <Preview 
+                                    video={rally}
+                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts."
+                                    type="Reward"
                                 />
                                 <Preview 
                                     video={rally}
                                     caption="Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods."
+                                    type="Reward"
                                 />
                                 <Preview 
-                                    video={airbnb}
+                                    video={rally}
                                     caption="Rally filters places based on the current rally which can be saved in lists for use in ideating hangout plans."
+                                    type="Investment"
                                 />
                         </Element>
                         <Element 

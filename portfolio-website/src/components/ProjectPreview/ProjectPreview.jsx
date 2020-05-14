@@ -1,28 +1,17 @@
 import React from 'react';
 import "./ProjectPreview.scss";
 
-import overlay from "../../assets/layers/iPhoneOverlay.svg";
+import App from "../App/App";
 
 const ProjectPreview = (props) => {
 
-    const {image, video, caption} = props
+    const {type, video, caption} = props
 
     return (
         <article className="preview">
             <div className="preview__container preview__container--video">
-                <img 
-                    className="preview__overlay" 
-                    src={overlay}
-                />
-                <img 
-                    className="preview__image" 
-                    src={image}
-                />
-                <video
-                    id=""
-                    className="preview__video"
-                    src={video}
-                    autoPlay
+                <App 
+                    video={video}
                 />
             </div>
             <div className="preview__container preview__container--content">
@@ -30,6 +19,10 @@ const ProjectPreview = (props) => {
                     className="preview__caption">
                     {caption}
                 </h3>
+                <h4 
+                    className="preview__type">
+                    {type}
+                </h4>
                 <ul className="preview__list">
                     <li className="preview__selection">
                         <h5 className="preview__title">Trigger</h5>

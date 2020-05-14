@@ -179,14 +179,13 @@
         display: none;
 
         @include laptop-small {
-            width: 80px;
             height: 80px;
             background-color: transparent;
             border: none;
             outline: none;
             position: absolute;
             display: flex;
-            left: 200;
+            left: 100;
             top: 200;
             margin-top: 620px;
             justify-content: space-around;
