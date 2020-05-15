@@ -11,12 +11,15 @@ import Palette from "../../components/Palette/Palette";
 import map from "../../assets/images/ExperienceMap.png";
 import Preview from "../../components/ProjectPreview/ProjectPreview";
 
-import tinder from "../../assets/images/TinderPush.png";
-import bumble from "../../assets/videos/BumbleModes.mp4";
+import bumblePush from "../../assets/videos/BumblePush.mp4";
+import bumbleModes from "../../assets/videos/BumbleModes.mp4";
 import local from "../../assets/videos/LocalEvents.mp4";
 import airbnb from "../../assets/videos/AirbnbLists.mp4";
 import rally from "../../assets/videos/RallyPromo.mp4";
 import shop from "../../assets/videos/ShopLocal.mp4";
+
+import modes from "../../assets/videos/RallyModes.mp4";
+import connect from "../../assets/videos/RallyConnect.mp4";
 
 import github from "../../assets/icons/github.svg";
 import SideNav from '../../components/SideNav/SideNav';
@@ -126,12 +129,12 @@ class Rally extends Component {
                                 <h3>Product Inspiration</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                                 <Preview 
-                                    video={bumble}
-                                    caption="Tinder uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+                                    video={bumblePush}
+                                    caption="Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
                                     type="Trigger"
                                 />
                                 <Preview 
-                                    video={bumble}
+                                    video={bumbleModes}
                                     caption="Bumble uses swipeable cards to enable users to switch modes and focus in on how they want to connect with others."
                                     type="Action"
                                 />
@@ -181,18 +184,18 @@ class Rally extends Component {
                                     type="Trigger"
                                 />
                                 <Preview 
-                                    video={rally}
+                                    video={modes}
                                     caption="Rally uses swipeable cards to enable users to broadcast their interests in an actionable way for use in making plans."
                                     type="Action"
                                 />
                                 <Preview 
-                                    video={rally}
-                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts."
+                                    video={connect}
+                                    caption="Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods."
                                     type="Reward"
                                 />
                                 <Preview 
                                     video={rally}
-                                    caption="Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods."
+                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts."
                                     type="Reward"
                                 />
                                 <Preview 

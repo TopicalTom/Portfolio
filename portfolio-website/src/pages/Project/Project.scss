@@ -109,7 +109,7 @@
     }
 
     &__github {
-        color: white;
+        @include theme-aware('color', 'color-text-static');
     }
 
     &__icon {

@@ -12,7 +12,7 @@ export default class Map extends Component {
             lat: 43.6532,
             zoom: 11,
             //style: "mapbox://styles/mapbox/dark-v9"
-            style: 'mapbox://styles/mapbox/streets-v11'
+            style: "mapbox://styles/shamal1ama/ck6eo9e4j2ejk1inxvfh9p4au"
         };
     }
     
@@ -23,6 +23,16 @@ export default class Map extends Component {
             center: [this.state.lng, this.state.lat],
             zoom: this.state.zoom
         });
+
+            if (window.localStorage.getItem("global-theme") == "light") {
+                this.setState({
+                    style: "mapbox://styles/shamal1ama/ck6eo9e4j2ejk1inxvfh9p4au"
+                })
+            } else if (window.localStorage.getItem("global-theme") == "dark") {
+                this.setState({
+                    style: "mapbox://styles/mapbox/dark-v9"
+                })
+            }
     }
 
     render() {

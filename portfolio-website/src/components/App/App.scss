@@ -16,7 +16,6 @@
     &__preview {
         height: 100%;
         width: 85%;
-        border-radius: 16px;
         overflow: hidden;
         display: flex;
         align-self: center;
@@ -39,6 +38,7 @@
         height: 600px;
         width: 240px;
         position: absolute;
+        overflow: hidden;
 
         @include laptop-small {
             height: 703px;
