@@ -37,6 +37,7 @@ const Switch = () => {
 
     return (
         <div className="toggle">
+            <h4 className="toggle__type">{makeDark} mode</h4>
             <input
                 className="switch"
                 id={`react-switch-new`}

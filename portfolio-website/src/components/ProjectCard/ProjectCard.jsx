@@ -17,10 +17,6 @@ const ProjectCard = (props) => {
                         className="project-card__type">
                         {type}
                     </h4>
-                    <a 
-                        className="project-card__link">
-                        Coming Soon
-                    </a>
                 </div>
                 <div className="project-card__preview">
                     <img

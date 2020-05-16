@@ -39,7 +39,7 @@ class Homediate extends Component {
                                 <p className="project__paragraph">The goal is to get people to be accountable for contributing their part to a household, be it chores or otherwise, which is achieved by tying the percent calculation of variable utility costs to the completion of daily, weekly, and even monthly assigned tasks.</p>
                                 <img className="project__image" src={Layers}/>
                                 <p className="project__paragraph">The Homediate experience is built as an iMessage App to leverage a pre-existing chat infrastructure since households typically have a group chat for communicating important household events and needs.</p>
-                                <p className="project__paragraph">Given more time, I am interested in exploring how this app experience could utilize Apple business chat to connect with landlords to allow users to request fixes or pay their percentage of the rent with adjusted utility cost average factored in.</p>
+                                <p className="project__paragraph">Given more time, I am interested in exploring how this app experience could utilize Apple business chat to connect with landlords to allow users to request fixes or pay their percentage of the rent with the adjusted utility costs factored in.</p>
                         </Element>
                         <Redirect 
                             link="/skills"

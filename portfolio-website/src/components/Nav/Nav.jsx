@@ -35,7 +35,7 @@ function Nav() {
                         />
                         <span
                             className="nav__back">
-                            Back
+                            Home
                         </span>
                     </div>
                 </a>

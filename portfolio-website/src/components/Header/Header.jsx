@@ -46,48 +46,47 @@ class Header extends Component {
         <>
         <header className={`header`}>
             <div className="header__container">
-                <div className="header__section header__section--logo">
-                    <a href="/">
-                        <h3
-                            className={`header__logo`}
-                            onMouseEnter={ () => this.closeDropdown() }>
-                            TopicalTom
-                        </h3>
-                    </a>
-                </div>
+                <a className="header__section header__section--logo" href="/">
+                    <h3
+                        className={`header__logo`}
+                        onMouseEnter={ () => this.closeDropdown() }>
+                        TopicalTom
+                    </h3>
+                </a>
                 <nav className="header__section header__section--nav">
-                    <Menu />
                     <ul className="header__links">
-                        <li><div
-                            className={`header__dropdown`}
+                        <li
+                            className="header__dropdown"
                             onMouseEnter={ () => this.openDropdown() }>
                             <p>Projects</p>
-                            <img 
-                                className="header__drop"
-                                src={dropdown}
-                            />
-                        </div></li>
-                        <span 
-                            className="header__spacing" 
+                            <svg className={`header__drop header__drop${isOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                                <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
+                            </svg>
+                        </li>
+                        <li 
+                            className="header__link"
                             onMouseEnter={ () => this.closeDropdown() }>
-                            <li><a
-                                className={`header__link`}
-                                href="/skills">
+                            <a href="/skills">
                                 Skills
-                            </a></li>
-                            <li><a
-                                className={`header__link`}
-                                href="/about">
-                                About
-                            </a></li>
-                            <li><a
-                                className={`header__link`}
-                                href="/contact">
-                                Contact
-                            </a></li>
-                        </span>
+                            </a>
+                        </li>
+                        <li 
+                            className="header__link"
+                            onMouseEnter={ () => this.closeDropdown() }>
+                            <a href="/about">
+                            About
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+                <div className="header__cta">
+                    <a
+                        className="header__contact"
+                        href="/contact">
+                            Contact
+                    </a>
+                </div>
+                <Menu />
             </div>
         </header>
         {isOpen && // Only displays dropdown when isOpen = true
@@ -97,7 +96,7 @@ class Header extends Component {
                 <div 
                     className="dropdown__container">
                     {projects.map(item => {
-                        const {project, promo, link, description} = item
+                        const {project, promo, link, type} = item
                         return (
                             <a 
                                 className="dropdown__item"
@@ -110,7 +109,7 @@ class Header extends Component {
                                     </div>
                                     <div className="dropdown__content dropdown__content--details">
                                         <p className="dropdown__project">{project}</p>
-                                        <p className="dropdown__description">{description}</p>
+                                        <p className="dropdown__description">{type}</p>
                                     </div>
                             </a>
                         )

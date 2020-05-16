@@ -15,6 +15,7 @@ const projectsData = [
         icon: RallyIcon,
         preview: Rally,
         promo: RallyPromo,
+        type: "React Native App",
         link: "rally",
         orientation: "left",
         code: ""
@@ -25,16 +26,18 @@ const projectsData = [
         icon: TouchBaseIcon,
         preview: TouchBase,
         promo: TouchBasePromo,
+        type: "Wallet Pass & App",
         link: "touch-base",
         orientation: "right",
         code: "none"
     },
     {
         project: "Homediate",
-        description: "Helping people mediate household tasks and utility costs within a shared space.",
+        description: "Helping people mediate household tasks through utility costs within a shared space.",
         icon: HomediateIcon,
         preview: Homediate,
         promo: HomediatePromo,
+        type: "iMessage App",
         link: "shared-space",
         orientation: "left",
         code: "none"

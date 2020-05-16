@@ -70,42 +70,47 @@ class Rally extends Component {
                         <Element 
                             name="Overview"
                             className="project__block">
-                                <h1 className="project__heading">Rally</h1>
-                                <p className="project__paragraph">Rally is a React Native that empowers the plan-creation process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
+                                <h1>Rally</h1>
+                                <p>Rally is a React Native that empowers the plan-creation process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
                                 <img className="project__image" src={Layers}/>
                         </Element>
                         <Element
                             name="Problem Space" 
                             className="project__block">
-                                <h2 className="project__title">The Need to Connect</h2>
-                                <p className="project__paragraph">After moving out of my residence hall from first year, I found it was harder to figure out what all my friends were up to at a moments notice as I wasn’t able to just head across the hall and ask them in person. I now had to message them through a variety of channels in order to figure out if there was anything going on that night. Throughout the years, and especially after graduating, this problem has only worsened as we have even less free time and become increasingly unaware of when we can meetup with our friends to do something fun. </p>
+                                <h2>The Need to Connect</h2>
+                                <p>Amid a global pandemic, life has almost come to a standstill with people around the world "coming-together" through "separation" to ensure our healthcare systems stay within their operational capacities. In doing so, the usual bustling spots for social engagements have been hit hard and have had to adapt to stay alive. Given the problem space, the question I asked is:</p>
+                        </Element>
+                        <Element
+                            name="HMW" 
+                            className="project__block">
+                                <h4>How Might We</h4>
+                                <h3 className="project__hmw">Ensure local businesses that have persevered through these tough times have a chance to bounce back once social restrictions have lifted.</h3>
                         </Element>
                         <Element
                             name="Research"
                             className="project__block">
-                                <h2 className="project__title">Gaining Context</h2>
-                                <p className="project__paragraph">Making plans with friends is analogous to playing Go-Fish where the “cards” are one’s current interests or availability and the “game” is the process of finding common ground. The inherent challenge of Go-Fish is that we cannot see the cards of the other player and the only way to determine what they have is to explicitly ask.</p>
+                                <h2>Gaining Context</h2>
+                                <p>Research for how to solve this problem and how it affects people was focused on two areas. These areas were Online Research through Articles and Technology sites and User Research through in-person interviews. I outline these aspects in further detail below with regards to my objectives and how they relate back to the problem at hand:</p>
                         </Element>
                         <Element
                             name="Insights"
                             className="project__block">
-                                <h2 className="project__title">Research Insights</h2>
-                                <p className="project__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <h2>Research Insights</h2>
                         </Element>
                         <Element
                             className="project__block">
-                                <h3 className="project__subtitle">Gathering Patterns</h3>
-                                <p className="project__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <h3>Gathering Patterns</h3>
+                                <p>Participants would conduct a form of plan insurance to maximize the success that what they were going to do would succeed. This could be seen in participants individually building a foundation of people they could fall-back on or by reaching out to groups for “specific moods” with a proven track record of following through with a plan. Reasons for why they themselves would not follow through with plans were because they were no longer in the mood, it was too difficult to coordinate, or people started dropping out. Participants noted that as the number of people involved increases, so does the difficulty of planning a hangout that works for everyone. Whereas, when these plans are made with one or two people, coordination wasn’t an issue at all. Participants stated that a part of this problem comes people being indecisive, non-responsive or tools generally lacking.</p>
                         </Element>
                         <Element
                             className="project__block">
                                 <h3>Refining our Audience</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <p>Throughout the interviews it became apparent that there are a few types of roles that participants might take when they are either organizing plans themselves or engaging in a plan that another friend is organizing. It appears that there are two primary roles which I call the Social Convener and  Engaged Planner. Using participants descriptions of how they engage in the planning process I was able to construct a few user personas for future reference as the product was being designed to ensure each role and their respective needs would be accounted for:</p>
                         </Element>
                         <Element
                             className="project__block">
                                 <h3>Mapping the Experience</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <p>The current process for making plans can be described as occurring in three stages: Determine Interest, Group Coordination, and Plan Execution. The area of opportunity, or area where the experience dips, is roughly around the group coordination stage and is mostly due to the difficulty of coordinating details with a large group. The full experience map of this process can be viewed below that highlights key moments and areas of opportunity within this space:</p>
                                 <img 
                                     className="project__image"
                                     src={map}
@@ -115,6 +120,10 @@ class Rally extends Component {
                             name="Ideation"
                             className="project__block">
                                 <h2>Ideation</h2>
+                        </Element>
+                        <Element 
+                            className="project__block">
+                                <h3>Core Value</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                                 <img 
                                     className="project__image"
@@ -160,7 +169,6 @@ class Rally extends Component {
                             name="Design"
                             className="project__block">
                                 <h2 className="project__title">Design Output</h2>
-                                <p className="project__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                         </Element>
                         <Element 
                             className="project__block">

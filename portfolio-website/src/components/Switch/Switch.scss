@@ -42,8 +42,20 @@
   }
 
   .toggle {
-      justify-content: center;
-      display: flex;
-      height: 30px;
-      padding: auto 0px;
-  }
+    justify-content: center;
+    display: flex;
+    height: 30px;
+    padding: auto 0px;
+
+    &:hover > h4 {
+        opacity: 1.0;
+    }
+
+    &__type {
+        opacity: 0;
+        padding: auto 0px;
+        margin-right: 4px;
+        height: 30px;
+        align-self: center;
+    }
+}

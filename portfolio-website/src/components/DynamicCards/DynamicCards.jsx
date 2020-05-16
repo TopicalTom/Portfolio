@@ -29,7 +29,7 @@ export default class DynamicCards extends Component {
                     <div className="dynamic__container dynamic__container--row">
                     <ProjectCard
                         project={"TouchBase"}
-                        type={"Wallet Pass"}
+                        type={"Wallet Pass & App"}
                         preview={TouchBasePreview}
                         link={"touch-base"}
                     />
@@ -73,7 +73,7 @@ export default class DynamicCards extends Component {
                     />
                     <ProjectCard
                         project={"TouchBase"}
-                        type={"Wallet Pass"}
+                        type={"Wallet Pass & App"}
                         preview={TouchBasePreview}
                         link={"touch-base"}
                     />
