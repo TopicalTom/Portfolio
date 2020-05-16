@@ -58,18 +58,6 @@ const ProjectPromo = (props) => {
                                 Learn More
                             </div>
                         </a>
-                        <a
-                            className={`promo__link promo__link--secondary ${code}`}
-                            href={"https://github.com/TopicalTom/rally-capstone"}>
-                            <div
-                                className="promo__code">
-                                View Code
-                            </div>
-                            <img
-                                className="promo__redirect"
-                                src={redirect}
-                            />
-                        </a>
                     </div>
                 </div>
             </article>
@@ -82,15 +70,17 @@ export default ProjectPromo;
 
 /*
 
-                    <img 
-                        className="promo__overlay" 
-                        src={overlay}/>
-                    <video
-                        id={`${project}`}
-                        className="promo__preview"
-                        src={preview} 
-                        autoPlay
-                        loop
-                    />
+                        <a
+                            className={`promo__link promo__link--secondary ${code}`}
+                            href={"https://github.com/TopicalTom/rally-capstone"}>
+                            <div
+                                className="promo__code">
+                                View Code
+                            </div>
+                            <img
+                                className="promo__redirect"
+                                src={redirect}
+                            />
+                        </a>
 
 */

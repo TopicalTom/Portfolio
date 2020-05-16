@@ -59,10 +59,6 @@ function Menu() {
                     <h4 className="menu__header">Projects</h4>
                     <ul className="menu__list">
                         <li>
-                            <img 
-                                className="menu__icon"
-                                src={rally}
-                            />
                             <a 
                                 className="menu__link"
                                 href="/project/rally"
@@ -71,10 +67,6 @@ function Menu() {
                             </a>
                         </li>
                         <li>
-                            <img 
-                                className="menu__icon"
-                                src={touchBase}
-                            />
                             <a 
                                 className="menu__link"
                                 href="/project/touchbase"
@@ -83,10 +75,6 @@ function Menu() {
                             </a>
                         </li>
                         <li>
-                            <img 
-                                className="menu__icon"
-                                src={homediate}
-                            />
                             <a 
                                 className="menu__link"
                                 href="/project/shared-space"
@@ -98,10 +86,6 @@ function Menu() {
                     <h4 className="menu__header">Explore</h4>
                     <ul className="menu__list">
                         <li>
-                            <img 
-                                className="menu__icon"
-                                src={touchBase}
-                            />
                             <a 
                                 className="menu__link"
                                 href="/skills"
@@ -110,10 +94,6 @@ function Menu() {
                             </a>
                         </li>
                         <li>
-                            <img 
-                                className="menu__icon"
-                                src={touchBase}
-                            />
                             <a 
                                 className="menu__link"
                                 href="/about"
@@ -122,10 +102,6 @@ function Menu() {
                             </a>
                         </li>
                         <li>
-                            <img 
-                                className="menu__icon"
-                                src={touchBase}
-                            />
                             <a 
                                 className="menu__link"
                                 href="/contact"

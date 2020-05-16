@@ -40,54 +40,15 @@
         }
     }
 
-    &__preview {
-        height: 500px;
-        border-radius: 16px;
-        overflow: hidden;
-        padding: auto;
-
-        @include tablet {
-            height: 500px;
-            border-radius: 16px;
-            overflow: hidden;
-            padding: auto;
-        }
-
-        @include laptop-small {
-            height: 703px;
-            border-radius: 16px;
-            overflow: hidden;
-            padding-top: 29px;
-            padding-left: 116px;
-        }
-    }
-
-    &__overlay {
-        height: 500px;
-        position: absolute;
-        margin: auto;
-        overflow: hidden;
-
-        @include tablet {
-            height: 500px;
-            border-radius: 16px;
-            overflow: hidden;
-            padding: auto;
-        }
-
-        @include laptop-small {
-            height: 730px;
-            position: absolute;
-            margin: 4px 88px 0px 88px;
-            overflow: hidden;
-        }
-    }
-
     &__app {
         width: 100%;
 
         @include tablet {
             width: 45%;
+        }
+
+        @include laptop {
+            width: 50%;
         }
     }
 
@@ -108,12 +69,12 @@
         }
 
         @include laptop {
-            width: 500px;
+            width: 50%;
         }
     }
 
     &__description {
-        @include theme-aware('color', 'color-text-alt');
+        @include theme-aware('color', 'color-paragraph');
         opacity: 0.65;
     }
 
@@ -123,14 +84,6 @@
         margin-right: 25px;
         display: flex;
         flex-direction: row;
-
-        &--secondary {
-            display: none;
-
-            @include laptop-small {
-                display: flex;
-            }
-        }
     }
 
     &__actions {
@@ -145,19 +98,6 @@
         height: 34px;
         padding: 10px 0px;
         margin: 8px 0px;
-    }
-
-    &__code {
-        height: 50px;
-        border-radius: 12px;
-        text-align: center;
-        vertical-align: middle;
-        padding: 8px 0;
-        color: #007AFF;
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 
     &__button {

@@ -61,7 +61,8 @@ p {
     //line-height: 1.8rem;
     font-size: 1.15rem;
     line-height: 2.2rem;
-    font-weight: normal;
+    //font-weight: normal;
+    //font-weight: 500;
     transition: color 0.3s ease;
     font-family: "SF Pro Text";
     @include theme-aware('color', 'color-paragraph');

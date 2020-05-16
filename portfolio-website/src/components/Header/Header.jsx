@@ -4,6 +4,7 @@ import "./Header.scss";
 
 import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
+import dropdown from "../../assets/icons/dropdown.svg";
 
 ReactModal.setAppElement('*');
 
@@ -57,11 +58,15 @@ class Header extends Component {
                 <nav className="header__section header__section--nav">
                     <Menu />
                     <ul className="header__links">
-                        <li><p
+                        <li><div
                             className={`header__dropdown`}
                             onMouseEnter={ () => this.openDropdown() }>
-                            Projects
-                        </p></li>
+                            <p>Projects</p>
+                            <img 
+                                className="header__drop"
+                                src={dropdown}
+                            />
+                        </div></li>
                         <span 
                             className="header__spacing" 
                             onMouseEnter={ () => this.closeDropdown() }>
@@ -91,17 +96,22 @@ class Header extends Component {
                 onMouseLeave={ () => this.closeDropdown() }>
                 <div 
                     className="dropdown__container">
-                    {projects.map(promo => {
-                        const {project, icon, link} = promo
+                    {projects.map(item => {
+                        const {project, promo, link, description} = item
                         return (
                             <a 
-                                className="dropdown__project"
+                                className="dropdown__item"
                                 href={`/project/${link}`}>
-                                <img 
-                                    className="dropdown__icon"
-                                    src={icon}
-                                />
-                                {project}
+                                    <div className="dropdown__content dropdown__content--promo">
+                                        <img 
+                                            className="dropdown__preview"
+                                            src={promo}
+                                        />
+                                    </div>
+                                    <div className="dropdown__content dropdown__content--details">
+                                        <p className="dropdown__project">{project}</p>
+                                        <p className="dropdown__description">{description}</p>
+                                    </div>
                             </a>
                         )
                     })}

@@ -22,16 +22,19 @@ const About = () => {
                         A bit about me...
                     </h2>
                     <p className="about__content">
-                        While I eventually graduated with a Biology degree, my time at University was marked by a feeling of restlessness as I wasn't feeling gripped with what I was working on in the way a passion should feel.
+                    While I am no longer building Lego worlds or making Forge Maps on Halo 3 for my friends to play on, creating things has been core to my identity ever since I was a kid. Becoming a Digital Product Designer is just the natural conclusion to that path, even though the journey to get here wasn't a straightforward one.
                     </p>
                     <p className="about__content">
-                        This feeling of restlessness led me to switch my major a total of five times and to explore new opportunities outside of my comfort zone and current skillset in the pursuit of finding something that truly felt like Me.
+                        After five-degree changes and some exploration, I stumbled upon the field of design while working as a marketing designer for a few extracurricular conferences. It was here where I was able to capture the same excitement I felt when working on my childhood extracurriculars by shaping experiences while being able to create an impact on the people that attended.
                     </p>
                     <p className="about__content">
-                        Having reached this breakthrough in what drives me, I explored further education at BrainStation in UX Design, iOS Development, and Product Management to kickstart my journey into the field
+                        Since this breakthrough, I have been on a mission to pick up as many tech skills as possible so that I would have the resources to take on any problem thrown my way in creating exceptional experiences.
                     </p>
                     <p className="about__content">
-                        Now equipped with a course-refined process to complement my self-taught skills and drive, the only missing piece is a new mission I can invest in! I am currently looking to secure a challenging entry-level position in an organization that needs a multifaceted individual to invest in their mission of driving impact for people.
+                        When I am not busy working on my skillset or making apps, I like to balance my life by playing video games with friends, consuming as many movies as possible as I work my way through the IMDB Top 250, or driving my Jeep with the roof down when the weather is just right.
+                    </p>
+                    <p className="about__content">
+                        If you, or someone you know, needs someone like me on their team, make sure to reach out as I am currently looking for a position to kickstart my journey into the field!
                     </p>
                     <Redirect 
                         text=""

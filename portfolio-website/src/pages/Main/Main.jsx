@@ -32,7 +32,7 @@ const Main = () => {
                             to="Projects"
                             smooth={true}
                             duration={500}
-                            offset={-240}>
+                            offset={-120}>
                             <div className="main__cta"/>
                         </Link>
                     </div>

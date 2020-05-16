@@ -38,23 +38,6 @@ const skillsData = [
     altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
     skills: [
         {
-            category:"Research",
-            tools: [
-                {
-                    tool:"Otter.ai",
-                    description:"Ai-powered speech to text transcription",
-                    status:"Current",
-                    logo:otterAi
-                },
-                {
-                    tool:"Optimal Sort",
-                    description:"Card-based information architecture categorization",
-                    status:"Current",
-                    logo:optimalsort
-                }
-            ],
-        },
-        {
             category:"Visuals",
             tools: [
                 {
@@ -261,6 +244,18 @@ const skillsData = [
         {
             category:"Research",
             tools: [
+                {
+                    tool:"Otter.ai",
+                    description:"Ai-powered speech to text transcription",
+                    status:"Current",
+                    logo:otterAi
+                },
+                {
+                    tool:"Optimal Sort",
+                    description:"Card-based information architecture categorization",
+                    status:"Current",
+                    logo:optimalsort
+                },
                 {
                     tool:"Google Analytics",
                     description:"Web analytics service for measuring website traffic and ROI",

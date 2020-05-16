@@ -10,6 +10,7 @@ import sketch from "../../assets/images/Sketches.png";
 import Palette from "../../components/Palette/Palette";
 import map from "../../assets/images/ExperienceMap.png";
 import Preview from "../../components/ProjectPreview/ProjectPreview";
+import Layers from "../../assets/layers/HangoutLayer.png";
 
 import bumblePush from "../../assets/videos/BumblePush.mp4";
 import bumbleModes from "../../assets/videos/BumbleModes.mp4";
@@ -71,6 +72,7 @@ class Rally extends Component {
                             className="project__block">
                                 <h1 className="project__heading">Rally</h1>
                                 <p className="project__paragraph">Rally is a React Native that empowers the plan-creation process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
+                                <img className="project__image" src={Layers}/>
                         </Element>
                         <Element
                             name="Problem Space" 
@@ -135,7 +137,7 @@ class Rally extends Component {
                                 />
                                 <Preview 
                                     video={bumbleModes}
-                                    caption="Bumble uses swipeable cards to enable users to switch modes and focus in on how they want to connect with others."
+                                    caption="Bumble uses swipeable cards to enable users to switch modes and focus in on how to connect with others."
                                     type="Action"
                                 />
                                 <Preview 
