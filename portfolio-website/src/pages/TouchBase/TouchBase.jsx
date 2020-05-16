@@ -35,9 +35,11 @@ class TouchBase extends Component {
                             name="Coming Soon"
                             className="project__block">
                                 <h1 className="project__heading">TouchBase</h1>
-                                <p className="project__paragraph">TouchBase is a React Native that empowers the plan-creation process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
+                                <p className="project__paragraph">TouchBase is a project I did as a one-week design challenge that aims to help people who are either looking for employment or are currently employed, manage their professional networking.</p>
+                                <p className="project__paragraph">The goal is to get people to follow-up more with the people they meet and create more meaningful interactions that are akin to relationships rather than just being a +1 to their LinkedIn network count.</p>
                                 <img className="project__image" src={Layers}/>
-                                <p className="project__paragraph">TouchBase is a React Native that empowers the plan-creation process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
+                                <p className="project__paragraph">The TouchBase experience is composed of two ecosystems. The first is the Wallet Pass Card with the Apple Wallet, which serves as an e-business card, where users can quickly add people they meet to their TouchBase network. The second, the standalone app experience, is where users can adjust their profiles, make plans, and search for potential connections without having to meet someone in person first.</p>
+                                <p className="project__paragraph">Given more time, I am looking to expand on the app experience where users can find connections as there is an opportunity for mentorship in this space without having to be in the same geographical location as one-another.</p>
                         </Element>
                         <Redirect 
                             link="/skills"

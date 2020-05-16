@@ -21,7 +21,7 @@ const projectsData = [
     },
     {
         project: "TouchBase",
-        description: "Helping people foster professional work connections by making networking more manageable.",
+        description: "Helping people foster professional connections by making networking more manageable.",
         icon: TouchBaseIcon,
         preview: TouchBase,
         promo: TouchBasePromo,

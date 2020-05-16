@@ -35,9 +35,11 @@ class Homediate extends Component {
                             name="Coming Soon"
                             className="project__block">
                                 <h1 className="project__heading">Homediate</h1>
-                                <p className="project__paragraph">Homediate is a React Native that empowers the plan-creation process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
+                                <p className="project__paragraph">Homediate is a design challenge I did for a job application that aims to help people mediate household tasks and utility costs within a shared space.</p>
+                                <p className="project__paragraph">The goal is to get people to be accountable for contributing their part to a household, be it chores or otherwise, which is achieved by tying the percent calculation of variable utility costs to the completion of daily, weekly, and even monthly assigned tasks.</p>
                                 <img className="project__image" src={Layers}/>
-                                <p className="project__paragraph">TouchBase is a React Native that empowers the plan-creation process by connecting friends who are actively wanting to make plans so that they can collectively support one-another through the plan creation process before sharing it within their social circles.</p>
+                                <p className="project__paragraph">The Homediate experience is built as an iMessage App to leverage a pre-existing chat infrastructure since households typically have a group chat for communicating important household events and needs.</p>
+                                <p className="project__paragraph">Given more time, I am interested in exploring how this app experience could utilize Apple business chat to connect with landlords to allow users to request fixes or pay their percentage of the rent with adjusted utility cost average factored in.</p>
                         </Element>
                         <Redirect 
                             link="/skills"
