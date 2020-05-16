@@ -4,26 +4,27 @@ import { Element , animateScroll as scroll, scrollSpy, scroller } from 'react-sc
 import "../Project/Project.scss";
 
 import Hero from "../../components/Hero/Hero";
+import Quotes from "../../components/Quotes/Quotes";
+import Palette from "../../components/Palette/Palette";
+import SideNav from '../../components/SideNav/SideNav';
 import Redirect from "../../components/Redirect/Redirect";
+
+import quotesData from "../../data/quotesData";
+
 import prism from "../../assets/images/RallyPrism.png";
 import sketch from "../../assets/images/Sketches.png";
-import Palette from "../../components/Palette/Palette";
 import map from "../../assets/images/ExperienceMap.png";
 import Preview from "../../components/ProjectPreview/ProjectPreview";
 import Layers from "../../assets/layers/HangoutLayer.png";
-
 import bumblePush from "../../assets/videos/BumblePush.mp4";
 import bumbleModes from "../../assets/videos/BumbleModes.mp4";
 import local from "../../assets/videos/LocalEvents.mp4";
 import airbnb from "../../assets/videos/AirbnbLists.mp4";
 import rally from "../../assets/videos/RallyPromo.mp4";
 import shop from "../../assets/videos/ShopLocal.mp4";
-
 import modes from "../../assets/videos/RallyModes.mp4";
 import connect from "../../assets/videos/RallyConnect.mp4";
-
 import github from "../../assets/icons/github.svg";
-import SideNav from '../../components/SideNav/SideNav';
 
 class Rally extends Component {
 
@@ -36,7 +37,8 @@ class Rally extends Component {
             "Ideation",
             "Design",
             "Next Steps" 
-        ]      
+        ],
+        quotes: quotesData
     }
 
     componentDidMount() {
@@ -83,8 +85,8 @@ class Rally extends Component {
                         <Element
                             name="HMW" 
                             className="project__block">
-                                <h4>How Might We</h4>
-                                <h3 className="project__hmw">Ensure local businesses that have persevered through these tough times have a chance to bounce back once social restrictions have lifted.</h3>
+                                <h4 className="project__hmw">How Might We</h4>
+                                <h3 className="project__question">Ensure local businesses that have persevered through these tough times have a chance to bounce back once social restrictions have lifted.</h3>
                         </Element>
                         <Element
                             name="Research"
@@ -95,12 +97,15 @@ class Rally extends Component {
                         <Element
                             name="Insights"
                             className="project__block">
-                                <h2>Research Insights</h2>
+                                <h2>Insights</h2>
                         </Element>
                         <Element
                             className="project__block">
                                 <h3>Gathering Patterns</h3>
                                 <p>Participants would conduct a form of plan insurance to maximize the success that what they were going to do would succeed. This could be seen in participants individually building a foundation of people they could fall-back on or by reaching out to groups for “specific moods” with a proven track record of following through with a plan. Reasons for why they themselves would not follow through with plans were because they were no longer in the mood, it was too difficult to coordinate, or people started dropping out. Participants noted that as the number of people involved increases, so does the difficulty of planning a hangout that works for everyone. Whereas, when these plans are made with one or two people, coordination wasn’t an issue at all. Participants stated that a part of this problem comes people being indecisive, non-responsive or tools generally lacking.</p>
+                                <Quotes
+                                    quotes={this.state.quotes}
+                                />
                         </Element>
                         <Element
                             className="project__block">
@@ -183,6 +188,7 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Branding</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <Palette />
                         </Element>
                         <Element 
                             className="project__block">
