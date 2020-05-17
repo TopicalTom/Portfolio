@@ -33,7 +33,7 @@ const projectsData = [
     },
     {
         project: "Homediate",
-        description: "Helping people mediate household tasks through utility costs within a shared space.",
+        description: "Helping people mediate household tasks with performance based individual utility costs.",
         icon: HomediateIcon,
         preview: Homediate,
         promo: HomediatePromo,

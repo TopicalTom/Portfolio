@@ -69,7 +69,7 @@ const Footer = () => {
                         </a></li>
                     </ul>
                     <p className="footer__copyright">
-                        Built in React © TopicalTom
+                        Built in React © 2020
                     </p>
                 </div>
         </footer>
