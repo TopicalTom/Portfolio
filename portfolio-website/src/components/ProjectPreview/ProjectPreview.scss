@@ -65,6 +65,7 @@
     &__scrubber {
         height: 0.25rem;
         width: 60%;
+        transition: background-color 0.3s ease;
         @include theme-aware('background-color', 'system-background-tertiary');
         //background-color: #F2F3F7;
         border-radius: 8px;
