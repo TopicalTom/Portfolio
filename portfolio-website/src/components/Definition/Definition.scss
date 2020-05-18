@@ -1,0 +1,32 @@
+@import "../../styles/baseline.scss";
+
+.definition {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2rem 3rem;
+    margin: 2rem auto;
+    transition: background-color 0.3s ease;
+    @include theme-aware('background', 'system-background-tertiary');
+    border-radius: 10px;
+
+    &__variations {
+        //padding-inline-start: 20px;
+        list-style-type: decimal;
+
+        & > li {
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &__definition {
+        margin-bottom: 0.8rem;
+        transition: color 0.3s ease;
+        @include theme-aware('color', 'color-text');
+    }
+
+    &__type {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+}
