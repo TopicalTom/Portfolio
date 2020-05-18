@@ -2,7 +2,7 @@
 
 .footer {
     width: 100vw;
-    padding: 50px 0;
+    //padding: 50px 0;
     transition: color 0.3s ease;
     transition: background-color 0.3s ease;
     @include theme-aware('background', 'system-background-primary');

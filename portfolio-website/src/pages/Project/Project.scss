@@ -159,4 +159,8 @@
             width: 50%;
         }
     }
+
+    &__external-link {
+        @include theme-aware('color', 'link');
+    }
 }

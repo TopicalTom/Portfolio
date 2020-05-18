@@ -10,6 +10,7 @@ import Palette from "../../components/Palette/Palette";
 import SideNav from '../../components/SideNav/SideNav';
 import Redirect from "../../components/Redirect/Redirect";
 import Model from "../../components/Model/Model";
+import Tech from "../../components/Tech/Tech";
 
 import quotesData from "../../data/quotesData";
 
@@ -27,8 +28,6 @@ import shop from "../../assets/videos/ShopLocal.mp4";
 import modes from "../../assets/videos/RallyModes.mp4";
 import connect from "../../assets/videos/RallyConnect.mp4";
 import github from "../../assets/icons/github.svg";
-
-import rallyLogo from "../../assets/icons/Rally.svg";
 
 class Rally extends Component {
 
@@ -98,7 +97,10 @@ class Rally extends Component {
                             className="project__block">
                                 <h2>Gaining Context</h2>
                                 <p>While the objective is to help local businesses stay afloat, there is a level of reliance on people both wanting to hangout and being aware that a specific business exists. Due to this, there was a need to understand the process that people undergo when trying to make plans, how they find out where they want to go and any barriers they overcome along the way.</p>
-                                <p>With this in-mind, my research focused on online articles that contextualized why we make plans and 6 exploratory interviews I conducted with participants outlining their experience making plans.</p>
+                                <p>
+                                    With this in-mind, my research focused on 
+                                    <a className="project__external-link" href="https://techcrunch.com/2016/06/10/come-together/"> online articles </a> 
+                                    that contextualized why we make plans and 6 exploratory interviews I conducted with participants outlining their experience making plans.</p>
                         </Element>
                         <Element
                             name="Insights"
@@ -157,7 +159,10 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Leveraging the Hook Model</h3>
                                 <p>With the core value that our solution would provide figured out, the remaining questions were what form would this product take, how would it go about helping local businesses and how would we ensure people would continue using it to solve this problem.</p>
-                                <p>To address these concerns, I utilized the Hook Model framework as a way to structure what our experience loop would need to emulate to ensure continual use and to serve as a springboard for what I would need to look for product inspiration.</p>
+                                <p>
+                                    To address these concerns, I utilized the
+                                    <a className="project__external-link" href="https://www.nirandfar.com/how-to-manufacture-desire/"> Hook Model </a>  
+                                    framework as a way to structure what our experience loop would need to emulate to ensure continual use and to serve as a springboard for what I would need to look for product inspiration.</p>
                                 <Model />
                         </Element>
                         <Element
@@ -204,8 +209,19 @@ class Rally extends Component {
                         <Element 
                             className="project__block">
                                 <h3>Tech Stack</h3>
-                                <p>To alleviate these concerns, I did some additional research on the technology that would be needed to bring this solution to life. To overcome the barrier-to-entry issue, the app could be developed in React Native, rather than pure native solutions, as it would allow for simultaneous iOS and Android Development and even allow for a web platform to be made for a business facing component.</p>
-                                <p>In order to support similar features outlined in the product inspiration phase, I could leverage Mapbox and Foursquare for location and places data. The benefit of these services is that it would allow me to use location to determine if and where people are meeting up, to validate if plans are coming to fruition and if businesses are receiving additional traffic due to the app.</p>
+                                <p>
+                                    To alleviate these concerns, I did some additional research on the technology that would be needed to bring this solution to life. To overcome the barrier-to-entry issue, the app could be developed in
+                                    <a className="project__external-link" href="https://reactnative.dev/"> React Native</a>
+                                    , rather than pure native solutions, as it would allow for simultaneous iOS and Android Development and even allow for a web platform to be made for a business facing component.
+                                </p>
+                                <p>
+                                    In order to support similar features outlined in the product inspiration phase, I could leverage
+                                    <a className="project__external-link" href="https://www.mapbox.com/"> Mapbox </a> 
+                                    and
+                                    <a className="project__external-link" href="https://foursquare.com/"> FourSquare </a> 
+                                    for location and places data. The benefit of these services is that it would allow me to use location to determine if and where people are meeting up, to validate if plans are coming to fruition and if businesses are receiving additional traffic due to the app.
+                                </p>
+                                <Tech />
                         </Element>
                         <Element
                             name="Design"
