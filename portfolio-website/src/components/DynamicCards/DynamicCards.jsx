@@ -15,7 +15,7 @@ export default class DynamicCards extends Component {
 
     render(){
 
-        if (window.location.href === "http://localhost:3000/about") {
+        if (window.location.href === "https://topicaltom.netlify.app/about") {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
@@ -23,7 +23,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href === "http://localhost:3000/project" || window.location.href == "http://localhost:3000/project/rally" ) {
+        } else if (window.location.href === "https://topicaltom.netlify.app/project" || window.location.href == "https://topicaltom.netlify.app/project/rally" ) {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
@@ -42,7 +42,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href === "http://localhost:3000/project/touch-base") {
+        } else if (window.location.href === "https://topicaltom.netlify.app/project/touch-base") {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
@@ -61,7 +61,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href === "http://localhost:3000/project/shared-space" ) {
+        } else if (window.location.href === "https://topicaltom.netlify.app/project/shared-space" ) {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
@@ -80,7 +80,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href === "http://localhost:3000/skills") {
+        } else if (window.location.href === "https://topicaltom.netlify.app/skills") {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
