@@ -34,8 +34,8 @@ import zapier from "../assets/tools/Zapier.svg";
 const skillsData = [
 { 
     discipline:"Design",
-    caption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
-    altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    caption: "I thoroughly enjoy usability testing with users, so prototyping skills are something I have been working to build on. My recent foray into development has been to gain a foundation in React to be able to utilize Framer and prototype designs using real data.",
+    altCaption: "I thoroughly enjoy usability testing with users, so prototyping skills are something I have been working to build on. My recent foray into development has been to gain a foundation in React to be able to utilize Framer and prototype designs using real data.",
     skills: [
         {
             category:"Visuals",
@@ -104,8 +104,8 @@ const skillsData = [
 },
 {
     discipline:"Development",
-    caption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
-    altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    caption: "By exploring the development side of things, I have picked up some full-stack skills, but with a greater emphasis on the front-end. My interests are to learn more about iOS development and eventually try ARKit.",
+    altCaption: "By exploring the development side of things, I have picked up some full-stack skills, but with a greater emphasis on the front-end. My interests are to learn more about iOS development and eventually try ARKit.",
     skills: [
         {
             category:"Front-End (Web)",
@@ -238,8 +238,8 @@ const skillsData = [
 },
 {
     discipline:"Product",
-    caption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
-    altCaption: "My focus on the development side of things has been on the front-end but with my interests more aligned with mobile development specifically for iOS Devices.",
+    caption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
+    altCaption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
     skills: [
         {
             category:"Research",
