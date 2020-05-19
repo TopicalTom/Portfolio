@@ -117,7 +117,6 @@
         font-size: 1.25rem;
         line-height: 2rem;
         font-weight: bold;
-        font-family: "SF Pro Display";
         transition: color 0.3s ease;
         @include theme-aware('color', 'color-text');
         width: 100%;
