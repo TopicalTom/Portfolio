@@ -17,6 +17,16 @@
     &__action {
         @include theme-aware('color', 'link');
     }
+
+    &__container {
+        width: 200px;
+        padding: 0 auto;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
     
     &__drop {
         transition: 0.2s ease 0s;

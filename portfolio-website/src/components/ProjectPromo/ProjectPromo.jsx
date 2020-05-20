@@ -3,7 +3,6 @@ import "./ProjectPromo.scss";
 
 import pause from "../../assets/icons/pause.svg";
 import play from "../../assets/icons/play.svg";
-import redirect from "../../assets/icons/redirect.svg";
 
 import App from "../App/App";
 
@@ -41,7 +40,7 @@ const ProjectPromo = (props) => {
                             src={isPlaying ? pause : play}
                             alt=""
                         />
-                </button>
+                    </button>
                 </div>
                 <div className="promo__details">
                     <h2 className="promo__project">

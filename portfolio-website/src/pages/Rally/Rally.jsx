@@ -84,7 +84,8 @@ class Rally extends Component {
                         <Element
                             name="Problem Space" 
                             className="project__block">
-                                <h2>Social Distancing</h2>
+                                <h2>Problem Space</h2>
+                                <h3>The Impact of Social Distancing</h3>
                                 <p>Amid a global pandemic, life has almost come to a standstill with people around the world "coming-together" through "separation" to ensure our healthcare systems stay within their operational capacities. In doing so, the usual bustling spots for social engagements have been hit hard and have had to adapt to stay alive.</p>
                                 <p>While there won’t be an issue with people wanting to hangout in-person once restrictions are lifted, there is a need for local businesses that rely on social hangouts to receive constant sustained support early on to survive. Given the problem space, the question I asked is:</p>
                         </Element>
@@ -96,7 +97,8 @@ class Rally extends Component {
                         <Element
                             name="Research"
                             className="project__block">
-                                <h2>Gaining Context</h2>
+                                <h2>Research</h2>
+                                <h3>Gaining Context</h3>
                                 <p>While the objective is to help local businesses stay afloat, there is a level of reliance on people both wanting to hangout and being aware that a specific business exists. Due to this, there was a need to understand the process that people undergo when trying to make plans, how they find out where they want to go and any barriers they overcome along the way.</p>
                                 <p>
                                     With this in-mind, my research focused on 

@@ -54,7 +54,8 @@
     }
 
     &__project {
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
         font-size: 2.4rem;
     }
 
@@ -126,6 +127,7 @@
         outline: none;
         height: 80px;
         display: flex;
+        //background-color: red;
         justify-content: space-around;
 
         @include laptop-small {
@@ -140,7 +142,6 @@
         width: 20px;
 
         &:hover {
-            width: 25px;
             cursor: pointer;
         }
     }
