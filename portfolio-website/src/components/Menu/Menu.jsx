@@ -9,6 +9,7 @@ ReactModal.setAppElement('*')
 function Menu() {
 
     const [menuIsOpen, setIsOpen] = useState(false);
+    const [projectIsOpen, setProjectOpen] = useState(false);
     const [iconIsActive, setActive] = useState(false);
 
     function toggleMenu() {
@@ -18,6 +19,16 @@ function Menu() {
         }
         else {
             closeMenu()
+        }
+    }
+
+    function toggleProjectDropdown() {
+
+        if (projectIsOpen !== true) {
+            setProjectOpen(true)
+        }
+        else {
+            setProjectOpen(false)
         }
     }
 
@@ -49,37 +60,38 @@ function Menu() {
                 isOpen={menuIsOpen}
                 contentLabel="onRequestClose Example"
                 className="Menu"
+                overlayClassName="OverlayNew"
+                shouldCloseOnOverlayClick={true}
             >
-                <div className="menu">
-                    <h4 className="menu__header">Projects</h4>
+                <nav className="menu">
                     <ul className="menu__list">
-                        <li>
-                            <a 
+                        <li className="menu__expand"
+                            onClick={toggleProjectDropdown}>
+                            <span 
                                 className="menu__link"
-                                href="/project/rally"
-                                onClick={closeMenu}>
-                                Rally
-                            </a>
+                                href="/">
+                                Projects
+                            </span>
+                            <svg className={`menu__drop menu__drop${projectIsOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                                <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
+                            </svg>
                         </li>
-                        <li>
-                            <a 
-                                className="menu__link"
-                                href="/project/touchbase"
-                                onClick={closeMenu}>
-                                TouchBase
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                                className="menu__link"
-                                href="/project/shared-space"
-                                onClick={closeMenu}>
-                                Homediate
-                            </a>
-                        </li>
-                    </ul>
-                    <h4 className="menu__header">Explore</h4>
-                    <ul className="menu__list">
+                        {projectIsOpen && // Only displays dropdown when isOpen = true
+                            <ul className="menu__dropdown">
+                                <li><a
+                                    href="/project/rally">
+                                    Rally
+                                </a></li>
+                                <li><a
+                                    href="/project/touch-base">
+                                    TouchBase
+                                </a></li>
+                                <li><a
+                                    href="/project/shared-space">
+                                    Homediate
+                                </a></li>
+                            </ul>
+                        }
                         <li>
                             <a 
                                 className="menu__link"
@@ -98,15 +110,14 @@ function Menu() {
                         </li>
                         <li>
                             <a 
-                                className="menu__link"
+                                className="menu__link menu__link--contact"
                                 href="/contact"
                                 onClick={closeMenu}>
-                                Contact
+                                Let's Chat
                             </a>
                         </li>
                     </ul>
-                </div>
-                <Switch className="menu__toggle"/>
+                </nav>
             </ReactModal>
         </>
         );

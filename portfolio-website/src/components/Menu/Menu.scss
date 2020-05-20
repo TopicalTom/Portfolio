@@ -69,6 +69,8 @@
     flex-direction: column;
     text-align: left;
     z-index: 1000;
+    width: 80%;
+    margin: auto;
 
     &__header {
         font-size: 0.875rem;
@@ -81,11 +83,15 @@
 
         & > li {
             padding: 1rem 0rem;
-            border-bottom: 1px solid;
+            //border-bottom: 1px solid;
             @include theme-aware('border-color', 'content-outline-light');
             transition: 0.3s ease;
             flex-direction: row;
             display: flex;
+
+            & > li:nth-last-child() {
+                border-bottom: none;
+            }
         }
     }
 
@@ -103,6 +109,14 @@
         transition: color 0.3s ease;
         @include theme-aware('color', 'color-text');
         width: 100%;
+
+        &--contact {
+            transition: color 0.3s ease;
+            @include theme-aware('color', 'color-text-button');
+            @include theme-aware('background-color', 'button');
+            padding: 0.825rem 1rem;
+            text-align: center;
+        }
     }
 
     @include tablet {
@@ -111,6 +125,50 @@
 
     &__toggle {
         position: absolute;
+    }
+
+    &__expand {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__dropdown {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border-left: 2px solid;
+
+        @include theme-aware('border-color', 'content-outline-light');
+        padding-left: 2rem;
+
+        & > li {
+            margin: 0.5rem 0;
+        }
+    }
+
+    &__drop {
+        transition: 0.2s ease 0s;
+        width: 14px;
+        height: 14px;
+        margin: auto 0;
+
+        &--active {
+            @include theme-aware('fill', 'dropdown');
+            transition: 0.2s ease 0s;
+            transform: scaleY(-1);
+            opacity: 1;
+            padding: 0px 0px 0px 4px;
+        }
+
+        &--inactive {
+            @include theme-aware('fill', 'dropdown');
+            opacity: 0.5;
+            transition: 0.2s ease 0s;
+            transform: scaleY(1);
+            padding: 2px 0px 0px 4px;
+        }
     }
 }
 
@@ -121,12 +179,12 @@
     @include theme-aware('color', 'color-text');
     transition: 0.3s ease;
     top:0;
-    left:0;
+    right:0;
     z-index: 1005;
-    //margin-top: 76px;
-    width: 100%;
+    margin-top: 76px;
+    width: 80%;
     height: 100vh;
-    padding: 80px 20px;
+    padding: 60px 20px;
     text-align: center;
     outline: none;
 
@@ -141,10 +199,11 @@
     left:0;
     right:0;
     bottom:0;
-    z-index: 1005;
-    background: rgba(0, 0, 0, 0);
+    z-index: 1000;
+    background: rgba(0, 0, 0, .7);
+    //margin-top: 76px;
     display: flex;
-    width: 100vw;
+    width: 20vw;
     height: 100vh;
 
     @include tablet {

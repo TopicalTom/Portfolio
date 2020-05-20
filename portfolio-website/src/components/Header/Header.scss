@@ -52,10 +52,12 @@
 
     &__section {
         display: flex;
+        justify-content: space-between;
         //flex-direction: row-reverse;
 
         &--logo {
             margin: 0;
+            width: 150px;
         }
 
         &--nav {

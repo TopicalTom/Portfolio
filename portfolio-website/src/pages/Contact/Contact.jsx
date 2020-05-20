@@ -32,8 +32,18 @@ const Contact = () => {
                 <aside className="contact__section contact__section--links">
                     <ul className="contact__links">
                         <h3 className="contact__info">
-                            Or, Email me at:
+                            Direct
                         </h3>
+                        <li><a 
+                            className="contact__link"
+                            href="mailto:thomasvgriffiths@gmail.com">
+                            thomasvgriffiths@gmail.com
+                        </a></li>
+                        <li><a 
+                            className="contact__link"
+                            href="mailto:thomasvgriffiths@gmail.com">
+                            thomasvgriffiths@gmail.com
+                        </a></li>
                         <li><a 
                             className="contact__link"
                             href="mailto:thomasvgriffiths@gmail.com">

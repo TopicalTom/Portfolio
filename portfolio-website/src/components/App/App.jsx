@@ -19,10 +19,10 @@ const App = (props) => {
                     id={`${project}`}
                     className="app__preview"
                     src={preview} 
-                    autoplay="autoplay"
-                    loop="loop"
-                    playsinine="playsinline"
-                    muted="muted"
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
                     type="video/mp4"
                 />
             </div>
@@ -39,10 +39,10 @@ const App = (props) => {
                     id={`${video}`}
                     className="alt__preview"
                     src={video} 
-                    autoplay="autoplay"
-                    loop="loop"
-                    playsinine="playsinline"
-                    muted="muted"
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
                     type="video/mp4"
                 />
             </div>

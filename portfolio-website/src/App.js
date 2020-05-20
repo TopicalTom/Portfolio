@@ -3,6 +3,8 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 // Reusable Components
 import Header from "./components/Header/Header";
+import Scroll from "./components/Scroll/Scroll";
+import DynamicCards from "./components/DynamicCards/DynamicCards";
 import Footer from "./components/Footer/Footer";
 
 // Unqiue Pages
@@ -11,7 +13,6 @@ import Contact from "./pages/Contact/Contact";
 import Skills from "./pages/Skills/Skills";
 import About from "./pages/About/About";
 import Main from "./pages/Main/Main";
-import DynamicCards from "./components/DynamicCards/DynamicCards";
 
 import "./styles/baseline.scss";
 
@@ -42,6 +43,7 @@ function App() {
                 />
             </Switch>
             <DynamicCards/>
+            <Scroll />
             <Footer/>
         </BrowserRouter>
     );

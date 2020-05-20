@@ -4,7 +4,6 @@ import "./Header.scss";
 
 import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
-//import dropdown from "../../assets/icons/dropdown.svg";
 
 ReactModal.setAppElement('*');
 
@@ -50,7 +49,7 @@ class Header extends Component {
                     <h3
                         className={`header__logo`}
                         onMouseEnter={ () => this.closeDropdown() }>
-                        TopicalTom
+                        T
                     </h3>
                 </a>
                 <nav className="header__section header__section--nav">
