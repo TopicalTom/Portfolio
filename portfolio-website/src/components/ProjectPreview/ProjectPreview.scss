@@ -52,7 +52,13 @@
     }
 
     &__caption {
-        margin-bottom: 30px;
+        margin: 10px auto;
+        width: 90%;
+
+        @include tablet {
+            width: 100%;
+            margin: 30px auto;
+        }
     }
 
     &__multiple {
@@ -95,6 +101,8 @@
 
     &__type {
         display: flex;
+        width: 90%;
+        margin: 0 auto;
 
         @include tablet {
             display: none;

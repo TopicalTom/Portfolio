@@ -18,21 +18,21 @@ const PersonaCarousel = () => {
         >
             <div className="persona-carousel">
                 <ButtonNext className="persona-carousel__button">
-                    <img className="persona-carousel__icon--flip" src={chevron} />
+                    <img className="persona-carousel__icon--flip" src={chevron} alt=""/>
                 </ButtonNext>
                 <ButtonBack className="persona-carousel__button">
-                    <img src={chevron} />
+                    <img src={chevron} alt=""/>
                 </ButtonBack>
             </div>
             <Slider className="persona-carousel__slider" classNameAnimation="persona-carousel__slider--animation">
                 <Slide className="persona-carousel__slide" index={0}>
-                <img className="persona-carousel__image" src={persona1} />
+                <img className="persona-carousel__image" src={persona1} alt=""/>
                 </Slide>
                 <Slide className="persona-carousel__slide" index={1}>
-                    <img className="persona-carousel__image" src={persona2} />
+                    <img className="persona-carousel__image" src={persona2} alt=""/>
                 </Slide>
                 <Slide className="persona-carousel__slide" index={2}>
-                    <img className="persona-carousel__image" src={persona3} />
+                    <img className="persona-carousel__image" src={persona3} alt=""/>
                 </Slide>
             </Slider>
         </CarouselProvider>

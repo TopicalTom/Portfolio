@@ -19,22 +19,23 @@
     &__slide {
         width: 730px;
         display: flex;
-        height: auto;
+        height: 360px;
         flex-direction: row;
         justify-content: space-between;
-        //margin-right: 15px;
         transition: border-color 0.3s ease;
         transition: background-color 0.3s ease;
         @include theme-aware('border-color', 'content-outline');
         @include theme-aware('background-color', 'system-background-secondary');
         border: 1px solid;
         border-radius: 20px;
-        padding: 2.8rem 4rem;
+        padding: 2.8rem 2rem;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         margin: 2rem 0.5rem;
 
         @include tablet {
             margin: 2rem 3rem;
+            padding: 2.8rem 4rem;
+            height: auto;
         }
     }
 
@@ -66,7 +67,11 @@
 
     &__content {
         display: block;
-        height: 240px;
+        height: 300px;
+
+        @include tablet {
+            height: 240px;
+        }
     }
 
     &__category {

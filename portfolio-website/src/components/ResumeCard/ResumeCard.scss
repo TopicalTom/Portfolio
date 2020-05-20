@@ -2,7 +2,7 @@
 
 .resume {
     width: 100%;
-    height: 300px;
+    height: 160px;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -16,6 +16,10 @@
     justify-content: space-between;
     //border: 1px solid;
     //@include theme-aware('border-color', 'content-outline-mid');
+
+    @include tablet {
+        height: 300px;
+    }
 
     @include laptop-small {
         flex-direction: row;
@@ -58,7 +62,12 @@
 
     &__cta {
         @include theme-aware('color', 'color-text');
-        padding-top: 20px;
+        font-size: 1.2rem;
+
+        @include tablet {
+            padding-top: 20px;
+            font-size: 2.25rem;
+        }
     }
 
     &__link {
@@ -67,7 +76,12 @@
     }
 
     &__preview {
-        margin: 40px 60px 0px 30px;
+        display: none;
+
+        @include tablet {
+            margin: 40px 60px 0px 30px;
+            display: block;
+        }
     }
 
     &__image {

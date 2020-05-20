@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./App.scss";
 
 import overlay from "../../assets/layers/iPhoneOverlay.svg";
@@ -13,13 +13,17 @@ const App = (props) => {
                 <img 
                     className="app__overlay" 
                     src={overlay}
+                    alt=""
                 />
                 <video
                     id={`${project}`}
                     className="app__preview"
                     src={preview} 
-                    autoPlay
-                    loop
+                    autoplay="autoplay"
+                    loop="loop"
+                    playsinine="playsinline"
+                    muted="muted"
+                    type="video/mp4"
                 />
             </div>
         );
@@ -29,13 +33,17 @@ const App = (props) => {
                 <img 
                     className="alt__overlay" 
                     src={overlay}
+                    alt=""
                 />
                 <video
                     id={`${video}`}
                     className="alt__preview"
                     src={video} 
-                    autoPlay
-                    loop
+                    autoplay="autoplay"
+                    loop="loop"
+                    playsinine="playsinline"
+                    muted="muted"
+                    type="video/mp4"
                 />
             </div>
         );

@@ -35,6 +35,7 @@ function Share() {
                             <img 
                                 className="share__icon"
                                 src={copyURLSuccess ? success : copy}
+                                alt=""
                             />
                         </div>
                     </div>

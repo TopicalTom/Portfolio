@@ -32,6 +32,7 @@ function Nav() {
                         <img 
                             className="nav__chevron"
                             src={chevron} 
+                            alt=""
                         />
                         <span
                             className="nav__back">

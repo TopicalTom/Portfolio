@@ -42,6 +42,7 @@
 
     &__app {
         width: 100%;
+        position: relative;
 
         @include tablet {
             width: 45%;
@@ -116,18 +117,21 @@
     }
 
     &__toggle {
-        display: none;
+        position: absolute;
+        margin-top: 0px;
+        bottom: 0;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
 
         @include laptop-small {
-            height: 80px;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            position: absolute;
-            display: flex;
-            left: 100;
-            top: 200;
-            margin-top: 620px;
+            left: 0;
+            //top: 200;
+            //margin-top: 620px;
             justify-content: space-around;
         }
     }

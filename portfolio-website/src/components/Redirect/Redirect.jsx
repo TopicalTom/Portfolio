@@ -19,6 +19,7 @@ const Redirect = (props) => {
                 <img 
                     className="redirect__chevron"
                     src={chevron}
+                    alt=""
                 />
             </a>
         </article>

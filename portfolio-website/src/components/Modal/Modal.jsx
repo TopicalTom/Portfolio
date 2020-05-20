@@ -56,7 +56,8 @@ function Modal() {
             <img 
                 className="contact"
                 onClick={openModal}
-                src={share} 
+                src={share}
+                alt="" 
             />
             <ReactModal
                 isOpen={modalIsOpen}
@@ -70,6 +71,7 @@ function Modal() {
                         className="modal__cancel"
                         onClick={closeModal}
                         src={cancel}
+                        alt=""
                     />
                     <h2>Looking to Hire?</h2>
                     <br></br>
@@ -93,6 +95,7 @@ function Modal() {
                                 <img 
                                     className="modal__icon"
                                     src={copyPageSuccess ? success : copy}
+                                    alt=""
                                 />
                             </div>
                         </div>
@@ -114,6 +117,7 @@ function Modal() {
                                 <img 
                                     className="modal__icon"
                                     src={copyHomeSuccess ? success : copy}
+                                    alt=""
                                 />
                             </div>
                         </div>

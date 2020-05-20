@@ -1,6 +1,5 @@
 import React from 'react';
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Link} from 'react-scroll';
 import "./SideNav.scss";
 
 const SideNav = props => {

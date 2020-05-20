@@ -1,12 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 import "./Menu.scss";
 
-import menuLight from "../../assets/icons/menuLight.svg";
-import menuDark from "../../assets/icons/menuDark.svg";
-import touchBase from "../../assets/icons/TouchBase.svg";
-import rally from "../../assets/icons/Rally.svg";
-import homediate from "../../assets/icons/Homediate.svg";
 import Switch from "../../components/Switch/Switch";
 
 ReactModal.setAppElement('*')
@@ -18,7 +13,7 @@ function Menu() {
 
     function toggleMenu() {
 
-        if (menuIsOpen != true) {
+        if (menuIsOpen !== true) {
             openMenu()
         }
         else {
@@ -110,8 +105,8 @@ function Menu() {
                             </a>
                         </li>
                     </ul>
-                    <Switch />
                 </div>
+                <Switch className="menu__toggle"/>
             </ReactModal>
         </>
         );

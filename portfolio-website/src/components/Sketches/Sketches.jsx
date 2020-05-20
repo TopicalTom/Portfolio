@@ -8,7 +8,7 @@ const Sketches = () => {
             <div className="sketches__container">
                 <div className="sketches__row">
                     <div className="sketches__preview">
-                        <img className="sketches__image"/>
+                        <img className="sketches__image" alt=""/>
                         <p className="sketches__label"></p>
                     </div>
                 </div>

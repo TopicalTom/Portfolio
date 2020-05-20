@@ -12,17 +12,17 @@ const Tech = () => {
             <a 
                 className="tech__container tech__container--reactnative"
                 href="https://reactnative.dev/">
-                <img className="tech__logo" src={reactnative}/>
+                <img className="tech__logo" src={reactnative} alt=""/>
             </a>
             <a 
                 className="tech__container tech__container--mapbox"
                 href="https://www.mapbox.com/">
-                <img className="tech__logo" src={mapbox}/>
+                <img className="tech__logo" src={mapbox} alt=""/>
             </a>
             <a 
                 className="tech__container tech__container--foursquare"
                 href="https://foursquare.com/">
-                <img className="tech__logo" src={foursquare}/>
+                <img className="tech__logo" src={foursquare} alt=""/>
             </a>
         </article>
     );

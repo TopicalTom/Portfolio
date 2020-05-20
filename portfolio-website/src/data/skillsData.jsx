@@ -170,16 +170,16 @@ const skillsData = [
                     logo:netlify
                 },
                 {
-                    tool:"mySQL",
-                    description:"Relational database management system",
-                    status:"Upcoming",
-                    logo:mySQL
-                },
-                {
                     tool:"OAuth",
                     description:"Authorization framework for authenticated access to assets",
                     status:"Upcoming",
                     logo:oAuth
+                },
+                {
+                    tool:"mySQL",
+                    description:"Relational database management system",
+                    status:"Upcoming",
+                    logo:mySQL
                 }
             ] 
         },

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ResumeCard from "../ResumeCard/ResumeCard";
-import PersonalCard from "../PersonalCard/PersonalCard";
 import Map from "../Map/Map";
 
 import "./DynamicCards.scss"
@@ -13,6 +15,10 @@ import RallyPreview from "../../assets/images/RallyPreview.png";
 
 export default class DynamicCards extends Component {
 
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    }
+
     render(){
 
         if (window.location.href === "https://topicaltom.netlify.app/about") {
@@ -21,9 +27,10 @@ export default class DynamicCards extends Component {
                     <div className="dynamic__container dynamic__container--column">
                         <Map />
                     </div>
+                    <span className="dynamic__scroll" onClick={ () => this.scrollToTop()}>Back to top</span>
                 </div>
             )
-        } else if (window.location.href === "https://topicaltom.netlify.app/project" || window.location.href == "https://topicaltom.netlify.app/project/rally" ) {
+        } else if (window.location.href === "https://topicaltom.netlify.app/project" || window.location.href === "https://topicaltom.netlify.app/project/rally" ) {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
@@ -40,6 +47,7 @@ export default class DynamicCards extends Component {
                         link={"shared-space"}
                     />    
                     </div>
+                    <span className="dynamic__scroll" onClick={ () => this.scrollToTop()}>Back to top</span>
                 </div>
             )
         } else if (window.location.href === "https://topicaltom.netlify.app/project/touch-base") {
@@ -59,6 +67,7 @@ export default class DynamicCards extends Component {
                         link={"rally"}
                     />    
                     </div>
+                    <span className="dynamic__scroll" onClick={ () => this.scrollToTop()}>Back to top</span>
                 </div>
             )
         } else if (window.location.href === "https://topicaltom.netlify.app/project/shared-space" ) {
@@ -78,6 +87,7 @@ export default class DynamicCards extends Component {
                         link={"touch-base"}
                     />
                     </div>
+                    <span className="dynamic__scroll" onClick={ () => this.scrollToTop()}>Back to top</span>
                 </div>
             )
         } else if (window.location.href === "https://topicaltom.netlify.app/skills") {
@@ -85,12 +95,15 @@ export default class DynamicCards extends Component {
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">
                         <ResumeCard />
+                        <span className="dynamic__scroll" onClick={ () => this.scrollToTop()}>Back to top</span>
                     </div>
                 </div>
             )
         } else {
             return (
-                <div className="dynamic--empty" />
+                <div className="dynamic"> 
+                    <span className="dynamic__scroll" onClick={ () => this.scrollToTop()}>Back to top</span>
+                </div>
             )
         }
     }

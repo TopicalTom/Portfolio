@@ -22,6 +22,7 @@ const ProjectCard = (props) => {
                     <img
                         className="project-card__image"
                         src={preview}
+                        alt=""
                     />
                 </div>
             </article>

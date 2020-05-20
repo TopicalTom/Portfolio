@@ -18,31 +18,31 @@ const Degrees = () => {
         >
             <div className="degrees">
                 <ButtonNext className="degrees__button">
-                    <img className="degrees__icon--flip" src={chevron} />
+                    <img className="degrees__icon--flip" src={chevron} alt=""/>
                 </ButtonNext>
                 <ButtonBack className="degrees__button">
-                    <img src={chevron} />
+                    <img src={chevron} alt=""/>
                 </ButtonBack>
             </div>
             <Slider className="degrees__slider" classNameAnimation="degrees__slider--animation">
                 <Slide className="degrees__slide" index={0}>
                     <a 
                         href="https://brainstation.io/course-package/user-experience-immersive/toronto">
-                        <img src={UX} className="degrees__certificate" />
+                        <img src={UX} className="degrees__certificate" alt=""/>
                     </a>
                     <a
                         href="https://brainstation.io/course-package/web-development-immersive/toronto">
-                        <img src={Web} className="degrees__certificate" />
+                        <img src={Web} className="degrees__certificate" alt=""/>
                     </a>
                 </Slide>
                 <Slide className="degrees__slide" index={1}>
                     <a
                         href="https://brainstation.io/course-package/intro-to-ios-development/toronto">
-                        <img src={iOS} className="degrees__certificate" />
+                        <img src={iOS} className="degrees__certificate" alt=""/>
                     </a>
                     <a
                         href="https://brainstation.io/course-package/product-management/toronto">
-                        <img src={PM} className="degrees__certificate" />
+                        <img src={PM} className="degrees__certificate" alt=""/>
                     </a>
                 </Slide>
             </Slider>

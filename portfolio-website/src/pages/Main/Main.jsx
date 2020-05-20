@@ -1,6 +1,5 @@
 import React from 'react';
-import * as Scroll from 'react-scroll';
-import { Link, Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element } from 'react-scroll'
 import "./Main.scss";
 
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";

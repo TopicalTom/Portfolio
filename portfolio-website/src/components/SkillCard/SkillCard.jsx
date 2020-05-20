@@ -10,7 +10,7 @@ const SkillCard = (props) => {
     return (
             <article className="skill-card">
                 <div className="skill-card__container">
-                    <img className="skill-card__image" src={icon}/>
+                    <img className="skill-card__image" src={icon} alt=""/>
                     <div className="skill-card__details">
                         <div className="skill-card__content">
                             <h3

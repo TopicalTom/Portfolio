@@ -63,6 +63,7 @@ class Hero extends Component {
                     <img 
                         className="hero__layer"
                         src={this.state.layerPath} 
+                        alt=""
                     />
                 </div>
                 <div className={`hero__background hero__background-${this.state.colors}`}/>

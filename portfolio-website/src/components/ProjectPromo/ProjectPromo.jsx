@@ -32,16 +32,17 @@ const ProjectPromo = (props) => {
                         project={project}
                         preview={preview}
                     />
-                </div>
-                <button
-                    className="promo__toggle"
-                    onClick={isPlaying ? pauseVideo : playVideo}
-                >
-                    <img
-                        className="promo__player"
-                        src={isPlaying ? pause : play}
-                    />
+                    <button
+                        className="promo__toggle"
+                        onClick={isPlaying ? pauseVideo : playVideo}
+                    >
+                        <img
+                            className="promo__player"
+                            src={isPlaying ? pause : play}
+                            alt=""
+                        />
                 </button>
+                </div>
                 <div className="promo__details">
                     <h2 className="promo__project">
                         {project}

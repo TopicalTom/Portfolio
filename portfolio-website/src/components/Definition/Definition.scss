@@ -3,12 +3,17 @@
 .definition {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    padding: 2rem 3rem;
+    width: 90%;
+    padding: 2rem 2rem;
     margin: 2rem auto;
     transition: background-color 0.3s ease;
     @include theme-aware('background', 'system-background-tertiary');
     border-radius: 10px;
+
+    @include tablet {
+        width: 80%;
+        padding: 2rem 3rem;
+    }
 
     &__variations {
         //padding-inline-start: 20px;

@@ -4,7 +4,7 @@ import "./Header.scss";
 
 import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
-import dropdown from "../../assets/icons/dropdown.svg";
+//import dropdown from "../../assets/icons/dropdown.svg";
 
 ReactModal.setAppElement('*');
 
@@ -83,7 +83,7 @@ class Header extends Component {
                     <a
                         className="header__contact"
                         href="/contact">
-                            Contact
+                            Let's Chat
                     </a>
                 </div>
                 <Menu />
@@ -105,6 +105,7 @@ class Header extends Component {
                                         <img 
                                             className="dropdown__preview"
                                             src={promo}
+                                            alt=""
                                         />
                                     </div>
                                     <div className="dropdown__content dropdown__content--details">

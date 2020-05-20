@@ -5,8 +5,13 @@
     //padding: 50px 0;
     transition: color 0.3s ease;
     transition: background-color 0.3s ease;
-    @include theme-aware('background', 'system-background-primary');
+    @include theme-aware('background', 'footer-backing');
     @include theme-aware('color', 'color-text');
+
+    @include tablet {
+        transition: background-color 0.3s ease;
+        @include theme-aware('background', 'system-background-primary');
+    }
 
     &__container {
         margin: 0 20px;
@@ -42,7 +47,12 @@
         width: 25px;
         height: 25px;
         transition: all 0.2s ease 0s;
-        @include theme-aware('fill', 'footer');
+        @include theme-aware('fill', 'footer-mobile');
+
+        @include tablet {
+            transition: all 0.2s ease 0s;
+            @include theme-aware('fill', 'footer');
+        }
 
         &:hover {
             opacity: 1.0;
@@ -60,5 +70,41 @@
         text-align: center;
         padding-bottom: 80px;
         opacity: 0.6;
+        @extend p;
+    }
+
+    &__github {
+        text-decoration: none;
+        //opacity: 0.6;
+        @extend p;
+        margin-right: 6px;
+        @include theme-aware('color', 'color-text-alt');
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: row;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 90%;
+        margin: 0 auto;
+        padding: 60px 0;
+    }
+
+    &__link {
+        @include theme-aware('color', 'color-text-alt');
     }
 }

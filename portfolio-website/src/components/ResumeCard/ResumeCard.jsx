@@ -12,7 +12,7 @@ const ResumeCard = () => {
                 <div className="resume__details">
                     <h2
                         className="resume__cta">
-                        Download my Resume
+                        Download Resume
                     </h2>
                     <h4 
                         className="resume__download">
@@ -23,6 +23,7 @@ const ResumeCard = () => {
                     <img
                         className="resume__image"
                         src={resumePreview}
+                        alt=""
                     />
                 </div>
             </article>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Element } from 'react-scroll';
 import "../../pages/Skills/Skills.scss";
 
 import SkillCategory from "../SkillCategory/SkillCategory";

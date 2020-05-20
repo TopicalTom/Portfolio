@@ -13,6 +13,7 @@ const PersonalCard = () => {
                     <img
                         className="spotify__image"
                         src={Spotify}
+                        alt=""
                     />
                     <h2
                         className="spotify__cta">
@@ -27,6 +28,7 @@ const PersonalCard = () => {
                     <img
                         className="spotify__album"
                         src={Album}
+                        alt=""
                     />
                 </div>
             </article>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Element} from 'react-scroll';
 import "./Skills.scss";
 
 import skillsData from "../../data/skillsData.jsx";

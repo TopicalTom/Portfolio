@@ -2,7 +2,7 @@
 
 .dynamic {
     width: 100%;
-    padding: 20px 0;
+    padding: 40px 0;
     transition: color 0.3s ease;
     transition: background-color 0.3s ease;
     @include theme-aware('background', 'system-background-primary');
@@ -11,10 +11,6 @@
 
     @include tablet {
         padding: 50px 0;
-    }
-
-    &--empty {
-        height: 0;
     }
 
     &__container {
@@ -46,6 +42,18 @@
 
         &--column {
             flex-direction: column;
+        }
+    }
+
+    &__scroll {
+        @include theme-aware('color', 'link');
+        width: 100%;
+        display: flex;
+        padding: 0 auto;
+        justify-content: center;
+
+        @include tablet {
+            display: none;
         }
     }
 }
