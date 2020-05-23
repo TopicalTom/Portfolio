@@ -76,4 +76,35 @@
         font-weight: bolder;
         padding-bottom: 10px;
     }
+
+    &__button {
+        width: 200px;
+        height: 55px;
+        transition: 0.3s ease;
+        @include theme-aware('background', 'button');
+        border-radius: 12px;
+        //color: white;
+        border: none;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0.6rem 0;
+        cursor: pointer;
+    }
+
+    &__submit {
+        transition: 0.3s ease;
+        @include theme-aware('color', 'color-text-button');
+    }
+
+    &__confirmation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        padding: auto;
+    }
+
+    &__message {
+        margin-bottom: 20px;
+    }
 }

@@ -37,7 +37,8 @@
     }
 
     &__content {
-        //justify-content: space-between;
+        padding: auto;
+        width: 100%;
 
         &--filter {
             display: none;
@@ -55,14 +56,13 @@
         }
 
         &--skills {
-            width: 100%;
 
             @include laptop-small {
                 width: 60vw;
             }
             
             @include laptop {
-                width: 730px;
+                max-width: 730px;
             }
         }
     }

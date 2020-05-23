@@ -6,7 +6,6 @@ import skillsData from "../../data/skillsData.jsx";
 
 import Nav from "../../components/Nav/Nav";
 import SideNav from "../../components/SideNav/SideNav";
-import Degrees from "../../components/Degrees/Degrees";
 import SkillBlock from "../../components/SkillBlock/SkillBlock";
 import Redirect from "../../components/Redirect/Redirect";
 

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { animateScroll as scroll} from 'react-scroll'
 import "./Contact.scss";
 
 import Nav from "../../components/Nav/Nav";
@@ -32,7 +33,9 @@ export default class Contact extends Component {
                 this.setState ({
                     formSubmitted: true
                 }),
-                alert("Success!"))
+                alert("Success!"),
+                scroll.scrollToTop()
+            )
             .catch(error => alert(error));
         
         e.preventDefault();
@@ -45,6 +48,7 @@ export default class Contact extends Component {
     }
 
     render() {
+        const {formSubmitted} = this.state
         return (
             <>
             <Nav/>
@@ -53,7 +57,7 @@ export default class Contact extends Component {
                     <aside className="contact__section contact__section--links">
                         <ul className="contact__links">
                             <h3 className="contact__info">
-                                Direct
+                                Direct Links
                             </h3>
                             <li><a 
                                 className="contact__link"
@@ -73,12 +77,23 @@ export default class Contact extends Component {
                         </ul>
                     </aside>
                     <section className="contact__section contact__section--form">
-                        {this.state.formSubmitted 
+                        {formSubmitted 
                         ?
                         <>
                             <h1>Message Sent</h1>
-                            <div>Thank you for reaching out and I will get back to as soon as I can! In the meantime, make sure to check out my projects and skills or even submit another message.</div>
-                            <button onClick={this.resetForm}>Send Another</button>
+                            <p 
+                                className="contact__message">
+                                Thank you for reaching out and I will get back to you as soon as I can! In the meantime, make sure to check out my projects, skills and about page or even submit another message if you still have something you want to talk about.
+                            </p>
+                            <div className="contact__confirmation">
+                                <button 
+                                    className="contact__button" 
+                                    onClick={this.resetForm}>
+                                    <p className="contact__submit">
+                                        Send Another
+                                    </p>
+                                </button>
+                            </div>
                         </>
                         :
                         <>

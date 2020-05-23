@@ -87,7 +87,7 @@ function Menu() {
                                     TouchBase
                                 </a></li>
                                 <li><a
-                                    href="/project/shared-space">
+                                    href="/project/homediate">
                                     Homediate
                                 </a></li>
                             </ul>

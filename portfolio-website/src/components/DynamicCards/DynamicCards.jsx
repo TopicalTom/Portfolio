@@ -7,7 +7,7 @@ import Map from "../Map/Map";
 import "./DynamicCards.scss"
 
 import TouchBasePreview from "../../assets/images/TouchBasePreview.png";
-import SharedSpacePreview from "../../assets/images/SharedSpacePreview.png";
+import HomediatePreview from "../../assets/images/SharedSpacePreview.png";
 import RallyPreview from "../../assets/images/RallyPreview.png";
 
 export default class DynamicCards extends Component {
@@ -35,8 +35,8 @@ export default class DynamicCards extends Component {
                     <ProjectCard
                         project={"Homediate"}
                         type={"iMessage App"}
-                        preview={SharedSpacePreview}
-                        link={"shared-space"}
+                        preview={HomediatePreview}
+                        link={"homediate"}
                     />    
                     </div>
                 </div>
@@ -48,25 +48,25 @@ export default class DynamicCards extends Component {
                     <ProjectCard
                         project={"Homediate"}
                         type={"iMessage App"}
-                        preview={SharedSpacePreview}
-                        link={"shared-space"}
+                        preview={HomediatePreview}
+                        link={"homediate"}
                     />
                     <ProjectCard
                         project={"Rally"}
-                        type={"Standalone App"}
+                        type={"React Native App"}
                         preview={RallyPreview}
                         link={"rally"}
                     />    
                     </div>
                 </div>
             )
-        } else if (window.location.href === "https://topicaltom.netlify.app/project/shared-space" ) {
+        } else if (window.location.href === "https://topicaltom.netlify.app/project/homediate" ) {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
                     <ProjectCard
                         project={"Rally"}
-                        type={"Standalone App"}
+                        type={"React Native App"}
                         preview={RallyPreview}
                         link={"rally"}
                     />

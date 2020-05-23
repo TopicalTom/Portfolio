@@ -4,6 +4,7 @@ import "./Header.scss";
 
 import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
+import laptop from "../../assets/layers/laptopOverlay.svg";
 
 ReactModal.setAppElement('*');
 
@@ -11,34 +12,40 @@ class Header extends Component {
     constructor(props){
         super(props)        
         this.state = {
-            isOpen: false,
+            isWorkOpen: false,
+            isPesonalOpen: false,
             projects: projectsData
         }
     }
-    /*
+
     toggleDropdown = () => {
-        this.setState(prevState => ({
-            isOpen: !prevState.isOpen
-        }));
-    }
-    */
-
-    openDropdown = () => {
-        this.setState({isOpen: true})
+        this.setState({
+            isWorkOpen: false,
+            isPersonalOpen: false
+        });
     }
 
-    closeDropdown = () => {
-        this.setState({isOpen: false})
-        /*
-        setTimeout(() => {
-            this.setState({isOpen: false});
-        }, 1000);
-        */
+    openWorkDropdown = () => {
+        this.setState({isWorkOpen: true})
+        this.setState({isPersonalOpen: false})
+    }
+
+    closeWorkDropdown = () => {
+        this.setState({isWorkOpen: false})
+    }
+
+    openPersonalDropdown = () => {
+        this.setState({isPersonalOpen: true})
+        this.setState({isWorkOpen: false})
+    }
+
+    closePersonalDropdown = () => {
+        this.setState({isPersonalOpen: false})
     }
 
     render() {
 
-        const { isOpen } = this.state;
+        const { isPersonalOpen, isWorkOpen } = this.state;
         const projects = this.state.projects
 
     return (
@@ -48,7 +55,7 @@ class Header extends Component {
                 <a className="header__section header__section--logo" href="/">
                     <h3
                         className={`header__logo`}
-                        onMouseEnter={ () => this.closeDropdown() }>
+                        onMouseEnter={ () => this.toggleDropdown() }>
                         T
                     </h3>
                 </a>
@@ -56,22 +63,30 @@ class Header extends Component {
                     <ul className="header__links">
                         <li
                             className="header__dropdown"
-                            onMouseEnter={ () => this.openDropdown() }>
-                            <p>Projects</p>
-                            <svg className={`header__drop header__drop${isOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                            onMouseEnter={ () => this.openWorkDropdown() }>
+                            <p>Work</p>
+                            <svg className={`header__drop header__drop${isWorkOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                                <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
+                            </svg>
+                        </li>
+                        <li
+                            className="header__dropdown"
+                            onMouseEnter={ () => this.openPersonalDropdown() }>
+                            <p>Personal</p>
+                            <svg className={`header__drop header__drop${isPersonalOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
                                 <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
                             </svg>
                         </li>
                         <li 
                             className="header__link"
-                            onMouseEnter={ () => this.closeDropdown() }>
+                            onMouseEnter={ () => this.toggleDropdown() }>
                             <a href="/skills">
                                 Skills
                             </a>
                         </li>
                         <li 
                             className="header__link"
-                            onMouseEnter={ () => this.closeDropdown() }>
+                            onMouseEnter={ () => this.toggleDropdown() }>
                             <a href="/about">
                             About
                             </a>
@@ -88,17 +103,42 @@ class Header extends Component {
                 <Menu />
             </div>
         </header>
-        {isOpen && // Only displays dropdown when isOpen = true
+        {isWorkOpen && // Only displays dropdown when isPersonalOpen = true
             <div 
-                className={`dropdown dropdown${isOpen ? "--active" : "--inactive"}`}
-                onMouseLeave={ () => this.closeDropdown() }>
+                className={`dropdown dropdown${isWorkOpen ? "--active" : "--inactive"}`}
+                onMouseLeave={ () => this.toggleDropdown() }>
+                <div 
+                    className="dropdown__container">
+                        <a 
+                            className="dropdown__item dropdown__item--single"
+                            href={`/project/cucoh`}>
+                                <div className="dropdown__content dropdown__content--promo">
+                                    <img 
+                                        className="dropdown__preview dropdown__preview--laptop"
+                                            src={laptop}
+                                            alt=""
+                                    />
+                                </div>
+                                <div className="dropdown__content dropdown__content--details">
+                                    <p className="dropdown__project">CUCOH</p>
+                                    <p className="dropdown__description">End-to-end fulfillment framework that would enable our team to ensure the experience communicated to our audience was consistent at each stage of the delegate journey.
+</p>
+                                </div>
+                        </a>
+                </div>
+            </div>
+        }
+        {isPersonalOpen && // Only displays dropdown when isPersonalOpen = true
+            <div 
+                className={`dropdown dropdown${isPersonalOpen ? "--active" : "--inactive"}`}
+                onMouseLeave={ () => this.toggleDropdown() }>
                 <div 
                     className="dropdown__container">
                     {projects.map(item => {
                         const {project, promo, link, type} = item
                         return (
                             <a 
-                                className="dropdown__item"
+                                className="dropdown__item dropdown__item--triple"
                                 href={`/project/${link}`}>
                                     <div className="dropdown__content dropdown__content--promo">
                                         <img 

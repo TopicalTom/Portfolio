@@ -45,7 +45,7 @@
         }
 
         @include laptop {
-            width: 1000px;
+            width: 1200px;
             margin: 0 auto;
         }
     }
@@ -64,7 +64,7 @@
             display: none;
 
             @include tablet {
-                width: 320px;
+                width: 400px;
                 display: flex;
                 justify-content: space-between;
             }
@@ -78,6 +78,12 @@
         width: 100%;
         justify-content: space-between;
         text-align: center;
+        width: 100%;
+
+        & > li {
+            //background-color: red;
+            width: 90px;
+        }
     }
 
     &__logo {
@@ -240,7 +246,6 @@
     }
 
     &__item {
-        width: 30%;
         transition: all 0.2s ease 0s;
         margin-top: 10px;
         display: flex;
@@ -249,6 +254,14 @@
         vertical-align: middle;
         padding: 18px 0;
         //background-color: red;
+
+        &--single {
+            width: 100%;
+        }
+
+        &--triple {
+            width: 30%;
+        }
 
         &--locked {
             opacity: 0.5;
@@ -260,6 +273,10 @@
         margin: 0 20px;
         padding: 0 auto;
         display: flex;
+
+        &--laptop {
+            width: 380px;
+        }
     }
 
     &__content {
@@ -290,7 +307,7 @@
 
     &__description {
         font-size: 0.825rem;
-        line-height: 1rem;
+        line-height: 1.25rem;
         @include theme-aware('color', 'color-text-alt');
 
         &:hover {

@@ -38,7 +38,7 @@ const projectsData = [
         preview: Homediate,
         promo: HomediatePromo,
         type: "iMessage App",
-        link: "shared-space",
+        link: "homediate",
         orientation: "left",
         code: "none"
     }

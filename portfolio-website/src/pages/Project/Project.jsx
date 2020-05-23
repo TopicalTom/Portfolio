@@ -6,16 +6,18 @@ import Nav from "../../components/Nav/Nav";
 
 import Rally from "../Rally/Rally";
 import TouchBase from "../TouchBase/TouchBase";
-import SharedSpace from "../SharedSpace/SharedSpace";
+import Homediate from "../SharedSpace/SharedSpace";
+import CUCOH from "../CUCOH/CUCCOH";
 
 const Project = () => {
     return (
         <>
             <Nav/>
             <Switch>
+                <Route path="/project/cucoh" component={CUCOH} />
                 <Route path="/project/rally" component={Rally} />
                 <Route path="/project/touch-base" component={TouchBase} />
-                <Route path="/project/shared-space" component={SharedSpace}/>
+                <Route path="/project/homediate" component={Homediate}/>
                 <Route path="/project" exact component={Rally} />
             </Switch>
         </>
