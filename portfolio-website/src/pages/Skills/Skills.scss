@@ -58,6 +58,10 @@
             width: 100%;
 
             @include laptop-small {
+                width: 60vw;
+            }
+            
+            @include laptop {
                 width: 730px;
             }
         }

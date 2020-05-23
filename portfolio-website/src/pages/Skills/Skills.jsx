@@ -81,8 +81,7 @@ export default class Skills extends Component {
                             name="Overview"
                             className="skills__overview">
                             <h1>My Skillset</h1>
-                            <p>I'm currently on a mission to build up a cross-functional skillset to take on any problem standing between myself and delivering on great people-driven experiences. As I pursue this goal, I will be updating this space with the skills and certificates I have picked up along the way:</p>
-                            <Degrees />
+                            <p>I'm currently on a mission to build up a cross-functional skillset to take on any problem standing between myself and delivering on great people-driven experiences. As I pursue this goal, I will be updating this space with the skills I have picked up along the way:</p>
                         </Element>
                         <SkillBlock 
                             allSkills={allSkills}

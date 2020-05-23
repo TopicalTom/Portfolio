@@ -15,8 +15,12 @@ const ResumeCard = () => {
                         Download Resume
                     </h2>
                     <h4 
-                        className="resume__download">
+                        className="resume__download--web">
                         Click to Begin
+                    </h4>
+                    <h4 
+                        className="resume__download--mobile">
+                        Tap to Begin
                     </h4>
                 </div>
                 <div className="resume__preview">

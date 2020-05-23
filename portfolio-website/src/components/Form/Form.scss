@@ -51,6 +51,9 @@
         transition: 0.3s ease;
         @include theme-aware('caret-color', 'caret-color');
         @include theme-aware('color', 'color-text');
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 
         &--filled {
             border: 1px solid #2e2e2e;

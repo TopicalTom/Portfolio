@@ -14,6 +14,7 @@
     //background: linear-gradient(180deg,#2e2e2e, black);
     @include theme-aware('background-color', 'system-background-tertiary');
     justify-content: space-between;
+    position: relative;
     //border: 1px solid;
     //@include theme-aware('border-color', 'content-outline-mid');
 
@@ -62,11 +63,32 @@
 
     &__cta {
         @include theme-aware('color', 'color-text');
-        font-size: 1.2rem;
+        font-size: 1.25rem;
+        line-height: 2rem;
 
         @include tablet {
             padding-top: 20px;
-            font-size: 2.25rem;
+            font-size: 2rem;
+        }
+    }
+
+    &__download {
+        margin: 0;
+        
+        &--mobile {
+            display: initial;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &--web {
+            display: none;
+
+            @include tablet {
+                display: initial;
+            }
         }
     }
 
@@ -77,8 +99,10 @@
 
     &__preview {
         display: none;
+        justify-content: center;
 
         @include tablet {
+            position: initial;
             margin: 40px 60px 0px 30px;
             display: block;
         }
