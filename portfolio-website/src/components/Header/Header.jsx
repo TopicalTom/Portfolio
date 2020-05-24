@@ -4,7 +4,8 @@ import "./Header.scss";
 
 import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
-import laptop from "../../assets/layers/laptopOverlay.svg";
+import Website from "../../components/Website/Website";
+import CUCOH from "../../assets/images/CUCOHLander.png";
 
 ReactModal.setAppElement('*');
 
@@ -112,17 +113,13 @@ class Header extends Component {
                         <a 
                             className="dropdown__item dropdown__item--single"
                             href={`/project/cucoh`}>
-                                <div className="dropdown__content dropdown__content--promo">
-                                    <img 
-                                        className="dropdown__preview dropdown__preview--laptop"
-                                            src={laptop}
-                                            alt=""
-                                    />
-                                </div>
+                                <Website 
+                                    project="CUCOH"
+                                    preview={CUCOH}
+                                />
                                 <div className="dropdown__content dropdown__content--details">
                                     <p className="dropdown__project">CUCOH</p>
-                                    <p className="dropdown__description">End-to-end fulfillment framework that would enable our team to ensure the experience communicated to our audience was consistent at each stage of the delegate journey.
-</p>
+                                    <p className="dropdown__description">End-to-end fulfillment framework for ensuring our marketing message was representative of our conference experience.</p>
                                 </div>
                         </a>
                 </div>
