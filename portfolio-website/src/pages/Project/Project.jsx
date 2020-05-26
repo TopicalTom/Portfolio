@@ -7,7 +7,7 @@ import Nav from "../../components/Nav/Nav";
 import Rally from "../Rally/Rally";
 import TouchBase from "../TouchBase/TouchBase";
 import Homediate from "../SharedSpace/SharedSpace";
-import CUCOH from "../CUCOH/CUCCOH";
+import CUCOH from "../CUCOH/CUCOH";
 
 const Project = () => {
     return (

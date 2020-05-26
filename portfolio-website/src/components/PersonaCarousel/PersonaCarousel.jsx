@@ -3,18 +3,16 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import "./PersonaCarousel.scss";
 
 import chevron from "../../assets/icons/chevron.svg";
-import persona1 from "../../assets/images/RallyPersona.png";
-import persona2 from "../../assets/images/RallyPersona2.png";
-import persona3 from "../../assets/images/RallyPersona3.png";
-import Persona from "../../components/Persona/Persona";
 
-const PersonaCarousel = () => {
+const PersonaCarousel = (props) => {
+
+    const {persona, size} = props
 
     return (
         <CarouselProvider
             naturalSlideWidth={3000}
             isIntrinsicHeight={true}
-            totalSlides={3}
+            totalSlides={size}
         >
             <div className="persona-carousel">
                 <ButtonNext className="persona-carousel__button">
@@ -25,15 +23,16 @@ const PersonaCarousel = () => {
                 </ButtonBack>
             </div>
             <Slider className="persona-carousel__slider" classNameAnimation="persona-carousel__slider--animation">
-                <Slide className="persona-carousel__slide" index={0}>
-                <img className="persona-carousel__image" src={persona1} alt=""/>
-                </Slide>
-                <Slide className="persona-carousel__slide" index={1}>
-                    <img className="persona-carousel__image" src={persona2} alt=""/>
-                </Slide>
-                <Slide className="persona-carousel__slide" index={2}>
-                    <img className="persona-carousel__image" src={persona3} alt=""/>
-                </Slide>
+            {persona.map(item => {
+
+                const {deliverable, order} = item
+
+                return (
+                    <Slide className="persona-carousel__slide" index={order}>
+                        <img className="persona-carousel__image" src={deliverable} alt=""/>
+                    </Slide>
+                )
+            })}
             </Slider>
         </CarouselProvider>
     );

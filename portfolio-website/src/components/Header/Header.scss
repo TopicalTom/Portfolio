@@ -45,7 +45,7 @@
         }
 
         @include laptop {
-            width: 1200px;
+            width: 1000px;
             margin: 0 auto;
         }
     }
@@ -57,7 +57,10 @@
 
         &--logo {
             margin: 0;
-            width: 150px;
+
+            @include laptop-small {
+                width: 150px;
+            }
         }
 
         &--nav {

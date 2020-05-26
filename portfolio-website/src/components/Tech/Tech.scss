@@ -20,12 +20,24 @@
             background-color: #282c34;
         }
 
+        &--squarespace {
+            background-color: #1c1c1e;
+        }
+
         &--mapbox {
             background-color: #007afc;
         }
 
         &--foursquare {
             background-color: #fa4778;
+        }
+
+        &--zapier {
+            background-color: #FF4A00;
+        }
+
+        &--ticketspice {
+            background-color: #08B234;
         }
 
         &:hover {

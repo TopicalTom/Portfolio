@@ -53,6 +53,10 @@
                 height: calc(100vh - 280px);
                 overflow: scroll;
             }
+
+            @include laptop {
+                margin-right: 70px;
+            }
         }
 
         &--skills {

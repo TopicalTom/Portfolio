@@ -12,7 +12,7 @@
     margin-top: 5px;
     transition: all 0.2s ease 0s;
     //background: linear-gradient(180deg,#2e2e2e, black);
-    @include theme-aware('background-color', 'system-background-tertiary');
+    @include theme-aware('background-color', 'footer-backing');
     justify-content: space-between;
     position: relative;
     //border: 1px solid;
@@ -62,7 +62,7 @@
     }
 
     &__cta {
-        @include theme-aware('color', 'color-text');
+        @include theme-aware('color', 'color-text-static');
         font-size: 1.25rem;
         line-height: 2rem;
 

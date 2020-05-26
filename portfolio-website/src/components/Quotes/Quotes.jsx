@@ -7,11 +7,13 @@ import quotation from "../../assets/icons/quotation.svg";
 
 const Quotes = props => {
 
+    const {quotes, size} = props
+
     return (
         <CarouselProvider
             naturalSlideWidth={12000}
             isIntrinsicHeight={true}
-            totalSlides={13}
+            totalSlides={size}
         >
             <div className="quotes">
                 <ButtonNext className="quotes__button">
@@ -22,7 +24,7 @@ const Quotes = props => {
                 </ButtonBack>
             </div>
             <Slider className="quotes__slider" classNameAnimation="quotes__slider--animation">
-                {props.quotes.map(item => {
+                {quotes.map(item => {
 
                     const {quote, takeaway, category, order} = item
 

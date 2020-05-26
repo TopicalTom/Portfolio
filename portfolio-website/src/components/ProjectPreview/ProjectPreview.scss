@@ -120,13 +120,10 @@
         outline: none;
         height: 80px;
         display: flex;
-        //background-color: red;
         justify-content: space-around;
 
         @include laptop-small {
             left: 0;
-            //top: 200;
-            //margin-top: 620px;
             justify-content: space-around;
         }
     }

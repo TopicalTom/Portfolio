@@ -13,6 +13,8 @@ import Tech from "../../components/Tech/Tech";
 import Definition from "../../components/Definition/Definition";
 
 import quotesData from "../../data/quotesData";
+import techData from "../../data/techData";
+import personaData from "../../data/personaData";
 
 import prism from "../../assets/images/RallyPrism.png";
 import sketch from "../../assets/images/Sketches.png";
@@ -27,14 +29,13 @@ import rally from "../../assets/videos/RallyPromo.mp4";
 import shop from "../../assets/videos/ShopLocal.mp4";
 import modes from "../../assets/videos/RallyModes.mp4";
 import connect from "../../assets/videos/RallyConnect.mp4";
-import github from "../../assets/icons/github.svg";
 
 class Rally extends Component {
 
     state = {
         links: [
             "Overview", 
-            "Problem Space", 
+            "Problem", 
             "Research",
             "Insights",
             "Ideation",
@@ -42,7 +43,9 @@ class Rally extends Component {
             "Design",
             "Next Steps" 
         ],
-        quotes: quotesData
+        quotes: quotesData.rally,
+        tech: techData.rally,
+        personas: personaData.rally
     }
     
     render() {
@@ -55,19 +58,6 @@ class Rally extends Component {
                             header="Rally"
                             links={this.state.links}
                         />
-                        <a 
-                            className="project__code"
-                            href="https://github.com/TopicalTom/rally-capstone">
-                            <p 
-                                className="project__github">
-                                Github
-                            </p>
-                            <img 
-                                className="project__icon"
-                                src={github}
-                                alt=""
-                            />
-                        </a>
                     </aside>
                     <section className="project__content">
                         <Element 
@@ -82,7 +72,7 @@ class Rally extends Component {
                                 />
                         </Element>
                         <Element
-                            name="Problem Space" 
+                            name="Problem" 
                             className="project__block">
                                 <h2>Problem Space</h2>
                                 <h3>The Impact of Social Distancing</h3>
@@ -113,6 +103,7 @@ class Rally extends Component {
                                 <p>After synthesizing the interview data, a very clear theme began to emerge. A common frustration people had when making plans was with friends not following through with the plans they organized. This was largely due to moods changing and people dropping out between the time a plan was suggested, and when it was going to occur, since coordinating general availability and interest for a particular plan took too long.</p>
                                 <p>To overcome this, people would undergo a form of plan insurance to maximize the success of their plans. This could be seen in people asking specific friends that are known to be more spontaneous, have a proven track record for being down for a specific type of activity, or share their current interest, to build a strong foundation of an idea before bringing it to a larger group. The participant quotes that led to these insights can be seen below:</p>
                                 <Quotes
+                                    size={this.state.quotes.length}
                                     quotes={this.state.quotes}
                                 />
                         </Element>
@@ -120,7 +111,10 @@ class Rally extends Component {
                             className="project__block">
                                 <h3>Refining Audience Types</h3>
                                 <p>It also became apparent that people take on different roles when making plans which I have narrowed down to three types which are: the Social Convener, the Wingman and the Passive Participant. </p>
-                                <PersonaCarousel />
+                                <PersonaCarousel 
+                                    size={this.state.personas.length}
+                                    persona={this.state.personas}
+                                />
                         </Element>
                         <Element
                             className="project__block">
@@ -211,7 +205,9 @@ class Rally extends Component {
                                     <a className="project__external-link" href="https://foursquare.com/"> FourSquare </a> 
                                     for location and places data. The benefit of these services is that it would allow me to use location to determine if and where people are meeting up, to validate if plans are coming to fruition and if businesses are receiving additional traffic due to the app.
                                 </p>
-                                <Tech />
+                                <Tech 
+                                    tech={this.state.tech}
+                                />
                         </Element>
                         <Element
                             name="Design"
@@ -258,18 +254,13 @@ class Rally extends Component {
                                     caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts."
                                     type="Reward"
                                 />
-                                <Preview 
-                                    video={rally}
-                                    caption="Rally filters places based on the current rally which can be saved in lists for use in ideating hangout plans."
-                                    type="Investment"
-                                />
                         </Element>
                         <Element 
                             name="Next Steps"
                             className="project__block">
                                 <h2>What's Next</h2>
-                                <p>Rally has been an idea I’ve had since my second year in university and even after four major iterations (with the latest being a pivot more towards helping current businesses) to better align to real needs, I am getting closer to my goal of launching my first app to the App Store.</p>
-                                <p>Before I dive into the development side of things, I am going to conduct one more round of usability tests as the design has been altered dramatically since the previous version as I want to ensure the UI is usable before I devote my time into coding something I ultimately need to change.</p>
+                                <p>With the infrastructure for connecting friends over shared social moods established, my focus is now determining how Rally can connect users to places they might be interested in.</p>
+                                <p>Before diving deeper into designing this next stage, I plan to conduct another six interviews to explore the space of the second Persona, the Wingman. I'm interested in learning more about the barriers behind people finding and trying out new places outside of their usual spots, which would bring this experience back to the app's primary objective.</p>
                         </Element>
                         <Redirect 
                             link="/skills"
