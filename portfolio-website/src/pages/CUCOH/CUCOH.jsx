@@ -16,6 +16,7 @@ import Allocation from "../../assets/files/Allocation.gif";
 import Tech from "../../components/Tech/Tech";
 import techData from "../../data/techData";
 import personaData from "../../data/personaData";
+import Metrics from "../../components/Metrics/Metrics";
 
 class CUCOH extends Component {
 
@@ -185,6 +186,7 @@ class CUCOH extends Component {
                                 <h2 className="project__heading">Results</h2>
                                 <p>What started as a simple problem of just wanting to help people feel confident in what they were spending their money on snowballed into a deeper understanding of creating something that is truly human-centred.</p>
                                 <p>While all the systems and processes outlined above were not able to be completed in full, a strong foundation has been set for our future teams in continuing to optimize our conference and have show promise with the following metrics:</p>
+                                <Metrics />
                         </Element>
                         <Redirect 
                             link="/skills"

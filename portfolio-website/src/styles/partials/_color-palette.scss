@@ -24,7 +24,8 @@ $themes: (
         footer-mobile: white,
         footer-backing: black,
         color-form-header: rgb(142,142,147),
-        dropdown: #2E2E2E
+        dropdown: #2E2E2E,
+        metrics: #F2F3F7
     ),
     dark: (
         system-background-primary: #131313,
@@ -51,6 +52,7 @@ $themes: (
         footer-mobile: white,
         footer-backing: #1C1C1E,
         color-form-header: rgba(255, 255, 255, 0.5),
-        dropdown: white
+        dropdown: white,
+        metrics: #1C1C1E
     )
 );
