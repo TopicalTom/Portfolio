@@ -95,7 +95,7 @@ class CUCOH extends Component {
                                 <p>After talking with our full team and reading every transition manual I could find, I was able to construct an approximate Service Blueprint (below) for our 2016 conference.</p>
                                 <p>The main takeaway was a delegate's selection was only used after the fact to inform, not guarantee, where they might be slotted, based on our room capacity, equipment, and time constraints for our conference on a first-come-first-serve basis. This process was largely behind the line of visibility, over an extended period after they have paid, which could be causing our registration process to feel like a slot machine.</p>
                                 <img 
-                                    className="project__image" 
+                                    className="project__deliverable" 
                                     src={Blueprint}
                                     alt=""
                                 />
@@ -129,7 +129,7 @@ class CUCOH extends Component {
                                 <p>With this information in mind, I focused on our Rachel persona as the primary focus of this case study as she must overcome the most barriers when it comes to first overcoming a lack of information to attend our conference and deciding whether to recommend our conference to others based on her expectations.</p>
                                 <p>Using Rachel as a lens for reference, and comments from our feedback form, I constructed the following Journey Map to outline what a new delegate's experience might have been like at CUCOH 2016 as they interact with each stage of our service.</p>
                                 <img 
-                                    className="project__image" 
+                                    className="project__deliverable" 
                                     src={Journey}
                                     alt=""
                                 />
