@@ -27,6 +27,7 @@ import local from "../../assets/videos/LocalEvents.mp4";
 import airbnb from "../../assets/videos/AirbnbLists.mp4";
 import rally from "../../assets/videos/RallyPromo.mp4";
 import shop from "../../assets/videos/ShopLocal.mp4";
+import push from "../../assets/videos/RallyPush.mp4";
 import modes from "../../assets/videos/RallyModes.mp4";
 import connect from "../../assets/videos/RallyConnect.mp4";
 
@@ -235,7 +236,7 @@ class Rally extends Component {
                                 <p>With this rough user flow, I tried to strike a balance when users set their rally so the experience feels “Focused” rather than “Forced”. What this means is when a user selects the rally, “Go Out” they are still able to connect and see friends that don’t share their rally as well as being able to view other places that are outside their current social mood.</p>
                                 <p>This aims to emulate the ebb and flow of plans and how people are able to change their mind and pivot to other plans if that is where there is a greater interest within their social circle.</p>
                                 <Preview 
-                                    video={rally}
+                                    video={push}
                                     caption="Rally uses push notifications to enable users to know when their friends are currently rallying to encourage app use."
                                     type="Trigger"
                                 />
@@ -251,7 +252,7 @@ class Rally extends Component {
                                 />
                                 <Preview 
                                     video={rally}
-                                    caption="Rally allows users to selectively broadcast their location to close friends to help coordinate the logistics of hangouts."
+                                    caption="Rally allows users to selectively broadcast their location within a group chat to help coordinate plan logistics."
                                     type="Reward"
                                 />
                         </Element>

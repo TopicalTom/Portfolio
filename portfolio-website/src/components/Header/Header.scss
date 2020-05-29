@@ -167,12 +167,13 @@
     }
 
     &__contact {
-        padding: 10px 20px;
+        padding: 0.75rem 2rem;
         border-radius: 6px;
         transition: color 0.3s ease;
         transition: background-color 0.3s ease;
         @include theme-aware('color', 'color-text-button');
         @include theme-aware('background-color', 'button');
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px;
 
         &:hover {
             opacity: 0.8;

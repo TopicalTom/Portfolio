@@ -176,7 +176,7 @@
 
     &__deliverable {
         width: 100%;
-        margin: 2rem 0;
+        margin: 100px 0;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         border: 1px solid;
         @include theme-aware('border-color', 'content-outline');

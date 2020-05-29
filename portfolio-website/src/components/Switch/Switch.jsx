@@ -7,11 +7,19 @@ const Switch = () => {
         () => JSON.parse(window.localStorage.getItem("global-theme")) || "light"
     );
 
+                /*
     function checkMode() {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
             setMakeDark( e.matches ? "dark" : "light");
         });
+        changeTheme()
     }
+    checkMode()
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // dark mode
+        }
+        */
 
     function toggleMode(e) {
         if (e.target.value === "light" ) {

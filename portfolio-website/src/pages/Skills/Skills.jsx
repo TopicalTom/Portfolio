@@ -32,14 +32,14 @@ export default class Skills extends Component {
             });
         }
 
-        window.scrollTo({ top: 700, behavior: 'smooth' });
+        window.scrollTo({ top: 345, behavior: 'smooth' });
     };
 
     render() {
 
         const {allSkills, filterBy, filter} = this.state
 
-        const links = [ "Overview", "Design", "Development", "Product" ]
+        const links = [ "Overview", "Product","Design", "Development", "Marketing" ]
         const filters = [ "None", "Current", "Learning", "Upcoming"]
 
         return (

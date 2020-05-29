@@ -17,6 +17,17 @@ import Tech from "../../components/Tech/Tech";
 import techData from "../../data/techData";
 import personaData from "../../data/personaData";
 import Metrics from "../../components/Metrics/Metrics";
+import Screen from "../../components/Screen/Screen";
+
+import promote from "../../assets/files/CUCOHPromote.png";
+import inform from "../../assets/files/CUCOHInform.png";
+import remind from "../../assets/files/CUCOHRemind.png";
+import convert from "../../assets/files/CUCOHConvert.png";
+import support from "../../assets/files/CUCOHSupport.png";
+import prepare from "../../assets/files/CUCOHPrepare.png";
+import engage from "../../assets/files/CUCOHEngage.png";
+import engage2 from "../../assets/files/CUCOHEngage2.png";
+import reflect from "../../assets/files/CUCOHReflect.png";
 
 class CUCOH extends Component {
 
@@ -29,11 +40,85 @@ class CUCOH extends Component {
             "Ideation",
             "Constraints",
             "Design",
-            "Results"
+            "Impact"
         ],
         quotes: quotesData,
         tech: techData.cucoh,
-        personas: personaData      
+        personas: personaData,
+        screens: [
+            {
+                preview: promote,
+                type: "website",
+                caption: "While scrolling aimlessly through her McGill University year group on Facebook, Rachel stumbles upon a shared post about CUCOH regarding the announcement of their theme and clicks the link.",
+                touchpoint: "Facebook Groups",
+                success: "Post Viewed",
+                kpi: "Link Clicks"
+            },
+            {
+                preview: inform,
+                type: "website",
+                caption: "Rachel explores the CUCOH website to learn if the conference is right for her. Not wanting to miss out on this opportunity, Rachel signs up for the mailing list as registration doesn't appear to be open yet.",
+                touchpoint: "CUCOH Website",
+                success: "Mailing List Sign-up",
+                kpi: "Opt-In Rate"
+            },
+            {
+                preview: remind,
+                type: "website",
+                caption: "Late September arrives and Rachel receives an email letting her know CUCOH registration is in motion! Having completely forgotten about the conference, she reads the conference update and looks into tickets.",
+                touchpoint: "Personal Email",
+                success: "Clicks Registration Link",
+                kpi: "Open & Click Rate"
+            },
+            {
+                preview: convert,
+                type: "website",
+                caption: "As she fills out her form, Rachel appreciates being able to make her selections within the context of the schedule as it gives her confidence in what she is paying for and in setting her expectations.",
+                touchpoint: "CUCOH Website (Embedded Form)",
+                success: "Payment Processed",
+                kpi: "Conversion Rate"
+            },
+            {
+                preview: support,
+                type: "website",
+                caption: "Moments after clicking submit, Rachel receives an email notification. She is presented with a warm welcome from the CUCOH team and next steps to take which puts her mind at ease for planning her trip.",
+                touchpoint: "Personal Email",
+                success: "Clicks Schedule Link",
+                kpi: "Open & Click Rate"
+            },
+            {
+                preview: prepare,
+                type: "website",
+                caption: "Soon after her confirmation email, Rachel receives another email with a link to her personal schedule with all the selections she made during her online registration and a way to contact the CUCOH team.",
+                touchpoint: "CUCOH Website (Unique Link)",
+                success: "Schedule Viewed",
+                kpi: "Support Tickets"
+            },
+            {
+                preview: engage,
+                type: "other",
+                caption: "The day of the conference Rachel is greeted by the executive team and is handed her delegate swag. She is instructed to scan the back of her Delegate Tag to access the conference details and her schedule.",
+                touchpoint: "Delegate Tag",
+                success: "Tag Scanned",
+                kpi: "Unique QR Scans"
+            },
+            {
+                preview: engage2,
+                type: "other",
+                caption: "After scanning the QR code on the back of her Delegate Tag, Rachel is directed to a new landing page for the CUCOH Website with links to conference information and a live twitter feed for updates.",
+                touchpoint: "CUCOH Website (App Lander)",
+                success: "Hub Saved to Home Screen",
+                kpi: "Unique Page Views"
+            },
+            {
+                preview: reflect,
+                type: "other",
+                caption: "At the conclusion of CUCOH, Rachel is informed by the executive team that the feedback form is now live by scanning the QR code on their ID Tag. While on the bus back home, she fills out the form.",
+                touchpoint: "Google Form",
+                success: "Form Completed",
+                kpi: "Net Promoter Score"
+            }
+        ]      
     }
     
     render() {
@@ -43,7 +128,7 @@ class CUCOH extends Component {
                 <div className="project__container">
                     <aside className="project__nav">
                         <SideNav 
-                            header="Process"
+                            header="CUCOH"
                             links={this.state.links}
                         />
                     </aside>
@@ -170,21 +255,25 @@ class CUCOH extends Component {
                             name="Design"
                             className="project__block">
                                 <h2 className="project__heading">Design</h2>
-                                <h3>Current State</h3>
+                                <h3>Original Framework</h3>
                                 <p>Based on what I learned from our service design blueprint, our registration process is broken up into three stages with the allocation of delegates to their preferred experiences happening behind the line of visibility. This, on top of there being a delay in communication of details between delegate and executive, were the primary areas of concern I wanted to focus on when updating our previous framework, as shown below:</p>
                                 <img className="project__image" src={OldFramework} alt=""/>
-                                <h3>Proposed State</h3>
+                                <h3>Real-time Feedback & Flow</h3>
                                 <p>In designing a new framework my goal was to keep delegates constantly in the loop from the moment they learned about our conference to the moment they were returning home after attending. At a high level, our Squarespace website became a central space where delegates would learn about our conference, receive support, purchase tickets and view their unique schedules for interacting with our physical experience.</p>
+                                <Screen 
+                                    screens={this.state.screens}
+                                />
                                 <p>This was made possible through Zapier, for connecting our emails and slack channel to specific forms and TicketSpice allowing for embeddable forms with easy to export data that was used for creating unique delegate URLs. Squarespace in-house mailing lists and QR codes on delegate material were used to return delegates to this central space whenever they completed an action and needed confirmation, guidance for next steps or we wanted to keep them informed on conference updates.</p>
                                 <img className="project__image" src={NewFramework} alt=""/>
-                                <p>By building our conference systems and processes around our delegates for each step, we are not only creating a conference that more closely aligns to what our delegates want, but we are simultaneously influencing that word of mouth channel we don’t directly control when people hear about our conference from their friends.</p>
-                                <img className="project__image" src={FullFramework} alt=""/>
                         </Element>
                         <Element 
-                            name="Results"
+                            name="Impact"
                             className="project__block">
-                                <h2 className="project__heading">Results</h2>
-                                <p>What started as a simple problem of just wanting to help people feel confident in what they were spending their money on snowballed into a deeper understanding of creating something that is truly human-centred.</p>
+                                <h2 className="project__heading">Impact</h2>
+                                <h3>Marketing Loop</h3>
+                                <p>By building our conference systems and processes around our delegates for each step, we are not only creating a conference that more closely aligns to what our delegates want, but we are simultaneously influencing that word of mouth channel we don’t directly control when people hear about our conference from their friends.</p>
+                                <img className="project__image" src={FullFramework} alt=""/>
+                                <h3>Building a Foundation</h3>
                                 <p>While all the systems and processes outlined above were not able to be completed in full, a strong foundation has been set for our future teams in continuing to optimize our conference and have show promise with the following metrics:</p>
                                 <Metrics />
                         </Element>

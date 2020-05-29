@@ -71,6 +71,9 @@
     z-index: 1000;
     width: 80%;
     margin: auto;
+    position: relative;
+    height: 65vh;
+    opacity: 1;
 
     &__header {
         font-size: 0.875rem;
@@ -119,8 +122,21 @@
         }
     }
 
+    &__sublink {
+        width: 100%;
+        display: flex;
+    }
+
     @include tablet {
         display: none;
+    }
+
+    &__contact {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        display: flex;
     }
 
     &__toggle {
@@ -145,6 +161,7 @@
 
         & > li {
             margin: 0.5rem 0;
+            width: 100%;
         }
     }
 
@@ -181,7 +198,7 @@
     top:0;
     right:0;
     z-index: 1005;
-    margin-top: 76px;
+    margin-top: 50px;
     width: 80%;
     height: 100vh;
     padding: 60px 20px;

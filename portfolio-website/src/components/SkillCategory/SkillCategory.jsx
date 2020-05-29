@@ -31,6 +31,7 @@ const SkillCategory = (props) => {
             </>
         )
     } else {
+
         return (
             <>
                 <h4 className="skills__category">
@@ -39,6 +40,7 @@ const SkillCategory = (props) => {
                 <div className="skills__box">
                 {skills.map(data => {
                     const {tools} = data
+            
                     return (
                         <SkillList 
                             tools={tools}

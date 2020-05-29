@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useLayoutEffect} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 // Reusable Components
@@ -17,6 +17,7 @@ import Main from "./pages/Main/Main";
 import "./styles/baseline.scss";
 
 function App() {
+
     return (
         <BrowserRouter>
             <Header />

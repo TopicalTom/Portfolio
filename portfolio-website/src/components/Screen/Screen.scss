@@ -1,0 +1,57 @@
+@import "../../styles/baseline.scss";
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 100px 0px;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 1rem;
+        width: 90%;
+        padding: 0 auto;
+
+        @include tablet {
+            padding-left: 30px;
+            margin-top: 0rem;
+            width: 100%
+        }
+    }
+
+    &__preview {
+        z-index: 3;
+        width: 100%;
+        border-radius: 2px;
+
+        &--website {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+        }
+
+        @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__caption {
+        margin: 10px auto;
+        //width: 90%;
+        //background-color: red;
+    }
+
+    &__title {
+        padding-bottom: 5px;
+    }
+
+    &__type {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

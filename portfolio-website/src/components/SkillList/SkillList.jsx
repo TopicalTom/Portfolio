@@ -2,11 +2,12 @@ import React from 'react';
 
 import SkillCard from "../SkillCard/SkillCard";
 import "../../pages/Skills/Skills.scss";
+import "../SkillCard/SkillCard.scss"
 
 const SkillList = (props) => {
 
     const {tools, filter, filterBy} = props
-
+    
     return (
         <>
             {tools.map(content => {

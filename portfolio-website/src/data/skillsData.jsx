@@ -32,10 +32,57 @@ import netlify from "../assets/tools/Netlify.svg";
 import zapier from "../assets/tools/Zapier.svg";
 
 const skillsData = [
+{
+    discipline:"Product",
+    caption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
+    altCaption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
+    skills: [
+        {
+            category:"Research",
+            tools: [
+                {
+                    tool:"Otter.ai",
+                    description:"Ai-powered speech to text transcription",
+                    status:"Current",
+                    logo:otterAi
+                },
+                {
+                    tool:"Optimal Sort",
+                    description:"Card-based information architecture categorization",
+                    status:"Current",
+                    logo:optimalsort
+                }
+            ]
+        },
+        {
+            category:"Workflow",
+            tools: [
+                {
+                    tool:"Slack",
+                    description:"Instant messaging platform for team collaboration",
+                    status:"Current",
+                    logo:slack
+                },
+                {
+                    tool:"Zapier",
+                    description:"Online automation tool for connecting apps and services",
+                    status:"Current",
+                    logo:zapier
+                },
+                {
+                    tool:"Jira",
+                    description:"Ticket-based issue tracking for agile project management",
+                    status:"Current",
+                    logo:jira
+                }
+            ]
+        }
+    ]
+},
 { 
     discipline:"Design",
-    caption: "I thoroughly enjoy usability testing with users, so prototyping skills are something I have been working to build on. My recent foray into development has been to gain a foundation in React to be able to utilize Framer and prototype designs using real data.",
-    altCaption: "I thoroughly enjoy usability testing with users, so prototyping skills are something I have been working to build on. My recent foray into development has been to gain a foundation in React to be able to utilize Framer and prototype designs using real data.",
+    caption: "I view myself first and foremost as a designer which led me to strengthen my previous design experience with the User Experience (UX) Design course at BrainStation. Since then, I have been building on my quick prototyping skills to better communicate design interactions.",
+    altCaption: "I view myself first and foremost as a designer which led me to strengthen my previous design experience with the User Experience (UX) Design course at BrainStation. Since then, I have been building on my quick prototyping skills to better communicate design interactions.",
     skills: [
         {
             category:"Visuals",
@@ -104,8 +151,8 @@ const skillsData = [
 },
 {
     discipline:"Development",
-    caption: "By exploring the development side of things, I have picked up some full-stack skills, but with a greater emphasis on the front-end. My interests are to learn more about iOS development and eventually try ARKit.",
-    altCaption: "By exploring the development side of things, I have picked up some full-stack skills, but with a greater emphasis on the front-end. My interests are to learn more about iOS development and eventually try ARKit.",
+    caption: "By exploring the development side of things, I have picked up some full-stack skills, but with a greater emphasis on the front-end. A majority of these skills were picked up through the iOS & Web Development courses I took at BrainStation. Going forward, my interests are to learn more about iOS development and eventually dive into ARKit.",
+    altCaption: "By exploring the development side of things, I have picked up some full-stack skills, but with a greater emphasis on the front-end. A majority of these skills were picked up through the iOS & Web Development courses I took at BrainStation. Going forward, my interests are to learn more about iOS development and eventually dive into ARKit.",
     skills: [
         {
             category:"Front-End (Web)",
@@ -237,25 +284,13 @@ const skillsData = [
     ]
 },
 {
-    discipline:"Product",
+    discipline:"Marketing",
     caption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
     altCaption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
     skills: [
         {
-            category:"Research",
+            category:"SEO",
             tools: [
-                {
-                    tool:"Otter.ai",
-                    description:"Ai-powered speech to text transcription",
-                    status:"Current",
-                    logo:otterAi
-                },
-                {
-                    tool:"Optimal Sort",
-                    description:"Card-based information architecture categorization",
-                    status:"Current",
-                    logo:optimalsort
-                },
                 {
                     tool:"Google Analytics",
                     description:"Web analytics service for measuring website traffic and ROI",
@@ -263,50 +298,32 @@ const skillsData = [
                     logo:analytics
                 },
                 {
-                    tool:"HotJar",
-                    description:"Behavior analytics and user feedback service for websites",
-                    status:"Upcoming",
-                    logo:hotjar
+                    tool:"Search Console",
+                    description:"Web service for website search engine optimization (SEO)",
+                    status:"Current",
+                    logo:searchconsole
                 }
             ]
         },
         {
-            category:"Workflow",
-            tools: [
-                {
-                    tool:"Slack",
-                    description:"Instant messaging platform for team collaboration",
-                    status:"Current",
-                    logo:slack
-                },
-                {
-                    tool:"Zapier",
-                    description:"Online automation tool for connecting apps and services",
-                    status:"Current",
-                    logo:zapier
-                },
-                {
-                    tool:"Jira",
-                    description:"Ticket-based issue tracking for agile project management",
-                    status:"Current",
-                    logo:jira
-                }
-            ]
-        },
-        {
-            category:"Marketing",
+            category:"Mailing Lists",
             tools: [
                 {
                     tool:"Mailchimp",
                     description:"Email-campaign focused marketing platform for CMS needs",
                     status:"Current",
                     logo:mailchimp
-                },
+                }
+            ]
+        },
+        {
+            category:"CRO",
+            tools: [
                 {
-                    tool:"Search Console",
-                    description:"Web service for website search engine optimization (SEO)",
-                    status:"Current",
-                    logo:searchconsole
+                    tool:"HotJar",
+                    description:"Behavior analytics and user feedback service for websites",
+                    status:"Upcoming",
+                    logo:hotjar
                 }
             ]
         }

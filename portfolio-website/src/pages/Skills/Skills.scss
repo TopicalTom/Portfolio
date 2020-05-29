@@ -135,7 +135,9 @@
     flex-direction: column;
     justify-content: space-between;
     padding-top: 20px;
-    border-top: 2px solid #F2F2F7;
+    border-top: 2px solid;
+    transition: border-color 0.3s ease;
+    @include theme-aware('border-top-color', 'content-outline');
     width: 60%;
 
     &__form {
@@ -174,6 +176,5 @@
 
     &__label {
         transition: color 0.3s ease;
-        @include theme-aware('color', 'color-text');
     }
 }

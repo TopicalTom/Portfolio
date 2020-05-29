@@ -107,7 +107,7 @@
             padding: 1.25rem 2rem;
             width: 100%;
             border-bottom: 1px solid;
-            @include theme-aware('border-color', 'seperator-line-light');
+            @include theme-aware('border-color', 'seperator-footer');
 
             &:nth-last-of-type(1) {
                 border-bottom: none;
