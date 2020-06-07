@@ -7,9 +7,9 @@
     //width: 100%;
 
     &__slider {
-        overflow: hidden;
         margin: auto;
         //transition: 0.3s ease;
+        overflow: hidden;
 
         &--animation {
             transition-duration: all 1s ease;

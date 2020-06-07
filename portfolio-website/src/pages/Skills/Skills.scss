@@ -134,6 +134,88 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    //padding-top: 20px;
+   //border-top: 2px solid;
+    transition: border-color 0.3s ease;
+    @include theme-aware('border-top-color', 'content-outline');
+    width: 80%;
+
+    &__form {
+        margin: 0;
+        justify-content: space-between; 
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__current {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem;
+        transition: color 0.3s ease;
+        transition: background-color 0.3s ease;
+        @include theme-aware('background', 'system-background-tertiary');
+        @include theme-aware('border-color', 'content-outline-mid');
+    }
+
+    &__drop {
+        transition: 0.2s ease 0s;
+        width: 14px;
+        height: 14px;
+        margin: auto 0;
+
+        &--active {
+            @include theme-aware('fill', 'dropdown');
+            transition: 0.2s ease 0s;
+            transform: scaleY(-1);
+            opacity: 1;
+            padding: 0px 0px 0px 4px;
+        }
+
+        &--inactive {
+            @include theme-aware('fill', 'dropdown');
+            opacity: 0.5;
+            transition: 0.2s ease 0s;
+            transform: scaleY(1);
+            padding: 2px 0px 0px 4px;
+        }
+    }
+
+    &__header {
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    &__selections {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        @include theme-aware('background', 'system-background-tertiary');
+        @include theme-aware('border-color', 'content-outline-mid');
+    }
+
+    &__checkbox {
+        padding: 3px 0px;
+    }
+
+    &__input {
+        margin-right: 10px;
+        margin-left: 1px;
+    }
+
+    &__label {
+        transition: color 0.3s ease;
+    }
+}
+
+
+/*
+.filter {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding-top: 20px;
     border-top: 2px solid;
     transition: border-color 0.3s ease;
@@ -178,3 +260,4 @@
         transition: color 0.3s ease;
     }
 }
+*/

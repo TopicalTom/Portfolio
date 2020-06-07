@@ -1,5 +1,6 @@
 import React, {useState, useLayoutEffect} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 // Reusable Components
 import Header from "./components/Header/Header";
@@ -15,6 +16,7 @@ import About from "./pages/About/About";
 import Main from "./pages/Main/Main";
 
 import "./styles/baseline.scss";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -46,6 +48,7 @@ function App() {
             <DynamicCards/>
             <Scroll />
             <Footer/>
+            <ToastContainer />
         </BrowserRouter>
     );
 }

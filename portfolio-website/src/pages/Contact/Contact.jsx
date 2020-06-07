@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { animateScroll as scroll} from 'react-scroll'
+import { toast } from 'react-toastify';
 import "./Contact.scss";
 
 import Nav from "../../components/Nav/Nav";
@@ -33,10 +34,28 @@ export default class Contact extends Component {
                 this.setState ({
                     formSubmitted: true
                 }),
-                alert("Success!"),
+                toast.success(`Message successfully sent!`, {
+                    position: "bottom-right",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    }),
                 scroll.scrollToTop()
             )
-            .catch(error => alert(error));
+            .catch(error => 
+                toast.error(`Form Requires More Inputs`, {
+                    position: "bottom-right",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                })
+            );
         
         e.preventDefault();
     };
@@ -49,6 +68,28 @@ export default class Contact extends Component {
 
     render() {
         const {formSubmitted} = this.state
+
+        const success = () => 
+        toast.success(`Message successfully sent!`, {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+
+        const error = () => 
+        toast.error(`Form Requires More Inputs`, {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
         return (
             <>
             <Nav/>

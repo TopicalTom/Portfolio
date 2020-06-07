@@ -2,32 +2,28 @@ import React, {Component} from 'react';
 import { Element , animateScroll as scrollSpy} from 'react-scroll'
 import "../Project/Project.scss";
 
+// Components
 import Redirect from "../../components/Redirect/Redirect";
 import SideNav from '../../components/SideNav/SideNav';
-import OldFramework from "../../assets/files/CUCOHOldFramework.png";
-import NewFramework from "../../assets/files/CUCOHNewFramework.png";
-import FullFramework from "../../assets/files/CUCOHFullFramework.png";
 import Quotes from '../../components/Quotes/Quotes';
-import quotesData from "../../data/quotesData";
 import PersonaCarousel from "../../components/PersonaCarousel/PersonaCarousel";
-import Blueprint from "../../assets/files/CUCOHBlueprint.png";
-import Journey from "../../assets/files/CUCOHMap.png";
-import Allocation from "../../assets/files/Allocation.gif";
 import Tech from "../../components/Tech/Tech";
-import techData from "../../data/techData";
-import personaData from "../../data/personaData";
 import Metrics from "../../components/Metrics/Metrics";
 import Screen from "../../components/Screen/Screen";
 
-import promote from "../../assets/files/CUCOHPromote.png";
-import inform from "../../assets/files/CUCOHInform.png";
-import remind from "../../assets/files/CUCOHRemind.png";
-import convert from "../../assets/files/CUCOHConvert.png";
-import support from "../../assets/files/CUCOHSupport.png";
-import prepare from "../../assets/files/CUCOHPrepare.png";
-import engage from "../../assets/files/CUCOHEngage.png";
-import engage2 from "../../assets/files/CUCOHEngage2.png";
-import reflect from "../../assets/files/CUCOHReflect.png";
+// Images
+import OldFramework from "../../assets/files/CUCOHOldFramework.png";
+import NewFramework from "../../assets/files/CUCOHNewFramework.png";
+import FullFramework from "../../assets/files/CUCOHFullFramework.png";
+import Blueprint from "../../assets/files/CUCOHBlueprint.png";
+import Journey from "../../assets/files/CUCOHMap.png";
+import Allocation from "../../assets/files/Allocation.gif";
+
+// Data
+import quotesData from "../../data/quotesData";
+import techData from "../../data/techData";
+import personaData from "../../data/personaData";
+import serviceData from "../../data/serviceData";
 
 class CUCOH extends Component {
 
@@ -45,80 +41,8 @@ class CUCOH extends Component {
         quotes: quotesData,
         tech: techData.cucoh,
         personas: personaData,
-        screens: [
-            {
-                preview: promote,
-                type: "website",
-                caption: "While scrolling aimlessly through her McGill University year group on Facebook, Rachel stumbles upon a shared post about CUCOH regarding the announcement of their theme and clicks the link.",
-                touchpoint: "Facebook Groups",
-                success: "Post Viewed",
-                kpi: "Link Clicks"
-            },
-            {
-                preview: inform,
-                type: "website",
-                caption: "Rachel explores the CUCOH website to learn if the conference is right for her. Not wanting to miss out on this opportunity, Rachel signs up for the mailing list as registration doesn't appear to be open yet.",
-                touchpoint: "CUCOH Website",
-                success: "Mailing List Sign-up",
-                kpi: "Opt-In Rate"
-            },
-            {
-                preview: remind,
-                type: "website",
-                caption: "Late September arrives and Rachel receives an email letting her know CUCOH registration is in motion! Having completely forgotten about the conference, she reads the conference update and looks into tickets.",
-                touchpoint: "Personal Email",
-                success: "Clicks Registration Link",
-                kpi: "Open & Click Rate"
-            },
-            {
-                preview: convert,
-                type: "website",
-                caption: "As she fills out her form, Rachel appreciates being able to make her selections within the context of the schedule as it gives her confidence in what she is paying for and in setting her expectations.",
-                touchpoint: "CUCOH Website (Embedded Form)",
-                success: "Payment Processed",
-                kpi: "Conversion Rate"
-            },
-            {
-                preview: support,
-                type: "website",
-                caption: "Moments after clicking submit, Rachel receives an email notification. She is presented with a warm welcome from the CUCOH team and next steps to take which puts her mind at ease for planning her trip.",
-                touchpoint: "Personal Email",
-                success: "Clicks Schedule Link",
-                kpi: "Open & Click Rate"
-            },
-            {
-                preview: prepare,
-                type: "website",
-                caption: "Soon after her confirmation email, Rachel receives another email with a link to her personal schedule with all the selections she made during her online registration and a way to contact the CUCOH team.",
-                touchpoint: "CUCOH Website (Unique Link)",
-                success: "Schedule Viewed",
-                kpi: "Support Tickets"
-            },
-            {
-                preview: engage,
-                type: "other",
-                caption: "The day of the conference Rachel is greeted by the executive team and is handed her delegate swag. She is instructed to scan the back of her Delegate Tag to access the conference details and her schedule.",
-                touchpoint: "Delegate Tag",
-                success: "Tag Scanned",
-                kpi: "Unique QR Scans"
-            },
-            {
-                preview: engage2,
-                type: "other",
-                caption: "After scanning the QR code on the back of her Delegate Tag, Rachel is directed to a new landing page for the CUCOH Website with links to conference information and a live twitter feed for updates.",
-                touchpoint: "CUCOH Website (App Lander)",
-                success: "Hub Saved to Home Screen",
-                kpi: "Unique Page Views"
-            },
-            {
-                preview: reflect,
-                type: "other",
-                caption: "At the conclusion of CUCOH, Rachel is informed by the executive team that the feedback form is now live by scanning the QR code on their ID Tag. While on the bus back home, she fills out the form.",
-                touchpoint: "Google Form",
-                success: "Form Completed",
-                kpi: "Net Promoter Score"
-            }
-        ]      
+        frontend: serviceData.frontend,
+        backend: serviceData.backend  
     }
     
     render() {
@@ -241,7 +165,7 @@ class CUCOH extends Component {
                             name="Constraints"
                             className="project__block">
                                 <h2 className="project__heading">Constraints</h2>
-                                <h3>Reusable Systems & Measuring Success</h3>
+                                <h3>Accessible & Measurable</h3>
                                 <p>The hurdle here, aside from figuring out how to implement this slotting logic, was figuring out how to build a solution within my own capabilities and those of our current and future teams. If current and future teams were unable to replicate the experience delegates had come to expect, it would ultimately hurt our delegates more in the long-run. This meant that whatever was introduced to our conference had to be easily learnable and accessible to anyone on the team.</p>
                                 <p>There is also the big question of how will we know that these new systems would be worth the time commitment to implement. As outlined by our personas, two metrics worth measuring would be registration conversion rate and NPS Score as it would allow our team to determine how well our conference is living up to delegate expectations and how well we communicate our value proposition.</p>
                                 <h3>Tech Stack</h3>
@@ -255,16 +179,24 @@ class CUCOH extends Component {
                             name="Design"
                             className="project__block">
                                 <h2 className="project__heading">Design</h2>
-                                <h3>Original Framework</h3>
-                                <p>Based on what I learned from our service design blueprint, our registration process is broken up into three stages with the allocation of delegates to their preferred experiences happening behind the line of visibility. This, on top of there being a delay in communication of details between delegate and executive, were the primary areas of concern I wanted to focus on when updating our previous framework, as shown below:</p>
+                                <h3>Synergy & Flow</h3>
+                                <p>Based on my research, the limitations of our tools were impacting how information could effectively be passed between delegates and our team. In designing a new framework with the new tools I outlined above, my goal was to reshape what infrastructure we had, without scrapping what worked, to allow for more information to be effectively shared between both parties.</p>
+                                <p>At a high-level the changes between the former (2016) and proposed (2019) frameworks were focused on the relationship in how information flowed between delegate and team touchpoints.</p>
+                                <h4 className="project__title">2016 Framework</h4>
                                 <img className="project__image" src={OldFramework} alt=""/>
-                                <h3>Real-time Feedback & Flow</h3>
-                                <p>In designing a new framework my goal was to keep delegates constantly in the loop from the moment they learned about our conference to the moment they were returning home after attending. At a high level, our Squarespace website became a central space where delegates would learn about our conference, receive support, purchase tickets and view their unique schedules for interacting with our physical experience.</p>
-                                <Screen 
-                                    screens={this.state.screens}
-                                />
-                                <p>This was made possible through Zapier, for connecting our emails and slack channel to specific forms and TicketSpice allowing for embeddable forms with easy to export data that was used for creating unique delegate URLs. Squarespace in-house mailing lists and QR codes on delegate material were used to return delegates to this central space whenever they completed an action and needed confirmation, guidance for next steps or we wanted to keep them informed on conference updates.</p>
+                                <h4 className="project__title">2019 Framework</h4>
                                 <img className="project__image" src={NewFramework} alt=""/>
+                                <h3>Delegate Touchpoints</h3>
+                                <p>Our delegates desired to be constantly in the loop from the moment they learned about our conference to the moment our conference ended. Using this, my goal was to create clear progression through each stage of the delegate journey with more information on what to expect, how to get help, and what to do next so that they could feel comfortable in their $150+ dollar purchase. To demonstrate this, I’ll be using the Rachel persona as a lens to guide through the high-level flow I aimed for:</p>
+                                <Screen 
+                                    screens={this.state.frontend}
+                                />
+                                <h3>Team Touchpoints</h3>
+                                <p>The word that comes to mind when looking at our team’s tools is “disjointed”, as different team members were in-charge of completing different actions along the delegate journey. In a way, our team was in-of itself a blocker when it came to getting information back to delegates in a timely manner. This issue was only exacerbated by the yearly rotating team which would result in members having to first learn the tools before being able to complete actions.</p>
+                                <p>Due to this, the infrastructure I added was structured around automation (where possible) to allow for a constant experience each year, and consolidation, to reduce the amount of barriers needed to get information back to our audience . How these new systems work in context of the delegate journey is as follows:</p>
+                                <Screen 
+                                    screens={this.state.backend}
+                                />
                         </Element>
                         <Element 
                             name="Impact"
@@ -291,61 +223,3 @@ class CUCOH extends Component {
 };
 
 export default CUCOH;
-
-
-
-/*
-
-import React, {Component} from 'react';
-import { Element , animateScroll as scrollSpy} from 'react-scroll'
-import "../Project/Project.scss";
-
-import Redirect from "../../components/Redirect/Redirect";
-import SideNav from '../../components/SideNav/SideNav';
-import Framework from "../../assets/files/CUCOHFramework.png";
-
-class CUCOH extends Component {
-
-    state = {
-        links: [
-            "Coming Soon"
-        ]      
-    }
-    
-    render() {
-        return (
-            <>
-            <main className="project">
-                <div className="project__container">
-                    <aside className="project__nav">
-                        <SideNav 
-                            header="Process"
-                            links={this.state.links}
-                        />
-                    </aside>
-                    <section className="project__content">
-                        <Element 
-                            name="Coming Soon"
-                            className="project__block">
-                                <h1 className="project__heading">CUCOH</h1>
-                                <p className="project__paragraph">The Canadian Undergraduate Conference on Healthcare (CUCOH) is a three-day student-run conference at Queen's University held annually in November. CUCOH exposes undergraduate students to a wide array of professions in the healthcare industry through inspiring keynotes, engaging case challenges, interactive workshops and a research competition that showcase the multidisciplinary nature of healthcare.</p>
-                                <p className="project__paragraph">I took the initiative to independently create an end-to-end process that would allow our delegates to feel confident in their purchase of the conference experience the rest of the team was building.</p>
-                                <img className="project__image" src={Framework} alt=""/>
-                                <p className="project__paragraph">This goal was accomplished by implementing a slotting framework that enabled our team to preemptively slot delegates into our conference experiences and then by improving the way information regarding a delegates’ experience was communicated throughout their journey.</p>
-                        </Element>
-                        <Redirect 
-                            link="/skills"
-                            cta="View Skills"
-                        />
-                    </section>
-                </div>
-            </main>
-            </>
-        );
-
-    }
-};
-
-export default CUCOH;
-
-*/

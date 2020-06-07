@@ -30,30 +30,16 @@ import foursquare from "../assets/tools/FourSquare.svg";
 import postman from "../assets/tools/Postman.svg";
 import netlify from "../assets/tools/Netlify.svg";
 import zapier from "../assets/tools/Zapier.svg";
+import ticketspice from "../assets/tools/TicketSpice.svg";
+import shopify from "../assets/tools/Shopify.svg";
+import squarespace from "../assets/tools/Squarespace.svg";
 
 const skillsData = [
 {
     discipline:"Product",
-    caption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
-    altCaption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
+    caption: "To complement my cross-functional skillset I took the Product Management course at BrainStation to gain more insight into how UX, Tech and Business come together.",
+    altCaption: "To complement my cross-functional skillset I took the Product Management course at BrainStation to gain more insight into how UX, Tech and Business come together.",
     skills: [
-        {
-            category:"Research",
-            tools: [
-                {
-                    tool:"Otter.ai",
-                    description:"Ai-powered speech to text transcription",
-                    status:"Current",
-                    logo:otterAi
-                },
-                {
-                    tool:"Optimal Sort",
-                    description:"Card-based information architecture categorization",
-                    status:"Current",
-                    logo:optimalsort
-                }
-            ]
-        },
         {
             category:"Workflow",
             tools: [
@@ -74,6 +60,29 @@ const skillsData = [
                     description:"Ticket-based issue tracking for agile project management",
                     status:"Current",
                     logo:jira
+                }
+            ]
+        },
+        {
+            category:"Research",
+            tools: [
+                {
+                    tool:"Otter.ai",
+                    description:"Ai-powered speech to text transcription",
+                    status:"Current",
+                    logo:otterAi
+                },
+                {
+                    tool:"Optimal Sort",
+                    description:"Card-based information architecture categorization",
+                    status:"Current",
+                    logo:optimalsort
+                },
+                {
+                    tool:"HotJar",
+                    description:"Behavior analytics and user feedback service for websites",
+                    status:"Upcoming",
+                    logo:hotjar
                 }
             ]
         }
@@ -104,12 +113,6 @@ const skillsData = [
                     description:"Vector graphics editor for print and digital media",
                     status:"Upcoming",
                     logo:illustrator
-                },
-                {
-                    tool:"After Effects",
-                    description:"Motion graphics editor for animation and composition",
-                    status:"Upcoming",
-                    logo:afterEffects
                 }
             ]
         },
@@ -285,8 +288,8 @@ const skillsData = [
 },
 {
     discipline:"Marketing",
-    caption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
-    altCaption: "The product space feels like a familiar one due to coming from a research-heavy science degree with some side-experience in marketing for conferences. Aside from expanding on my marketing skills with SEO, I am looking to explore more tools used in validating the design and development work I do.",
+    caption: "A majority of my previous experience is from Marketing positions during my undergraduate which led to the majority of skills below. Going forward I am looking to dive deeper into SEO best practices when building a website from scratch.",
+    altCaption: "A majority of my previous experience is from Marketing positions during my undergraduate which led to the majority of skills below. Going forward I am looking to dive deeper into SEO best practices when building a website from scratch.",
     skills: [
         {
             category:"SEO",
@@ -306,25 +309,33 @@ const skillsData = [
             ]
         },
         {
-            category:"Mailing Lists",
+            category:"Platforms",
             tools: [
                 {
                     tool:"Mailchimp",
-                    description:"Email-campaign focused marketing platform for CMS needs",
+                    description:"Email-campaign focused marketing platform",
                     status:"Current",
                     logo:mailchimp
-                }
-            ]
-        },
-        {
-            category:"CRO",
-            tools: [
+                },
                 {
-                    tool:"HotJar",
-                    description:"Behavior analytics and user feedback service for websites",
-                    status:"Upcoming",
-                    logo:hotjar
-                }
+                    tool:"TicketSpice",
+                    description:"Cloud-based ticketing and event management platform",
+                    status:"Current",
+                    logo:ticketspice
+                },
+                {
+                    tool:"Squarespace",
+                    description:"All-inclusive online platform for promoting a brand and scheduling",
+                    status:"Current",
+                    logo:squarespace
+                },
+                {
+                    tool:"Shopify",
+                    description:"All-inclusive online platform used to promote, sell, and ship products",
+                    status:"Learning",
+                    logo:shopify
+                },
+
             ]
         }
     ]

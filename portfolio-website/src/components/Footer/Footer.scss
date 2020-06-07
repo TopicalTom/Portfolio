@@ -147,7 +147,7 @@
     }
 
     &__sub-link {
-        @include theme-aware('color', 'color-text-button');
+        @include theme-aware('color', 'color-text-static');
         opacity: 0.5;
         width: 100%;
         display: flex;
