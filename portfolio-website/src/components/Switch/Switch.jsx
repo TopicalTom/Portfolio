@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
+import { toast } from 'react-toastify';
 import './Switch.scss'
 
 const Switch = () => {
@@ -25,9 +26,27 @@ const Switch = () => {
         if (e.target.value === "light" ) {
             setMakeDark("dark")
             changeTheme();
+            toast.info(`Theme Set: Dark Mode`, {
+                position: "bottom-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
         } else {
             setMakeDark("light")
             changeTheme();
+            toast.info(`Theme Set: Light Mode`, {
+                position: "bottom-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
         }
     }
 
@@ -58,6 +77,7 @@ const Switch = () => {
                 type="checkbox"
                 onChange={toggleMode}
                 value={makeDark}
+                checked={makeDark === "light"}
             />
             <label
                 className="switch__label"

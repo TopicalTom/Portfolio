@@ -46,7 +46,16 @@ export default class Skills extends Component {
                 filter: false
             });
         }
-
+        
+        toast.info(`Filtered By: ${e.target.value} Skills`, {
+            position: "bottom-right",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        })
         window.scrollTo({ top: 345, behavior: 'smooth' });
     };
 
@@ -56,17 +65,6 @@ export default class Skills extends Component {
 
         const links = [ "Overview", "Product","Design", "Development", "Marketing" ]
         const filters = [ "All", "Current", "Learning", "Upcoming"]
-
-        const notify = () => 
-            toast.info(`Filtered By: ${filterBy} Skills`, {
-            position: "bottom-right",
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            });
 
         return (
             <>
@@ -99,7 +97,6 @@ export default class Skills extends Component {
                                                     value={filter}
                                                     checked={filterBy === filter}
                                                     onChange={this.handleFilterChange}
-                                                    onClick={notify}
                                                 />
                                                 {filter}
                                             </label></li>
