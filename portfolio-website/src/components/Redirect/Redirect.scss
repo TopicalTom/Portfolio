@@ -23,14 +23,22 @@
         flex-direction: row;
 
         &:hover {
-            opacity: 0.5;
+            opacity: 0.8;
+        }
+
+        &:hover > svg {
+            padding-right: 12px;
+            padding-left: 0px;
+            transform: 0.3 ease;
         }
     }
 
     &__chevron {
         transform: scaleX(-1);
         padding-right: 8px;
-        margin: 0.75rem 0rem;
+        padding-left: 4px;
+        margin: auto 0rem;
         height: 12px;
+        @include theme-aware('fill', 'link');
     }
 }

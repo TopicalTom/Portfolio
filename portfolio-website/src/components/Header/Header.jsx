@@ -105,6 +105,7 @@ class Header extends Component {
             </div>
         </header>
         {isWorkOpen && // Only displays dropdown when isPersonalOpen = true
+            <>
             <div 
                 className={`dropdown dropdown${isWorkOpen ? "--active" : "--inactive"}`}
                 onMouseLeave={ () => this.toggleDropdown() }>
@@ -124,8 +125,11 @@ class Header extends Component {
                         </a>
                 </div>
             </div>
+            <div className="header__overlay"/>
+            </>
         }
         {isPersonalOpen && // Only displays dropdown when isPersonalOpen = true
+            <>
             <div 
                 className={`dropdown dropdown${isPersonalOpen ? "--active" : "--inactive"}`}
                 onMouseLeave={ () => this.toggleDropdown() }>
@@ -153,6 +157,8 @@ class Header extends Component {
                     })}
                 </div>
             </div>
+            <div className="header__overlay"/>
+            </>
         }
         </>
     );

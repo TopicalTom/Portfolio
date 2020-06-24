@@ -2,8 +2,8 @@ import React from 'react';
 import "./About.scss";
 
 import Profile from "../../assets/images/Thomas.jpg";
-import Nav from "../../components/Nav/Nav";
 import Redirect from '../../components/Redirect/Redirect';
+import Nav from "../../components/Nav/Nav";
 
 const About = () => {
     return (

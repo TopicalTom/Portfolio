@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Element , animateScroll as scrollSpy} from 'react-scroll'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import "../Project/Project.scss";
 
 // Components
@@ -10,6 +10,8 @@ import PersonaCarousel from "../../components/PersonaCarousel/PersonaCarousel";
 import Tech from "../../components/Tech/Tech";
 import Metrics from "../../components/Metrics/Metrics";
 import Screen from "../../components/Screen/Screen";
+import Skip from "../../components/Skip/Skip";
+import Hero from "../../components/Hero/Hero";
 
 // Images
 import OldFramework from "../../assets/files/CUCOHOldFramework.png";
@@ -44,10 +46,24 @@ class CUCOH extends Component {
         frontend: serviceData.frontend,
         backend: serviceData.backend  
     }
+
+    handleScroll = (e) => {
+        scroller.scrollTo(e.target.value, {
+            duration: 500,
+            delay: 100,
+            offset: -120,
+            smooth: true
+        });
+    }
     
     render() {
         return (
             <>
+            <Hero 
+                project="cucoh"
+                video={"https://www.youtube.com/embed/Mer2NbNnnrc?controls=0"}
+                type="video"
+            />
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">
@@ -70,6 +86,11 @@ class CUCOH extends Component {
                                     allow="accelerometer; autoplay" 
                                     allowfullscreen>
                                 </iframe>
+                                <p className="project__paragraph">The Canadian Undergraduate Conference on Healthcare (CUCOH) is a three-day student-run conference at Queen's University held annually in November. CUCOH exposes undergraduate students to a wide array of professions in the healthcare industry through inspiring keynotes, engaging case challenges, interactive workshops and a research competition that showcase the multidisciplinary nature of healthcare.</p>
+                                <Skip 
+                                    links={this.state.links}
+                                    handleScroll={this.handleScroll}
+                                />
                         </Element>
                         <Element 
                             name="Problem"

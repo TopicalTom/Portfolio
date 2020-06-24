@@ -63,6 +63,8 @@
         justify-content: space-between;
         align-items: center;
         align-items: middle;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
 
         @include tablet {
             margin: 0 60px;
@@ -81,27 +83,28 @@
     &__action {
         display: flex;
         flex-direction: row;
-        opacity: 1.0;
 
         &:hover {
-            opacity: 0.5;
+            opacity: 0.8;
+        }
+
+        &:hover > svg {
+            padding-right: 12px;
+            padding-left: 0px;
+            transform: 0.3 ease;
         }
     }
 
     &__back {
         @include theme-aware('color', 'link');
-        padding-left: 8px;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-
-        &--shadow {
-            color: #2e2e2e
-        }
     }
 
     &__chevron {
+        padding-right: 8px;
+        padding-left: 4px;
+        margin: auto 0rem;
         height: 12px;
-        margin: 1.5rem 0rem;
+        @include theme-aware('fill', 'link');
     }
 }
 

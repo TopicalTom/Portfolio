@@ -14,6 +14,7 @@ import Contact from "./pages/Contact/Contact";
 import Skills from "./pages/Skills/Skills";
 import About from "./pages/About/About";
 import Main from "./pages/Main/Main";
+import Home from "./pages/Home/Home";
 
 import "./styles/baseline.scss";
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,7 +47,6 @@ function App() {
                 />
             </Switch>
             <DynamicCards/>
-            <Scroll />
             <Footer/>
             <ToastContainer />
         </BrowserRouter>

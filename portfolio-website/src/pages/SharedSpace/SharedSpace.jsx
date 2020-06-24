@@ -5,18 +5,27 @@ import "../Project/Project.scss";
 import Redirect from "../../components/Redirect/Redirect";
 import SideNav from '../../components/SideNav/SideNav';
 import Layers from "../../assets/layers/HomediateLayer.png";
+import Hero from "../../components/Hero/Hero";
+
+import HomediatePreview from "../../assets/videos/HomediatePromo.mp4";
 
 class Homediate extends Component {
 
     state = {
         links: [
             "Coming Soon"
-        ]      
+        ],
+        preview: HomediatePreview      
     }
     
     render() {
         return (
             <>
+            <Hero 
+                project="homediate"
+                preview={this.state.preview}
+                type="app"
+            />
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">

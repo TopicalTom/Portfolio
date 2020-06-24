@@ -1,13 +1,39 @@
 @import "../../styles/baseline.scss";
 
+/*
+.mapContainer {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: none;
+
+    @include laptop-small {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        //padding-top: 100px;
+        position: absolute;
+    }
+}
+
+.mapboxgl-control-container {
+    display: hidden;
+}
+*/
+
 .mapContainer {
     width: 100%;
     height: 300px;
     border-radius: 10px;
     overflow: hidden;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     @include desktop {
-        width: 1000px;
+        width: 400px;
+        height: 600px;
     }
 }
 

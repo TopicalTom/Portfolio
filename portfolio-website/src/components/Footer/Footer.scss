@@ -5,11 +5,14 @@
     transition: color 0.3s ease;
     transition: background-color 0.3s ease;
     @include theme-aware('background', 'footer-backing');
-    @include theme-aware('color', 'color-text');
+    @include theme-aware('color', 'color-text-static');
 
     @include tablet {
-        transition: background-color 0.3s ease;
-        @include theme-aware('background', 'system-background-primary');
+        padding: 100px 0px;
+    }
+
+    @include laptop {
+        padding: 100px;
     }
 
     &__container {
@@ -21,9 +24,25 @@
             margin: 0 100px;
         }
 
+        @include laptop-small {
+            margin: 0 100px;
+        }
+
         @include desktop {
             margin: 0 auto;
             width: 1000px;
+        }
+    }
+
+    &__wordmark {
+        display: none;
+
+        & > h3 {
+            @include theme-aware('color', 'color-text-static');
+        }
+
+        @include laptop {
+            display: flex;
         }
     }
 
@@ -37,12 +56,13 @@
 
         @include tablet {
             width: 300px;
-            padding-top: 50px;
+            //padding-top: 50px;
+            margin: 0;
         }
     }
 
     &__icon {
-        opacity: 0.3;
+        opacity: 0.4;
         width: 25px;
         height: 25px;
         transition: all 0.2s ease 0s;
@@ -50,12 +70,42 @@
 
         @include tablet {
             transition: all 0.2s ease 0s;
-            @include theme-aware('fill', 'footer');
+            @include theme-aware('fill', 'footer-mobile');
+            width: 20px;
+            height: 20px;
         }
 
         &:hover {
             opacity: 1.0;
             transition: all 0.2s ease 0s;
+        }
+    }
+
+    &__top {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: auto;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            padding-top: 40px;
+            border-top: 1px solid;
+            margin: auto;
+            @include theme-aware('border-color', 'seperator-footer');
         }
     }
 
@@ -65,19 +115,25 @@
         justify-self: center;
         margin: auto;
         padding-top: 20px;
-        @include theme-aware('color', 'color-text-alt');
+        @include theme-aware('color', 'footer-mobile');
         text-align: center;
         padding-bottom: 80px;
-        opacity: 0.6;
+        opacity: 0.4;
+        position: relative;
         @extend p;
+
+        @include tablet {
+            padding: 0px;
+            margin: 0;
+        }
     }
 
     &__github {
         text-decoration: none;
         //opacity: 0.6;
         @extend p;
-        margin-right: 6px;
-        @include theme-aware('color', 'color-text-alt');
+        margin-left: 5px;
+        @include theme-aware('color', 'footer-mobile');
         
         &:hover {
             text-decoration: underline;
@@ -119,6 +175,12 @@
         @include theme-aware('color', 'footer-mobile');
         width: 100%;
         display: flex;
+        //font-weight: bold;
+        padding-bottom: 10px;
+
+        &--primary {
+            margin-top: 34px;
+        }
     }
 
     &__expand {
@@ -148,7 +210,7 @@
 
     &__sub-link {
         @include theme-aware('color', 'color-text-static');
-        opacity: 0.5;
+        //opacity: 0.4;
         width: 100%;
         display: flex;
     }
@@ -172,5 +234,25 @@
             transform: scaleY(1);
             padding: 2px 0px 0px 4px;
         }
+    }
+
+    &__links {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-self: flex-end;
+        flex-direction: row;
+
+        @include laptop {
+            width: 67.5%;
+        }
+    }
+
+    &__label {
+        @include theme-aware('color', 'footer-mobile');
+        opacity: 0.4;
+        width: 100%;
+        display: flex;
+        font-size: 1rem;
     }
 }

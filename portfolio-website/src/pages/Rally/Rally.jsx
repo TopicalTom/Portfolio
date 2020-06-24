@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Element , animateScroll as scrollSpy} from 'react-scroll'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import "../Project/Project.scss";
 
 import Hero from "../../components/Hero/Hero";
@@ -11,6 +11,7 @@ import Redirect from "../../components/Redirect/Redirect";
 import Model from "../../components/Model/Model";
 import Tech from "../../components/Tech/Tech";
 import Definition from "../../components/Definition/Definition";
+import Skip from "../../components/Skip/Skip";
 
 import quotesData from "../../data/quotesData";
 import techData from "../../data/techData";
@@ -30,6 +31,7 @@ import shop from "../../assets/videos/ShopLocal.mp4";
 import push from "../../assets/videos/RallyPush.mp4";
 import modes from "../../assets/videos/RallyModes.mp4";
 import connect from "../../assets/videos/RallyConnect.mp4";
+import RallyPreview from "../../assets/videos/RallyPromo.mp4";
 
 class Rally extends Component {
 
@@ -46,18 +48,34 @@ class Rally extends Component {
         ],
         quotes: quotesData.rally,
         tech: techData.rally,
-        personas: personaData.rally
+        personas: personaData.rally,
+        preview: RallyPreview
+    }
+
+    handleScroll = (e) => {
+        scroller.scrollTo(e.target.value, {
+            duration: 500,
+            delay: 100,
+            offset: -120,
+            smooth: true
+        });
     }
     
     render() {
         return (
             <>
+            <Hero 
+                project="rally"
+                preview={this.state.preview}
+                type="app"
+            />
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">
                         <SideNav 
                             header="Rally"
                             links={this.state.links}
+                            type="app"
                         />
                     </aside>
                     <section className="project__content">
@@ -65,9 +83,14 @@ class Rally extends Component {
                             name="Overview"
                             className="project__block">
                                 <h1>Rally</h1>
-                                <p>Rally is a React Native app that facilitates the process of organizing in-person hangouts by connecting friends that share social moods. Once connected, users are able to support one-another in organizing a hangout while Rally assists with ideation, by suggesting local places to go, and with logistics, by providing peer-to-peer location sharing.</p>
+                                <p>Rally is a React Native app that facilitates the process of organizing in-person hangouts by connecting friends that share social moods.</p>
+                                <p>Once connected, users are able to support one-another in organizing a hangout while Rally assists with ideation, by suggesting local places to go, and with logistics, by providing peer-to-peer location sharing.</p>
+                                <Skip 
+                                    links={this.state.links}
+                                    handleScroll={this.handleScroll}
+                                />
                                 <img 
-                                    className="project__image" 
+                                    className="project__image project__image--web" 
                                     src={Layers}
                                     alt=""
                                 />
@@ -213,7 +236,7 @@ class Rally extends Component {
                         <Element
                             name="Design"
                             className="project__block">
-                                <h2 className="project__title">Design</h2>
+                                <h2>Design</h2>
                                 <h3>Sketching a Solution</h3>
                                 <p>Using similar UI elements and platform conventions from apps in this space, I sketched the following screens. It is worth mentioning that these drawings are of an earlier version before I conducted usability tests so only some elements made it to the latest version depicted below.</p>
                                 <img 

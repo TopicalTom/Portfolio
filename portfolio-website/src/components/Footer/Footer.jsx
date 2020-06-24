@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import "./Footer.scss";
 
-import Switch from "../Switch/Switch";
-
 const Footer = () => {
 
     const [workIsOpen, setWorkOpen] = useState(false);
@@ -31,83 +29,137 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__container">
-                    <nav className="footer__navigation">
-                        <ul className="footer__list">
-                            <li 
-                                className="footer__expand"
-                                onClick={toggleWorkDropdown}>
-                                <div className="footer__category">
-                                    <a
-                                        className="footer__link">
-                                        Work Projects
-                                    </a>
-                                    <svg className={`footer__drop footer__drop${workIsOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
-                                        <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
-                                    </svg>
-                                </div>
-                                {workIsOpen && // Only displays dropdown when isOpen = true
-                                    <ul className="footer__dropdown">
-                                        <li><a
-                                            className="footer__sub-link"
-                                            href="/project/cucoh">
-                                            CUCOH
-                                        </a></li>
-                                    </ul>
-                                }
-                            </li>
-                            <li 
-                                className="footer__expand"
-                                onClick={togglePersonalDropdown}>
-                                <div className="footer__category">
-                                    <a
-                                        className="footer__link">
-                                        Personal Projects
-                                    </a>
-                                    <svg className={`footer__drop footer__drop${personalIsOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
-                                        <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
-                                    </svg>
-                                </div>
-                                {personalIsOpen && // Only displays dropdown when isOpen = true
-                                    <ul className="footer__dropdown">
-                                        <li><a
-                                            className="footer__sub-link"
-                                            href="/project/rally">
-                                            Rally
-                                        </a></li>
-                                        <li><a
-                                            className="footer__sub-link"
-                                            href="/project/touch-base">
-                                            TouchBase
-                                        </a></li>
-                                        <li><a
-                                            className="footer__sub-link"
-                                            href="/project/homediate">
-                                            Homediate
-                                        </a></li>
-                                    </ul>
-                                }
-                            </li>
-                            <li><a
-                                className="footer__link"
-                                href="/skills">
-                                Skills
+            <nav className="footer__navigation">
+                <ul className="footer__list">
+                    <li 
+                        className="footer__expand"
+                        onClick={toggleWorkDropdown}>
+                        <div className="footer__category">
+                            <a
+                                className="footer__link">
+                                Work Projects
+                            </a>
+                            <svg className={`footer__drop footer__drop${workIsOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                                <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
+                            </svg>
+                        </div>
+                        {workIsOpen && // Only displays dropdown when isOpen = true
+                            <ul className="footer__dropdown">
+                                <li><a
+                                    className="footer__sub-link"
+                                    href="/project/cucoh">
+                                    CUCOH
+                                </a></li>
+                            </ul>
+                        }
+                    </li>
+                    <li 
+                        className="footer__expand"
+                        onClick={togglePersonalDropdown}>
+                        <div className="footer__category">
+                            <a
+                                className="footer__link">
+                                Personal Projects
+                            </a>
+                            <svg className={`footer__drop footer__drop${personalIsOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                                <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
+                            </svg>
+                        </div>
+                        {personalIsOpen && // Only displays dropdown when isOpen = true
+                            <ul className="footer__dropdown">
+                                <li><a
+                                    className="footer__sub-link"
+                                    href="/project/rally">
+                                    Rally
+                                </a></li>
+                                <li><a
+                                    className="footer__sub-link"
+                                    href="/project/touch-base">
+                                    TouchBase
+                                </a></li>
+                                <li><a
+                                    className="footer__sub-link"
+                                    href="/project/homediate">
+                                    Homediate
+                                </a></li>
+                            </ul>
+                        }
+                    </li>
+                    <li><a
+                        className="footer__link"
+                        href="/skills">
+                        Skills
+                    </a></li>
+                    <li><a
+                        className="footer__link"
+                        href="/about">
+                        About
+                    </a></li>
+                    <li><a
+                        className="footer__link"
+                        href="/contact">
+                        Contact
+                    </a></li>
+                </ul>
+            </nav>
+                <div className="footer__top">
+                    <a className="footer__wordmark" href="/"><h3>
+                        TopicalTom
+                    </h3></a>
+                    <ul className="footer__links">
+                        <li><ul className="footer__options">
+                            <li><a className="footer__label">
+                                Work Projects
                             </a></li>
                             <li><a
-                                className="footer__link"
-                                href="/about">
-                                About
+                                className="footer__sub-link"
+                                href="/project/cucoh">
+                                CUCOH
+                            </a></li>
+                        </ul></li>
+                        <li><ul className="footer__options">
+                            <li><a className="footer__label">
+                                Personal Projects
                             </a></li>
                             <li><a
-                                className="footer__link"
-                                href="/contact">
-                                Contact
+                                className="footer__sub-link"
+                                href="/project/rally">
+                                Rally
                             </a></li>
-                        </ul>
-                    </nav>
+                            <li><a
+                                className="footer__sub-link"
+                                href="/project/touch-base">
+                                TouchBase
+                            </a></li>
+                            <li><a
+                                className="footer__sub-link"
+                                href="/project/homediate">
+                                Homediate
+                            </a></li>
+                        </ul></li>
+                        <li><a
+                            className="footer__link footer__link--primary"
+                            href="/skills">
+                            Skills
+                        </a></li>
+                        <li><a
+                            className="footer__link footer__link--primary"
+                            href="/about">
+                            About
+                        </a></li>
+                        <li><a
+                            className="footer__link footer__link--primary"
+                            href="/contact">
+                            Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div className="footer__bottom">
                     <ul className="footer__social">
                         <li><a 
                             className="footer__external"
-                            href="https://www.linkedin.com/in/thomasvgriffiths/">
+                            href="https://www.linkedin.com/in/thomasvgriffiths/"
+                            aria-label="LinkedIn Social Link">
                             <svg className="footer__icon" viewBox="0 0 510 510">
                                 <path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
 			                        M153,433.5H76.5V204H153V433.5z M114.75,160.65c-25.5,0-45.9-20.4-45.9-45.9s20.4-45.9,45.9-45.9s45.9,20.4,45.9,45.9
@@ -118,7 +170,8 @@ const Footer = () => {
                         </a></li>
                         <li><a 
                             className="footer__external"
-                            href="https://github.com/TopicalTom">
+                            href="https://github.com/TopicalTom"
+                            aria-label="Github Social Link">
                             <svg className="footer__icon" viewBox="0 0 568.034 568.034"> 
                                 <path d="M550.99,0H17.051C8.948,0,2.381,6.567,2.381,14.67v538.694c0,8.104,6.567,14.67,14.67,14.67h177.498v-0.129
 			                        c8.011-0.092,14.149-4.577,14.431-12.166c0.728-19.725,0.214-39.492,0.214-58.562c-14.296,0.667-27.944,2.473-41.438,1.695
@@ -139,30 +192,34 @@ const Footer = () => {
                         </a></li>
                         <li><a 
                             className="footer__external"
-                            href="https://dribbble.com/TopicalTom">
+                            href="https://dribbble.com/TopicalTom"
+                            aria-label="Dribble Social Link">
                             <svg className="footer__icon" viewBox="0 0 601 614">
                                 <path d="M533.1,112.9 C574.9,165.1 600.2,231.6 600.9,304.1 C591,302 491.7,281.4 391.9,294.2 C389.8,288.9 387.6,283.7 385.4,278.4 C379.2,263.4 372.5,248.6 365.5,233.9 C476.4,187.6 526.8,121.6 533.1,112.9 Z M300.7,0.1 C377,0.1 446.7,29.4 499.7,77.4 C494.3,85.3 449.1,147.4 342.4,188.3 C293.2,95.9 238.7,20 230.4,8.6 C252.9,3 276.5,0.1 300.7,0.1 Z M173,29.2 C180.9,40.3 234.6,116.3 284.3,206.7 C143.9,244.8 20.2,244.3 6.7,244.1 C26.3,148.9 89.1,69.7 173,29.2 Z M0.5,307 C0.5,303.9 0.6,300.7 0.7,297.6 C13.8,297.9 159.3,299.8 309.3,253.9 C317.9,271.1 326.1,288.5 333.6,306 C329.6,307.1 325.7,308.4 321.8,309.7 C167,360.9 84.6,500.3 77.8,512.2 C29.7,457.8 0.5,385.8 0.5,307 Z M300.7,613.9 C231.3,613.9 167.3,589.7 116.4,549.1 C121.8,537.8 182.6,417.8 351.9,357.4 C352.6,357.2 353.2,356.9 353.9,356.7 C396,468.7 413.5,562.5 417.9,589.4 C381.9,605.2 342.3,613.9 300.7,613.9 Z M468.4,561.4 C465.3,542.7 449.3,452.9 410.1,342.6 C504.2,327.2 586.8,352.4 597.1,355.7 C583.7,441.1 535.8,514.8 468.4,561.4 Z" id="Shape"></path>
                             </svg>
                         </a></li>
                         <li><a 
                             className="footer__external"
-                            href="https://www.instagram.com/topicaltom/">
+                            href="https://www.instagram.com/topicaltom/"
+                            aria-label="Instagram Social Link">
                             <svg className="footer__icon" viewBox="0 0 44 44">
                             <path d="M30.5,1 C34.4,1.2 37.4,2.3 39.5,4.5 C41.6,6.7 42.8,9.6 43,13.5 C43,15.0428571 43.0929847,17.7945153 43.0996265,21.8446383 L43.0994306,24.4702123 C43.0968112,27.5942602 43.0821429,29.7857143 43,31.1 C42.8,35 41.7,38 39.5,40.1 C37.3,42.2 34.4,43.4 30.5,43.6 C29.1962963,43.6814815 26.9631001,43.6965706 23.9086064,43.6993649 L19.5297877,43.6994306 C16.4057398,43.6968112 14.2142857,43.6821429 12.9,43.6 C9,43.4 6,42.3 3.9,40.1 C1.8,38 0.6,35 0.4,31.1 C0.307407407,29.6185185 0.300548697,26.9367627 0.300040644,23.213499 L0.300040644,21.386501 C0.300548697,17.6632373 0.307407407,14.9814815 0.4,13.5 C0.6,9.6 1.7,6.6 3.9,4.5 C6,2.4 9,1.2 12.9,1 C14.3814815,0.907407407 17.0632373,0.900548697 20.786501,0.900040644 L22.6000364,0.900036443 C26.4076531,0.900510204 29.0142857,0.907142857 30.5,1 Z M21.6,11.3 C18.5,11.3 15.9,12.4 13.8,14.5 C11.7,16.7 10.6,19.2 10.6,22.3 C10.6,25.4 11.7,28 13.8,30.1 C16,32.2 18.5,33.3 21.6,33.3 C24.7,33.3 27.3,32.2 29.4,30.1 C31.5,27.9 32.6,25.4 32.6,22.3 C32.6,19.2 31.5,16.6 29.4,14.5 C27.3,12.3 24.7,11.3 21.6,11.3 Z M21.6,15.1 C23.6,15.1 25.3,15.8 26.7,17.2 C28.1,18.6 28.8,20.4 28.8,22.3 C28.8,24.2 28.1,25.9 26.7,27.3 C25.3,28.7 23.6,29.4 21.6,29.4 C19.6,29.4 17.9,28.7 16.5,27.3 C15.1,26 14.4,24.3 14.4,22.3 C14.4,20.3 15.1,18.6 16.5,17.2 C17.9,15.8 19.6,15.1 21.6,15.1 Z M33.1,8.2 C32.4,8.2 31.8,8.5 31.3,9 C30.8,9.5 30.5,10.1 30.5,10.8 C30.5,11.5 30.8,12.1 31.3,12.6 C31.8,13.1 32.4,13.4 33.1,13.4 C33.8,13.4 34.4,13.1 34.9,12.6 C35.4,12.1 35.7,11.5 35.7,10.8 C35.7,10.1 35.4,9.5 34.9,9 C34.4,8.5 33.8,8.2 33.1,8.2 Z"></path>
                             </svg>
                         </a></li>
                         <li><a 
                             className="footer__external"
-                            href="https://www.behance.net/topicaltom/">
+                            href="https://www.behance.net/topicaltom/"
+                            aria-label="Behance Social Link">
                             <svg className="footer__icon" viewBox="0 0 24 24">
                                 <path d="M8.228,15.01 L6,15.01 L6,13 L8.261,13 C10.139,13 10.264,15.01 8.228,15.01 Z M14.986,12.333 L18.004,12.333 C17.887,10.618 15.274,10.356 14.986,12.333 Z M8.182,9 L6,9 L6,11 L8.389,11 C10.062,11 10.326,9 8.182,9 L8.182,9 Z M24,5 L24,19 C24,21.761 21.762,24 19,24 L5,24 C2.238,24 0,21.761 0,19 L0,5 C0,2.239 2.238,0 5,0 L19,0 C21.762,0 24,2.239 24,5 Z M14,8 L19,8 L19,7 L14,7 L14,8 Z M10.448,11.618 C12.355,10.644 12.285,7.068 8.635,7.014 L4,7.014 L4,16.992 L8.311,16.992 C12.833,16.992 12.756,12.458 10.448,11.618 Z M19.935,12.22 C19.661,10.457 18.407,9.27 16.352,9.27 C14.258,9.27 13,10.61 13,13.217 C13,15.848 14.367,17 16.416,17 C18.465,17 19.522,15.865 19.816,15 L17.705,15 C16.969,15.855 14.812,15.521 14.938,13.647 L19.998,13.647 C20.008,13.013 19.986,12.558 19.935,12.22 Z" id="Behance"></path><path d="M8.228,15.01 L6,15.01 L6,13 L8.261,13 C10.139,13 10.264,15.01 8.228,15.01 Z M14.986,12.333 L18.004,12.333 C17.887,10.618 15.274,10.356 14.986,12.333 Z M8.182,9 L6,9 L6,11 L8.389,11 C10.062,11 10.326,9 8.182,9 L8.182,9 Z M24,5 L24,19 C24,21.761 21.762,24 19,24 L5,24 C2.238,24 0,21.761 0,19 L0,5 C0,2.239 2.238,0 5,0 L19,0 C21.762,0 24,2.239 24,5 Z M14,8 L19,8 L19,7 L14,7 L14,8 Z M10.448,11.618 C12.355,10.644 12.285,7.068 8.635,7.014 L4,7.014 L4,16.992 L8.311,16.992 C12.833,16.992 12.756,12.458 10.448,11.618 Z M19.935,12.22 C19.661,10.457 18.407,9.27 16.352,9.27 C14.258,9.27 13,10.61 13,13.217 C13,15.848 14.367,17 16.416,17 C18.465,17 19.522,15.865 19.816,15 L17.705,15 C16.969,15.855 14.812,15.521 14.938,13.647 L19.998,13.647 C20.008,13.013 19.986,12.558 19.935,12.22 Z"></path>
                             </svg>
                         </a></li>
                     </ul>
                     <span className="footer__copyright">
-                        <a className="footer__github" href="https://github.com/TopicalTom/portfolio-website">Built in React</a> © 2020
+                        © 2020 | <a className="footer__github" href="https://github.com/TopicalTom/portfolio-website"> Built in React</a>
                     </span>
                 </div>
+            </div>
         </footer>
     );
 };

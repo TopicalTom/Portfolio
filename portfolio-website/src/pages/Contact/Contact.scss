@@ -1,12 +1,14 @@
 @import "../../styles/baseline.scss";
 
+/*
 .contact {
     margin: 0;
     width: 100vw;
+    height: 100vh;
     transition: color 0.3s ease;
     transition: background-color 0.3s ease;
-    @include theme-aware('background', 'system-background-primary');
-    @include theme-aware('color', 'color-text');
+    //@include theme-aware('background', 'system-background-primary');
+    //@include theme-aware('color', 'color-text');
 
     &__container {
         margin: 0 20px;
@@ -20,20 +22,36 @@
             padding-top: 280px;
             display: flex;
             flex-direction: row;
+            justify-content: flex-end;
         }
 
         @include laptop-small {
             margin: 0 100px;
+            position: relative;
+            right: 0;
         }
 
         @include laptop {
             margin: 0 auto;
             width: 1000px;
+            justify-content: flex-end;
         }
     }
 
     &__section {
-        margin: 0;
+        margin-left: auto;
+        transition: color 0.3s ease;
+        transition: background-color 0.3s ease;
+        @include theme-aware('background', 'system-background-primary');
+        @include theme-aware('color', 'color-text');
+
+        @include laptop-small {
+            margin: auto;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+            position: absolute;
+        }
 
         &--links {
             display: none;
@@ -48,7 +66,7 @@
             width: 100%;
 
             @include laptop {
-                width: 730px;
+                width: 550px;
             }
             & > h1,
             & > p {
@@ -106,5 +124,142 @@
 
     &__message {
         margin-bottom: 20px;
+    }
+}
+
+*/
+
+.contact {
+    margin: 0;
+    width: 100vw;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    @include theme-aware('background', 'system-background-primary');
+    @include theme-aware('color', 'color-text');
+
+    &__container {
+        margin: 0 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 200px;
+
+        @include tablet {
+            margin: 0 60px;
+            padding-top: 280px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include laptop-small {
+            margin: 0 100px;
+        }
+
+        @include laptop {
+            margin: 0 auto;
+            width: 1000px;
+        }
+    }
+
+    &__section {
+
+        &--map {
+            display: none;
+
+            @include laptop {
+                display: flex;
+            }
+        }
+
+        &--form {
+            width: 100%;
+
+            @include laptop {
+                width: 500px;
+                margin-left: 100px;
+            }
+            & > h1,
+            & > p {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+    }
+
+    &__link {
+        @include theme-aware('color', 'link');
+        font-size: 0.825rem;
+    }
+
+    &__info {
+        font-weight: bolder;
+        padding-bottom: 10px;
+    }
+
+    &__button {
+        width: 200px;
+        height: 55px;
+        transition: 0.3s ease;
+        @include theme-aware('background', 'button');
+        border-radius: 12px;
+        //color: white;
+        border: none;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0.6rem 0;
+        cursor: pointer;
+    }
+
+    &__submit {
+        transition: 0.3s ease;
+        @include theme-aware('color', 'color-text-button');
+    }
+
+    &__confirmation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        padding: auto;
+    }
+
+    &__message {
+        margin-top: 20px;
+        display: flex;
+    }
+
+    &__email {
+        @include theme-aware('color', 'link');
+        margin-left: 5px;
+        transform: 0.3 ease;
+    }
+
+    &__option {
+        @include theme-aware('color', 'link');
+        transform: 0.3 ease;
+    }
+
+    &__external {
+        width: 14px;
+        height: 14px;
+        @include theme-aware('fill', 'link');
+        margin-left: 5px;
+        transform: 0.3 ease;
+    }
+
+    &__link {
+        &:hover {
+            opacity: 0.8;
+            transform: 0.3 ease;
+        }
     }
 }

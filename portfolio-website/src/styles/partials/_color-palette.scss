@@ -17,7 +17,7 @@ $themes: (
         switch: #53d769,
         scroller: rgba(58, 58, 60, 0.24),
         scroller-hover: rgba(0, 123, 255, 0.5),
-        link: #007AFF,
+        link: #0033FF,
         button: rgb(28, 28, 30),
         button-inactive: #AFAFAF,
         caret-color: #000000,
@@ -26,7 +26,10 @@ $themes: (
         footer-backing: black,
         color-form-header: rgb(142,142,147),
         dropdown: #2E2E2E,
-        metrics: #F2F3F7
+        metrics: #F2F3F7,
+        imput-field: #0033FF,
+        success: #53d769,
+        error: #DF2549
     ),
     dark: (
         system-background-primary: #131313,
@@ -55,6 +58,9 @@ $themes: (
         footer-backing: #1C1C1E,
         color-form-header: rgba(255, 255, 255, 0.5),
         dropdown: white,
-        metrics: #1C1C1E
+        metrics: #1C1C1E,
+        imput-field: #2997FF,
+        success: #53d769,
+        error: #DF2549
     )
 );

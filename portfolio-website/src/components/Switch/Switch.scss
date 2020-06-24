@@ -53,9 +53,11 @@
 
     &__type {
         opacity: 0;
-        padding: auto 0px;
-        margin-right: 4px;
+        padding: 3px;
+        margin-right: 10px;
         height: 30px;
         align-self: center;
+        text-transform: capitalize;
+        //background-color: red;
     }
 }

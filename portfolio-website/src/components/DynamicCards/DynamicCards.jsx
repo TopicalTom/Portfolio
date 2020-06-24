@@ -14,15 +14,7 @@ export default class DynamicCards extends Component {
 
     render(){
 
-        if (window.location.href === "https://topicaltom.netlify.app/about") {
-            return (
-                <div className="dynamic">
-                    <div className="dynamic__container dynamic__container--column">
-                        <Map />
-                    </div>
-                </div>
-            )
-        } else if (window.location.href === "https://topicaltom.netlify.app/project" || window.location.href === "https://topicaltom.netlify.app/project/rally") {
+        if (window.location.href === "https://topicaltom.netlify.app/project" || window.location.href === "https://topicaltom.netlify.app/project/rally") {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--row">
@@ -79,7 +71,7 @@ export default class DynamicCards extends Component {
                     </div>
                 </div>
             )
-        } else if (window.location.href === "https://topicaltom.netlify.app/skills") {
+        } else if (window.location.href === "https://topicaltom.netlify.app/skills" || window.location.href === "https://topicaltom.netlify.app/about") {
             return (
                 <div className="dynamic">
                     <div className="dynamic__container dynamic__container--column">

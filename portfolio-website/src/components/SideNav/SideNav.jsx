@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link} from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import "./SideNav.scss";
 
 const SideNav = props => {
@@ -15,7 +15,9 @@ const SideNav = props => {
                     return (
                         <li>
                             <Link
+                                activeClass="active"
                                 to={link}
+                                spy={true}
                                 className="side-nav__link"
                                 smooth={true}
                                 offset={-240}

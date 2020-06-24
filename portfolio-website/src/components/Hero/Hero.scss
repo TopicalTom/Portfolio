@@ -2,13 +2,35 @@
 
 .hero {
     width: 100vw;
-    height: 70vh;
+    height: 60vh;
+
+    @include tablet {
+        display: none;
+    }
 
     &__background {
         width: 100vw;
-        height: 70vh;
+        height: 80vh;
         //-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+
+        &--rally {
+            background: linear-gradient(45deg,#FD2D55, #ED506F);
+        }
+
+        &--touch-base {
+            background: linear-gradient(45deg,#4D7FFF, #589AF6);
+        }
+
+        &--homediate {
+            background: linear-gradient(45deg,#31C488, #5ECB84);
+        }
+
+        &--cucoh {
+            background-color: #2e2e2e;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+            height: 60vh;
+        }
 
         &-hangout {
             background: linear-gradient(45deg,#FD2D55, #ED506F);
@@ -46,7 +68,7 @@
         margin: 0 auto;
         padding: 0 auto;
         display: flex;
-        bottom: 12%;
+        top: 20%;
     }
 
     &__layer {

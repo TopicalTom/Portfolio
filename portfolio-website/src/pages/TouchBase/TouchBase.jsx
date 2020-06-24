@@ -5,18 +5,27 @@ import "../Project/Project.scss";
 import Redirect from "../../components/Redirect/Redirect";
 import SideNav from '../../components/SideNav/SideNav';
 import Layers from "../../assets/layers/TouchBaseLayer.png";
+import Hero from "../../components/Hero/Hero";
+
+import TouchBasePreview from "../../assets/videos/TouchBasePromo.mp4";
 
 class TouchBase extends Component {
 
     state = {
         links: [
             "Coming Soon"
-        ]      
+        ],
+        preview: TouchBasePreview      
     }
     
     render() {
         return (
             <>
+            <Hero 
+                project="touch-base"
+                preview={this.state.preview}
+                type="app"
+            />
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">
