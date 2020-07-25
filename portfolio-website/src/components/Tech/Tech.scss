@@ -40,6 +40,15 @@
             background-color: #08B234;
         }
 
+        &--swiftui {
+            background-color: #F05138;
+        }
+
+        &--walletpass,
+        &--appclips {
+            background-color: #000000;
+        }
+
         &:hover {
             cursor: pointer;
         }

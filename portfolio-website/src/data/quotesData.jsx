@@ -80,6 +80,194 @@ const quotesData = {
         order: 12
     }
     ],
+    touchbase: [
+        {
+            quote: "Networking is the opportunity to speak to somebody who’s in the industry that you’re trying to join or become acquainted with.",
+            takeaway: "Networking Objecitve",
+            category: "Needs",
+            order: 0 
+        },
+        {
+            quote: "I think a lot of people think networking is just about job hunting but I think it’s more about building your personal skill set or your knowledge base in order to enter or proceed through an industry.",
+            takeaway: "Varied Objectives",
+            category: "Needs",
+            order: 1 
+        },
+        {
+            quote: "I’ve met most of my connections through my educational experiences...but then also you start to slowly expand that group as you meet people through people so it becomes sort of an exponential process.",
+            takeaway: "Building a Base",
+            category: "Needs",
+            order: 2 
+        },
+        {
+            quote: "One of the keys to networking would be making sure that you don’t just use and burn some connections…it’s important to actually keep these people in a constant cycle of communication.",
+            takeaway: "Constant Reminders",
+            category: "Actions",
+            order: 3 
+        },
+        {
+            quote: "One of the keys to networking would be making sure that you don’t just use and burn some connections…it’s important to actually keep these people in a constant cycle of communication.",
+            takeaway: "Constant Reminders",
+            category: "Actions",
+            order: 4 
+        },
+        {
+            quote: "It’s about understanding that if you add value to your connection with these people, then they’re much more likely to be receptive to you asking for a favor or asking to sort of support you.",
+            takeaway: "Adding Value",
+            category: "Actions",
+            order: 5 
+        },
+        {
+            quote: "I think it’s really rewarding to be able to help people. If you have a friend who works for a company, you can connect them to make their path to their goals a little easier.",
+            takeaway: "Helping Others",
+            category: "Actions",
+            order: 6 
+        },
+        {
+            quote: "I think it all comes down to real communication with a person to understand what their actual goals are. The only person who really knows what they want to achieve is the person themself.",
+            takeaway: "Communicating Goals",
+            category: "Needs",
+            order: 7 
+        },
+        {
+            quote: "Endeavoring to also create connections that are outside of just what you work on personally will make you more grounded but also broaden your perspective and open up other opportunities later on.",
+            takeaway: "Broaden Network",
+            category: "Needs",
+            order: 8 
+        },
+        {
+            quote: "I think it’s important to bear in mind that these people (prospective networking) are being asked by hundreds of people to share their experience. So if you go into it with the understanding that there’s a good chance this person isn’t going to check in with you, so it is about setting expectations.",
+            takeaway: "Managing Expectations",
+            category: "Actions",
+            order: 9 
+        },
+        {
+            quote: "It takes a lot of effort in order to do real authentic networking, because you aren’t just going to get the director, senior vice president or precedent to sit down and have coffee with you...it’s going to take a few touch points.",
+            takeaway: "Persistence",
+            category: "Actions",
+            order: 10 
+        },
+        {
+            quote: "Demonstrating you’ve spent some time thinking about what it is that they do and working on understanding their career trajectory will show that you’re actually interested in that person and the information they can pass on.",
+            takeaway: "Genuine Interest",
+            category: "Actions",
+            order: 11
+        },
+        {
+            quote: "The first time you network with somebody it is actually quite easy as you sit down and talk about a job...after that you can’t just ask them for another coffee and ask the same questions over again, because you are wasting their time.",
+            takeaway: "Maintaining Interest",
+            category: "Needs",
+            order: 12
+        },
+        {
+            quote: "If you are properly networking, it shouldn’t really matter if you’re employed or looking for work as you should be continuing to talk and expand your network.",
+            takeaway: "Value for Everyone",
+            category: "Needs",
+            order: 13
+        },
+        {
+            quote: "Progress to me, especially for younger people early on in our careers is about finding the next steps towards a more fulfilling job. Once you are at that point, it’s then about looking back and asking yourself how can I help somebody else get where they need to go?",
+            takeaway: "Goal Shift",
+            category: "Needs",
+            order: 14
+        },
+        {
+            quote: "If your personal brand is one that helps other people, you essentially become a connector in your community, and you become someone who people go to. You become a leader in your industry.",
+            takeaway: "Becoming a Leader",
+            category: "Actions",
+            order: 15
+        },
+        {
+            quote: "A lot of professional networking is done by word of mouth or reputation.",
+            takeaway: "WOM",
+            category: "Actions",
+            order: 16
+        },
+        {
+            quote: "If you are asking big questions, and the people are giving you good responses that are adding value and you are learning, then that’s indicative of a solid connection that you’d like to continue with.",
+            takeaway: "Valuable Connections",
+            category: "Actions",
+            order: 17
+        },
+        {
+            quote: "I feel like sometimes when I’m in a networking situation, it can be a really anxious sort of place because you are talking to strangers and you’re trying to learn more about them.",
+            takeaway: "Networking Anxiety",
+            category: "Fears",
+            order: 18
+        },
+        {
+            quote: "The people I connect with are based on personality, like when I’m talking to someone and I feel like our energy lines up and I don’t feel anxious talking to them. The best connections are when they have a personality that matches mine.",
+            takeaway: "Personality Connection",
+            category: "Actions",
+            order: 19
+        },
+        {
+            quote: "If I know I’m going to a networking event I always try to read a little bit about people ahead of time. I think it makes it easier in networking situations if I am able to bring stuff up but also for them that I’m showing interest in what they do.",
+            takeaway: "Conducting Research",
+            category: "Actions",
+            order: 20
+        },
+        {
+            quote: "Reaching out to people makes me nervous because we are very new and there is a fear of not wanting to look too eager or that I’m trying to suck up to them but I think that’s something that’s in our own heads.",
+            takeaway: "Projecting Feelings",
+            category: "Fears",
+            order: 21
+        },
+        {
+            quote: "I want them to like me for my qualifications, my personality, and I don’t want them to think that if I messaged them that I’m trying to get a step up from other people.",
+            takeaway: "Shaping Perceptions",
+            category: "Fears",
+            order: 22
+        },
+        {
+            quote: "When I think of networking events as they are, they are really awkward and they are kind of a scary thought to have...but once I just go in and start talking to someone and build my own confidence it definitely is a little bit easier.",
+            takeaway: "Building Confidence",
+            category: "Actions",
+            order: 23
+        },
+        {
+            quote: "(On talking to people)One thing about networking events is trying to think of questions that they haven’t heard like 100 times already.",
+            takeaway: "Keep it Fresh",
+            category: "Actions",
+            order: 24
+        },
+        {
+            quote: "I think it’s hard to (network) because being someone who’s young and getting started in the working world, there’s a bit of anxiety when talking to higher level executives or even just someone that’s got more authority than you that they are somehow looking down on you or that there’s some judgement.",
+            takeaway: "Feeling of Judgement",
+            category: "Fears",
+            order: 25
+        },
+        {
+            quote: "If it’s recruiting season for a specific type of job I would network a lot more but if its off season then I’ll probably be like, whatever happens, happens.",
+            takeaway: "No Urgency",
+            category: "Needs",
+            order: 26
+        },
+        {
+            quote: "When initiating conversations, I try to make open ended questions that are targeted towards everyone.",
+            takeaway: "Approachable Initiators",
+            category: "Actions",
+            order: 27
+        },
+        {
+            quote: "I think the best way is to just directly ask and if there is anything I can do at the moment. It’s a very mutual thing. If there is anything that they hint at that might link to something that you’ve done or if you’re interested in doing, that’s an open door.",
+            takeaway: "Finding an Opening",
+            category: "Actions",
+            order: 28
+        },
+        {
+            quote: "(On why they don’t just share numbers) I find that a bit more intrusive, I think, and some people may value those boundaries so I think (using business cards) is a very non intrusive way to be like here’s my information, you can kind of make a judgement call whether or not you connect.",
+            takeaway: "No Committment",
+            category: "Actions",
+            order: 29
+        },
+        {
+            quote: "If the meeting you have or connection you make in the moment has to get somewhere...it’s a lot easier to be like here’s my card if you want to connect and talk further. It’s almost like an open invitation so that they’re not required or obligated to follow up.",
+            takeaway: "Open Invite",
+            category: "Actions",
+            order: 30
+        },
+    ],
     cucoh: [
         {
             quote: "It was really hard to get there [Banquet] due to the difficulty of finding a taxi or uber. I think I paid $60 or more on transportation aline [between hotel and venues].",

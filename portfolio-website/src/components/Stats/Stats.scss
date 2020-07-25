@@ -1,0 +1,39 @@
+@import "../../styles/baseline.scss";
+
+.stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: stretch;
+    margin: 4rem 0rem;
+
+    &__card {
+        width: 46%;
+        margin-bottom: 24px;
+        border-radius: 8px;
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: background-color 0.3s ease;
+        @include theme-aware('background-color', 'system-background-tertiary');
+
+        @include tablet {
+            width: 30%;
+        }
+    }
+
+    &__metric {
+        transition: color 0.3s ease;
+        @include theme-aware('color', 'color-text');
+    }
+
+    &__qualifier {
+        font-size: 0.825rem;
+        transition: color 0.3s ease;
+        opacity: 0.5;
+        @include theme-aware('color', 'color-text');
+    }
+}

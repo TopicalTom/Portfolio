@@ -58,7 +58,7 @@
 
         @include tablet {
             width: 100%;
-            margin: 30px auto;
+            margin: 10px auto;
         }
     }
 
@@ -102,12 +102,8 @@
 
     &__type {
         display: flex;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-
-        @include tablet {
-            display: none;
-        }
     }
 
     &__toggle {

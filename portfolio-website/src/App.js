@@ -34,10 +34,6 @@ function App() {
                     component={Contact} 
                 />
                 <Route 
-                    path="/skills" 
-                    component={Skills} 
-                />
-                <Route 
                     path="/about" 
                     component={About} 
                 />

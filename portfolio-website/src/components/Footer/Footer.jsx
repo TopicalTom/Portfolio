@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import "./Footer.scss";
 
+import resume from "../../assets/files/ThomasGriffithsResume.pdf";
+
 const Footer = () => {
 
     const [workIsOpen, setWorkOpen] = useState(false);
@@ -139,8 +141,10 @@ const Footer = () => {
                         </ul></li>
                         <li><a
                             className="footer__link footer__link--primary"
-                            href="/skills">
-                            Skills
+                            href={resume} 
+                            download="ThomasGriffithsResume" 
+                            aria-label="Digital Product Designer Resume Download Link">
+                            Resume
                         </a></li>
                         <li><a
                             className="footer__link footer__link--primary"

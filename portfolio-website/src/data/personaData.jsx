@@ -5,6 +5,9 @@ import Searcher from "../assets/files/SearcherPersona.png";
 import Follower from "../assets/files/FollowerPersona.png";
 import Hesitant from "../assets/files/HesitantPersona.png";
 import Advocate from "../assets/files/AdvocatePersona.png";
+import Prospective from "../assets/files/ProspectivePersona.png";
+import Wandering from "../assets/files/WanderingPersona.png";
+import Established from "../assets/files/EstablishedPersona.png";
 
 const personaData = {
     rally: [
@@ -19,6 +22,20 @@ const personaData = {
         {
             deliverable: PassiveParticipant,
             order: 2,
+        }
+    ],
+    touchbase: [
+        {
+            deliverable: Prospective,
+            order: 0,
+        },
+        {
+            deliverable: Wandering,
+            order: 1,
+        },
+        {
+            deliverable: Established,
+            order: 1,
         }
     ],
     cucoh: [

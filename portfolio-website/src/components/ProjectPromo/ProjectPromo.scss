@@ -78,6 +78,7 @@
     &__description {
         @include theme-aware('color', 'color-paragraph');
         opacity: 0.65;
+        padding-bottom: 20px;
     }
 
     &__link {
@@ -102,20 +103,98 @@
         margin: 8px 0px;
     }
 
-    &__button {
-        width: 150px;
-        height: 50px;
-        background-color: #2E2E2E;
-        border-radius: 12px;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-        padding: 8px 0;
+
+
+    &__toggle {
+        position: absolute;
+        margin-top: 0px;
+        bottom: 0;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 80px;
+        display: flex;
+        //background-color: red;
+        justify-content: space-around;
+
+        @include laptop-small {
+            left: 0;
+            //top: 200;
+            //margin-top: 620px;
+            justify-content: space-around;
+        }
+    }
+
+    &__player {
+        width: 20px;
 
         &:hover {
             cursor: pointer;
         }
     }
+
+    &__cta {
+        @include theme-aware('color', 'link');
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: row;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:hover > svg {
+            padding-right: 12px;
+            padding-left: 0px;
+            transform: 0.3 ease;
+        }
+    }
+
+    &__chevron {
+        transform: scaleX(-1);
+        padding-right: 8px;
+        padding-left: 4px;
+        margin: auto 0rem;
+        height: 12px;
+        @include theme-aware('fill', 'link');
+    }
+}
+
+/*
+@import "../../styles/baseline.scss";
+
+.promo {
+    width: 50vw;
+    margin: 0;
+    margin-bottom: 100px;
+
+    &__container {
+        margin: auto 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        //background-color: red;
+
+        @include tablet {
+            margin: auto 60px;
+            flex-direction: row-reverse;
+        }
+
+
+        @include laptop {
+            margin: auto;
+            //width: 1000px;
+        }
+    }
+
+    &__app {
+        width: 100%;
+        position: relative;
+    }
+
 
     &__toggle {
         position: absolute;
@@ -146,3 +225,4 @@
         }
     }
 }
+*/

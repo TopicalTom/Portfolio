@@ -48,6 +48,14 @@ const ProjectPreview = (props) => {
                     className="preview__type">
                     {type}
                 </h4>
+            </div>
+        </article>
+    );
+};
+
+export default ProjectPreview;
+
+/*
                 <ul className="preview__list">
                     <li className="preview__selection">
                         <h5 className="preview__title">Trigger</h5>
@@ -69,9 +77,5 @@ const ProjectPreview = (props) => {
                         <div className="preview__scrubber"/>
                     </li>
                 </ul>
-            </div>
-        </article>
-    );
-};
 
-export default ProjectPreview;
+*/

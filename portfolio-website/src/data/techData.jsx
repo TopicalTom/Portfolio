@@ -26,17 +26,17 @@ const techData = {
     cucoh: [
         {
             name: "squarespace",
-            link: "https://reactnative.dev/",
+            link: "https://www.squarespace.com/",
             logo: squarespace,
         },
         {
             name: "zapier",
-            link: "https://reactnative.dev/",
+            link: "https://zapier.com/",
             logo: zapier,
         },
         {
             name: "ticketspice",
-            link: "https://reactnative.dev/",
+            link: "https://www.ticketspice.com/",
             logo: ticketspice,
         }
     ]

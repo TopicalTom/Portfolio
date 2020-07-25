@@ -6,6 +6,7 @@ import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
 import Website from "../../components/Website/Website";
 import CUCOH from "../../assets/images/CUCOHLander.png";
+import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 
 ReactModal.setAppElement('*');
 
@@ -81,8 +82,11 @@ class Header extends Component {
                         <li 
                             className="header__link"
                             onMouseEnter={ () => this.toggleDropdown() }>
-                            <a href="/skills">
-                                Skills
+                            <a 
+                                href={resume} 
+                                download="ThomasGriffithsResume" 
+                                aria-label="Digital Product Designer Resume Download Link">
+                                Resume
                             </a>
                         </li>
                         <li 

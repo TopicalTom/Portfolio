@@ -1,0 +1,15 @@
+@import "../../styles/baseline.scss";
+
+.step {
+    //@include theme-aware('background-color', 'system-background-tertiary');
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 4px;
+    width: auto;
+    margin: 0;
+
+    &__header {
+        font-weight: bold;
+        @include theme-aware('color', 'color-text-static');
+    }
+}

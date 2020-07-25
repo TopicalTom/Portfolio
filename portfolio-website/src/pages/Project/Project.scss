@@ -52,6 +52,37 @@
         }
     }
 
+    &__details {
+        display: inline-block;
+        margin: 1rem 0rem 1rem 0rem;
+        vertical-align: center;
+        padding: auto;
+    }
+
+    &__symbol {
+        @include theme-aware('fill', 'link');
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+
+    &__tag {
+        margin-right: 1rem;
+        padding-right: 1rem;
+        border-right: 1px solid;
+        font-weight: bold;
+        @include theme-aware('color', 'link');
+        @include theme-aware('border-right-color', 'content-outline-light');
+
+        &:last-child {
+            border-right: 0px solid;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     &__links {
         padding-inline-start: 0px;
     }
@@ -80,7 +111,7 @@
         margin-bottom: 100px;
  
         & > h1 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         & > p,
@@ -124,6 +155,18 @@
         justify-content: space-around;
     }
 
+    &__step {
+        @include theme-aware('background-color', 'system-background-tertiary');
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        border-radius: 4px;
+        width: auto;
+    }
+
+    &__header {
+        font-weight: bold;
+    }
+
     &__github {
         @include theme-aware('color', 'color-text-static');
     }
@@ -149,29 +192,19 @@
     }
 
     &__video {
-        height: 582px;
-        margin: 0 auto;
-        width: 100%;
+        width: 100%; 
+        height: 411px; 
+        margin: 60px auto;
         margin-top: 20px;
-
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+        
         &--overlay {
             position: absolute;
             height: 630px;
             padding: 0 auto;
             width: 730px;
         }
-    }
-
-    &__hmw {
-        text-align: center;
-        padding-top: 20px;
-        font-weight: bold;
-        color: #FD2D55;
-    }
-
-    &__question {
-        text-align: center;
-        padding-bottom: 80px;
     }
 
     &__wordmark {
