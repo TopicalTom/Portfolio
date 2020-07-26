@@ -11,34 +11,15 @@ import SideNav from '../../components/SideNav/SideNav';
 import Redirect from "../../components/Redirect/Redirect";
 import Model from "../../components/Model/Model";
 import Tech from "../../components/Tech/Tech";
-import Definition from "../../components/Definition/Definition";
 import Skip from "../../components/Skip/Skip";
 import Takeaway from "../../components/Takeaway/Takeaway";
 import Step from "../../components/Step/Step";
 import Stats from "../../components/Stats/Stats";
 import Tag from "../../components/Tag/Tag";
+import Preview from "../../components/ProjectPreview/ProjectPreview";
 
 // Data
-import quotesData from "../../data/quotesData";
-import techData from "../../data/techData";
-import personaData from "../../data/personaData";
-
-// Assets
-import prism from "../../assets/images/RallyPrism.png";
-import sketch from "../../assets/images/Sketches.png";
-import map from "../../assets/images/ExperienceMap.png";
-import Preview from "../../components/ProjectPreview/ProjectPreview";
-import Layers from "../../assets/layers/HangoutLayer.png";
-import bumblePush from "../../assets/videos/BumblePush.mp4";
-import bumbleModes from "../../assets/videos/BumbleModes.mp4";
-import local from "../../assets/videos/LocalEvents.mp4";
-import airbnb from "../../assets/videos/AirbnbLists.mp4";
-import rally from "../../assets/videos/RallyPromo.mp4";
-import shop from "../../assets/videos/ShopLocal.mp4";
-import push from "../../assets/videos/RallyPush.mp4";
-import modes from "../../assets/videos/RallyModes.mp4";
-import connect from "../../assets/videos/RallyConnect.mp4";
-import RallyPreview from "../../assets/videos/RallyPromo.mp4";
+import projectsData from "../../data/projectsData";
 
 class Rally extends Component {
 
@@ -53,11 +34,14 @@ class Rally extends Component {
             "Design",
             "Next Steps" 
         ],
-        color: "#FD2D55",
-        quotes: quotesData.rally,
-        tech: techData.rally,
-        personas: personaData.rally,
-        preview: RallyPreview
+        color: projectsData[0].color,
+        quotes: projectsData[0].quotes,
+        personas: projectsData[0].personas,
+        assets: projectsData[0].assets,
+        inspiration: projectsData[0].inspiration,
+        tech: projectsData[0].tech,
+        prototype: projectsData[0].prototype,
+        preview: projectsData[0].preview
     }
 
     handleScroll = (e) => {
@@ -71,7 +55,8 @@ class Rally extends Component {
     
     render() {
 
-        const {preview, links, quotes, personas, tech, color} = this.state
+        const {preview, links, quotes, personas, tech, color, inspiration, assets, prototype} = this.state
+        const { layers, sketch, prism, map} = assets
 
         return (
             <>
@@ -108,7 +93,7 @@ class Rally extends Component {
                                 />
                                 <img 
                                     className="project__image project__image--web" 
-                                    src={Layers}
+                                    src={layers}
                                     alt=""
                                 />
                         </Element>
@@ -215,31 +200,16 @@ class Rally extends Component {
                                 <h2>Product Inspiration</h2>
                                 <p>Taking the Hook Model I outlined, I started looking into other products that fit each section and solved similar needs to the one I was creating to leverage UI patterns when shaping our experience.</p>
                                 <p>I took strong inspiration from dating apps like Tinder and Bumble for their use in connecting people over a shared interest and apps like Local, Shop and Airbnb for their ability to connect users to places in their area that might be of interest.</p>
-                                <Preview 
-                                    video={bumblePush}
-                                    caption="Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
-                                    type="Trigger"
-                                />
-                                <Preview 
-                                    video={bumbleModes}
-                                    caption="Bumble uses swipeable cards to enable users to switch modes and focus in on how to connect with others."
-                                    type="Action"
-                                />
-                                <Preview 
-                                    video={local}
-                                    caption="Local (Facebook Events) enables users to see friends who expressed interest in events to help form groups."
-                                    type="Reward"
-                                />
-                                <Preview 
-                                    video={shop}
-                                    caption="Shop (previously Arrive) uses location to show local stores near a user that they should checkout and support."
-                                    type="Reward"
-                                />
-                                <Preview 
-                                    video={airbnb}
-                                    caption="Airbnb uses lists to enable users to save experiences and places they are interested in for use in sharing with friends."
-                                    type="Investment"
-                                />
+                                {inspiration.map(item => {
+                                    const {video, caption, type} = item
+                                    return (
+                                        <Preview 
+                                            video={video}
+                                            caption={caption}
+                                            type={type}
+                                        />
+                                    )
+                                })}
                         </Element>
                         <Element 
                             name="Constraints"
@@ -256,14 +226,14 @@ class Rally extends Component {
                                 <h2>Tech Stack</h2>
                                 <p>
                                     To alleviate these concerns, I did some additional research on the technology that would be needed to bring this solution to life. To overcome the barrier-to-entry issue, the app could be developed in
-                                    <a className="project__external-link" href="https://reactnative.dev/"> React Native</a>
+                                    <a className="project__external-link" href={tech[0].link}> React Native</a>
                                     , rather than pure native solutions, as it would allow for simultaneous iOS and Android Development and even allow for a web platform to be made for a business facing component.
                                 </p>
                                 <p>
                                     In order to support similar features outlined in the product inspiration phase, I could leverage
-                                    <a className="project__external-link" href="https://www.mapbox.com/"> Mapbox </a> 
+                                    <a className="project__external-link" href={tech[1].link}> Mapbox </a> 
                                     and
-                                    <a className="project__external-link" href="https://foursquare.com/"> FourSquare </a> 
+                                    <a className="project__external-link" href={tech[2].link}> FourSquare </a> 
                                     for location and places data. The benefit of these services is that it would allow me to use location to determine if and where people are meeting up, to validate if plans are coming to fruition and if businesses are receiving additional traffic due to the app.
                                 </p>
                                 <Tech 
@@ -341,26 +311,16 @@ class Rally extends Component {
                                 <h2>Feature Preview</h2>
                                 <p>With this rough user flow, I tried to strike a balance when users set their rally so the experience feels “Focused” rather than “Forced”. What this means is when a user selects the rally, “Go Out” they are still able to connect and see friends that don’t share their rally as well as being able to view other places that are outside their current social mood.</p>
                                 <p>This aims to emulate the ebb and flow of plans and how people are able to change their mind and pivot to other plans if that is where there is a greater interest within their social circle.</p>
-                                <Preview 
-                                    video={push}
-                                    caption="Rally uses push notifications to enable users to know when their friends are currently rallying to encourage app use."
-                                    type="Trigger"
-                                />
-                                <Preview 
-                                    video={modes}
-                                    caption="Rally uses swipeable cards to enable users to broadcast their interests in an actionable way for use in making plans."
-                                    type="Action"
-                                />
-                                <Preview 
-                                    video={connect}
-                                    caption="Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods."
-                                    type="Reward"
-                                />
-                                <Preview 
-                                    video={rally}
-                                    caption="Rally allows users to selectively broadcast their location within a group chat to help coordinate plan logistics."
-                                    type="Reward"
-                                />
+                                {prototype.map(item => {
+                                    const {video, caption, type} = item
+                                    return (
+                                        <Preview 
+                                            video={video}
+                                            caption={caption}
+                                            type={type}
+                                        />
+                                    )
+                                })}
                         </Element>
                         <Element 
                             name="Next Steps"

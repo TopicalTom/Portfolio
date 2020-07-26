@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ResumeCard from "../ResumeCard/ResumeCard";
-import Map from "../Map/Map";
 
 import "./DynamicCards.scss"
 
@@ -20,7 +19,7 @@ export default class DynamicCards extends Component {
                     <div className="dynamic__container dynamic__container--row">
                     <ProjectCard
                         project={"TouchBase"}
-                        type={"Wallet Pass & App"}
+                        type={"Mobile App"}
                         preview={TouchBasePreview}
                         link={"touch-base"}
                     />
@@ -45,7 +44,7 @@ export default class DynamicCards extends Component {
                     />
                     <ProjectCard
                         project={"Rally"}
-                        type={"React Native App"}
+                        type={"Mobile App"}
                         preview={RallyPreview}
                         link={"rally"}
                     />    
@@ -58,13 +57,13 @@ export default class DynamicCards extends Component {
                     <div className="dynamic__container dynamic__container--row">
                     <ProjectCard
                         project={"Rally"}
-                        type={"React Native App"}
+                        type={"Mobile App"}
                         preview={RallyPreview}
                         link={"rally"}
                     />
                     <ProjectCard
                         project={"TouchBase"}
-                        type={"Wallet Pass & App"}
+                        type={"Mobile App"}
                         preview={TouchBasePreview}
                         link={"touch-base"}
                     />

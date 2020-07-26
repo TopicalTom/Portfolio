@@ -17,24 +17,7 @@ import Stats from "../../components/Stats/Stats";
 import Tag from "../../components/Tag/Tag";
 
 // Data
-import quotesData from "../../data/quotesData";
-import techData from "../../data/techData";
-import personaData from "../../data/personaData";
-
-// Assets
-import Layers from "../../assets/layers/TouchBaseLayer.png";
-import Cards from "../../assets/images/BusinessCards.png";
-import bumblePrompt from "../../assets/videos/BumblePrompt.mov";
-import bumbleShare from "../../assets/videos/BumbleShare.mov";
-import shaprFind from "../../assets/videos/ShaprFind.mov";
-import shaprMeet from "../../assets/videos/ShaprMeet.mov";
-import sketch from "../../assets/files/TouchBaseSketch.png";
-import map from "../../assets/files/NetworkingJourneyMap.png";
-import touchbase from "../../assets/videos/TouchBasePreview.mp4";
-import home from "../../assets/videos/TouchBaseHome.mp4";
-import cta from "../../assets/videos/TouchBaseCTA.mp4";
-import details from "../../assets/videos/TouchBaseDetails.mp4";
-import meet from "../../assets/videos/TouchBaseMeet.mp4";
+import projectsData from "../../data/projectsData";
 
 class TouchBase extends Component {
 
@@ -49,10 +32,13 @@ class TouchBase extends Component {
             "Design",
             "Next Steps" 
         ],
-        color: "#4D7FFF",
-        quotes: quotesData.touchbase,
-        personas: personaData.touchbase,
-        preview: touchbase     
+        color: projectsData[1].color,
+        quotes: projectsData[1].quotes,
+        personas: projectsData[1].personas,
+        preview: projectsData[1].preview,
+        assets: projectsData[1].assets,
+        inspiration: projectsData[1].inspiration,
+        prototype: projectsData[1].prototype,
     }
 
     handleScroll = (e) => {
@@ -66,7 +52,8 @@ class TouchBase extends Component {
     
     render() {
 
-        const { preview, links, quotes, personas, color } = this.state
+        const { color, preview, links, quotes, personas, assets, inspiration, prototype } = this.state
+        const { layers, map, sketch, cards } = assets
 
         return (
             <>
@@ -102,7 +89,7 @@ class TouchBase extends Component {
                                 />
                                 <img 
                                     className="project__image project__image--web" 
-                                    src={Layers}
+                                    src={layers}
                                     alt=""
                                 />
                         </Element>
@@ -222,26 +209,16 @@ class TouchBase extends Component {
                                 <h2>Modern Solutions</h2>
                                 <p>Modern iterations of the networking formula take cues from the online dating scene which allow users to view details on the person they might want to connect with first, to determine if they should reach out.</p>
                                 <p>The most notable of these products are Bumble Bizz and Shapr, so I looked to them for inspiration for how they attempt to make networking approachable:</p>
-                                <Preview 
-                                    video={bumbleShare}
-                                    caption="Bumble uses their dating platform to allow users to share their professional details and swipe for new connections."
-                                    type="Action"
-                                />
-                                <Preview 
-                                    video={shaprFind}
-                                    caption="Shapr allows users to filter who they connect with by job titles, goals and interests so that their limited matches are worthwhile."
-                                    type="Trigger"
-                                />
-                                <Preview 
-                                    video={bumblePrompt}
-                                    caption="Bumble utilizes profile prompts to help users quickly transition into a conversation that will be interesting for the recipient."
-                                    type="Reward"
-                                />
-                                <Preview 
-                                    video={shaprMeet}
-                                    caption="Shapr lets users indicate what they would like to be doing when they meet for their in-person networking session."
-                                    type="Reward"
-                                />
+                                {inspiration.map(item => {
+                                    const {video, caption, type} = item
+                                    return (
+                                        <Preview 
+                                            video={video}
+                                            caption={caption}
+                                            type={type}
+                                        />
+                                    )
+                                })}
                                 <p>At a high-level, the value of these product experiences are their emphasis on prompts, for how to initiate conversations, and suggestions, in the case of how they would like to meet, to help both parties towards their goal of connecting.</p>
                         </Element>
                         <Element 
@@ -261,7 +238,7 @@ class TouchBase extends Component {
                                 <p>It’s because of this closed ecosystem that business cards have continued to see use as a form of sharing vital networking details, with the very act of handing someone your card serving as an open invite which says, “let’s continue this relationship”.</p>
                                 <img 
                                     className="project__image project__image--web" 
-                                    src={Cards}
+                                    src={cards}
                                     alt=""
                                 />
                                 <p>Unfortunately, this medium has limitations in how much information can be fit on a card, if the details are up-to-date, and whether a contact remembers to follow up which is all dependent on if the user had one on them to share in the first place.</p>
@@ -273,6 +250,7 @@ class TouchBase extends Component {
                                 <p>Based on this, there appeared to be a gap in the market for a solution that allows for the open shareability of business cards, with the approachability of content found in networking/dating app hybrids.</p>
                                 <p>To tackle this issue I did some additional research on technology that could enable this product to effectively have an open ecosystem with few if any hurdles to go through in sharing one’s personal details. What I landed on was App Clips which would allow for temporary access to the app experience without a user first needing to download it:</p>
                                 <iframe 
+                                    title="App Clips Promotional Video"
                                     className="project__video"  
                                     src="https://www.youtube.com/embed/IqP_iojZXxQ" 
                                     frameborder="0" 
@@ -348,31 +326,16 @@ class TouchBase extends Component {
                             className="project__block">
                                 <h2>Features Preview</h2>
                                 <p>While I am still in the process of building out the user flow of an MVP experience, I have completed the following subsections to demonstrate what TouchBase looks and how users may interact with portions of the experience:</p>
-                                <Preview 
-                                    video={touchbase}
-                                    caption="TouchBase encourages spontaneous networking by enables profile sharing through an Apple Wallet Pass."
-                                    type="Trigger"
-                                />
-                                <Preview 
-                                    video={cta}
-                                    caption="TouchBase displays a users' call to action cards at the start of their profile to serve as conversation initiators."
-                                    type="Action"
-                                />
-                                <Preview 
-                                    video={details}
-                                    caption="TouchBase provides a users' background for context when deciding to reach out and plan meetups."
-                                    type="Action"
-                                />
-                                <Preview 
-                                    video={meet}
-                                    caption="TouchBase allows for streamlined meetup planning by suggesting crowdsourced networking spots."
-                                    type="Reward"
-                                />
-                                <Preview 
-                                    video={home}
-                                    caption="TouchBase showcases a users' scheduled meetups front and center to remind users to maintain their connections."
-                                    type="Investment"
-                                />
+                                {prototype.map(item => {
+                                    const {video, caption, type} = item
+                                    return (
+                                        <Preview 
+                                            video={video}
+                                            caption={caption}
+                                            type={type}
+                                        />
+                                    )
+                                })}
                         </Element>
                         <Element 
                             name="Next Steps"
