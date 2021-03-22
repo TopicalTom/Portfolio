@@ -1,12 +1,118 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
+import ReactModal from 'react-modal';
+import "./Header.scss";
+
+// Components
+import Menu from "../Menu/Menu";
+import Dropdown from "../HeaderDropdown/HeaderDropdown";
+
+ReactModal.setAppElement('*');
+
+const Header = () => {
+
+    const [displayDropdown, setDisplayDropdown] = useState(false);
+    const [previewDev, setPreviewDev] = useState(false);
+    const [previewDesigns, setPreviewDesigns] = useState(false);
+
+    function closeDropdown() {
+        setDisplayDropdown(false);
+        setPreviewDev(false);
+        setPreviewDesigns(false);
+    }
+
+    function showDevProjects() {
+        setDisplayDropdown(true);
+        setPreviewDev(true);
+        setPreviewDesigns(false);
+    }
+
+    function showDesignProjects() {
+        setDisplayDropdown(true);
+        setPreviewDev(false);
+        setPreviewDesigns(true);
+    }
+
+    return (
+        <>
+        <header className="header">
+            <nav className="header__nav">
+                <ul className="header__container">
+                    <li className="header__section header__section--logo">
+                        <a 
+                            className="header__home" 
+                            href="/">
+                            <h3
+                                className="header__logo"
+                                onMouseEnter={ () => closeDropdown() }>
+                                T
+                            </h3>
+                        </a>
+                    </li>
+                    <ul className="header__links">
+                        <li
+                            className="header__section header__section--dropdown"
+                            onMouseEnter={ () => showDevProjects() }>
+                            Develop
+                            <svg className={`header__drop header__drop${previewDev ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                                <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
+                            </svg>
+                        </li>
+                        <li
+                            className="header__section header__section--dropdown"
+                            onMouseEnter={ () => showDesignProjects() }>
+                            Design
+                            <svg className={`header__drop header__drop${previewDesigns ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
+                                <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
+                            </svg>
+                        </li>
+                        <li 
+                            className="header__section header__section--link"
+                            onMouseEnter={ () => closeDropdown() }>
+                            <a href="/about">
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                    <li 
+                        className="header__section header__section--cta"
+                        onMouseEnter={ () => closeDropdown() }>
+                        <a
+                            className="header__contact"
+                            href="/contact">
+                            Let's Chat
+                        </a>
+                        <Menu />
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        {displayDropdown // Only displays dropdown when projects being previewed
+            ?   <>
+                    <Dropdown 
+                        development={previewDev}
+                        design={previewDesigns}
+                    />
+                    <div 
+                        className="header__overlay"
+                        onMouseEnter={ () => closeDropdown() }
+                    />
+                </>
+            :   <></>
+        }
+        </>
+    );
+};
+
+export default Header;
+
+/*import React, {Component} from 'react';
 import ReactModal from 'react-modal';
 import "./Header.scss";
 
 import Menu from "../Menu/Menu";
 import projectsData from "../../data/projectsData";
 import Website from "../../components/Website/Website";
-import CUCOH from "../../assets/images/CUCOHLander.png";
-import resume from "../../assets/files/ThomasGriffithsResume.pdf";
+import Shoppies from "../../assets/images/ShoppiesPreview.png";
 
 ReactModal.setAppElement('*');
 
@@ -66,7 +172,7 @@ class Header extends Component {
                         <li
                             className="header__dropdown"
                             onMouseEnter={ () => this.openWorkDropdown() }>
-                            <p>Work</p>
+                            Develop
                             <svg className={`header__drop header__drop${isWorkOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
                                 <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
                             </svg>
@@ -74,20 +180,10 @@ class Header extends Component {
                         <li
                             className="header__dropdown"
                             onMouseEnter={ () => this.openPersonalDropdown() }>
-                            <p>Personal</p>
+                            Design
                             <svg className={`header__drop header__drop${isPersonalOpen ? "--active" : "--inactive"}`} viewBox="0 0 24 24">
                                 <path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path>
                             </svg>
-                        </li>
-                        <li 
-                            className="header__link"
-                            onMouseEnter={ () => this.toggleDropdown() }>
-                            <a 
-                                href={resume} 
-                                download="ThomasGriffithsResume" 
-                                aria-label="Digital Product Designer Resume Download Link">
-                                Resume
-                            </a>
                         </li>
                         <li 
                             className="header__link"
@@ -117,14 +213,14 @@ class Header extends Component {
                     className="dropdown__container">
                         <a 
                             className="dropdown__item dropdown__item--single"
-                            href={`/project/cucoh`}>
+                            href="https://github.com/TopicalTom/Shoppies">
                                 <Website 
-                                    project="CUCOH"
-                                    preview={CUCOH}
+                                    project="Shoppies"
+                                    preview={Shoppies}
                                 />
                                 <div className="dropdown__content dropdown__content--details">
-                                    <p className="dropdown__project">CUCOH</p>
-                                    <p className="dropdown__description">End-to-end fulfillment framework for ensuring our marketing message was representative of our conference experience.</p>
+                                    <p className="dropdown__project">Shoppies</p>
+                                    <p className="dropdown__description">Website where entrepreneurs can submit movie nominations for award consideration.</p>
                                 </div>
                         </a>
                 </div>
@@ -170,6 +266,7 @@ class Header extends Component {
 };
 
 export default Header;
+*/
 
 
 /*

@@ -3,7 +3,7 @@ import { animateScroll as scroll} from 'react-scroll'
 import { toast } from 'react-toastify';
 import "./Contact.scss";
 
-import Nav from "../../components/Nav/Nav";
+import Actions from "../../components/HeaderActions/HeaderActions";
 import Form from "../../components/Form/Form";
 import Map from "../../components/Map/Map";
 import resume from "../../assets/files/ThomasGriffithsResume.pdf";
@@ -78,7 +78,7 @@ export default class Contact extends Component {
         
         return (
             <>
-            <Nav/>
+            <Actions />
             <main className="contact">
                 <div className="contact__container">
                     <section className="contact__section contact__section--map">

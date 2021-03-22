@@ -1,14 +1,16 @@
 @import "../../styles/baseline.scss";
 
 .quotes {
-    margin: 1rem auto;
+    margin-top: 1rem;
+    margin-bottom: 150px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     width: 100%;
+    position: relative;
 
     &__slider {
-        margin: auto;
-        //transition: 0.3s ease;
+        margin: 0;
+        transition: 0.3s ease;
         overflow: hidden;
 
         &--animation {
@@ -30,7 +32,7 @@
         border-radius: 20px;
         padding: 2.8rem 2rem;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
-        margin: 2rem 0.5rem;
+        margin: 2rem 1rem;
 
         @include tablet {
             margin: 2rem 3rem;
@@ -43,6 +45,24 @@
         background-color: transparent;
         outline: none;
         border: none;
+        position: absolute;
+        align-self: center;
+        padding: auto;
+        height: 60px;
+        width: 30px;
+        border-radius: 8px;
+        z-index: 60;
+        @include theme-aware('background', 'carousel-button');
+        opacity: 0.4;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+
+        &--left {
+            left: 0;   
+        }
+
+        &--right {
+            right: 0;
+        }
 
         &:hover {
             cursor: pointer;
@@ -50,6 +70,7 @@
     }
 
     &__icon {
+        @include theme-aware('fill', 'accent');
 
         &--flip {
             transform: scaleX(-1);
@@ -63,6 +84,7 @@
     &__octicons {
         height: 24px;
         margin-bottom: 20px;
+        @include theme-aware('fill', 'accent');
     }
 
     &__content {
@@ -76,10 +98,47 @@
 
     &__category {
         font-weight: bold;
-        //color: #FD2D55;
     }
 
     &__caption {
         margin-bottom: 0.5rem;
+        @include theme-aware('color', 'color-nav');
+    }
+
+    &__dots {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        position: absolute;
+        justify-content: center;
+        bottom: 0;
+        z-index: 60;
+        height: 3px;
+
+        & > button {
+            border-radius: 200px;
+            border: none;
+            margin-right: 2px;
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.carousel {
+
+    &__dot {
+        @include theme-aware('background', 'content-outline');
+
+        &:hover {
+            @include theme-aware('background', 'color-paragraph');
+            cursor: pointer;
+        }
+
+        &--selected {
+            @include theme-aware('background', 'accent');
+        }
     }
 }

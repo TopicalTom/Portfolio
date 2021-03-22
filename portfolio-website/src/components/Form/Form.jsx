@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import "./Form.scss";
 
-import Success from "../../assets/icons/Success.svg";
-import Error from "../../assets/icons/Error.svg";
-
 function Form ({submitHandler}) {
 
     // Handles Name Validation UI

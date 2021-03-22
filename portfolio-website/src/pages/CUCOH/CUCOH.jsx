@@ -7,7 +7,6 @@ import Redirect from "../../components/Redirect/Redirect";
 import SideNav from '../../components/SideNav/SideNav';
 import Quotes from '../../components/Quotes/Quotes';
 import PersonaCarousel from "../../components/PersonaCarousel/PersonaCarousel";
-import Tech from "../../components/Tech/Tech";
 import Metrics from "../../components/Metrics/Metrics";
 import Screen from "../../components/Screen/Screen";
 import Skip from "../../components/Skip/Skip";
@@ -72,7 +71,7 @@ class CUCOH extends Component {
                 <div className="project__container">
                     <aside className="project__nav">
                         <SideNav 
-                            header="Process"
+                            header="Navigate"
                             links={this.state.links}
                         />
                     </aside>
@@ -232,9 +231,6 @@ class CUCOH extends Component {
                                 <h2>Tech Stack</h2>
                                 <p>With these constraints as guiding principles, I sought to find technology that would allow me to automate as many processes as possible, create reusable templates, and limit the amount of new technology added to reduce the chances of “skill” being a limiting factor in enabling our team to provide important information for our delegates.</p>
                                 <p>What I landed on was Squarespace, Zapier and TicketSpice which would help fill in the gaps in our experience and bring cohesion to how we organize our conference:</p>
-                                <Tech 
-                                    tech={this.state.tech}
-                                />
                         </Element>
                         <Element 
                             name="Design"

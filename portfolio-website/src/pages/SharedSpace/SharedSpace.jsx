@@ -2,13 +2,16 @@ import React, {Component} from 'react';
 import { Element , animateScroll as scrollSpy} from 'react-scroll'
 import "../Project/Project.scss";
 
+// Components
 import Redirect from "../../components/Redirect/Redirect";
 import SideNav from '../../components/SideNav/SideNav';
-import Layers from "../../assets/layers/HomediateLayer.png";
 import Hero from "../../components/Hero/Hero";
 import Tag from "../../components/Tag/Tag";
+import Prototype from '../../components/Prototype/Prototype';
+import DynamicCards from '../../components/DynamicCards/DynamicCards';
 
-import HomediatePreview from "../../assets/videos/HomediatePromo.mp4";
+// Data
+import projectsData from "../../data/projectsData";
 
 class Homediate extends Component {
 
@@ -16,53 +19,69 @@ class Homediate extends Component {
         links: [
             "Coming Soon"
         ],
-        color: "#5ECB84",
-        preview: HomediatePreview      
+        color: projectsData[3].color,
+        preview: projectsData[3].preview,
+        assets: projectsData[3].assets    
     }
     
     render() {
 
-        const {color} = this.state
+        const {links, color, preview, assets} = this.state
 
         return (
             <>
             <Hero 
                 project="homediate"
-                preview={this.state.preview}
+                preview={preview}
                 type="app"
             />
             <main className="project">
                 <div className="project__container">
                     <aside className="project__nav">
                         <SideNav 
-                            header="Process"
-                            links={this.state.links}
+                            header="Homediate"
+                            links={links}
                         />
                     </aside>
                     <section className="project__content">
                         <Element 
                             name="Coming Soon"
                             className="project__block">
-                                <h1 className="project__heading">Homediate</h1>
+                            <div 
+                                className="project__sub-block">
+                                <h1>Homediate</h1>
                                 <Tag 
                                     type="iMessage App"
                                     role="Independent"
                                     duration="Upcoming"
                                     color={color}
                                 />
-                                <p className="project__paragraph">Homediate is a design challenge I did for a job application that aims to help people mediate household tasks and utility costs within a shared space.</p>
-                                <p className="project__paragraph">The goal is to get people to be accountable for contributing their part to a household, be it chores or otherwise, which is achieved by tying the percent calculation of variable utility costs to the completion of daily, weekly, and even monthly assigned tasks.</p>
-                                <img className="project__image" src={Layers} alt=""/>
-                                <p className="project__paragraph">The Homediate experience is built as an iMessage App to leverage a pre-existing chat infrastructure since households typically have a group chat for communicating important household events and needs.</p>
-                                <p className="project__paragraph">Given more time, I am interested in exploring how this app experience could utilize Apple business chat to connect with landlords to allow users to request fixes or pay their percentage of the rent with the adjusted utility costs factored in.</p>
+                                <p>Homediate is a design challenge I did for a job application that aims to help people mediate household tasks and utility costs within a shared space.</p>
+                                <p>The goal is to get people to be accountable for contributing their part to a household, be it chores or otherwise, which is achieved by tying the percent calculation of variable utility costs to the completion of daily, weekly, and even monthly assigned tasks.</p>
+                            </div>
+                            <div 
+                                className="project__sub-block">
+                                <Prototype 
+                                    video={preview}
+                                />   
+                            </div>
+                            <div 
+                                className="project__sub-block">
+                                <p>The Homediate experience is built as an iMessage App to leverage a pre-existing chat infrastructure since households typically have a group chat for communicating important household events and needs.</p>
+                                <p>Given more time, I am interested in exploring how this app experience could utilize Apple business chat to connect with landlords to allow users to request fixes or pay their percentage of the rent with the adjusted utility costs factored in.</p>
+                                <Redirect 
+                                    link="/project/rally"
+                                    cta="Next Project: Rally"
+                                />
+                            </div>
                         </Element>
-                        <Redirect 
-                            link="/about"
-                            cta="About Me"
-                        />
                     </section>
                 </div>
             </main>
+            <DynamicCards 
+                preview={preview}
+                color={color}
+            />
             </>
         );
 

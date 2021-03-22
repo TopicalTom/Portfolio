@@ -2,63 +2,14 @@
 
 .hero {
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
+    position: relative;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    @include theme-aware('background', 'system-background-primary');
 
     @include tablet {
         display: none;
-    }
-
-    &__background {
-        width: 100vw;
-        height: 80vh;
-        //-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
-
-        &--rally {
-            background: linear-gradient(45deg,#FD2D55, #ED506F);
-        }
-
-        &--touch-base {
-            background: linear-gradient(45deg,#4D7FFF, #589AF6);
-        }
-
-        &--homediate {
-            background: linear-gradient(45deg,#31C488, #5ECB84);
-        }
-
-        &--cucoh {
-            background-color: #2e2e2e;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-            height: 60vh;
-        }
-
-        &-hangout {
-            background: linear-gradient(45deg,#FD2D55, #ED506F);
-        }
-
-        &-grabdrinks {
-            background: linear-gradient(45deg,#F4844A, #F58F47);
-        }
-
-        &-getfood {
-            background: linear-gradient(45deg,#FACC30, #F4B92D);
-        }
-
-        &-beactive {
-            background: linear-gradient(45deg,#31C488, #5ECB84);
-        }
-
-        &-explore {
-            background: linear-gradient(45deg,#4D7FFF, #589AF6);
-        }
-
-        &-goout {
-            background: linear-gradient(45deg,#8637A6, #D156E8);
-        }
-
-        &-beproductive {
-            background: linear-gradient(45deg,#EE5BA1, #FB778F);
-        }
     }
 
     &__container {
@@ -69,16 +20,5 @@
         padding: 0 auto;
         display: flex;
         top: 20%;
-    }
-
-    &__layer {
-        width: 80%;
-        align-self: center;
-        margin: 0 auto;
-        padding: 0 auto;
-
-        @include laptop-small {
-            width: 50%;
-        }
     }
 }

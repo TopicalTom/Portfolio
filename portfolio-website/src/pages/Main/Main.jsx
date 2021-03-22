@@ -5,6 +5,7 @@ import "./Main.scss";
 import ProjectPromo from "../../components/ProjectPromo/ProjectPromo";
 import Switch from "../../components/Switch/Switch";
 import projectsData from "../../data/projectsData";
+import ResumeCard from '../../components/ResumeCard/ResumeCard';
 
 const Main = () => {
 
@@ -16,31 +17,31 @@ const Main = () => {
                 <div className="main__details">
                     <h1 
                         className="main__heading">
-                        I'm Thomas Griffiths a Digital Product Designer.
+                        I'm Thomas Griffiths a UX Developer.
                     </h1>
                     <p className="main__mission">
                         Specializing in crafting novel mobile experiences
                     </p>
-                    <div className="main__actions">
-                        <div className="main__toggle">
-                            <Switch/>
-                            Light Mode
-                        </div>
-                        <Link 
-                            className="main__button"
-                            to="Projects"
-                            smooth={true}
-                            duration={500}
-                            offset={-120}>
-                            <div className="main__cta"/>
-                        </Link>
+                    <div className="main__toggle">
+                        <Switch/>
                     </div>
+                    <Link 
+                        className="main__button"
+                        to="Projects"
+                        smooth={true}
+                        duration={500}
+                        offset={-120}>
+                        <span 
+                            className="main__label">
+                            See My Work
+                        </span>
+                    </Link>
                 </div>
             </section>
             <Element 
                 className="main__projects"
                 name="Projects">
-                {projects.map(promo => {
+                {projects.slice(0, 3).map(promo => {
                     const { project, description, preview, link, orientation, code } = promo
                     return (
                         <ProjectPromo

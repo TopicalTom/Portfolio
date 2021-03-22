@@ -1,41 +1,90 @@
-import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import React, { useState } from 'react';
 import "./PersonaCarousel.scss";
 
-import chevron from "../../assets/icons/chevron.svg";
-
 const PersonaCarousel = (props) => {
+    const { personas, color } = props
+    const [currentPersona, setCurrentPersona] = useState(personas[0].deliverable);
+    const [ currentIndex, setCurrentIndex ] = useState(0);
 
-    const {persona, size} = props
+    const handleSelection = (index) => {
+        setCurrentPersona(personas[index].deliverable);
+        setCurrentIndex(index);
+    };
+
+    console.log()
 
     return (
-        <CarouselProvider
-            naturalSlideWidth={3000}
-            isIntrinsicHeight={true}
-            totalSlides={size}
-        >
-            <div className="persona-carousel">
-                <ButtonNext className="persona-carousel__button">
-                    <img className="persona-carousel__icon--flip" src={chevron} alt=""/>
-                </ButtonNext>
-                <ButtonBack className="persona-carousel__button">
-                    <img src={chevron} alt=""/>
-                </ButtonBack>
+        <section className="personas">
+            <img 
+                className="personas__persona"
+                src={currentPersona}
+                alt={`${currentPersona}`}
+            />
+            <div className="personas__selections">
+                {personas.map((persona, index) => {
+                    return (
+                        <div 
+                            key={index}
+                            style={{borderColor: color}}
+                            className={`personas__button personas__button--${currentIndex === index ? "active" : "inactive"}`}
+                            onClick={() => handleSelection(index)}>
+                            <span 
+                                className="videos__label">
+                                {persona.label}
+                            </span>
+                        </div>  
+                    )
+                })}
             </div>
-            <Slider className="persona-carousel__slider" classNameAnimation="persona-carousel__slider--animation">
-            {persona.map(item => {
-
-                const {deliverable, order} = item
-
-                return (
-                    <Slide className="persona-carousel__slide" index={order}>
-                        <img className="persona-carousel__image" src={deliverable} alt=""/>
-                    </Slide>
-                )
-            })}
-            </Slider>
-        </CarouselProvider>
-    );
-};
+        </section>
+    )
+}
 
 export default PersonaCarousel;
+
+/*
+
+                    {personas.map((persona) => {
+                        return (
+                            <div 
+                                className={`personas__button personas__button--${persona.state ? "active" : "inactive"}`}
+                                onClick={persona.function}>
+                                <span 
+                                    className="videos__label">
+                                    {persona.label}
+                                </span>
+                            </div>  
+                        )
+                    })}
+
+*/
+
+
+/*
+
+                    <div 
+                        className={`personas__button personas__button--${firstSelected ? "active" : "inactive"}`}
+                        onClick={handleFirstSelection}>
+                        <span 
+                            className="videos__label">
+                            {personas[0].label}
+                        </span>
+                    </div>
+                    <div 
+                        className={`personas__button personas__button--${secondSelected ? "active" : "inactive"}`}
+                        onClick={handleSecondSelection}>
+                        <span 
+                            className="personas__label">
+                            {personas[1].label}
+                        </span>
+                    </div>
+                    <div 
+                        className={`personas__button personas__button--${thirdSelected ? "active" : "inactive"}`}
+                        onClick={handleThirdSelection}>
+                        <span 
+                            className="personas__label">
+                            {personas[2].label}
+                        </span>
+                    </div>
+
+*/

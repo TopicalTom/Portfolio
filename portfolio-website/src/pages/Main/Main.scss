@@ -33,6 +33,16 @@
         }
     }
 
+    &__heading {
+        //font-size: 3.5rem;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @include tablet {
+            width: 80%;
+        }
+    }
+
     &__details {
         display: flex;
         flex-direction: column;
@@ -53,12 +63,26 @@
     }
 
     &__button {
-        width: 4px;
-        height: 40px;
+        width: 200px;
+        padding: 0.5rem 2rem;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        @include theme-aware('background-color', 'button');
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px;
+
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
 
         @include tablet {
-            height: 80px;
+            width: 160px;
         }
+    }
+
+    &__label {
+        transition: color 0.3s ease;
+        @include theme-aware('color', 'color-text-button');
     }
 
     &__toggle {
@@ -97,14 +121,14 @@
     }
 
     &__mission {
-        display: none;
+        display: flex;
+        padding-bottom: 40px;
+        @include theme-aware('color', 'color-text-alt');
+        width: 70%;
+        font-weight: 500;
 
         @include tablet {
-            display: flex;
-            padding-top: 40px;
-            @include theme-aware('color', 'color-text-alt');
-            width: 70%;
-            font-weight: 500;
+            padding-bottom: 80px;
         }
     }
 
@@ -112,3 +136,41 @@
         margin-top: 60px;
     }
 }
+
+/*
+    &__cta {
+        width: 4px;
+        @include theme-aware('background-color', 'scroller');
+        border-radius: 12px;
+        color: white;
+        //text-align: center;
+        vertical-align: left;
+        //padding: 0.6rem 0;
+
+        animation: scroll .9s infinite alternate ease-in-out;
+
+        @keyframes scroll {
+            from { 
+                height: 70px;
+            };
+            to { 
+                height: 160px;
+            };
+        }
+
+        &:hover {
+            cursor: pointer;
+            @include theme-aware('background-color', 'scroller-hover');
+        }
+    }
+
+        &__button {
+        width: 4px;
+        height: 40px;
+
+        @include tablet {
+            height: 80px;
+        }
+    }
+
+*/

@@ -1,7 +1,25 @@
 @import "../../styles/baseline.scss";
 
 .takeaway {
-    margin-bottom: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    //@include theme-aware('background', 'accent');
+    padding: 80px 40px;
+    border-radius: 15px;
+
+    @include tablet {
+        margin: 200px 60px;
+        padding: 60px 40px;
+        transition: all 0.2s ease 0s;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 20px 30px;
+            transition: all 0.2s ease 0s;
+            //margin: 190px 60px 210px 60px;
+        }
+    }
  
     & > h3 {
         margin-top: 1rem;
@@ -10,12 +28,19 @@
 
     &__type {
         text-align: center;
+        font-size: 0.8125rem;
+        display: flex;
+        justify-content: space-around;
+        line-height: 1.125rem;
+        margin: auto 0;
         padding-top: 20px;
         font-weight: bold;
+        @include theme-aware('color', 'color-text-static');
+        opacity: 0.8;
     }
 
     &__details {
-        text-align: center;
-        padding-bottom: 80px;
+        text-align: left;
+        @include theme-aware('color', 'color-text-static');
     }
 }

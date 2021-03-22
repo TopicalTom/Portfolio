@@ -1,6 +1,45 @@
 import React from 'react';
 import "./Palette.scss";
 
+const Palette = (props) => {
+
+    const {palette} = props
+
+    return (
+        <article className="palette">
+            <div className="palette__container">
+            {Object.entries(palette).map(([key, value]) => {
+                return (
+                    <div className="palette__row">
+                        <p className="palette__category">{key}</p>
+                        <div className="palette__swatches">
+                            {value.map(swatch=> {
+                                return (
+                                    <div 
+                                        className="palette__color"
+                                        style={{background: swatch.color}}>
+                                        <h4 
+                                            className="palette__hex">
+                                            {swatch.color}
+                                        </h4>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                )
+            })}
+            </div>
+        </article>
+    );
+};
+
+export default Palette;
+
+/*
+import React from 'react';
+import "./Palette.scss";
+
 const Palette = () => {
 
     //const {primary, secondary, accent } = props
@@ -141,3 +180,5 @@ const Palette = () => {
 };
 
 export default Palette;
+
+*/

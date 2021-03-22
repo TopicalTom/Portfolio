@@ -1,0 +1,49 @@
+@import "../../styles/baseline.scss";
+
+.prototype {
+    display: none;
+
+    @include laptop-small {
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        height: 703px;
+        width: 350px;
+    }
+
+    &__preview {
+        height: 100%;
+        width: 85%;
+        overflow: hidden;
+        display: flex;
+        align-self: center;
+        margin: auto;
+        padding: 20px 0px 30px 0px;
+
+        @include laptop-small {
+            height: 100%;
+            width: 85%;
+            border-radius: 40px;
+            overflow: hidden;
+            display: flex;
+            align-self: center;
+            margin: auto;
+            padding: 25px 0px 30px 0px;
+        }
+    }
+
+    &__overlay {
+        height: 600px;
+        width: 240px;
+        position: absolute;
+        overflow: hidden;
+        pointer-events: none;
+
+        @include laptop-small {
+            height: 703px;
+            width: 350px;
+            position: absolute;
+        }
+    }
+}

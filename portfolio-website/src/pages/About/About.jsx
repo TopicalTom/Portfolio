@@ -3,12 +3,13 @@ import "./About.scss";
 
 import Profile from "../../assets/images/Thomas.jpg";
 import Redirect from '../../components/Redirect/Redirect';
-import Nav from "../../components/Nav/Nav";
+import Actions from "../../components/HeaderActions/HeaderActions";
+import ResumeCard from '../../components/ResumeCard/ResumeCard';
 
 const About = () => {
     return (
         <>
-        <Nav/>
+        <Actions />
         <main className="about">
             <div className="about__container">
                 <aside className="about__section about__section--profile">
@@ -23,7 +24,7 @@ const About = () => {
                         A bit about me...
                     </h2>
                     <p className="about__content">
-                        While I am no longer building Lego worlds or making Forge Maps on Halo 3 for my friends to play on, creating things has been core to my identity ever since I was a kid. Becoming a Digital Product Designer is just the natural next step, even though the journey to get here wasn't a straightforward one.
+                        While I am no longer building Lego worlds or making Forge Maps on Halo 3 for my friends to play on, creating things has been core to my identity ever since I was a kid. Becoming a UX Developer is just the natural next step, even though the journey to get here wasn't a straightforward one.
                     </p>
                     <p className="about__content">
                         After five-degree changes and some exploration, I stumbled upon the potential of design while working as a marketing designer for a few extracurricular conferences. It was here where I was able to capture the same excitement I felt when working on my childhood extracurriculars by shaping experiences while being able to create an impact on the people that attended.
@@ -44,6 +45,9 @@ const About = () => {
                     />
                 </section>
             </div>
+            <ResumeCard
+                color="#2e2e2e"
+            />
         </main>
      </>
     );

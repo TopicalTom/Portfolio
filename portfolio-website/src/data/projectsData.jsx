@@ -1,5 +1,7 @@
 // Rally Assets
 import Rally from "../assets/videos/RallyPromo.mp4";
+import Version1 from "../assets/videos/RallyVersion1.mp4";
+import Version2 from "../assets/videos/RallyVersion2.mp4";
 import RallyIcon from "../assets/icons/Rally.svg";
 import RallyPromo from "../assets/images/RallyPreview.png";
 import SocialArchitect from "../assets/files/SocialArchitectPersona.png";
@@ -42,22 +44,77 @@ import touchBaseDetails from "../assets/videos/TouchBaseDetails.mp4";
 import touchBaseMeet from "../assets/videos/TouchBaseMeet.mp4";
 import touchBaseHome from "../assets/videos/TouchBaseHome.mp4";
 
+// Shop Assets
+import ShopPromo from "../assets/images/ShopPreview.png";
+import shopFeatureOverview from "../assets/videos/ShopFeatureOverview.mp4";
+import userVessiReturn from "../assets/videos/UserVessiReturn.mp4";
+import guestVessiReturn from "../assets/videos/GuestVessiReturn.mp4";
+import shopViewProducts from "../assets/videos/ShopViewProducts.mov";
+import shopUserOpen from "../assets/videos/ShopUserOpen.mp4";
+import shopGuestOpen from "../assets/videos/ShopGuestOpen.mp4";
+import shopUserOrder from "../assets/videos/ShopUserOrder.mp4";
+import shopGuestOrder from "../assets/videos/ShopGuestOrder.mp4";
+import shopBothSelect from "../assets/videos/ShopBothSelect.mp4";
+import shopBothDetails from "../assets/videos/ShopBothDetails.mp4";
+import shopUserStatus from "../assets/videos/ShopUserStatus.mp4";
+import shopGuestStatus from "../assets/videos/ShopGuestStatus.mp4";
+import Shopper from "../assets/files/ShopperPersona.webp";
+import Merchant from "../assets/files/MerchantPersona.webp";
+import shopMap from "../assets/files/ShopMap.webp";
+import shopLayers from "../assets/files/ShopLayers.png";
+import Shoe from "../assets/images/VessiShoe.png";
+
 // Homediate Assets
 import Homediate from "../assets/videos/HomediatePromo.mp4";
 import HomediateIcon from "../assets/icons/Homediate.svg";
 import HomediatePromo from "../assets/images/SharedSpacePreview.png";
+import homediateLayers from "../assets/layers/HomediateLayer.png";
 
 const projectsData = [
     {
         project: "Rally",
         description: "Helping people spontaneously connect with their close friends over social moods.",
-        type: "Hangouts",
+        type: "Mobile App",
         link: "rally",
         preview: Rally,
         icon: RallyIcon,
         promo: RallyPromo,
         orientation: "left",
         color: "#FD2D55",
+        palette: {
+            accent: [
+                {color: "#FD2D55"},
+                {color: "#F58F47"},
+                {color: "#F6C232"},
+                {color: "#31C488"},
+                {color: "#4D7FFF"},
+                {color: "#8637A6"},
+                {color: "#F26A9A"},
+            ],
+            shades: [
+                {color: "#FFFFFF"},
+                {color: "#F1F2F3"},
+                {color: "#EFF3F4"},
+                {color: "#D7D8D9"},
+                {color: "#565859"},
+                {color: "#4C4D4E"},
+                {color: "#000000"}
+            ]
+        },
+        stats: [
+            {
+                metric: "80%",
+                qualifier: "Reported significant depressive symptoms"
+            },
+            {
+                metric: "65%",
+                qualifier: "Reported increased feelings of loneliness"
+            },
+            {
+                metric: "58%",
+                qualifier: "Reported feeling a loss of connectedness"
+            },
+        ],
         quotes: [
             {
                 quote: "I tend to focus on my friends that are more spontaneous and are more readily able to hangout on a whim when trying to make plans as they are more likely to follow through.",
@@ -140,16 +197,25 @@ const projectsData = [
         ],
         personas: [
             {
+                id: 0,
                 deliverable: SocialArchitect,
-                order: 0,
+                label: "Architect",
+                state: "firstSelected",
+                function: "handleFirstSelection"
             },
             {
+                id: 1,
                 deliverable: Wingman,
-                order: 1,
+                label: "Wingman",
+                state: "secondSelected",
+                function: "handleSecondSelection"
             },
             {
+                id: 2,
                 deliverable: PassiveParticipant,
-                order: 2,
+                label: "Participant",
+                state: "thirdSelected",
+                function: "handleThirdSelection"
             }
         ],
         assets: {
@@ -162,27 +228,27 @@ const projectsData = [
             {
                 video: bumblePush,
                 caption: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)",
-                type: "Trigger"
+                type: "Notifications"
             },
             {
                 video: bumbleModes,
                 caption: "Bumble uses swipeable cards to enable users to switch modes and focus in on how to connect with others.",
-                type: "Action"
+                type: "Mode Selection"
             },
             {
                 video: local,
                 caption: "Local (Facebook Events) enables users to see friends who expressed interest in events to help form groups.",
-                type: "Reward"
+                type: "Group Formation"
             },
             {
                 video: shop,
                 caption: "Shop (previously Arrive) uses location to show local stores near a user that they should checkout and support.",
-                type: "Reward"
+                type: "Suggestions"
             },
             {
                 video: airbnb,
                 caption: "Airbnb uses lists to enable users to save experiences and places they are interested in for use in sharing with friends.",
-                type: "Investment"
+                type: "Saved Interest"
             }
         ],
         tech: [
@@ -202,39 +268,77 @@ const projectsData = [
                 logo: foursquare,
             }
         ],
+        videos: [
+            {
+                title: "React Native",
+                src: "https://www.youtube.com/embed/6oFuwhIibo4",
+                citation: "What is React Native & Why is it so popular"
+            },
+            {
+                title: "Mapbox",
+                src: "https://www.youtube.com/embed/sRl6yWzZy8M",
+                citation: "Build with Mapbox"
+            },
+            {
+                title: "FourSquare",
+                src: "https://www.youtube.com/embed/fZunPW1kglI",
+                citation: "Building Place Aware Apps with FourSquare"
+            }
+        ],
+        versions: [
+            {
+                video: Version1,
+                caption: "Overall flow was confusing, too many clicks to get to the core experience and unclear how UI connected back to messages.",
+                type: "Version 1"
+            },
+            {
+                video: Version2,
+                caption: "Flow still confusing, unclear what rally symbols implied with regards to status and how it linked back to messages.",
+                type: "Version 2"
+            },
+        ],
         prototype: [
             {
                 video: rallyPush,
                 caption: "Rally uses push notifications to enable users to know when their friends are currently rallying to encourage app use.",
-                type: "Trigger"
+                type: "Notifications"
             },
             {
                 video: rallyModes,
                 caption: "Rally uses swipeable cards to enable users to broadcast their interests in an actionable way for use in making plans.",
-                type: "Action"
+                type: "Mode Selection"
             },
             {
                 video: rallyConnect,
                 caption: "Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods.",
-                type: "Reward"
+                type: "Filtering Interest"
             },
-            {
-                video: Rally,
-                caption: "Rally allows users to selectively broadcast their location within a group chat to help coordinate plan logistics.",
-                type: "Reward"
-            }
         ]
     },
     {
         project: "TouchBase",
         description: "Helping people foster professional connections by making networking more actionable.",
-        type: "Networking",
+        type: "Mobile App",
         link: "touch-base",
         preview: TouchBase,
         icon: TouchBaseIcon,
         promo: TouchBasePromo,
         orientation: "right",
         color: "#4D7FFF",
+        stats: [
+            {
+                metric: "85%",
+                qualifier: "Of positions are filled through networking"
+            },
+            {
+                metric: "49%",
+                qualifier: "Don't maintain professional relationships"
+            },
+            {
+                metric: "25%",
+                qualifier: "Don't invest any time in networking"
+            },
+        ],
         quotes: [
             {
                 quote: "Networking is the opportunity to speak to somebody who’s in the industry that you’re trying to join or become acquainted with.",
@@ -426,15 +530,15 @@ const projectsData = [
         personas: [
             {
                 deliverable: Prospective,
-                order: 0,
+                label: "Prospective",
             },
             {
                 deliverable: Wandering,
-                order: 1,
+                label: "Wandering",
             },
             {
                 deliverable: Established,
-                order: 1,
+                label: "Established",
             }
         ],
         assets: {
@@ -445,25 +549,23 @@ const projectsData = [
         },
         inspiration: [
             {
-                video: bumbleShare,
-                caption: "Bumble uses their dating platform to allow users to share their professional details and swipe for new connections.",
-                type: "Action"
+                title: "Bumble App",
+                videoOne: bumbleShare,
+                captionOne: "Bumble uses their dating platform to allow users to share their professional details and swipe for new connections.",
+                labelOne: "Share",
+                videoTwo: bumblePrompt,
+                captionTwo: "Bumble utilizes profile prompts to help users quickly transition into a conversation that will be interesting for the recipient.",
+                labelTwo: "Prompt"
             },
             {
-                video: shaprFind,
-                caption: "Shapr allows users to filter who they connect with by job titles, goals and interests so that their limited matches are worthwhile.",
-                type: "Trigger"
-            },
-            {
-                video: bumblePrompt,
-                caption: "Bumble utilizes profile prompts to help users quickly transition into a conversation that will be interesting for the recipient.",
-                type: "Reward"
-            },
-            {
-                video: shaprMeet,
-                caption: "Shapr lets users indicate what they would like to be doing when they meet for their in-person networking session.",
-                type: "Reward"
-            },
+                title: "Shapr App",
+                videoOne: shaprFind,
+                captionOne: "Shapr allows users to filter who they connect with by job titles, goals and interests so that their limited matches are worthwhile.",
+                labelOne: "Find",
+                videoTwo: shaprMeet,
+                captionTwo: "Shapr lets users indicate what they would like to be doing when they meet for their in-person networking session.",
+                labelTwo: "Meet"
+            }
         ],
         prototype: [
             {
@@ -494,14 +596,323 @@ const projectsData = [
         ]
     },
     {
+        project: "Shop",
+        description: "Improving the return/exchange process for online shoppers of an established app.",
+        type: "UX Improvement",
+        link: "shop",
+        color: "#5a31f4",
+        orientation: "left",
+        preview: shopFeatureOverview,
+        promo: ShopPromo,
+        palette: {
+            primary: [
+                {color: "#5A31F4"},
+                {color: "#B2A2FA"}
+            ],
+            status: [
+                {color: "#08CF9D"},
+                {color: "#00966F"},
+                {color: "#00966F"},
+                {color: "#EEC200"},
+                {color: "#FCF1CD"},
+                {color: "#BF4E40"},
+                {color: "#FDD1CF"}
+            ],
+            shades: [
+                {color: "#FFFFFF"},
+                {color: "#F1F2F3"},
+                {color: "#EFF3F4"},
+                {color: "#D7D8D9"},
+                {color: "#565859"},
+                {color: "#4C4D4E"},
+                {color: "#000000"}
+            ]
+        },
+        stats: [
+            {
+                metric: "3x",
+                qualifier: "The likelhood of returns for online retailers",
+                source: "https://www.nchannel.com/blog/ecommerce-online-return-policy/#more-15366:~:text=According%20to%20the%20NRF%2C%20returns%20are%20three%20times%20more%20prevalent%20for%20online%20retailers."
+            },
+            {
+                metric: "17%",
+                qualifier: "Tend to impulse buy knowing they’ll likely return the product",
+                source: "https://blog.globalwebindex.com/chart-of-the-week/online-shopping-returns/#top:~:text=17%25%20of%20people%20buy%20different%20colors,knowing%20they%E2%80%99ll%20likely%20return%20the%20product."
+            },
+            {
+                metric: "80%",
+                qualifier: "Are deterred by an inconvenient returns policy",
+                source: "https://www.nchannel.com/blog/ecommerce-online-return-policy/#more-15366:~:text=An%20inconvenient%20returns%20policy%20deters%2080%25%20of%20shoppers."
+            },
+            {
+                metric: "67%",
+                qualifier: "Increase their spending as a repeat customer",
+                source: "https://blog.hubspot.com/service/importance-customer-service#cta_button_53_6ecb5be3-74f7-49a2-b845-c947ee4d5804:~:text=This%20is%20because%20repeat%20customers%20are,to%20spend%20less%20on%20operating%20costs."
+            },
+            {
+                metric: "46%",
+                qualifier: "Make repeat purchases based on an easy returns policy",
+                source: "https://blog.globalwebindex.com/chart-of-the-week/online-shopping-returns/#top:~:text=A%20quick%20and%20easy%20returns%20policy,are%20also%20key%20repeat%20purchase%20drivers."
+            },
+            {
+                metric: "50%",
+                qualifier: "Will make repeat purchases due to good customer service",
+                source: "https://blog.globalwebindex.com/chart-of-the-week/online-shopping-returns/#top:~:text=A%20quick%20and%20easy%20returns%20policy,are%20also%20key%20repeat%20purchase%20drivers."
+            }
+        ],
+        quotes: {
+            consumers: [
+                {
+                    quote: "I typically purchase items online if I know my size, I bought the product before or if it was something that I couldn’t purchase locally (as their in-person location closed), otherwise I prefer to go to the mall.",
+                    takeaway: "Case-based Online Shopping",
+                    category: "Actions",
+                    order: 0
+                },
+                {
+                    quote: "For a new product I was thinking about getting, I browsed the website a couple times over the span of a week deciding on what size, type and color I wanted and then purchased them.",
+                    takeaway: "Taking The Time",
+                    category: "Actions",
+                    order: 1
+                },
+                {
+                    quote: "(On purchasing from a new place) I didn’t do it the first time as I wanted to think about it. I saw if there’s anything in person I wanted first that I could buy but I decided to try those.",
+                    takeaway: "Online Purchases Secondary",
+                    category: "Actions",
+                    order: 2
+                },
+                {
+                    quote: "I thought that if I’m going to return these then maybe I’ll try a different color as well because I wasn’t sure if I’d like the color that I actually got. It made me think that maybe next time I’d order two products and then ship one back.",
+                    takeaway: "Sampling Products",
+                    category: "Actions",
+                    order: 3
+                },
+                {
+                    quote: "(On not ordering two to try) I thought I would be happy with the pair I got as I’ve never ordered shoes online and didn’t feel like spending money on two shoes knowing I would have to return one.",
+                    takeaway: "Second Guessing",
+                    category: "Actions",
+                    order: 4
+                },
+                {
+                    quote: "I did look up the return policy for this new product as it’s really personalized and if it was an item I’d purchased before I’m probably less likely to return so I wouldn’t look it up.",
+                    takeaway: "Return Policy Use",
+                    category: "Actions",
+                    order: 5
+                },
+                {
+                    quote: "Reviews are valuable to me because I am able to gauge the true pros and cons associated with the product because even though I can see an image of it, there’s typically no description in terms of what the material will feel like and people are the ones who typically comment on these things.",
+                    takeaway: "Looking for Validation",
+                    category: "Actions",
+                    order: 6
+                },
+                {
+                    quote: "(On determining whether to get a refund) I didn’t know if I could return it, but I would rather just take a small loss rather than have to go through the hassle of calling them (support) and trying to get a clear answer on whether I could return it. Whereas the other alternative is taking a $10 loss and then selling it on Facebook.",
+                    takeaway: "Take a Loss",
+                    category: "Actions",
+                    order: 7
+                },
+                {
+                    quote: "I like returning stuff in person a lot more than online as I can just go and say here’s the receipt and item and then they just return it for me on the spot. It puts the onus on me and guarantees an outcome.",
+                    takeaway: "In-person Guarantee",
+                    category: "Actions",
+                    order: 8
+                },
+                {
+                    quote: "There’s a lot of unknowns in the way things can fall through the cracks when going through the process to make an online return. Like the package can get lost or someone might now have written the information down correctly and there are cases when the item couldn’t even be refunded in the first place.",
+                    takeaway: "Return Unknowns",
+                    category: "Actions",
+                    order: 9
+                },
+                {
+                    quote: "I like to get a verbal confirmation and some sort of paper trail for my own sake when making a return as it comes back to accountability. With online returns there’s almost a lack of accountability in terms of a delivery, whereas with in-person returns the accountability is on me and I can advocate for myself.",
+                    takeaway: "Return Accountability",
+                    category: "Actions",
+                    order: 10
+                },
+                {
+                    quote: "I like how some stores have online shopping assistants or chatbots as they are great for asking questions about colors or when something will come back in stock. I value having someone or something readily available to answer questions or clarify things which comes back to the whole personable experience.",
+                    takeaway: "Online Help",
+                    category: "Actions",
+                    order: 11
+                },
+            ],
+            merchants: [
+                {
+                    quote: "Refunds are pretty straightforward through Shopify, but exchanges seem more difficult. Any advice for how to handle exchanges?",
+                    takeaway: "Exchange Issues",
+                    date: "12-29-2016",
+                    order: 0
+                },
+                {
+                    quote: "How can I exchange an item for another size with an online order? Or what about exchanging for a different item? There is no way within Shopify to do this... A very basic function that every retailer does on a regular basis. Please provide a solution!",
+                    takeaway: "Online Order Exchanges",
+                    date: "02-07-2017",
+                    order: 1
+                },
+                {
+                    quote: "Is it still true that Shopify is unable to handle on online exchange? This seems like an obvious need for an online shopping cart. Please update me if there is a fix, so I don't have to create yet another workaround or purchase another app to fulfill a role that one would think would be inherent in a shopping cart software.",
+                    takeaway: "In-Service Solution",
+                    date: "05-30-2017",
+                    order: 2
+                },
+                {
+                    quote: "This seems like such a (yet another) obvious thing that should be included in a store setup by default. Why it is included in the POS app, and not the online store is beyond me.",
+                    takeaway: "Feature Availability",
+                    date: "02-05-2018",
+                    order: 3
+                },
+                {
+                    quote: "We've resolved this by downloading the POS app and using the refund / exchange section on there. It'll also let you pick the item (and check the stock) and will issue a bill / refund if there is a difference in price and refunds can be done in the same way.",
+                    takeaway: "Feature Workaround",
+                    date: "03-12-2019",
+                    order: 4
+                },
+                {
+                    quote: "There are many, including this one. But none are really free. This one is $10/month - in addition to what I'm already paying shopify..",
+                    takeaway: "No Free Solutions",
+                    date: "10-15-2019",
+                    order: 5
+                },
+                {
+                    quote: "Using the POS app is a great solution (even if you don't have a physical location, this app is free and syncs with your website). Note that from the POS app, website orders do not show up when you scroll through orders. You do have to search for the order by number.",
+                    takeaway: "Free Solution",
+                    date: "12-05-2019",
+                    order: 6
+                },
+                {
+                    quote: "The exchange works fine in the POS app, except in cases where the online customer wishes to exchange for items at higher value, thus leaving a balance. There is no way to email the invoice for the balance as a payment option- only cash/ credit.",
+                    takeaway: "Lacking Functionality",
+                    date: "12-12-2019",
+                    order: 7
+                },
+                {
+                    quote: "You have to create an order in Drafts and then under discount enter the amount you are refunding if they owe you money you have to send an invoice if you owe them money you can just credit them. You have to mark as paid to close it off if they owe you money. You also have to go to the original order and restock the item. Its a bit tricky when there are multiple exchanges.",
+                    takeaway: "Manual Work",
+                    date: "01-06-2020",
+                    order: 8
+                },
+            ]
+        },
+        personas: [
+            {
+                deliverable: Shopper,
+                label: "Consumer",
+            },
+            {
+                deliverable: Merchant,
+                label: "Merchant",
+            },
+        ],
+        assets: {
+            layers: shopLayers,
+            map: shopMap,
+            shoe: Shoe,
+            current: {
+                title: "Returns & Exchanges",
+                videoOne: userVessiReturn,
+                captionOne: "Shop users must find and decipher the return policy before manually sending an email requesting a return.",
+                labelOne: "User",
+                videoTwo: guestVessiReturn,
+                captionTwo: "Guests of the Shopify ecosystem must find their order details and return form on the company website.",
+                labelTwo: "Guest"
+            },
+            next: {
+                title: "Item Selection",
+                videoOne: shopViewProducts,
+                captionOne: "Shop users must find and decipher the return policy before manually sending an email requesting a return.",
+                labelOne: "User",
+                videoTwo: shopViewProducts,
+                captionTwo: "Guests outside of the Shopify ecosystem must find their delivery email or find the company support line.",
+                labelTwo: "Guest"
+            }
+        },
+        videos: [
+            {
+                title: "Shop App Promotional Video",
+                src: "https://fast.wistia.net/embed/iframe/er3qsm9vc8?videoFoam=true",
+                citation: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+            },
+            {
+                title: "Loop",
+                src: "https://www.youtube.com/embed/547zIEa_izM",
+                citation: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+            },
+            {
+                title: "AfterShip",
+                src: "https://www.youtube.com/embed/HzhwGXbvnU4",
+                citation: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+            },
+            {
+                title: "App Clips Promotional Video",
+                src: "https://www.youtube.com/embed/IqP_iojZXxQ",
+                citation: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+            },
+            {
+                title: "IKEA Places, AR Promotional Video",
+                src: "https://www.youtube.com/embed/SHj3xedWrAs",
+                citation: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)"
+            }
+        ],
+        features: [
+            {
+                title: "Order Access",
+                videoOne: shopUserOpen,
+                captionOne: "Users visit the Shop app from their mobile phone and select the order they are interested in returning.",
+                labelOne: "User",
+                videoTwo: shopGuestOpen,
+                captionTwo: "Guests are able to scan a App Clips or QR code on the product packaging to access the Shop experience.",
+                labelTwo: "Guest"
+            },
+            {
+                title: "Return Options",
+                videoOne: shopUserOrder,
+                captionOne: "Both users and guests are able to view product details or proceed to the return policy screen.",
+                labelOne: "User",
+                videoTwo: shopGuestOrder,
+                captionTwo: "Both users and guests are able to view product details or proceed to the return policy screen.",
+                labelTwo: "Guest",
+            },
+            {
+                title: "Item Selection",
+                videoOne: shopBothSelect,
+                captionOne: "Both users and guests can select elligble items to return using the return policy breakdowns.",
+                labelOne: "User",
+                videoTwo: shopBothSelect,
+                captionTwo: "Both users and guests can select elligble items to return using the return policy breakdowns.",
+                labelTwo: "Guest",
+            },
+            {
+                title: "Return Request",
+                videoOne: shopBothDetails,
+                captionOne: "Both users and guests are able to bypass providing some return request info thanks to baked-in details.",
+                labelOne: "User",
+                videoTwo: shopBothDetails,
+                captionTwo: "Both users and guests are able to bypass providing some return request info thanks to baked-in details.",
+                labelTwo: "Guest",
+            },
+            {
+                title: "Request Status",
+                videoOne: shopUserStatus,
+                captionOne: "Users are redirected to the Home Screen where they can view their pending return request after submission.",
+                labelOne: "User",
+                videoTwo: shopGuestStatus,
+                captionTwo: "Guests receive an email notification notifying them that their refund request is pending after submission.",
+                labelTwo: "Guest",
+            }
+        ]
+    },
+    {
         project: "Homediate",
         description: "Helping people mediate household tasks with individual performance based utility costs.",
         icon: HomediateIcon,
         preview: Homediate,
         promo: HomediatePromo,
-        type: "Housing",
+        type: "iMessage App",
         link: "homediate",
-        orientation: "left"
+        orientation: "right",
+        color: "#5ECB84",
+        assets: {
+            layers: homediateLayers
+        }
     }
 ]
 

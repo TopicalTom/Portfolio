@@ -1,0 +1,150 @@
+@import "../../styles/baseline.scss";
+
+.dropdown {
+    position: fixed;
+    z-index: 104;
+    width: 100vw;
+    transition: background-color 0.3s ease;
+    transition: border-color 0.3s ease;
+    @include theme-aware('background-color', 'system-background-secondary');
+    @include theme-aware('border-color', 'content-outline-light');
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    border-top: 1px solid;
+    animation: out 0.3s;
+    animation-fill-mode: forwards;
+
+    @keyframes out {
+        from { 
+            margin-top: 0px; 
+            height: 83px;
+        };
+        to { 
+            margin-top: 60px;
+            height: 300px;
+        };
+    }
+
+    &__container {
+        width: 768px;
+        height: 300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        animation: fade 0.5s;
+        animation-fill-mode: forwards;
+    
+        @keyframes fade {
+            from { 
+                opacity: 0;
+            };
+            to { 
+                opacity: 1;
+            };
+        }
+
+        @include laptop-small {
+            width: 1000px;
+        }
+    }
+
+    &__details {
+        text-align: left;
+        align-items: center;
+        padding: auto 0;
+        margin: auto 0;
+        width: 30%;
+    }
+
+    &__content {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__overlay {
+        position: absolute;
+
+        &--website {
+            width: 380px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        &--app {
+            width: 110px;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 0 auto;
+        }
+    }
+
+    &__item {
+        transition: 0.2s ease;
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        vertical-align: bottom;
+        padding: 18px 0;
+        border-radius: 4px;
+
+        &--design {
+            width: 240px;
+        }
+
+        &--development {
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: #cacaca1f;
+        }
+    }
+
+    &__preview {
+        display: flex;
+
+        &--website {
+            height: 180px;
+            width: 300px;
+            align-self: center;
+            margin-top: 16px;
+            background-color: black;
+            margin-bottom: 22px;
+        }
+
+        &--app {
+            width: 94px;
+            margin: 7px 20px;
+            padding: 0 auto;
+            border-radius: 4px;
+        }
+    }
+
+    &__promo {
+        position: relative;
+
+        &--website {
+            margin: 0 20px;
+            padding: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &--app {
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0 auto;
+        }
+    }
+
+    &__project {
+        font-weight: bold;
+        @include theme-aware('color', 'color-text');
+        font-size: 1rem;
+    }
+}

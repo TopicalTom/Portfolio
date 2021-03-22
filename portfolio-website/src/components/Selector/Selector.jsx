@@ -1,29 +1,29 @@
 import React, {useState} from 'react';
 import "./Selector.scss";
 
-import ProjectPromo from "../ProjectPromo/ProjectPromo";
-import Redirect from '../Redirect/Redirect';
-import projectsData from "../../data/projectsData";
+import Selected from "../../components/SelectorPreview/SelectorPreview";
+import pause from "../../assets/icons/pause.svg";
+import play from "../../assets/icons/play.svg";
 
-const Selector = () => {
+const Selector = (props) => {
 
-    const projects = projectsData
+    const {title, videoOne, captionOne, labelOne, videoTwo, captionTwo, labelTwo, color} = props
 
     const [firstSelected, setFirstSelected] = useState(true);
     const [secondSelected, setSecondSelected] = useState(false);
-    const [thirdSelected, setThirdSelected] = useState(false);
+    const [currentVideo, setCurrentVideo] = useState(videoOne);
+    const [isPlaying, setIsPlaying] = useState(true);
 
-    const [currentProject, setCurrentProject] = useState(projectsData[0].project);
-    const [currentPreview, setCurrentPreview] = useState(projectsData[0].preview);
+    const [mediaType, setMediaType] = useState("video");
 
     function handleFirstSelection() {
 
         if (firstSelected !== true) {
             setFirstSelected(true)
             setSecondSelected(false)
-            setThirdSelected(false)
-            setCurrentProject(projectsData[0].preview)
-            setCurrentPreview(projectsData[0].preview)
+            setMediaType("video")
+            setCurrentVideo(videoOne)
+            setIsPlaying(true);
         }
         else {
             setFirstSelected(true)
@@ -33,143 +33,210 @@ const Selector = () => {
     function handleSecondSelection() {
 
         if (secondSelected !== true) {
-            setFirstSelected(false)
             setSecondSelected(true)
-            setThirdSelected(false)
-            setCurrentProject(projectsData[1].preview)
-            setCurrentPreview(projectsData[1].preview)
+            setFirstSelected(false)
+            setMediaType("video")
+            setCurrentVideo(videoTwo)
+            setIsPlaying(true);
         }
         else {
             setSecondSelected(true)
         }
     }
 
-    function handleThirdSelection() {
-
-        if (thirdSelected !== true) {
-            setFirstSelected(false)
-            setSecondSelected(false)
-            setThirdSelected(true)
-            setCurrentProject(projectsData[2].preview)
-            setCurrentPreview(projectsData[2].preview)
-        }
-        else {
-            setThirdSelected(true)
-        }
+    function playVideo() {
+        let player = document.getElementById(`${currentVideo}`);
+        player.play();
+        setIsPlaying(true);
+    }
+   
+    function pauseVideo(){
+        let player = document.getElementById(`${currentVideo}`);
+        player.pause();
+        setIsPlaying(false);
     }
 
         return (
-            <section className="selector">
-                <article className="selector__container">
-                    <div className="selector__selections">
-                    <h4 className="selector__title">My Projects</h4>
-                    <div 
-                        className={`selector__card selector__card--${firstSelected ? "active" : "inactive"}`}
-                        onClick={handleFirstSelection}>
-                        <h3 
-                            className="selector__project">
-                            Rally
-                        </h3>
-                        {firstSelected &&
-                            <div className="selector__expand">
-                                <p 
-                                    className="selector__description">
-                                    Helping people spontaneously connect with their close friends over social moods.
-                                </p>
-                                <div className="selector__redirect">
-                                    <a 
-                                        className="selector__button"
-                                        href={`project/${projectsData[0].link}`}>
-                                        <span
-                                            className="selector__cta">
-                                            Learn More
-                                        </span>
-                                        <svg
-                                            className="selector__chevron"
-                                            viewBox="0 0 11 20" 
-                                            alt=""
-                                        >
-                                            <path d="M1.262,11.714 L10.264,20.713 C10.659,21.107 11.299,21.107 11.695,20.713 C12.09,20.319 12.09,19.679 11.695,19.285 L3.407,11 L11.694,2.715 C12.089,2.321 12.089,1.681 11.694,1.286 C11.299,0.892 10.658,0.892 10.263,1.286 L1.261,10.285 C0.872,10.675 0.872,11.325 1.262,11.714 Z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                    <div 
-                        className={`selector__card selector__card--${secondSelected ? "active" : "inactive"}`}
-                        onClick={handleSecondSelection}>
-                        <h3 
-                            className="selector__project">
-                            TouchBase
-                        </h3>
-                        {secondSelected &&
-                            <div className="selector__expand">
-                                <h4 
-                                    className="selector__description">
-                                    Helping people foster professional connections by making networking more actionable.
-                                </h4>
-                                <div className="selector__redirect">
-                                    <a 
-                                        className="selector__button"
-                                        href={`project/${projectsData[1].link}`}>
-                                        <span
-                                            className="selector__cta">
-                                            Learn More
-                                        </span>
-                                        <svg
-                                            className="selector__chevron"
-                                            viewBox="0 0 11 20" 
-                                            alt=""
-                                        >
-                                            <path d="M1.262,11.714 L10.264,20.713 C10.659,21.107 11.299,21.107 11.695,20.713 C12.09,20.319 12.09,19.679 11.695,19.285 L3.407,11 L11.694,2.715 C12.089,2.321 12.089,1.681 11.694,1.286 C11.299,0.892 10.658,0.892 10.263,1.286 L1.261,10.285 C0.872,10.675 0.872,11.325 1.262,11.714 Z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                    <div 
-                        className={`selector__card selector__card--${thirdSelected ? "active" : "inactive"}`}
-                        onClick={handleThirdSelection}>
-                        <h3 
-                            className="selector__project">
-                            Homediate
-                        </h3>
-                        {thirdSelected &&
-                            <div className="selector__expand">
-                                <h4 
-                                    className="selector__description">
-                                    Helping people spontaneously connect with their close friends over social moods.
-                                </h4>
-                                <div className="selector__redirect">
-                                    <a 
-                                        className="selector__button"
-                                        href={`project/${projectsData[2].link}`}>
-                                        <span
-                                            className="selector__cta">
-                                            Learn More
-                                        </span>
-                                        <svg
-                                            className="selector__chevron"
-                                            viewBox="0 0 11 20" 
-                                            alt=""
-                                        >
-                                            <path d="M1.262,11.714 L10.264,20.713 C10.659,21.107 11.299,21.107 11.695,20.713 C12.09,20.319 12.09,19.679 11.695,19.285 L3.407,11 L11.694,2.715 C12.089,2.321 12.089,1.681 11.694,1.286 C11.299,0.892 10.658,0.892 10.263,1.286 L1.261,10.285 C0.872,10.675 0.872,11.325 1.262,11.714 Z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                    </div>
-                    <ProjectPromo 
-                        project={currentProject}
-                        preview={currentPreview}
+            <section
+                className="selector">
+                <div className="selector__container selector__container--selected">
+                    <Selected
+                        type={mediaType}
+                        video={currentVideo}
                     />
-                </article>
+                    <button
+                        className="selector__toggle"
+                        onClick={isPlaying ? pauseVideo : playVideo}
+                        alt="Video playback status"
+                    >
+                        <img
+                            className="selector__player"
+                            src={isPlaying ? pause : play}
+                            alt={`${isPlaying ? "Pause" : "Play"} button`}
+                        />
+                    </button>
+                </div>
+                <div className="selector__container selector__container--content">
+                    <span 
+                        className="selector__title">
+                        {title}
+                    </span>
+                    {firstSelected &&
+                        <h3 
+                            className="selector__caption">
+                            {captionOne}
+                        </h3>
+                    }
+                    {secondSelected &&
+                        <h3 
+                            className="selector__caption">
+                            {captionTwo}
+                        </h3>
+                    }
+                    <div className="selector__selections">
+                        <div 
+                            className={`selector__button selector__button--${firstSelected ? "active" : "inactive"}`}
+                            onClick={handleFirstSelection}>
+                            <span 
+                                className="selector__label">
+                                {labelOne}
+                            </span>
+                        </div>
+                        <div 
+                            className={`selector__button selector__button--${secondSelected ? "active" : "inactive"}`}
+                            onClick={handleSecondSelection}>
+                            <span 
+                                className="selector__label">
+                                {labelTwo}
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </section>
         )
 }
 
 export default Selector;
+
+/*
+import React, {useState} from 'react';
+import "./Selector.scss";
+
+import Selected from "../../components/SelectorPreview/SelectorPreview";
+import pause from "../../assets/icons/pause.svg";
+import play from "../../assets/icons/play.svg";
+
+const Selector = (props) => {
+
+    const {title, userVideo, userCaption, guestVideo, guestCaption, color} = props
+
+    const [userSelected, setUserSelected] = useState(true);
+    const [guestSelected, setGuestSelected] = useState(false);
+    const [currentVideo, setCurrentVideo] = useState(userVideo);
+    const [isPlaying, setIsPlaying] = useState(true);
+
+    const [mediaType, setMediaType] = useState("video");
+
+    function handleUserSelection() {
+
+        if (userSelected !== true) {
+            setUserSelected(true)
+            setGuestSelected(false)
+            setMediaType("video")
+            setCurrentVideo(userVideo)
+            setIsPlaying(true);
+        }
+        else {
+            setUserSelected(true)
+        }
+    }
+
+    function handleGuestSelection() {
+
+        if (guestSelected !== true) {
+            setGuestSelected(true)
+            setUserSelected(false)
+            setMediaType("video")
+            setCurrentVideo(guestVideo)
+            setIsPlaying(true);
+        }
+        else {
+            setGuestSelected(true)
+        }
+    }
+
+    function playVideo() {
+        let player = document.getElementById(`${currentVideo}`);
+        player.play();
+        setIsPlaying(true);
+    }
+   
+    function pauseVideo(){
+        let player = document.getElementById(`${currentVideo}`);
+        player.pause();
+        setIsPlaying(false);
+    }
+
+        return (
+            <section className="selector">
+                <div className="selector__container selector__container--selected">
+                    <Selected
+                        type={mediaType}
+                        video={currentVideo}
+                    />
+                    <button
+                        className="preview__toggle"
+                        onClick={isPlaying ? pauseVideo : playVideo}
+                    >
+                        <img
+                            className="preview__player"
+                            src={isPlaying ? pause : play}
+                            alt=""
+                        />
+                    </button>
+                </div>
+                <div className="selector__container selector__container--content">
+                    <h4 
+                        className="selector__title">
+                        {title}
+                    </h4>
+                    {userSelected &&
+                        <h3 
+                            className="selector__caption">
+                            {userCaption}
+                        </h3>
+                    }
+                    {guestSelected &&
+                        <h3 
+                            className="selector__caption">
+                            {guestCaption}
+                        </h3>
+                    }
+                    <div className="selector__selections">
+                        <div 
+                            className={`selector__button selector__button--${userSelected ? "active" : "inactive"}`}
+                            style={{"border-color": color}}
+                            onClick={handleUserSelection}>
+                            <span 
+                                className="selector__label">
+                                User
+                            </span>
+                        </div>
+                        <div 
+                            className={`selector__button selector__button--${guestSelected ? "active" : "inactive"}`}
+                            style={{"border-color": color}}
+                            onClick={handleGuestSelection}>
+                            <span 
+                                className="selector__label">
+                                Guest
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+}
+
+export default Selector;
+
+*/

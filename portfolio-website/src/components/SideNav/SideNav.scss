@@ -1,6 +1,9 @@
+@import "../../styles/baseline.scss";
+
 .side-nav {
     margin-bottom: 20px;
     width: 80%;
+    overflow: hidden;
 
     &__header {
         font-weight: bold;
@@ -9,14 +12,32 @@
     
     &__links {
         padding-inline-start: 0px;
+        margin-bottom: 30px;
     }
 
     &__link {
-        opacity: 0.5;
+        transition: 0.3s ease;
+        text-decoration: none;
+        @include theme-aware('color', 'color-text-alt');
+
+        &.active {
+            transition: 0.3s ease;
+            font-weight: bold;
+            @include theme-aware('color', 'color-text');
+
+            &:hover {
+                transition: 0.3s ease;
+                font-weight: bold;
+                @include theme-aware('color', 'color-paragraph');
+            }
+        }
 
         &:hover {
-            opacity: 1.0;
+            //opacity: 0.8;
+            transition: 0.3s ease;
             cursor: pointer;
+            @include theme-aware('color', 'link');
         }
+
     }
 }

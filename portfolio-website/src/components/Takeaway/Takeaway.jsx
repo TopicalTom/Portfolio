@@ -6,10 +6,11 @@ const Takeaway = (props) => {
     const {color, type, details} = props
 
     return (
-        <article className="takeaway">
+        <article 
+            className="takeaway"
+            style={{background: color}}>
             <h4 
-                className="takeaway__type"
-                style={{color: color}}>
+                className="takeaway__type">
                 {type}
             </h4>
             <h3 className="takeaway__details">

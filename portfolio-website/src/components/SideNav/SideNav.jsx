@@ -1,19 +1,39 @@
-import React from 'react';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import uuid from "react-uuid"; 
 import "./SideNav.scss";
 
 const SideNav = props => {
+
+    const {handleSetActive, links, header} = props
+
+    const [navHeader, setNavHeader] = useState("Jump to");
+
+    const listenScrollEvent = (event) => {
+        if (window.scrollY > 250) {
+            setNavHeader(header)
+        } else {
+            setNavHeader("Jump to")
+        } 
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenScrollEvent);
+      
+        return () =>
+            window.removeEventListener('scroll', listenScrollEvent);
+    }, []);
 
     return (
         <div className="side-nav">
             <h3 
                 className="side-nav__header">
-                {props.header}
+                {navHeader}
             </h3>
             <ul className="side-nav__links">
-                {props.links.map(link => {
+                {links.map(link => {
                     return (
-                        <li>
+                        <li key={uuid()}>
                             <Link
                                 activeClass="active"
                                 to={link}
@@ -21,7 +41,9 @@ const SideNav = props => {
                                 className="side-nav__link"
                                 smooth={true}
                                 offset={-240}
-                                duration={500}>
+                                duration={500}
+                                onSetActive={handleSetActive}
+                                >
                                 {link}
                             </Link>
                         </li>

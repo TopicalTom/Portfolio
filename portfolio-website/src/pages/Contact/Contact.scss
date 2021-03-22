@@ -146,7 +146,8 @@
 
         @include tablet {
             margin: 0 60px;
-            padding-top: 280px;
+            padding-top: 240px;
+            padding-bottom: 20px;
             display: flex;
             flex-direction: row;
         }

@@ -1,0 +1,21 @@
+@import "../../styles/baseline.scss";
+
+.shopping {
+    margin: 60px 0px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+
+    &__item {
+        position: absolute;
+        width: 80%;
+        vertical-align: center;
+        margin: auto;
+        align-self: center;
+
+        @include tablet {
+            width: 60%;
+        }
+    }
+}

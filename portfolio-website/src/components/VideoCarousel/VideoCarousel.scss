@@ -1,0 +1,67 @@
+@import "../../styles/baseline.scss";
+
+.videos {
+    width: 100%; 
+    margin: 60px auto;
+
+    &__video {
+        height: 411px; 
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
+    }
+
+    &__selections {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        padding-top: 40px;
+
+        & > div {
+            margin-right: 10px;
+        }
+
+        & > div:last-of-type {
+            margin-right: 0px;
+        }
+    }
+
+    &__button {
+        display: flexbox;
+        width: 100%;
+        transition: height 0.3 ease-in-out;
+        cursor: pointer;
+        border-radius: 8px;
+        text-align: center;
+        justify-content: center;
+
+        @include tablet {
+            display: flexbox;
+            width: auto;
+        }
+
+        &--active {
+            padding: 11px 31px;
+            transition: height 0.3 ease-in-out;
+            background-color: rgba(0, 0, 0, 0.062);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.096);
+            }
+        }
+
+        &--inactive {
+            border: 1px solid rgba(0, 0, 0, 0.096);
+            padding: 10px 30px;
+            transition: height 0.3 ease-in-out;
+            background-color: rgba(0, 0, 0, 0);
+
+            &:hover {
+                border: 1px solid rgba(0, 0, 0, 0.096);
+                background-color: rgba(0, 0, 0, 0.034);
+            }
+        }
+    }
+}

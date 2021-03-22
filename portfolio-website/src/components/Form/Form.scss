@@ -98,7 +98,7 @@
         width: 200px;
         height: 55px;
         transition: 0.3s ease;
-        @include theme-aware('background', 'button-inactive');
+        @include theme-aware('background', 'button');
         border-radius: 12px;
         //color: white;
         border: none;
@@ -108,7 +108,7 @@
         cursor: pointer;
 
         &--active {
-            @include theme-aware('background', 'button');
+            @include theme-aware('background', 'link');
         }
     }
 

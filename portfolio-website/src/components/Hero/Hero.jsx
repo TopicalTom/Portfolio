@@ -19,7 +19,6 @@ const Hero = (props) => {
                         loop
                     />
                 </div>
-                <div className={`hero__background hero__background--${project}`}/>
             </section>
         );
     } else {
@@ -28,11 +27,9 @@ const Hero = (props) => {
                 <div className="hero__container">
                     <img 
                         src={tags}
-                        //width="100%"
                         height="435px"
                     />
                 </div>
-                <div className={`hero__background hero__background--cucoh`}/>
             </section>
         );
 

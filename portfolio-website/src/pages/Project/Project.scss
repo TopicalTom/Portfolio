@@ -9,7 +9,7 @@
     @include theme-aware('color', 'color-text');
 
     &__container {
-        margin: 0 20px;
+        margin: 0px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -17,7 +17,7 @@
 
         @include tablet {
             margin: 0 60px;
-            padding-top: 280px;
+            padding-top: 240px;
             display: flex;
             flex-direction: row;
         }
@@ -108,6 +108,7 @@
     }
 
     &__block {
+        margin-top: 200px;
         margin-bottom: 100px;
  
         & > h1 {
@@ -119,6 +120,33 @@
         & > h3 {
             margin-top: 1rem;
             margin-bottom: 2rem;
+        }
+
+        & > div:first-child {
+            margin-top: 0px;
+        }
+
+        &:first-of-type {
+            margin-top: 0px;
+        }
+    }
+
+    &__sub-block {
+        margin: 100px 20px 0px 20px;
+ 
+        & > h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        & > p,
+        & > h2,
+        & > h3 {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @include tablet {
+            margin: 100px 0px 0px 0px;
         }
     }
 
@@ -195,7 +223,6 @@
         width: 100%; 
         height: 411px; 
         margin: 60px auto;
-        margin-top: 20px;
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 20px;
         

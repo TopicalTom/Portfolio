@@ -4,17 +4,13 @@ import { ToastContainer, toast } from 'react-toastify';
 
 // Reusable Components
 import Header from "./components/Header/Header";
-import Scroll from "./components/Scroll/Scroll";
-import DynamicCards from "./components/DynamicCards/DynamicCards";
 import Footer from "./components/Footer/Footer";
 
 // Unqiue Pages
 import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
-import Skills from "./pages/Skills/Skills";
 import About from "./pages/About/About";
 import Main from "./pages/Main/Main";
-import Home from "./pages/Home/Home";
 
 import "./styles/baseline.scss";
 import 'react-toastify/dist/ReactToastify.css';
@@ -42,7 +38,6 @@ function App() {
                     exact component={Main}
                 />
             </Switch>
-            <DynamicCards/>
             <Footer/>
             <ToastContainer />
         </BrowserRouter>

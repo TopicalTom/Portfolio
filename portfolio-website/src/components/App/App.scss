@@ -21,11 +21,12 @@
         align-self: center;
         margin: auto;
         padding: 20px 0px 30px 0px;
+        border-radius: 24px;
 
         @include laptop-small {
             height: 100%;
             width: 85%;
-            border-radius: 16px;
+            border-radius: 36px;
             overflow: hidden;
             display: flex;
             align-self: center;
