@@ -8,20 +8,24 @@ const personaData = {
         {
             deliverable: Searcher,
             order: 0,
+            label: "Searcher",
         },
         {
             deliverable: Follower,
             order: 1,
+            label: "Follower",
         }
     ],
     cucoh2: [
         {
             deliverable: Hesitant,
             order: 0,
+            label: "Hesitant",
         },
         {
             deliverable: Advocate,
             order: 1,
+            label: "Advocate",
         },
     ]
 }

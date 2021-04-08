@@ -15,6 +15,7 @@ const Project = () => {
         <>
             <Actions />
             <Switch>
+                <Route path="/project/cucoh" component={CUCOH} />
                 <Route path="/project/rally" component={Rally} />
                 <Route path="/project/touch-base" component={TouchBase} />
                 <Route path="/project/homediate" component={Homediate}/>

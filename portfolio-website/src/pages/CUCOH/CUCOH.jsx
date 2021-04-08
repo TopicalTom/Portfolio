@@ -171,14 +171,16 @@ class CUCOH extends Component {
                                 <p>Conducting user interviews to dig deeper into these insights and get a better idea of who our audience is would have been the ideal next step; however, I was not aware of this option in 2017 and 2018 when I started this project.</p>
                                 <p>Instead, I used comments from our feedback form and responses from our brand ambassador applications to create approximate personas to understand the motivations, frustrations, and types of our audience:</p>
                                 <PersonaCarousel 
-                                    size={this.state.personas.cucoh.length}
-                                    persona={this.state.personas.cucoh}
+                                    color={this.state.color}
+                                    //size={this.state.personas.cucoh.length}
+                                    personas={this.state.personas.cucoh}
                                 />
                                 <p>Rachel and Kristie, our new delegates would be impacted the most as they may be learning about our conference for the first time and don’t have a previous CUCOH experience to draw from. Without enough information on what our conference entails, these potential delegates are unable to make an informed decision on whether or not to pay upfront for our conference experience.</p>
                                 <p>While Kristie was referred by a friend and can form a level of trust for our conference based on that recommendation, Rachel likely stumbled upon our conference and we would have to build trust from scratch. This uncertainty ultimately hurts our registration conversion rate and increases the length of our registration period.</p>
                                 <PersonaCarousel 
-                                    size={this.state.personas.cucoh2.length}
-                                    persona={this.state.personas.cucoh2}
+                                    color={this.state.color}
+                                    //size={this.state.personas.cucoh2.length}
+                                    personas={this.state.personas.cucoh2}
                                 />
                                 <p>Joshua and Anna, our past delegates, would be impacted the most as they have already attended CUCOH before, and their decision to attend again would be based on that experience. For Joshua who registered early and got all of his top choices, this is an easier decision to make, but for Anna, who registered late and didn’t get any or all of her top choices, this would be a harder decision to make.</p>
                                 <p>How well a delegates’ conference experience aligned with their initial expectations (formed during their information search and registration) impacts how they would evaluate our conference in our feedback form and the likeliness they would recommend our conference to others. A misalignment in expectations would ultimately hurt our theoretical (not currently tracked) net promoter score.</p>
