@@ -3,11 +3,9 @@ import "./DynamicCards.scss";
 
 import App from "../App/App";
 
-//import preview from "../../assets/videos/ShopFeatureOverview.mp4";
-
 const DynamicCards = (props) => {
 
-    const {preview, color} = props
+    const { title, caption, preview, color, link} = props
 
     return (
         <section className="dynamic">
@@ -15,18 +13,18 @@ const DynamicCards = (props) => {
                 <a
                     className="dynamic__web"
                     aria-label="Interactive Prototype Link"
-                    href={`https://framer.com/share/Shop--ju55T5OIS0sVE1NZSjdV/t1lB5JvSL?fullscreen=1&highlights=0`}> 
+                    href={link}> 
                     <article 
                         className="dynamic__card"
                         style={{background: color}}>
                         <div className="dynamic__card-section--details">
                             <h2 
                                 className="dynamic__card-header">
-                                Try it Yourself
+                                {title}
                             </h2>
                             <p 
                                 className="dynamic__card-description">
-                                Click to try out an interactive prototype!
+                                {caption}
                             </p>
                             <svg className="dynamic__card-arrow" viewBox="0 0 642 344" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <g stroke="none" strokeWidth="1" fillRule="evenodd" transform="translate(-435.000000, 0.000000)" fill="#ffffff">

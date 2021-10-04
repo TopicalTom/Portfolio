@@ -512,8 +512,11 @@ class Shop extends Component {
                 </div>
             </main>
             <DynamicCards 
+                title="Try it Yourself"
+                caption="Click to try out an interactive prototype"
                 preview={preview}
                 color={color}
+                link={`https://framer.com/share/Shop--ju55T5OIS0sVE1NZSjdV/t1lB5JvSL?fullscreen=1&highlights=0`}
             />
             </>
         );

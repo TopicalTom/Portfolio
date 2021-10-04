@@ -1,9 +1,9 @@
 // Rally Assets
-import Rally from "../assets/videos/RallyPromo.mp4";
+import Rally from "../assets/videos/RallyPreview.mp4";
 import Version1 from "../assets/videos/RallyVersion1.mp4";
 import Version2 from "../assets/videos/RallyVersion2.mp4";
 import RallyIcon from "../assets/icons/Rally.svg";
-import RallyPromo from "../assets/images/RallyPreview.png";
+import RallyPromo from "../assets/images/RallyNewPromo.jpeg";
 import SocialArchitect from "../assets/files/SocialArchitectPersona.png";
 import Wingman from "../assets/files/WingmanPersona.png";
 import PassiveParticipant from "../assets/files/PassiveParticipantPersona.png";
@@ -15,10 +15,16 @@ import reactnative from "../assets/icons/reactWatermark.svg";
 import mapbox from "../assets/icons/mapboxWatermark.svg";
 import foursquare from "../assets/icons/foursquareWatermark.svg";
 import bumblePush from "../assets/videos/BumblePush.mp4";
-import bumbleModes from "../assets/videos/BumbleModes.mp4";
+import bumbleMode from "../assets/videos/BumbleMode.mov";
+import bumbleAuth from "../assets/videos/BumbleAuth.mov";
+import bumblePrefs from "../assets/videos/BumblePrefs.mov";
+import bumbleFilter from "../assets/videos/BumbleFilter.mov";
 import local from "../assets/videos/LocalEvents.mp4";
 import airbnb from "../assets/videos/AirbnbLists.mp4";
 import shop from "../assets/videos/ShopLocal.mp4";
+import rallyAuth from "../assets/videos/RallyAuth.mov";
+import rallyStart from "../assets/videos/RallyStart.mov";
+import rallyChat from "../assets/videos/RallyChat.mov";
 import rallyPush from "../assets/videos/RallyPush.mp4";
 import rallyModes from "../assets/videos/RallyModes.mp4";
 import rallyConnect from "../assets/videos/RallyConnect.mp4";
@@ -226,15 +232,32 @@ const projectsData = [
         },
         inspiration: [
             {
-                video: bumblePush,
-                caption: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)",
-                type: "Notifications"
+                video: bumbleAuth,
+                caption: "Bumble promotes streamlined account creation through a mobile number or quick authentication methods.",
+                type: "Account Creation"
             },
             {
-                video: bumbleModes,
-                caption: "Bumble uses swipeable cards to enable users to switch modes and focus in on how to connect with others.",
+                video: bumbleMode,
+                caption: "Bumble uses selectable modes to enable users to focus in on how they want to connect with others.",
                 type: "Mode Selection"
             },
+            {
+                video: bumblePrefs,
+                caption: "Bumble lets users select tags and input text prompts to further refine how they want to connect.",
+                type: "Focus Interest"
+            },
+            {
+                video: bumbleFilter,
+                caption: "Bumble lets users limit who they want to connect with based on a variety of constraints.",
+                type: "Limit Visibility"
+            },
+            {
+                video: bumblePush,
+                caption: "Bumble uses push notifications to bring current users back into the app in anticipation of getting matches (FOMO)",
+                type: "Push Notifications"
+            },
+        ],
+        future: [
             {
                 video: local,
                 caption: "Local (Facebook Events) enables users to see friends who expressed interest in events to help form groups.",
@@ -289,29 +312,34 @@ const projectsData = [
             {
                 video: Version1,
                 caption: "Overall flow was confusing, too many clicks to get to the core experience and unclear how UI connected back to messages.",
-                type: "Version 1"
+                type: "Iteration 1"
             },
             {
                 video: Version2,
                 caption: "Flow still confusing, unclear what rally symbols implied with regards to status and how it linked back to messages.",
-                type: "Version 2"
+                type: "Iteration 2"
+            },
+            {
+                video: rallyConnect,
+                caption: "Streamlined flow but inefficient UI for quickly informing users of their current interest, prompt and discoverability settings.",
+                type: "Iteration 3"
             },
         ],
         prototype: [
             {
-                video: rallyPush,
-                caption: "Rally uses push notifications to enable users to know when their friends are currently rallying to encourage app use.",
-                type: "Notifications"
+                video: rallyAuth,
+                caption: "Rally allows users to sign-in or sign-up through a variety of quick authentication methods or by email.",
+                type: "Authentication"
             },
             {
-                video: rallyModes,
-                caption: "Rally uses swipeable cards to enable users to broadcast their interests in an actionable way for use in making plans.",
+                video: rallyStart,
+                caption: "When looking to rally, users are able to select a mode and discoverability to certain social groups.",
                 type: "Mode Selection"
             },
             {
-                video: rallyConnect,
-                caption: "Rally filters a user's friends by current shared interests to assist users in forming groups for specific moods.",
-                type: "Filtering Interest"
+                video: rallyChat,
+                caption: "Users that are rallying will show up on the home screen for quick access to starting chats.",
+                type: "Reaching Out"
             },
         ]
     },

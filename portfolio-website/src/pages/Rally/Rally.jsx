@@ -31,11 +31,11 @@ class Rally extends Component {
             "Problem", 
             "Define",
             "Research",
-            "Ideation",
-            "Design (v1)",
-            "Pivot",
+            "Concept",
+            "Inspiration",
             "Constraints",
-            "Design (v2)",
+            "Pivots",
+            "Design",
             "Next Steps" 
         ],
         color: projectsData[0].color,
@@ -174,12 +174,7 @@ class Rally extends Component {
                             <div 
                                 className="project__sub-block">
                                 <p>A common frustration people had was with friends not following through with the plans they organized. This was largely due to moods changing and people dropping out between the time a plan was suggested, and when it was going to occur, since coordinating general availability and interest for a particular plan took too long.</p>
-                                <p>To overcome this, people would ask specific friends that are known to be more spontaneous, have a proven track record for being down for a specific type of activity, or share their current interest, to build a strong foundation of an idea before bringing it to a larger group.</p>
-                            </div>
-                            <div 
-                                className="project__sub-block">
-                                <h2>Social Roles</h2>
-                                <p>It also became apparent that people take on different roles when making plans which I have narrowed down to three types which are:</p>
+                                <p>To overcome this, people would ask specific friends that are known to be more spontaneous, have a proven track record for being down for a specific type of activity, or share their current interest, to build a strong foundation of an idea before bringing it to a larger group. It also became apparent that people take on different roles when making plans which I have narrowed down to three types which are:</p>
                                 <PersonaCarousel 
                                     personas={personas}
                                     color={color}
@@ -199,12 +194,12 @@ class Rally extends Component {
                             </div>
                         </Element>
                         <Element
-                            name="Ideation"
+                            name="Concept"
                             className="project__block">
                             <div 
                                 className="project__sub-block">
                                 <Step 
-                                    step="Ideation"
+                                    step="Concept"
                                     color={color}
                                 />
                                 <h2>Focusing Intent</h2>
@@ -216,18 +211,112 @@ class Rally extends Component {
                                     alt=""
                                 />
                             </div>  
+                            <div 
+                                className="project__sub-block">
+                                <p>Since letting friends know what you are interested in is a core part of the app, making sure the action was clearly communicated and stood out is imperative. Building on the interest spectrum illustrated above, color could be used in a similar manner as “mood rings” that dynamically change to align with whatever “social mood” the user selects.</p>
+                                <p>Aside from being useful for communicating system status (usability heuristic), the color could be used as a visual filter associated with content or people most relevant to the user’s current needs throughout the app.</p>
+                                <Palette 
+                                    palette={palette}
+                                />
+                            </div>
                         </Element>
-                        <Element 
-                            name="Design (v1)"
+                        <Element
+                            name="Inspiration"
                             className="project__block">
                             <div 
                                 className="project__sub-block">
                                 <Step 
-                                    step="Design"
+                                    step="Inspiration"
                                     color={color}
                                 />
-                                <h2>Initial Missteps</h2>
-                                <p>Unfortunately, due to this being my first big design project I naively got stuck on the idea of building out the product as an iMessage app as I latched onto some interviewees not wanting to get a new app. While this idea had the potential to build upon an ecosystem where people already have friends, iMessage App Trays are limited both in functionality and familiarity as I learned through my 10 usability tests:</p>
+                                <h2>A Sense of Familiarity</h2>
+                                <p>With the value the app is trying to provide determined, I started looking into the core experience loop. Taking the learnings from my interviews and constructed experience map, I aligned the different steps to the Hook Model.</p>
+                                <p>This was done as the experience relies on people getting into the habit of posting their current “social mood” whenever it occurs and should encourage a feedback loop by users and aid in a success metric of engagement.</p>
+                                <Model 
+                                    color={color}
+                                    external={[
+                                        "Direct Message",
+                                        "Push Notifications"
+                                    ]}
+                                    internal={[
+                                        "FOMO", 
+                                        "Boredom"
+                                    ]}
+                                    action={[
+                                        "Create Account",
+                                        "Starts Rallying",
+                                        "Messages Friend(s)"
+                                    ]}
+                                    reward={[
+                                        "Boredom Gone", 
+                                        "Connects with Friends",
+                                    ]}
+                                    investment={[
+                                        "Social Circle Grows"
+                                    ]}
+                                />
+                            </div> 
+                            <div 
+                                className="project__sub-block">
+                                <p>Based on the refined loop above, it was clear that the potential experience resembled that of dating apps such as Tinder, Hinge, and Bumble. Looking to avoid navigation issues that impacted my earlier iterations (see pivots section), I looked to these experiences for inspiration. Doing so would enable me to leverage pre-existing mental models from other apps and create a more usable experience for users from the start.</p>
+                                <p>The exact screens I looked at and sought to replicate for each section of the core experience loop are as follows:</p>
+                                {inspiration.map(item => {
+                                    const {video, caption, type} = item
+                                    return (
+                                        <Preview 
+                                            video={video}
+                                            caption={caption}
+                                            type={type}
+                                        />
+                                    )
+                                })}
+                            </div>
+                        </Element>
+                        <Element 
+                            name="Constraints"
+                            className="project__block">
+                            <div 
+                                className="project__sub-block">
+                                <Step 
+                                    step="Constraints"
+                                    color={color}
+                                />
+                                <h2>Low Barrier of Entry</h2>
+                                <p>Social messaging apps such as Messenger are successful in part to their low-barrier entry to ensure friend groups are not left fragmented based on cost or mobile device they own. Having the experience be limited to users of one phone type would be counter to that goal of overcoming feelings of disconnect from one-another and would lead to a walled-garden experience.</p>
+                                <p>To alleviate these concerns, I did some additional research on the development-side of what would be needed to create a feasible solution. To overcome the barrier-to-entry issue, the app could be developed in React Native, rather than pure native solutions, as it would allow for simultaneous iOS and Android Development and even allow for a web platform to be made for a potential business facing component.</p>
+                                <iframe 
+                                    title={videos[0].title}
+                                    className="project__video"  
+                                    src={videos[0].src} 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                            <div 
+                                className="project__sub-block">
+                                <p>There is also the question of how to validate that this product is actually helping people make plans and in turn help local businesses acquire a new audience. One solution could be through implementing the Pilgrim SDK from FourSquare as it would utilize their “venue check-in” functionality to gain data on if users end up following through with the location-specific plans they suggest. Additionally, the SDK also has the capability of determining when a user is home which could then be cross-referenced for non-venue based hangouts.</p>
+                                <VideoCarousel
+                                    firstVideo={videos[1].src}
+                                    firstTitle={videos[1].title}
+                                    secondVideo={videos[2].src}
+                                    secondTitle={videos[2].title}
+                                    color={color}
+                                />
+                            </div>
+                        </Element>
+                        <Element 
+                            name="Pivots"
+                            className="project__block">
+                            <div 
+                                className="project__sub-block">
+                                <Step 
+                                    step="Pivots"
+                                    color={color}
+                                />
+                                <h2>Ensuring Clear Flow</h2>
+                                <p>Before getting to the current design iteration, I want to illustrate some missteps I made in trying to build out this experience. Due to this being my first big design project I naively got stuck on the idea of building out the product as an iMessage app as I latched onto some interviewees not wanting to get a new app.</p>
+                                <p>While this idea had the potential to build upon an ecosystem where people already have friends, after 10 usability tests it became clear that iMessage App Trays are limited both in functionality and familiarity which led to it being confusing to navigate. However, since the core concept was still strong, I decided to take my learnings and pivot towards a full app experience as shown in iteration 3:</p>
                                 {versions.map(item => {
                                     const {video, caption, type} = item
                                     return (
@@ -241,103 +330,7 @@ class Rally extends Component {
                             </div>
                         </Element>
                         <Element
-                            name="Pivot"
-                            className="project__block">
-                            <div 
-                                className="project__sub-block">
-                                 <Step 
-                                    step="Pivot"
-                                    color={color}
-                                />
-                                <h2>A Sense of Familiarity</h2>
-                                <p>After acknowledging my missteps in product direction, I decided to pivot away from pushing for an iMessage experience due to all the navigational awkwardness and functional limitations that it caused and have more confidence in providing value through a standalone experience.</p>
-                                <p>In doing so I also aimed to avoid my other misstep of relying too heavily on experimental interactions and instead rely on more conventional design standards. This would enable me to leverage pre-existing mental models from other apps and create a more usable experience for users from the start. Some app experiences that I looked to for inspiration, due to them providing similar experiences, value and familiarity to the target audience, are as follows:</p>
-                                {inspiration.map(item => {
-                                    const {video, caption, type} = item
-                                    return (
-                                        <Preview 
-                                            video={video}
-                                            caption={caption}
-                                            type={type}
-                                        />
-                                    )
-                                })}
-                            </div>
-                            <div 
-                                className="project__sub-block">
-                                <p>Another area that needed work was how users communicated their social interests as I received feedback on the icons and “tense” of the status being unclear. Since letting friends know what you are interested in is a core part of the app, I wanted to make sure the action was clearly communicated and stood out.</p>
-                                <p>To do this I took inspiration from “mood rings” that dynamically change color and added a rotating accent color that is tied to whatever “social mood” the user selects. Aside from being useful for communicating system status (usability heuristic), the color could be used as a visual filter associated with content or people most relevant to the user’s current needs throughout the app.</p>
-                                <Palette 
-                                    palette={palette}
-                                />
-                            </div>
-                            <div 
-                                className="project__sub-block">
-                                <p>Lastly, to address issues with flow and what to focus on for the core experience loop, I aligned the different aspects of the app onto the Hook Model. This was done to encourage a feedback loop by users as the experience relies on people getting into the habit of posting their current “social mood” whenever it occurs and should aid in a success metric of engagement.</p>
-                                <Model 
-                                    color={color}
-                                    external={[
-                                        "Push Notification", 
-                                        "Direct Message"
-                                    ]}
-                                    internal={[
-                                        "FOMO", 
-                                        "Boredom"
-                                    ]}
-                                    action={[
-                                        "Opens App", 
-                                        "Starts Rallying",
-                                        "Messages Friend(s)"
-                                    ]}
-                                    reward={[
-                                        "Boredom Gone", 
-                                        "Connects with Friends",
-                                        "Finds Places to Go"
-                                    ]}
-                                    investment={[
-                                        "Schedules Future Plans", 
-                                        "Saves Places",
-                                        "Social Circle Grows"
-                                    ]}
-                                />
-                            </div> 
-                        </Element>
-                        <Element 
-                            name="Constraints"
-                            className="project__block">
-                            <div 
-                                className="project__sub-block">
-                                <Step 
-                                    step="Constraints"
-                                    color={color}
-                                />
-                                <h2>Low Barrier of Entry</h2>
-                                <p>While my initial attempt with iMessage integration was great for building on a space people frequently use to communicate with one-another, it was short-sighted due to iMessage being a walled garden limited to just Apple Users. Social messaging apps such as Messenger are successful in part to their low-barrier entry to ensure friend groups are not left fragmented based on cost or mobile device they own. Having the experience be limited to users of one phone type would be counter to that goal of overcoming feelings of disconnect from one-another. </p>
-                                <p>To alleviate these concerns, I did some additional research on the development-side of what would be needed to create a feasible solution. To overcome the barrier-to-entry issue, the app could be developed in React Native, rather than pure native solutions, as it would allow for simultaneous iOS and Android Development and even allow for a web platform to be made for a potential business facing component.</p>
-                                <iframe 
-                                    title={videos[0].title}
-                                    className="project__video"  
-                                    src={videos[0].src} 
-                                    frameBorder="0" 
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowFullScreen>
-                                </iframe>
-                            </div>
-                            <div 
-                                className="project__sub-block">
-                                <h2>Product Validation</h2>
-                                <p>There is also the question of how to validate that this product is actually helping people make plans and in turn help local businesses acquire a new audience. One solution could be through implementing the Pilgrim SDK from FourSquare as it would utilize their “venue check-in” functionality to gain data on if users end up following through with the location-specific plans they suggest. Additionally, the SDK also has the capability of determining when a user is home which could then be cross-referenced for non-venue based hangouts.</p>
-                                <VideoCarousel
-                                    firstVideo={videos[1].src}
-                                    firstTitle={videos[1].title}
-                                    secondVideo={videos[2].src}
-                                    secondTitle={videos[2].title}
-                                    color={color}
-                                />
-                            </div>
-                        </Element>
-                        <Element
-                            name="Design (v2)"
+                            name="Design"
                             className="project__block">
                             <div 
                                 className="project__sub-block">
@@ -346,8 +339,8 @@ class Rally extends Component {
                                     color={color}
                                 />
                                 <h2>A Focused Experience</h2>
-                                <p>Taking all of this into consideration, I tried to strike a balance with this initial flow when users set their rally so the experience feels “Focused” rather than “Forced”. What this means is when a user selects the rally, “Go Out” they are still able to connect and see friends that don’t share their rally as well as being able to view other places that are outside their current social mood.</p>
-                                <p>This aims to emulate the ebb and flow of plans and how people are able to change their mind and pivot to other plans if that is where there is a greater interest within their social circle. That core concept in action is as follows:</p>
+                                <p>In designing the MVP experience, I tried to strike a balance with this initial flow when users set their rally so the experience feels “Focused” rather than “Forced”. What this means is when a user selects the rally, “Go Out” they are still able to connect and see friends that don’t share their rally as well as being able to view other places that are outside their current social mood.</p>
+                                <p>This aims to emulate the ebb and flow of plans and how people are able to change their mind and pivot to other plans if that is where there is a greater interest within their social circle. I also adapted iteration 3 of the project based on my new understanding of development constraints and cut down on the overly heavy animation I had used previously to make it something I could feasibly deliver:</p>
                                 {prototype.map(item => {
                                     const {video, caption, type} = item
                                     return (
@@ -369,9 +362,38 @@ class Rally extends Component {
                                     step="Next Steps"
                                     color={color}
                                 />
-                                <h2>Concurrent Development</h2>
-                                <p>As it stands, this only covers the “Trigger” and “Action” parts of the Rally experience which is only a small portion of the full experience that this has to offer. After pivoting I took a break from this design to learn React Native and have started to build out each section concurrently with the development side of things to ensure it is feasible.</p>
-                                <p>For phase 2 of this design I am currently looking into how to pull specific data from the Foursquare Pilgrim SDK and Places API based on different user actions, location and interests. And then for phase 3 I will be building out the chat functionality to link the three elements together that go into the overall mission of connecting friends and places.</p>
+                                <h2>Expanding the Experience</h2>
+                                <p>As it stands, the MVP experience only covers how users can connect over shared "moods," but not where they can go that fits their current "social needs." While enabling users to find places to go is essential for the overall flow of the app, I felt it was important to nail down the infrastructure of making an account, selecting a rally, and creating chats before branching out.</p>
+                                <p>I am actively developing these features and plan to beta test before I continue expanding to the next phase of the project, which covers the parts in brackets below:</p>
+                                <Model 
+                                    color={color}
+                                    external={[ 
+                                        "Direct Message",
+                                        "Push Notifications"
+                                    ]}
+                                    internal={[
+                                        "FOMO", 
+                                        "Boredom"
+                                    ]}
+                                    action={[
+                                        "Create Account",
+                                        "Starts Rallying",
+                                        "Messages Friend(s)"
+                                    ]}
+                                    reward={[
+                                        "Boredom Gone", 
+                                        "Connects with Friends",
+                                        "[Finds Places to Go]"
+                                    ]}
+                                    investment={[
+                                        "Social Circle Grows",
+                                        "[Schedules Future Plans]", 
+                                        "[Saves Places]"
+                                    ]}
+                                />
+                            </div>
+                            <div 
+                                className="project__sub-block">
                                 <Redirect 
                                     link="/project/touch-base"
                                     cta="Next Project: TouchBase"
@@ -382,8 +404,11 @@ class Rally extends Component {
                 </div>
             </main>
             <DynamicCards 
+                title="View my Code"
+                caption="Click to view my code repository"
                 preview={preview}
                 color={color}
+                link={`https://github.com/TopicalTom/Rally`}
             />
             </>
         );
@@ -391,30 +416,3 @@ class Rally extends Component {
 };
 
 export default Rally;
-
-
-/*
-                                <p>With the infrastructure for connecting friends over shared social moods established, my focus is now determining how Rally can connect users to places they might be interested in.</p>
-                                <p>Before diving deeper into designing this next stage, I plan to conduct another six interviews to explore the space of the second Persona, the Wingman. I'm interested in learning more about the barriers behind people finding and trying out new places outside of their usual spots, which would bring this experience back to the app's primary objective.</p>
-
-                                <p>Rally, the name I landed on, communicates a lot about what the brand is trying to accomplish. It can be defined as:</p>
-                                <p>This works on two levels due to people coming together over a common interest and how this all contributes to helping local businesses in light of recent events. The design of the wordmark aims to build on this by utilizing curving lines to showcase the ebb and flow of ideas as a plan starts to materialize and compromises are made.</p>
-                                <svg className="project__wordmark" viewBox="0 0 197 109">
-                                     <path d="M167.393123,22.2037037 L167.393123,57.5277778 C167.393123,59.4786725 167.461529,61.0601852 169.434977,61.0601852 C171.344765,61.0601852 171.470435,59.5790599 171.476555,57.7153802 L171.476831,22.2037037 L196.97212,22.2037037 C196.990626,22.5377992 197,22.8742989 197,23.212963 L197,74.1805556 C197,89.230315 190.487332,109 164.840807,109 C159.153393,109 153.723078,108.082944 149.016442,106.296903 L149.016442,85.51 C152.301983,87.4478328 155.612719,88.5 161.246636,88.5 C170.880553,88.5 173.486769,85.0535157 173.585974,85.1907196 C175.127533,87.3227402 175.997988,88.6797513 176.054056,88.756604 C176.199196,88.9555472 176.399706,89.1120526 176.656807,89.2228626 C176.913908,89.3336725 177.211639,89.3818396 177.549999,89.3673638 C178.226721,89.3384122 178.882919,89.0939669 179.520948,88.6323243 C180.156623,88.1723852 180.595198,87.6247132 180.831966,86.9927152 L185.511408,74.3599559 C185.645667,74.0657163 185.686789,73.7818723 185.640533,73.5113831 C185.595496,73.2376361 185.484711,73.0019626 185.310618,72.7978472 C185.136525,72.5937317 184.908196,72.4336082 184.622141,72.3176259 C184.337221,72.2031979 184.025623,72.1508157 183.687263,72.1652915 L170.394477,72.6810944 C169.707464,72.7008697 169.046731,72.9390981 168.408701,73.4007407 C167.770672,73.8623833 167.338987,74.4145688 167.108936,75.0607042 C166.990553,75.3767032 166.942281,75.6704696 166.965253,75.9435577 C166.988226,76.2166458 167.07346,76.4518097 167.218599,76.6507528 C167.282585,76.7384577 168.979136,79.0629667 170.868807,81.6520719 C164.893123,86.2451929 144,86.7963805 141.869954,65.6018519 L141.869954,23.212963 C141.869954,22.8742989 141.879328,22.5377992 141.897834,22.2037037 L167.393123,22.2037037 Z M109.736672,0 L109.736672,65.349537 C109.736672,72.3281735 113.030848,80.0600957 118.165854,84.0807893 C114.278689,86.4536453 110.3533,86.2916667 107.950051,86.2916667 C92.1132371,86.2916667 85.7448933,74.9498062 85.7448933,62.8263889 L85.7448933,0 L109.736672,0 Z M137.801779,0 L137.801779,65.349537 C137.801779,72.3281735 141.095955,80.0600957 146.230961,84.0807893 C142.343795,86.4536453 138.418407,86.2916667 136.015157,86.2916667 C120.178344,86.2916667 113.81,74.9498062 113.81,62.8263889 L113.81,0 L137.801779,0 Z M48.4940219,22.2252022 C50.8897341,22.2731185 53.5215594,22.4394865 56.266632,23.0138592 C67.3308587,24.8868608 81.6741421,32.0926494 81.6741421,47.1852078 L81.6741421,65.349537 C81.6741421,72.3281735 84.9683179,80.0600957 90.1033236,84.0807893 C86.2161582,86.4536453 82.2907698,86.2916667 79.8875202,86.2916667 C70.7686151,86.2916667 64.7889865,82.5312663 61.356795,77.0265145 C57.8453515,81.1490792 52.5858135,83.7685185 46.7074,83.7685185 C36.1353571,83.7685185 27.0675155,75.2961292 27.0675155,64.8449074 C27.0675155,54.3936856 35.6378496,45.9212963 46.2098925,45.9212963 C55.1839823,45.9212963 60.8132463,50.544521 63.8325659,56.3078057 L63.93,56.4959474 L63.93,56.4959474 C63.9926333,56.471403 64.0553522,56.4484235 64.1179437,56.4267017 C65.1519396,56.0678642 66.1511718,56.0522821 66.1555368,54.9954545 C66.1605522,53.7811769 64.8469488,51.3534359 63.7394724,49.8257976 C61.12442,46.2186287 55.6545026,42.68 48.4940219,42.1 L48.4940219,22.2252022 Z M22.9813158,22.2037037 L22.9813158,30.2073604 C30.2777608,23.2856669 38.6564487,22.3504942 44.9207781,22.2252022 L44.9207794,42.0511123 C32.6784663,42.8461479 23,52.8168587 23,65 C23,72.4205903 26.5905823,79.0203982 32.1641054,83.2259876 L32.4209607,83.07153 C28.5337954,85.4443861 24.6084069,86.2916667 22.2051574,86.2916667 C6.36834387,86.2916667 -1.49213975e-13,74.9498062 -1.49213975e-13,62.8263889 L-1.49213975e-13,22.2037037 L22.9813158,22.2037037 Z"></path>
-                                </svg>
-                            </div>
-                            <div 
-                                className="project__sub-block">
-                                <h2>Sketching a Solution</h2>
-                                <p>Using similar UI elements and platform conventions from apps in this space, I sketched the following screens. It is worth mentioning that these drawings are of an earlier version before I conducted usability tests so only some elements made it to the latest version depicted below.</p>
-                                <img 
-                                    className="project__image"
-                                    src={sketch}
-                                    alt=""
-                                />
-                            </div>
-                            <div 
-                                className="project__sub-block">
-                                <h2>Communicating with Color</h2>
-
-*/

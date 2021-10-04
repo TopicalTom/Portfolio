@@ -17,7 +17,7 @@ const Main = () => {
                 <div className="main__details">
                     <h1 
                         className="main__heading">
-                        I'm Thomas Griffiths a UX Developer.
+                        I'm Thomas Griffiths a Product Designer.
                     </h1>
                     <p className="main__mission">
                         Specializing in crafting novel mobile experiences

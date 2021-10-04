@@ -6,7 +6,7 @@ import "./Contact.scss";
 import Actions from "../../components/HeaderActions/HeaderActions";
 import Form from "../../components/Form/Form";
 import Map from "../../components/Map/Map";
-import resume from "../../assets/files/ThomasGriffithsResume.pdf";
+//import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 
 const encode = data =>
   Object.keys(data)
@@ -96,8 +96,7 @@ export default class Contact extends Component {
                             <ul>
                                 <li><a 
                                     className="contact__option"
-                                    download="ThomasGriffithsResume"
-                                    href={resume}>
+                                    download="ThomasGriffithsResume">
                                     <span>Download Resume</span>
                                     <svg className="contact__external" viewBox="0 0 768 1024">
                                         <path d="M640 768H128V257.90599999999995L256 256V128H0v768h768V576H640V768zM384 128l128 128L320 448l128 128 192-192 128 128V128H384z"/>

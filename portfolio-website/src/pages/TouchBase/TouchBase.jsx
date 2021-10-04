@@ -350,8 +350,11 @@ class TouchBase extends Component {
                 </div>
             </main>
             <DynamicCards 
+                title="Try it Yourself"
+                caption="Click to try out an interactive prototype"
                 preview={preview}
                 color={color}
+                link={'https://principle.app/share?id=LtW8qtkEOxOsqX5TnzNV'}
             />
             </>
         );

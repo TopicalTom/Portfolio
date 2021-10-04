@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 import "./Menu.scss";
 
-import resume from "../../assets/files/ThomasGriffithsResume.pdf";
+//import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 
 ReactModal.setAppElement('*')
 
@@ -137,7 +137,7 @@ function Menu() {
                         <li>
                             <a 
                                 className="menu__link"
-                                href={resume} 
+                                //href={resume} 
                                 download="ThomasGriffithsResume" 
                                 aria-label="Digital Product Designer Resume Download Link"
                                 onClick={closeMenu}>

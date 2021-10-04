@@ -2,7 +2,7 @@ import React from 'react';
 import "./Footer.scss";
 
 // Files
-import resume from "../../assets/files/ThomasGriffithsResume.pdf";
+//import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 
 const Footer = () => {
 
@@ -24,8 +24,18 @@ const Footer = () => {
                             <ul className="footer__links">
                                 <li><a
                                     className="footer__link footer__link--external"
+                                    href="https://github.com/TopicalTom/Rally">
+                                    Rally
+                                </a></li>
+                                <li><a
+                                    className="footer__link footer__link--external"
                                     href="https://github.com/TopicalTom/Shoppies">
                                     Shoppies
+                                </a></li>
+                                <li><a
+                                    className="footer__link footer__link--external"
+                                    href="https://github.com/TopicalTom/Spacestagram">
+                                    Spacestagram
                                 </a></li>
                             </ul>
                         </div>
@@ -70,7 +80,7 @@ const Footer = () => {
                                 </a></li>
                                 <li><a
                                     className="footer__link footer__link--internal"
-                                    href={resume} 
+                                    //href={resume} 
                                     download="ThomasGriffithsResume" 
                                     aria-label="Digital Product Designer Resume Download Link">
                                     Resume
@@ -146,7 +156,7 @@ const Footer = () => {
                         </a></li>
                     </ul>
                     <span className="footer__copyright">
-                        © 2020 | <a className="footer__github" href="https://github.com/TopicalTom/portfolio-website"> Built in React</a>
+                        © 2021 | <a className="footer__github" href="https://github.com/TopicalTom/portfolio-website"> Built in React</a>
                     </span>
                 </div>
             </div>
