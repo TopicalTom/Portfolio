@@ -36,7 +36,7 @@ const About = () => {
                         I'm not all work though, as I like to balance my life by playing video games with friends, consuming as many movies as possible as I work my way through the IMDB Top 250, or driving my Jeep with the roof down when the weather is just right.
                     </p>
                     <p className="about__content">
-                        Make sure to reach out if you want to chat, or have a cool opportunity I might be interested in, as I am currently looking for a position to kickstart my journey into the field!
+                        Make sure to reach out if you want to chat, or have a cool opportunity I might be interested in, as I am currently looking for a new position!
                     </p>
                     <Redirect 
                         text=""
