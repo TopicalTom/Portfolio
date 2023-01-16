@@ -1,7 +1,7 @@
 import React from 'react';
 import "./ResumeCard.scss";
 
-//import resume from "../../assets/files/ThomasGriffithsResume.pdf";
+import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 
 const ResumeCard = (props) => {
 
@@ -12,7 +12,7 @@ const ResumeCard = (props) => {
             <div className="resume__container">
                 <a
                     className="resume__web"
-                    //href={resume} 
+                    href={resume} 
                     download="ThomasGriffithsResume" 
                     aria-label="Digital Product Designer Resume Download Link"> 
                     <article 

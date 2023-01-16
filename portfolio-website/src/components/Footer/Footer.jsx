@@ -2,7 +2,7 @@ import React from 'react';
 import "./Footer.scss";
 
 // Files
-//import resume from "../../assets/files/ThomasGriffithsResume.pdf";
+import resume from "../../assets/files/ThomasGriffithsResume.pdf";
 
 const Footer = () => {
 
@@ -80,7 +80,7 @@ const Footer = () => {
                                 </a></li>
                                 <li><a
                                     className="footer__link footer__link--internal"
-                                    //href={resume} 
+                                    href={resume} 
                                     download="ThomasGriffithsResume" 
                                     aria-label="Digital Product Designer Resume Download Link">
                                     Resume
